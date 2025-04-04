@@ -20,7 +20,7 @@ width = 1.0
 
 [sub_resource type="Resource" id="Resource_7jqyl"]
 script = ExtResource("4_cw150")
-position = Vector2(-355.343, 672.952)
+position = Vector2(-232.659, 1029.59)
 point_in = Vector2(0, 0)
 point_out = Vector2(0, 0)
 properties = SubResource("Resource_xii2b")
@@ -34,8 +34,8 @@ width = 1.0
 [sub_resource type="Resource" id="Resource_sui6v"]
 script = ExtResource("4_cw150")
 position = Vector2(698.087, 471.73)
-point_in = Vector2(0, 0)
-point_out = Vector2(0, 0)
+point_in = Vector2(-1112.72, -62.7686)
+point_out = Vector2(25.6782, 696.161)
 properties = SubResource("Resource_fm1jd")
 
 [sub_resource type="Resource" id="Resource_m5ivw"]
@@ -46,7 +46,7 @@ width = 1.0
 
 [sub_resource type="Resource" id="Resource_kp5pi"]
 script = ExtResource("4_cw150")
-position = Vector2(1412.55, 488.235)
+position = Vector2(1720.69, 1135.89)
 point_in = Vector2(0, 0)
 point_out = Vector2(0, 0)
 properties = SubResource("Resource_m5ivw")
@@ -59,7 +59,7 @@ width = 1.0
 
 [sub_resource type="Resource" id="Resource_v4yay"]
 script = ExtResource("4_cw150")
-position = Vector2(1877.06, 705.167)
+position = Vector2(5327.91, 1160.25)
 point_in = Vector2(0, 0)
 point_out = Vector2(0, 0)
 properties = SubResource("Resource_tv7ir")
@@ -72,7 +72,7 @@ width = 1.0
 
 [sub_resource type="Resource" id="Resource_o0wo3"]
 script = ExtResource("4_cw150")
-position = Vector2(2392.52, 1237.1)
+position = Vector2(5333.39, 1317.97)
 point_in = Vector2(0, 0)
 point_out = Vector2(0, 0)
 properties = SubResource("Resource_b7y0n")
@@ -85,7 +85,7 @@ width = 1.0
 
 [sub_resource type="Resource" id="Resource_ml0fe"]
 script = ExtResource("4_cw150")
-position = Vector2(2024.19, 1606.41)
+position = Vector2(4473.31, 1918.87)
 point_in = Vector2(0, 0)
 point_out = Vector2(0, 0)
 properties = SubResource("Resource_xl7j7")
@@ -163,7 +163,7 @@ width = 1.0
 
 [sub_resource type="Resource" id="Resource_u1dsc"]
 script = ExtResource("4_cw150")
-position = Vector2(-355.343, 672.952)
+position = Vector2(-232.659, 1029.59)
 point_in = Vector2(0, 0)
 point_out = Vector2(0, 0)
 properties = SubResource("Resource_krw8e")
@@ -176,7 +176,7 @@ width = 1.0
 
 [sub_resource type="Resource" id="Resource_rhqlf"]
 script = ExtResource("4_cw150")
-position = Vector2(-1043.05, 1005.15)
+position = Vector2(-746.326, 1025.12)
 point_in = Vector2(0, 0)
 point_out = Vector2(0, 0)
 properties = SubResource("Resource_q4dhf")
@@ -202,7 +202,7 @@ _point_order = PackedInt32Array(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 11)
 _constraints = {
 Vector2i(0, 11): 15
 }
-_next_key = 14
+_next_key = 15
 _material_overrides = {}
 tessellation_stages = 3
 tessellation_tolerance = 6.0
@@ -258,7 +258,11 @@ render_offset = 0.0
 [node name="Node2D" type="Node2D"]
 
 [node name="Player" parent="." instance=ExtResource("1_7lnir")]
+position = Vector2(2230, 611)
 script = ExtResource("2_xii2b")
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+zoom = Vector2(0.26, 0.26)
 
 [node name="SS2D_Shape" type="Node2D" parent="."]
 texture_repeat = 2
@@ -267,12 +271,13 @@ _points = SubResource("Resource_8yb03")
 shape_material = SubResource("Resource_1vdk1")
 collision_polygon_node_path = NodePath("../StaticBody2D/CollisionPolygon2D")
 metadata/_custom_type_script = "uid://clts7ttaac1qj"
-
-[node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(211, 495)
-zoom = Vector2(0.26, 0.26)
+metadata/_edit_lock_ = true
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
+visible = false
+metadata/_edit_lock_ = true
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
-polygon = PackedVector2Array(-355.343, 672.952, 698.087, 471.73, 1412.55, 488.235, 1877.06, 705.167, 2392.52, 1237.1, 2024.19, 1606.41, 2132.8, 2182.87, 1216.06, 2789.23, 315.632, 2643.47, -703.551, 2182.87, -766.209, 1610.59, -1043.05, 1005.15, -355.343, 672.952)
+visible = false
+polygon = PackedVector2Array(-232.659, 1029.59, -238.305, 1003.05, -243.706, 933.599, -240.907, 887.562, -231.557, 836.53, -213.494, 782.414, -184.555, 727.123, -142.575, 672.567, -85.3934, 620.657, -10.8457, 573.303, 83.2308, 532.415, 198.999, 499.904, 338.623, 477.679, 698.087, 471.73, 713.803, 593.913, 749.399, 700.143, 801.993, 791.533, 868.701, 869.198, 946.641, 934.251, 1032.93, 987.805, 1219.02, 1064.87, 1403.9, 1109.31, 1564.52, 1130.01, 1720.69, 1135.89, 5327.91, 1160.25, 5333.39, 1317.97, 4473.31, 1918.87, 2132.8, 2182.87, 1216.06, 2789.23, 315.632, 2643.47, -703.551, 2182.87, -766.209, 1610.59, -746.326, 1025.12, -232.659, 1029.59)
+metadata/_edit_lock_ = true
