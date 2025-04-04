@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://350ko87cfb6b"
-path="res://.godot/imported/pony-ref.png-5e669569f7e9fb96de62b614d65321ee.ctex"
+uid="uid://dxyu74jyy6a5l"
+path="res://.godot/imported/whitebox_round.png-e25ba1a3f3f1e54138205525f24b9ee3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://pony-ref.png"
-dest_files=["res://.godot/imported/pony-ref.png-5e669569f7e9fb96de62b614d65321ee.ctex"]
+source_file="res://whitebox/whitebox_round.png"
+dest_files=["res://.godot/imported/whitebox_round.png-e25ba1a3f3f1e54138205525f24b9ee3.ctex"]
 
 [params]
 

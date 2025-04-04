@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://7yju3h34s0fs"
-path="res://.godot/imported/pony-color-ref.png-6079aa37b35568491a784b2bb71f1c2e.ctex"
+path="res://.godot/imported/pony-color-ref.png-657b23511cc583ea6bd012aac3cc2bfd.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://pony-color-ref.png"
-dest_files=["res://.godot/imported/pony-color-ref.png-6079aa37b35568491a784b2bb71f1c2e.ctex"]
+source_file="res://player/pony-color-ref.png"
+dest_files=["res://.godot/imported/pony-color-ref.png-657b23511cc583ea6bd012aac3cc2bfd.ctex"]
 
 [params]
 

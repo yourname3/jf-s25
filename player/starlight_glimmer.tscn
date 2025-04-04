@@ -3,9 +3,9 @@
 [ext_resource type="Script" uid="uid://bodn4jw8tyemx" path="res://addons/gdvecrig/VecDrawing.gd" id="1_oyty2"]
 [ext_resource type="Script" uid="uid://csgt88iv3c4ke" path="res://addons/gdvecrig/VecStroke.gd" id="2_27k37"]
 [ext_resource type="Script" uid="uid://druaxt2ugybtj" path="res://addons/gdvecrig/VecWaypoint.gd" id="3_3ekgy"]
-[ext_resource type="Texture2D" uid="uid://350ko87cfb6b" path="res://pony-ref.png" id="4_1my0b"]
-[ext_resource type="Script" uid="uid://bc4qbrgg2jegi" path="res://copy_rotation.gd" id="5_27k37"]
-[ext_resource type="Texture2D" uid="uid://7yju3h34s0fs" path="res://pony-color-ref.png" id="6_3ekgy"]
+[ext_resource type="Texture2D" uid="uid://350ko87cfb6b" path="res://player/pony-ref.png" id="4_1my0b"]
+[ext_resource type="Script" uid="uid://bc4qbrgg2jegi" path="res://player/copy_rotation.gd" id="5_27k37"]
+[ext_resource type="Texture2D" uid="uid://7yju3h34s0fs" path="res://player/pony-color-ref.png" id="6_3ekgy"]
 [ext_resource type="Script" uid="uid://qx12uswm33hj" path="res://addons/gdvecrig/VecEditCanvas.gd" id="7_1my0b"]
 
 [sub_resource type="Curve" id="Curve_cystm"]
