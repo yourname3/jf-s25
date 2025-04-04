@@ -3152,10 +3152,6 @@ script = ExtResource("2_27k37")
 metadata/_custom_type_script = "uid://csgt88iv3c4ke"
 metadata/_edit_lock_ = true
 
-[node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(393, -328)
-zoom = Vector2(0.662, 0.662)
-
 [node name="Skeleton2D" type="Skeleton2D" parent="."]
 modification_stack = SubResource("SkeletonModificationStack2D_27k37")
 
