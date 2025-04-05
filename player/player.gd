@@ -41,6 +41,11 @@ func get_inputs() -> Vector2:
 		if playback_frame < recording.size():
 			input = recording[playback_frame]
 			playback_frame += 1
+		else:
+			#queue_free()
+			#global_position = original_position
+			input = recording[0]
+			playback_frame = 1
 	return input
 	
 func spawn_clone() -> void:
@@ -59,11 +64,13 @@ func _physics_process(delta: float) -> void:
 	var encoded_inputs := get_inputs()
 	if mode == MODE_PLAYER:
 		if Input.is_action_just_pressed("clone"):
-			original_position = global_position
-			recording.clear()
-			is_recording = true
-		elif Input.is_action_just_released("clone"):
-			spawn_clone()
+			if is_recording:
+				spawn_clone()
+				is_recording = false
+			else:
+				original_position = global_position
+				recording.clear()
+				is_recording = true		
 		if is_recording:
 			recording.push_back(encoded_inputs)
 	
