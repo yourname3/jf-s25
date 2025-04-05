@@ -1,4 +1,4 @@
-[gd_scene load_steps=43 format=3 uid="uid://bda6bue7aop33"]
+[gd_scene load_steps=41 format=3 uid="uid://bda6bue7aop33"]
 
 [ext_resource type="PackedScene" uid="uid://d0u0o1s2jxhbj" path="res://player/player.tscn" id="1_7lnir"]
 [ext_resource type="Script" uid="uid://clts7ttaac1qj" path="res://addons/rmsmartshape/shapes/shape.gd" id="2_0v1st"]
@@ -24,19 +24,6 @@ point_in = Vector2(0, 0)
 point_out = Vector2(0, 0)
 properties = SubResource("Resource_s1aav")
 
-[sub_resource type="Resource" id="Resource_cw150"]
-script = ExtResource("3_6gtgk")
-texture_idx = 0
-flip = false
-width = 1.0
-
-[sub_resource type="Resource" id="Resource_sui6v"]
-script = ExtResource("4_cw150")
-position = Vector2(896, 512)
-point_in = Vector2(0, -384)
-point_out = Vector2(0, 448)
-properties = SubResource("Resource_cw150")
-
 [sub_resource type="Resource" id="Resource_xii2b"]
 script = ExtResource("3_6gtgk")
 texture_idx = 0
@@ -45,7 +32,7 @@ width = 1.0
 
 [sub_resource type="Resource" id="Resource_kp5pi"]
 script = ExtResource("4_cw150")
-position = Vector2(2048, 1024)
+position = Vector2(640, 1024)
 point_in = Vector2(0, 0)
 point_out = Vector2(0, 0)
 properties = SubResource("Resource_xii2b")
@@ -156,7 +143,7 @@ width = 1.0
 
 [sub_resource type="Resource" id="Resource_w5qvu"]
 script = ExtResource("4_cw150")
-position = Vector2(-128, 128)
+position = Vector2(-256, -384)
 point_in = Vector2(0, 0)
 point_out = Vector2(0, 0)
 properties = SubResource("Resource_lsj08")
@@ -182,7 +169,7 @@ width = 1.0
 
 [sub_resource type="Resource" id="Resource_krw8e"]
 script = ExtResource("4_cw150")
-position = Vector2(640, 128)
+position = Vector2(640, -384)
 point_in = Vector2(0, 0)
 point_out = Vector2(0, 0)
 properties = SubResource("Resource_kdj2k")
@@ -191,7 +178,6 @@ properties = SubResource("Resource_kdj2k")
 script = ExtResource("5_xii2b")
 _points = {
 0: SubResource("Resource_7jqyl"),
-1: SubResource("Resource_sui6v"),
 2: SubResource("Resource_kp5pi"),
 3: SubResource("Resource_v4yay"),
 4: SubResource("Resource_o0wo3"),
@@ -205,7 +191,7 @@ _points = {
 17: SubResource("Resource_qslh7"),
 18: SubResource("Resource_krw8e")
 }
-_point_order = PackedInt32Array(0, 15, 18, 1, 2, 17, 3, 4, 5, 6, 9, 10, 12, 11)
+_point_order = PackedInt32Array(0, 15, 18, 2, 17, 3, 4, 5, 6, 9, 10, 12, 11)
 _constraints = {
 Vector2i(0, 11): 15
 }
@@ -288,5 +274,5 @@ metadata/_edit_lock_ = true
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
 visible = false
-polygon = PackedVector2Array(-256, 1024, -128, 128, 640, 128, 651, 128.75, 680, 134, 721, 148.25, 744.125, 160.156, 768, 176, 791.875, 196.344, 815, 221.75, 836.625, 252.781, 856, 290, 872.375, 333.969, 885, 385.25, 896, 512, 908.938, 591.578, 945.5, 662.625, 1002.31, 725.609, 1076, 781, 1260.5, 870.875, 1472, 936, 2048, 1024, 3392, 1024, 5120, 896, 5120, 1344, 5115.88, 1357.75, 5099, 1394, 5062.63, 1445.25, 5000, 1504, 4904.38, 1562.75, 4769, 1614, 4587.13, 1650.25, 4352, 1664, 2048, 1664, -192, 1664, -768, 1664, -768, 1024, -256, 1024)
+polygon = PackedVector2Array(-256, 1024, -256, -384, 640, -384, 640, 1024, 3392, 1024, 5120, 896, 5120, 1344, 5115.88, 1357.75, 5099, 1394, 5062.63, 1445.25, 5000, 1504, 4904.38, 1562.75, 4769, 1614, 4587.13, 1650.25, 4352, 1664, 2048, 1664, -192, 1664, -768, 1664, -768, 1024, -256, 1024)
 metadata/_edit_lock_ = true
