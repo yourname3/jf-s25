@@ -5348,7 +5348,7 @@ rest = Transform2D(1, 0, 0, 1, 0, 0)
 [node name="IK_frontleg_front" type="Bone2D" parent="pony/root/ik_front_root"]
 position = Vector2(229, -116)
 rotation = 0.568486
-scale = Vector2(0.999843, 0.999843)
+scale = Vector2(0.999842, 0.999842)
 rest = Transform2D(1, 0, 0, 1, 235, -121)
 auto_calculate_length_and_angle = false
 length = 42.745

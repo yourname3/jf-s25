@@ -269,7 +269,7 @@ position = Vector2(2230, 611)
 max_contacts_reported = 8
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
-zoom = Vector2(0.315, 0.315)
+zoom = Vector2(0.404, 0.404)
 
 [node name="SS2D_Shape" type="Node2D" parent="."]
 texture_repeat = 2
