@@ -59,6 +59,36 @@ func spawn_clone() -> void:
 	clone.mode = MODE_PLAYBACK
 	recording = []
 	add_sibling(clone)
+	
+func _do_move_and_slide_override(delta: float, override: Vector2) -> void:
+	var prev_velocity := velocity
+	velocity = override
+	_do_move_and_slide(delta)
+	velocity = prev_velocity
+
+func _do_move_and_slide(delta: float) -> void:
+	var prev_position := position
+	var prev_velocity := velocity
+	var retries = 4
+	while retries > 0:
+		move_and_slide()
+		var do_retry := false
+		for i in range(0, get_slide_collision_count()):
+			var col := get_slide_collision(i)
+			var collider := col.get_collider()
+			if collider is Player:
+				if prev_velocity.y < 0:
+					print("retry: ", prev_velocity)
+					collider._do_move_and_slide_override(delta, prev_velocity)
+					#collider.move_and_collide(prev_velocity * delta)
+					do_retry = true
+		if not do_retry:
+			break
+		# Reset position velocity
+		position = prev_position
+		velocity = prev_velocity
+		retries -= 1
+		
 
 func _physics_process(delta: float) -> void:
 	var encoded_inputs := get_inputs()
@@ -110,7 +140,8 @@ func _physics_process(delta: float) -> void:
 		velocity.y = -JUMP_SPEED
 	
 	# floor_max_angle = deg_to_rad(15)
-	move_and_slide()
+	# move_and_slide()
+	_do_move_and_slide(delta)
 	
 	if velocity.y > 0:
 		# Disable jumps if we ever lose our Y velocity.
