@@ -59,6 +59,7 @@ clone={
 
 2d_physics/layer_1="PlayerWorld"
 2d_physics/layer_2="PlayerFeet"
+2d_physics/layer_3="OnlyPlayer"
 
 [physics]
 

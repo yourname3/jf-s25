@@ -21,6 +21,8 @@ const MODE_PLAYBACK = 1
 
 var original_position: Vector2
 
+@onready var player_jump_detector = $PlayerJumpDetector
+
 func _ready() -> void:
 	original_position = global_position
 
@@ -81,6 +83,10 @@ func _integrate_forces(state: PhysicsDirectBodyState2D) -> void:
 	var probe2 := test_move(transform, Vector2(0, -8))
 	if probe != null and probe.get_normal().dot(Vector2.UP) > 0.9:
 		_is_on_floor = 3.0 / 60.0
+	
+	if player_jump_detector.has_overlapping_bodies():
+		_is_on_floor = 3.0 / 60.0
+	
 
 func _physics_process(delta: float) -> void:
 	var encoded_inputs := get_inputs()
