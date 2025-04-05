@@ -65,8 +65,20 @@ func _do_move_and_slide_override(delta: float, override: Vector2) -> void:
 	velocity = override
 	_do_move_and_slide(delta)
 	velocity = prev_velocity
+	
+func _draw() -> void:
+	draw_line(Vector2.ZERO, velocity, Color.BLACK, 8)
+func _process(delta: float) -> void:
+	queue_redraw()
 
 func _do_move_and_slide(delta: float) -> void:
+	
+	if mode == MODE_PLAYER:
+		move_and_slide() # TODO
+		return
+	
+	if mode == MODE_PLAYBACK:
+		print("_do_move_and_slide: velocity = ", velocity)
 	var prev_position := position
 	var prev_velocity := velocity
 	#var retries = 4
@@ -74,12 +86,16 @@ func _do_move_and_slide(delta: float) -> void:
 	move_and_slide()
 	var do_retry := false
 	for i in range(0, get_slide_collision_count()):
+		if mode == MODE_PLAYBACK:
+			print("got col ", i, " ", get_slide_collision(i).get_collider())
 		var col := get_slide_collision(i)
 		var collider := col.get_collider()
 		if collider is Player:
 			if prev_velocity.y < 0:
 				print("retry: ", prev_velocity)
-				collider._do_move_and_slide_override(delta, prev_velocity)
+				if collider.velocity.y > 0:
+					collider.velocity.y = 0
+				collider._do_move_and_slide_override(delta, col.get_remainder())
 				#collider.move_and_collide(prev_velocity * delta)
 				do_retry = true
 	
