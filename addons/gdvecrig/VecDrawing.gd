@@ -574,7 +574,7 @@ func _ready():
 	collect_children()
 	pass # Replace with function body.
 
-var timer_20fps := 0
+var timer_20fps := 0.0
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
@@ -587,11 +587,12 @@ func _process(delta):
 	# the game absurdly.
 	# Apparently I was mistaken. We do still need to convert everything to
 	# resources...?
+	# HAHA JK THE CODE WAS BROKESN
 	timer_20fps -= delta
 	if timer_20fps > 0:
 		return
 	else:
-		timer_20fps = 1.0 / 20.0
+		timer_20fps += 1.0 / 20.0
 		
 	queue_redraw()
 	
