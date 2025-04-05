@@ -8,7 +8,7 @@
    version="1.1"
    id="svg1"
    inkscape:version="1.4 (86a8ad7, 2024-10-11)"
-   sodipodi:docname="tile_basic.svg"
+   sodipodi:docname="tile_basic_tl.svg"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
@@ -23,9 +23,9 @@
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#505050"
      inkscape:document-units="px"
-     inkscape:zoom="34.579349"
-     inkscape:cx="127.34479"
-     inkscape:cy="3.8606858"
+     inkscape:zoom="8.6448372"
+     inkscape:cx="87.855906"
+     inkscape:cy="9.4275922"
      inkscape:window-width="2560"
      inkscape:window-height="1494"
      inkscape:window-x="-11"
@@ -38,25 +38,21 @@
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1">
-    <rect
-       style="fill:#338f38;fill-opacity:1;stroke:none;stroke-width:0.501815"
+    <path
        id="rect1"
-       width="34.382683"
-       height="24.571833"
-       x="-0.12984999"
-       y="1.8178998" />
+       style="fill:#338f38;stroke-width:0.501815"
+       d="M -0.12984999,1.8178998 H 34.252833 L 33.854956,26.389732 -0.12984999,1.9346512 Z"
+       sodipodi:nodetypes="ccccc" />
     <path
        style="fill:#338f38;fill-opacity:1;stroke-width:2.24072"
-       d="m 0,26.35083 c 3.733924,0.03017 7.4984543,7.195912 14.507214,7.165748 7.008758,-0.03017 9.120568,-7.195914 19.18992,-7.226079"
+       d="M 0.15149166,2.0580617 C 1.8294575,4.2848606 7.2100044,19.291706 13.641547,16.50623 c 6.965475,-3.01672 10.051797,7.953251 20.121149,9.697702"
        id="path1"
        sodipodi:nodetypes="csc" />
-    <rect
-       style="fill:#3ca942;fill-opacity:1;stroke-width:2.6292"
+    <path
        id="rect2"
-       width="39.123779"
-       height="9.0043612"
-       x="-2.246383"
-       y="1.8164713" />
+       style="fill:#3ca942;stroke-width:2.6292"
+       d="M -0.16878321,1.903038 36.877396,1.773188 33.878014,10.820833 19.871398,8.4402499 Z"
+       sodipodi:nodetypes="ccccc" />
     <path
        style="fill:#3ca942;fill-opacity:1;stroke-width:2.257"
        d="M -0.08416633,1.8440076 8.1805493,0.47611662 c 0,0 9.7387487,1.42834988 9.9551657,1.42834988 0.216417,0 7.228316,-1.25521655 7.228316,-1.25521655 l 8.580602,1.17367585"
