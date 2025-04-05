@@ -12,6 +12,8 @@ var jump_timer: float = 0.0
 var recording: Array[Vector2] = []
 var mode: int = 0
 
+var is_recording: bool = false
+
 var playback_frame: int = 0
 
 const MODE_PLAYER = 0
@@ -56,7 +58,14 @@ func spawn_clone() -> void:
 func _physics_process(delta: float) -> void:
 	var encoded_inputs := get_inputs()
 	if mode == MODE_PLAYER:
-		recording.push_back(encoded_inputs)
+		if Input.is_action_just_pressed("clone"):
+			original_position = global_position
+			recording.clear()
+			is_recording = true
+		elif Input.is_action_just_released("clone"):
+			spawn_clone()
+		if is_recording:
+			recording.push_back(encoded_inputs)
 	
 	var h_input := encoded_inputs.x
 	var jump_pressed := false
@@ -99,6 +108,3 @@ func _physics_process(delta: float) -> void:
 	if velocity.y > 0:
 		# Disable jumps if we ever lose our Y velocity.
 		jump_timer = 0
-		
-	if Input.is_action_just_pressed("clone"):
-		spawn_clone()
