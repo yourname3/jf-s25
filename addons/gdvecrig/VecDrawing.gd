@@ -11,8 +11,12 @@ class_name VecDrawing
 @export var show_rest: bool = true
 @export var always_show_points: bool = false
 
-var waypoints = [VecWaypoint]
-var strokes = [VecStroke]
+@export var waypoints: Array[VecWaypoint]
+var strokes: Array[VecStroke]
+
+@export var weights: Array[Dictionary]
+
+@export var waypoints_new: Array[VecWaypoint2]
 
 @export_node_path("Skeleton2D") var skeleton
 @onready var skeleton_node = get_skeleton_from_tree()
