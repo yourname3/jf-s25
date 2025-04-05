@@ -125,6 +125,8 @@ func _physics_process(delta: float) -> void:
 		# NOTE: Getting rid of the if fixes our jumping problem, but it makes
 		# us get pushed in to the ground which is probably worse.
 		linear_velocity += get_gravity() * delta
+	#else:
+		#linear_velocity += get_gravity() * delta * 0.2
 	
 	var target_x_vel := h_input * H_VEL
 	var x_accel: float = sign(target_x_vel - linear_velocity.x) * H_ACCEL
