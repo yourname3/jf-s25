@@ -119,7 +119,7 @@ constraints = [1, 1, 1, 1, 1, 1, 1]
 metadata/_custom_type_script = "uid://bodn4jw8tyemx"
 
 [node name="VecStroke" type="Line2D" parent="frontleg_back"]
-points = PackedVector2Array(409.158, -268.014, 406.302, -259.539, 403.488, -249.172, 400.762, -237.338, 398.172, -224.465, 395.767, -210.978, 393.594, -197.304, 391.7, -183.87, 390.134, -171.102, 388.942, -159.425, 388.173, -149.268, 387.619, -137.285, 387.332, -124.855, 387.326, -112.213, 387.614, -99.5957, 388.209, -87.238, 389.126, -75.376, 390.377, -64.2454, 391.976, -54.0821, 393.936, -45.1217, 396.27, -37.6, 397.307, -35.993, 399.183, -34.4157, 401.868, -32.8992, 405.326, -31.4747, 409.526, -30.1734, 414.435, -29.0263, 420.019, -28.0647, 426.246, -27.3195, 433.082, -26.8221, 440.495, -26.6035, 449.488, -26.6982, 457.85, -27.1183, 465.482, -27.8182, 472.29, -28.7527, 478.176, -29.8764, 483.044, -31.144, 486.798, -32.51, 489.341, -33.9292, 490.577, -35.3562, 490.409, -36.7456, 487.121, -42.4422, 483.467, -50.0886, 479.575, -59.3361, 475.574, -69.8364, 471.59, -81.2408, 467.754, -93.2007, 464.191, -105.368, 461.031, -117.393, 458.4, -128.929, 456.428, -139.626, 455.022, -150.292, 453.881, -162.572, 453.018, -176.121, 452.448, -190.59, 452.182, -205.633, 452.235, -220.902, 452.62, -236.049, 453.35, -250.728, 454.438, -264.591, 455.897, -277.291)
+points = PackedVector2Array(409.158, -268.014, 406.302, -259.539, 403.488, -249.172, 400.762, -237.338, 398.172, -224.465, 395.767, -210.978, 393.594, -197.304, 391.7, -183.87, 390.134, -171.102, 388.942, -159.425, 388.173, -149.268, 387.619, -137.285, 387.332, -124.855, 387.326, -112.213, 387.614, -99.5957, 388.209, -87.238, 389.126, -75.376, 390.377, -64.2454, 391.976, -54.0821, 393.936, -45.1217, 396.27, -37.6, 397.307, -35.993, 399.183, -34.4157, 401.868, -32.8992, 405.326, -31.4747, 409.526, -30.1734, 414.435, -29.0263, 420.019, -28.0647, 426.246, -27.3195, 433.082, -26.8221, 440.495, -26.6035, 449.488, -26.6982, 457.85, -27.1183, 465.482, -27.8182, 472.29, -28.7527, 478.176, -29.8764, 483.044, -31.144, 486.798, -32.51, 489.341, -33.9292, 490.577, -35.3562, 490.409, -36.7456, 487.121, -42.4422, 483.467, -50.0886, 479.575, -59.3361, 475.573, -69.8364, 471.59, -81.2408, 467.754, -93.2007, 464.191, -105.368, 461.031, -117.393, 458.4, -128.929, 456.428, -139.626, 455.022, -150.292, 453.881, -162.572, 453.018, -176.121, 452.448, -190.59, 452.182, -205.633, 452.235, -220.902, 452.62, -236.049, 453.35, -250.728, 454.438, -264.591, 455.897, -277.291)
 width = 4.3
 width_curve = SubResource("Curve_cystm")
 default_color = Color(0.67451, 0.490196, 0.788235, 1)
@@ -131,7 +131,8 @@ metadata/_edit_lock_ = true
 script = ExtResource("3_3ekgy")
 value = Vector2(418.369, -291.8)
 weights = {
-NodePath("../../Skeleton2D/root/body_root/body/body2/shoulder_front"): 0.0
+NodePath("../../Skeleton2D/root/body_root/body/body2/shoulder_front"): 0.0,
+NodePath("../../Skeleton2D/root/body_root/body/body2/shoulder_back"): 1.0
 }
 
 [node name="_Node_43390" type="Node" parent="frontleg_back" node_paths=PackedStringArray("weights")]
@@ -139,6 +140,7 @@ script = ExtResource("3_3ekgy")
 value = Vector2(409.158, -268.014)
 weights = {
 NodePath("../../Skeleton2D/root/body_root/body/body2/shoulder_front"): 0.0,
+NodePath("../../Skeleton2D/root/body_root/body/body2/shoulder_back"): 1.0,
 null: 1.0
 }
 
@@ -148,6 +150,8 @@ value = Vector2(399.623, -243.393)
 weights = {
 NodePath("../../Skeleton2D/root/body_root/body/body2/shoulder_front"): 0.0,
 NodePath("../../Skeleton2D/root/body_root/body/body2/shoulder_front/arm_front"): 0.0,
+NodePath("../../Skeleton2D/root/body_root/body/body2/shoulder_back"): 1.0,
+NodePath("../../Skeleton2D/root/body_root/body/body2/shoulder_back/arm_back"): 0.5,
 null: 1.0
 }
 
@@ -159,6 +163,7 @@ NodePath("../../Skeleton2D/root/body_root/body/body2/shoulder_front/arm_front"):
 NodePath("../../Skeleton2D/root/body_root/body/body2/shoulder_front"): 0.0,
 NodePath("../../Skeleton2D/root/body_root/body/body2/shoulder_front/arm_front/forearm_front"): 0.0,
 NodePath("../../Skeleton2D/root/IK_frontleg_front"): 0.0,
+NodePath("../../Skeleton2D/root/body_root/body/body2/shoulder_back/arm_back"): 1.0,
 null: 1.0
 }
 
@@ -170,6 +175,7 @@ NodePath("../../Skeleton2D/root/body_root/body/body2/shoulder_front/arm_front"):
 NodePath("../../Skeleton2D/root/body_root/body/body2/shoulder_front/arm_front/forearm_front"): 0.0,
 NodePath("../../Skeleton2D/root/body_root/body/body2/shoulder_front"): 0.0,
 NodePath("../../Skeleton2D/root/IK_frontleg_front"): 0.0,
+NodePath("../../Skeleton2D/root/body_root/body/body2/shoulder_back/arm_back"): 1.0,
 null: 1.0
 }
 
@@ -180,6 +186,8 @@ weights = {
 NodePath("../../Skeleton2D/root/body_root/body/body2/shoulder_front/arm_front"): 0.0,
 NodePath("../../Skeleton2D/root/body_root/body/body2/shoulder_front/arm_front/forearm_front"): 0.0,
 NodePath("../../Skeleton2D/root/body_root/body/body2/shoulder_front"): 0.0,
+NodePath("../../Skeleton2D/root/body_root/body/body2/shoulder_back/arm_back"): 1.0,
+NodePath("../../Skeleton2D/root/body_root/body/body2/shoulder_back/arm_back/forearm_back"): 0.5,
 null: 1.0
 }
 
@@ -190,6 +198,7 @@ weights = {
 NodePath("../../Skeleton2D/root/body_root/body/body2/shoulder_front/arm_front/forearm_front"): 0.0,
 NodePath("../../Skeleton2D/root/IK_frontleg_front"): 0.0,
 NodePath("../../Skeleton2D/root/body_root/body/hip_front"): 0.0,
+NodePath("../../Skeleton2D/root/body_root/body/body2/shoulder_back/arm_back/forearm_back"): 1.0,
 null: 1.0
 }
 
@@ -200,6 +209,7 @@ weights = {
 NodePath("../../Skeleton2D/root/body_root/body/body2/shoulder_front/arm_front/forearm_front"): 0.0,
 NodePath("../../Skeleton2D/root/body_root/body/body2/shoulder_front/arm_front"): 0.0,
 NodePath("../../Skeleton2D/root/body_root/body/hip_front"): 0.0,
+NodePath("../../Skeleton2D/root/body_root/body/body2/shoulder_back/arm_back/forearm_back"): 1.0,
 null: 1.0
 }
 
@@ -210,6 +220,7 @@ weights = {
 NodePath("../../Skeleton2D/root/body_root/body/body2/shoulder_front/arm_front/forearm_front"): 0.0,
 NodePath("../../Skeleton2D/root/body_root/body/body2/shoulder_front/arm_front"): 0.0,
 NodePath("../../Skeleton2D/root/body_root/body/hip_front"): 0.0,
+NodePath("../../Skeleton2D/root/body_root/body/body2/shoulder_back/arm_back/forearm_back"): 1.0,
 null: 1.0
 }
 
@@ -219,6 +230,7 @@ value = Vector2(414.861, -26.8329)
 weights = {
 NodePath("../../Skeleton2D/root/body_root/body/body2/shoulder_front/arm_front/forearm_front"): 0.0,
 NodePath("../../Skeleton2D/root/body_root/body/hip_front"): 0.0,
+NodePath("../../Skeleton2D/root/body_root/body/body2/shoulder_back/arm_back/forearm_back"): 1.0,
 null: 1.0
 }
 
@@ -229,6 +241,7 @@ weights = {
 NodePath("../../Skeleton2D/root/body_root/body/body2/shoulder_front/arm_front/forearm_front"): 0.0,
 NodePath("../../Skeleton2D/root/body_root/body/hip_front"): 0.0,
 NodePath("../../Skeleton2D/root/IK_frontleg_front"): 0.0,
+NodePath("../../Skeleton2D/root/body_root/body/body2/shoulder_back/arm_back/forearm_back"): 1.0,
 null: 1.0
 }
 
@@ -238,6 +251,7 @@ value = Vector2(471.42, -26.3268)
 weights = {
 NodePath("../../Skeleton2D/root/body_root/body/body2/shoulder_front/arm_front/forearm_front"): 0.0,
 NodePath("../../Skeleton2D/root/body_root/body/body2/shoulder_front/arm_front"): 0.0,
+NodePath("../../Skeleton2D/root/body_root/body/body2/shoulder_back/arm_back/forearm_back"): 1.0,
 null: 1.0
 }
 
@@ -248,6 +262,7 @@ weights = {
 NodePath("../../Skeleton2D/root/body_root/body/body2/shoulder_front/arm_front/forearm_front"): 0.0,
 NodePath("../../Skeleton2D/root/body_root/body/hip_front"): 0.0,
 NodePath("../../Skeleton2D/root/body_root/body/body2/shoulder_front/arm_front"): 0.0,
+NodePath("../../Skeleton2D/root/body_root/body/body2/shoulder_back/arm_back/forearm_back"): 1.0,
 null: 1.0
 }
 
@@ -257,6 +272,7 @@ value = Vector2(490.409, -36.7456)
 weights = {
 NodePath("../../Skeleton2D/root/body_root/body/body2/shoulder_front/arm_front/forearm_front"): 0.0,
 NodePath("../../Skeleton2D/root/body_root/body/hip_front"): 0.0,
+NodePath("../../Skeleton2D/root/body_root/body/body2/shoulder_back/arm_back/forearm_back"): 1.0,
 null: 1.0
 }
 
@@ -267,6 +283,7 @@ weights = {
 NodePath("../../Skeleton2D/root/body_root/body/body2/shoulder_front/arm_front/forearm_front"): 0.0,
 NodePath("../../Skeleton2D/root/body_root/body/body2/shoulder_front"): 0.0,
 NodePath("../../Skeleton2D/root/body_root/body/hip_front"): 0.0,
+NodePath("../../Skeleton2D/root/body_root/body/body2/shoulder_back/arm_back/forearm_back"): 1.0,
 null: 1.0
 }
 
@@ -277,6 +294,8 @@ weights = {
 NodePath("../../Skeleton2D/root/body_root/body/body2/shoulder_front/arm_front"): 0.0,
 NodePath("../../Skeleton2D/root/body_root/body/body2/shoulder_front/arm_front/forearm_front"): 0.0,
 NodePath("../../Skeleton2D/root/body_root/body/body2/shoulder_front"): 0.0,
+NodePath("../../Skeleton2D/root/body_root/body/body2/shoulder_back/arm_back"): 1.0,
+NodePath("../../Skeleton2D/root/body_root/body/body2/shoulder_back/arm_back/forearm_back"): 0.5,
 null: 1.0
 }
 
@@ -287,6 +306,7 @@ weights = {
 NodePath("../../Skeleton2D/root/body_root/body/body2/shoulder_front/arm_front"): 0.0,
 NodePath("../../Skeleton2D/root/body_root/body/body2/shoulder_front/arm_front/forearm_front"): 0.0,
 NodePath("../../Skeleton2D/root/body_root/body/body2/shoulder_front"): 0.0,
+NodePath("../../Skeleton2D/root/body_root/body/body2/shoulder_back/arm_back"): 1.0,
 null: 1.0
 }
 
@@ -298,6 +318,7 @@ NodePath("../../Skeleton2D/root/body_root/body/body2/shoulder_front/arm_front"):
 NodePath("../../Skeleton2D/root/body_root/body/body2/shoulder_front"): 0.0,
 NodePath("../../Skeleton2D/root/body_root/body/hip_front"): 0.0,
 NodePath("../../Skeleton2D/root/body_root/body/body2/shoulder_front/arm_front/forearm_front"): 0.0,
+NodePath("../../Skeleton2D/root/body_root/body/body2/shoulder_back/arm_back"): 1.0,
 null: 1.0
 }
 
@@ -307,6 +328,8 @@ value = Vector2(450.398, -237.282)
 weights = {
 NodePath("../../Skeleton2D/root/body_root/body/body2/shoulder_front"): 0.0,
 NodePath("../../Skeleton2D/root/body_root/body/body2/shoulder_front/arm_front"): 0.0,
+NodePath("../../Skeleton2D/root/body_root/body/body2/shoulder_back"): 1.0,
+NodePath("../../Skeleton2D/root/body_root/body/body2/shoulder_back/arm_back"): 0.5,
 null: 1.0
 }
 
@@ -315,6 +338,7 @@ script = ExtResource("3_3ekgy")
 value = Vector2(455.897, -277.291)
 weights = {
 NodePath("../../Skeleton2D/root/body_root/body/body2/shoulder_front"): 0.0,
+NodePath("../../Skeleton2D/root/body_root/body/body2/shoulder_back"): 1.0,
 null: 1.0
 }
 
@@ -322,7 +346,8 @@ null: 1.0
 script = ExtResource("3_3ekgy")
 value = Vector2(461.359, -317.032)
 weights = {
-NodePath("../../Skeleton2D/root/body_root/body/body2/shoulder_front"): 0.0
+NodePath("../../Skeleton2D/root/body_root/body/body2/shoulder_front"): 0.0,
+NodePath("../../Skeleton2D/root/body_root/body/body2/shoulder_back"): 1.0
 }
 
 [node name="backleg_back_whole" type="Node2D" parent="."]
@@ -4191,7 +4216,7 @@ target = NodePath("../../../../../../IK_frontleg_front")
 
 [node name="shoulder_back" type="Bone2D" parent="Skeleton2D/root/body_root/body/body2"]
 position = Vector2(87, 27)
-rest = Transform2D(1, -8.34465e-07, 8.34465e-07, 1, 69, 50)
+rest = Transform2D(1, -8.34465e-07, 8.34465e-07, 1, 87, 27)
 
 [node name="arm_back" type="Bone2D" parent="Skeleton2D/root/body_root/body/body2/shoulder_back"]
 position = Vector2(-4, 39)
@@ -4243,19 +4268,19 @@ rest = Transform2D(1, 0, 0, 1, 0, 0)
 position = Vector2(-20, 28)
 rotation = -0.661979
 scale = Vector2(1, 1)
-rest = Transform2D(0.817657, -0.575706, 0.575706, 0.817657, -40, 52)
+rest = Transform2D(0.788777, -0.614679, 0.614679, 0.788777, -20, 28)
 
 [node name="lowerleg_back" type="Bone2D" parent="Skeleton2D/root/body_root/body/hip_back/thigh_back"]
 position = Vector2(-19.2008, 86.46)
 rotation = 0.0713909
 scale = Vector2(1, 1)
-rest = Transform2D(0.997453, 0.0713303, -0.0713303, 0.997453, -22.3444, 82.108)
+rest = Transform2D(0.997453, 0.0713303, -0.0713303, 0.997453, -19.2008, 86.46)
 
 [node name="toe_back" type="Bone2D" parent="Skeleton2D/root/body_root/body/hip_back/thigh_back/lowerleg_back"]
 position = Vector2(-57.9717, 2.06892)
 rotation = 0.197934
 scale = Vector2(0.999995, 0.999995)
-rest = Transform2D(0.98047, 0.196643, -0.196643, 0.98047, -57.2776, -1.80989)
+rest = Transform2D(0.98047, 0.196643, -0.196643, 0.98047, -57.9717, 2.06892)
 auto_calculate_length_and_angle = false
 length = 158.222
 bone_angle = 114.409
