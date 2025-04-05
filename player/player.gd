@@ -69,25 +69,26 @@ func _do_move_and_slide_override(delta: float, override: Vector2) -> void:
 func _do_move_and_slide(delta: float) -> void:
 	var prev_position := position
 	var prev_velocity := velocity
-	var retries = 4
-	while retries > 0:
-		move_and_slide()
-		var do_retry := false
-		for i in range(0, get_slide_collision_count()):
-			var col := get_slide_collision(i)
-			var collider := col.get_collider()
-			if collider is Player:
-				if prev_velocity.y < 0:
-					print("retry: ", prev_velocity)
-					collider._do_move_and_slide_override(delta, prev_velocity)
-					#collider.move_and_collide(prev_velocity * delta)
-					do_retry = true
-		if not do_retry:
-			break
+	#var retries = 4
+	#while retries > 0:
+	move_and_slide()
+	var do_retry := false
+	for i in range(0, get_slide_collision_count()):
+		var col := get_slide_collision(i)
+		var collider := col.get_collider()
+		if collider is Player:
+			if prev_velocity.y < 0:
+				print("retry: ", prev_velocity)
+				collider._do_move_and_slide_override(delta, prev_velocity)
+				#collider.move_and_collide(prev_velocity * delta)
+				do_retry = true
+	
+	if do_retry:
 		# Reset position velocity
 		position = prev_position
 		velocity = prev_velocity
-		retries -= 1
+		move_and_slide()
+		#retries -= 1
 		
 
 func _physics_process(delta: float) -> void:

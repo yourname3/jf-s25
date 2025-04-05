@@ -4,12 +4,14 @@
 [ext_resource type="Texture2D" uid="uid://dxyu74jyy6a5l" path="res://whitebox/whitebox_round.png" id="2_rkbax"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rkbax"]
-size = Vector2(256, 356)
+size = Vector2(257, 355)
 
 [node name="Player" type="CharacterBody2D"]
+floor_snap_length = 32.0
 script = ExtResource("1_g1dw6")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.5, -0.5)
 shape = SubResource("RectangleShape2D_rkbax")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
