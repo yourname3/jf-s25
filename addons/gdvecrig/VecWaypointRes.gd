@@ -1,8 +1,9 @@
+@tool
 extends Resource
 class_name VecWaypoint
 
 @export var value: Vector2
-var computed_value: Vector2 = Vector2.ZERO
+@export var computed_value: Vector2 = Vector2.ZERO
 
 func get_weight(bone: Bone2D, weights: Dictionary[Bone2D, float]):
 	if bone == null:

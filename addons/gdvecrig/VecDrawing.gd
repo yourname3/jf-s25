@@ -259,7 +259,7 @@ func get_skeleton_from_tree() -> Skeleton2D:
 	return null if skeleton == null else get_node_or_null(skeleton)
 
 func collect_children():
-	waypoints.clear()
+	#waypoints.clear()
 	strokes.clear()
 	for child in get_children(true):
 		#if child is VecWaypoint:
@@ -449,6 +449,9 @@ func handle_editing_mouse_motion(plugin: GDVecRig, event: InputEventMouseMotion)
 	return false
 	
 func delete_entire_points(group_idx: int, plugin: GDVecRig) -> void:
+	print("TODO: FIX THIS FOR WEIGHTS")
+	return
+	
 	# We don't want to mess up the selection.
 	plugin.point_selection.clear()
 	
@@ -487,7 +490,7 @@ func handle_editing_mouse_button(plugin: GDVecRig, event: InputEventMouseButton)
 				var index = find_point_index_at_target(10, plugin, get_local_mouse_position())
 				if index >= 0 and index % 3 == 1:
 					var c: ConstraintType = constraints[index / 3]
-					c = (c + 1) % 3
+					c = (c - 1) % 3
 					constraints[index / 3] = c
 				return true
 			
@@ -575,7 +578,10 @@ func _ready():
 	#for child in ordered:
 		#add_child(child, false, CURRENT_INTERNAL_MODE)
 		#child.owner = owner
-	
+	waypoints = []
+	for wp in waypoints_new:
+		print("append a waypoint: ", wp)
+		waypoints.append(wp)
 	#collect_children()
 	#
 	#weights = []
