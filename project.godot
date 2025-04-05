@@ -51,6 +51,11 @@ clone={
 ]
 }
 
+[layer_names]
+
+2d_physics/layer_1="PlayerWorld"
+2d_physics/layer_2="PlayerFeet"
+
 [physics]
 
 2d/default_gravity=4096.0

@@ -1,0 +1,34 @@
+[gd_scene load_steps=6 format=3 uid="uid://d0u0o1s2jxhbj"]
+
+[ext_resource type="Script" uid="uid://b14jeh0pd1aal" path="res://player/player.gd" id="1_g1dw6"]
+[ext_resource type="Texture2D" uid="uid://dxyu74jyy6a5l" path="res://whitebox/whitebox_round.png" id="2_rkbax"]
+[ext_resource type="PackedScene" uid="uid://b2cjwbuhd8mm3" path="res://player/starlight_glimmer.tscn" id="3_g1dw6"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_g1dw6"]
+friction = 0.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rkbax"]
+size = Vector2(257, 355)
+
+[node name="Player" type="RigidBody2D"]
+physics_material_override = SubResource("PhysicsMaterial_g1dw6")
+can_sleep = false
+lock_rotation = true
+freeze_mode = 1
+custom_integrator = true
+contact_monitor = true
+max_contacts_reported = 4
+script = ExtResource("1_g1dw6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.5, -0.5)
+shape = SubResource("RectangleShape2D_rkbax")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+visible = false
+scale = Vector2(2, 2.76563)
+texture = ExtResource("2_rkbax")
+
+[node name="Node2D" parent="." instance=ExtResource("3_g1dw6")]
+position = Vector2(-227, 186)
+scale = Vector2(0.567864, 0.567864)
