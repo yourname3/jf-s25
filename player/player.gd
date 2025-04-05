@@ -91,6 +91,7 @@ func _integrate_forces(state: PhysicsDirectBodyState2D) -> void:
 # Hystersis for the walking animation. Increase this when we're definitely walking,
 # decrease it when we're definitely not.
 var walking_accumulator: float = 0.0
+var air_accumulator: float = 0.0
 
 # In pixels/second
 const WALK_BASE_SPEED = (101 - 29)
@@ -164,22 +165,33 @@ func _physics_process(delta: float) -> void:
 	# Choose animation.
 	#var anim = "idle"
 	#if is_on_floor():
-		#if linear_velocity.length() > 32:
-			#walking_accumulator += delta
-		#else:
-			#walking_accumulator -= delta
+	if abs(linear_velocity.x) > 32:
+		walking_accumulator += delta
+	else:
+		walking_accumulator -= delta * 3.0
+		
+	if not is_on_floor():
+		if linear_velocity.y < -32:
+			air_accumulator += delta * 8.0
+		air_accumulator += delta
+	else:
+		air_accumulator -= delta * 3.0
+	
+	air_accumulator = clamp(air_accumulator, -0.1, 0.1)
 			#
 		#if walking_accumulator > 0:
 			#anim = "walk"
-	#walking_accumulator = clamp(walking_accumulator, -0.1, 0.1)
+	walking_accumulator = clamp(walking_accumulator, -0.1, 0.1)
+	#print(walking_accumulator)
 	#animator.set_animation(anim)
 	# For no foot sliding, do this: But it is very slow and not compatible with
 	# fast movement speeds.
 	# If we can get a gallop animation, we can make it look better.
 	# For now, just do foot sliding.
 	# animator.set_walkvel(abs(linear_velocity.x) / WALK_BASE_SPEED)
-	animator.want_air = not is_on_floor()
-	animator.want_walk = (abs(linear_velocity.x) > 32)
+	animator.want_air = air_accumulator > 0
+	animator.want_walk = walking_accumulator > 0
+	#print(animator.want_walk)
 	animator.want_jump_down = linear_velocity.y > 0
 	animator.set_walkvel(abs(linear_velocity.x) / (WALK_BASE_SPEED * 6))
 			

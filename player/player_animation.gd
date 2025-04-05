@@ -64,6 +64,7 @@ func _physics_process(delta: float) -> void:
 	var front_y := 0.0
 	
 	var valid = true
+	valid = false
 	
 	var col: KinematicCollision2D = detect_ik_back.move_and_collide(Vector2(0, MAX), true)
 	if col != null:
