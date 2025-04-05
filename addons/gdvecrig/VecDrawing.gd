@@ -576,6 +576,18 @@ func _ready():
 		#child.owner = owner
 	
 	collect_children()
+	
+	weights = []
+	waypoints_new = []
+	
+	for waypoint in waypoints:
+		var dict: Dictionary[Bone2D, float] = {}
+		weights.push_back(dict)
+		var wp = VecWaypoint2.new()
+		wp.value = waypoint.value
+		wp.computed_value = waypoint.computed_value
+		waypoints_new.push_back(wp)
+	
 	pass # Replace with function body.
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
