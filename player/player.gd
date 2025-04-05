@@ -26,6 +26,11 @@ var original_position: Vector2
 
 func _ready() -> void:
 	original_position = global_position
+	
+	if mode == MODE_PLAYER:
+		Global.recorder_ui.current_player = self
+	else:
+		Global.recorder_ui.current_clone = self
 
 func h_input() -> float:
 	return Input.get_axis("left", "right")
@@ -51,10 +56,15 @@ func get_inputs() -> Vector2:
 			playback_frame = 1
 	return input
 	
+var current_clone: Player = null
+	
 func spawn_clone() -> void:
 	# SAFETY: Do not let clones clone.
 	if mode != MODE_PLAYER:
 		return
+	
+	if current_clone != null:	
+		current_clone.queue_free()
 	
 	var clone := preload("res://player/player.tscn").instantiate()
 	clone.global_position = original_position
@@ -62,6 +72,7 @@ func spawn_clone() -> void:
 	clone.mode = MODE_PLAYBACK
 	recording = []
 	add_sibling(clone)
+	current_clone = clone
 	
 func _draw() -> void:
 	draw_line(Vector2.ZERO, linear_velocity, Color.BLACK, 8)

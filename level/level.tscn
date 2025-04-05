@@ -1,4 +1,4 @@
-[gd_scene load_steps=41 format=3 uid="uid://bda6bue7aop33"]
+[gd_scene load_steps=44 format=3 uid="uid://bda6bue7aop33"]
 
 [ext_resource type="PackedScene" uid="uid://d0u0o1s2jxhbj" path="res://player/player.tscn" id="1_7lnir"]
 [ext_resource type="Script" uid="uid://clts7ttaac1qj" path="res://addons/rmsmartshape/shapes/shape.gd" id="2_0v1st"]
@@ -10,6 +10,17 @@
 [ext_resource type="Script" uid="uid://igcmftw7hkgq" path="res://addons/rmsmartshape/materials/shape_material.gd" id="7_l5lfc"]
 [ext_resource type="Texture2D" uid="uid://dxyu74jyy6a5l" path="res://whitebox/whitebox_round.png" id="8_xii2b"]
 [ext_resource type="Script" uid="uid://53mvvatpbra5" path="res://addons/rmsmartshape/normal_range.gd" id="9_rhqlf"]
+[ext_resource type="Script" uid="uid://c666aimbmpet3" path="res://level/recorder_ui.gd" id="11_xii2b"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cw150"]
+bg_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 100
+corner_radius_top_right = 100
+corner_radius_bottom_right = 100
+corner_radius_bottom_left = 100
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xii2b"]
+bg_color = Color(0.310522, 0.707209, 0, 1)
 
 [sub_resource type="Resource" id="Resource_s1aav"]
 script = ExtResource("3_6gtgk")
@@ -249,6 +260,56 @@ fill_mesh_offset = 0.0
 render_offset = 0.0
 
 [node name="Node2D" type="Node2D"]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Control" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("11_xii2b")
+
+[node name="bar1" type="Panel" parent="CanvasLayer/Control"]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 88.0
+offset_top = -94.0
+offset_right = -88.0
+offset_bottom = -26.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_cw150")
+
+[node name="bar2" type="Panel" parent="CanvasLayer/Control/bar1"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 28.0
+offset_top = 9.0
+offset_right = -27.0
+offset_bottom = -8.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_xii2b")
+
+[node name="playhead" type="ColorRect" parent="CanvasLayer/Control/bar1/bar2"]
+layout_mode = 1
+anchors_preset = -1
+anchor_bottom = 1.0
+offset_left = -3.5
+offset_top = -18.0
+offset_right = 3.5
+offset_bottom = 18.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
 
 [node name="Player" parent="." instance=ExtResource("1_7lnir")]
 position = Vector2(2230, 611)
