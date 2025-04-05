@@ -238,7 +238,6 @@ render_offset = 0.0
 
 [node name="Player" parent="." instance=ExtResource("1_7lnir")]
 position = Vector2(2230, 611)
-contact_monitor = true
 max_contacts_reported = 8
 
 [node name="Camera2D" type="Camera2D" parent="Player"]

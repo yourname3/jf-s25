@@ -269,16 +269,16 @@ func collect_children():
 		constraints.pop_back()
 	
 
-func get_waypoint(index):
+func get_waypoint(index: int) -> VecWaypoint:
 	return waypoints[index]
 	
-func get_waypoint_place(index):
+func get_waypoint_place(index: int) -> Vector2:
 	if show_rest:
 		return waypoints[index].value
 	else:
 		return waypoints[index].computed_value
 	
-func waypoint_count():
+func waypoint_count() -> int:
 	return waypoints.size()
 	
 func center_waypoint_count():
@@ -574,12 +574,25 @@ func _ready():
 	collect_children()
 	pass # Replace with function body.
 
+var timer_20fps := 0
+
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	if Engine.is_editor_hint():
 		# Always collect waypoints while being edited.
 		collect_children()
 		skeleton_node = get_skeleton_from_tree()
+		
+	# SO... I thought that this hack was sufficient to make the pony not lag
+	# the game absurdly.
+	# Apparently I was mistaken. We do still need to convert everything to
+	# resources...?
+	timer_20fps -= delta
+	if timer_20fps > 0:
+		return
+	else:
+		timer_20fps = 1.0 / 20.0
+		
 	queue_redraw()
 	
 	# First step: re-compute constraints. Maybe we should have a flag
@@ -677,13 +690,13 @@ func _draw():
 
 	var i = 1
 	while (i + 3) <= waypoint_count():
-		var p0 = get_waypoint_place(i)
-		var p1 = get_waypoint_place(i + 1)
-		var p2 = get_waypoint_place(i + 2)
-		var p3 = get_waypoint_place(i + 3)
+		var p0 := get_waypoint_place(i)
+		var p1 := get_waypoint_place(i + 1)
+		var p2 := get_waypoint_place(i + 2)
+		var p3 := get_waypoint_place(i + 3)
 		
-		for j in range(0, steps):
-			var t = j / float(steps)
+		for j: int in range(0, steps):
+			var t: float = j / float(steps)
 			# Don't subtract -- steps - 1 -- because then we end up with dupe
 			# points (as each range is [0.0, 1.0]).
 			# TODO: RIght now, we have no logic for getting one curve at the
@@ -698,13 +711,13 @@ func _draw():
 		
 	if cyclic:
 		if waypoint_count() >= 6:
-			var end = waypoint_count() - 2
-			var p0 = get_waypoint_place(end + 0)
-			var p1 = get_waypoint_place(end + 1)
-			var p2 = get_waypoint_place(0)
-			var p3 = get_waypoint_place(1)
-			for j in range(0, steps):
-				var t = j / float(steps)
+			var end := waypoint_count() - 2
+			var p0 := get_waypoint_place(end + 0)
+			var p1 := get_waypoint_place(end + 1)
+			var p2 := get_waypoint_place(0)
+			var p3 := get_waypoint_place(1)
+			for j: int in range(0, steps):
+				var t: float = j / float(steps)
 				computed_points.push_back(compute(p0, p1, p2, p3, t))
 		
 	if do_fill and computed_points.size() >= 3:	
