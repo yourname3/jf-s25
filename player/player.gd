@@ -65,17 +65,26 @@ func _draw() -> void:
 func _process(delta: float) -> void:
 	queue_redraw()
 		
-var _is_on_floor: bool = false
+var _is_on_floor: float = 0.0
 		
 func is_on_floor() -> bool:
-	return _is_on_floor
+	return _is_on_floor > 0
 	
 func _integrate_forces(state: PhysicsDirectBodyState2D) -> void:
-	_is_on_floor = false
+	#_is_on_floor = false
 	for i in range(0, state.get_contact_count()):
 		var normal := state.get_contact_local_normal(i)
+		#if mode == MODE_PLAYBACK:
+			#print(normal, " ", normal.dot(Vector2.UP), " ", cos(deg_to_rad(45)))
 		if normal.dot(Vector2.UP) > cos(deg_to_rad(45)):
-			_is_on_floor = true
+			_is_on_floor = 3.0 / 60.0
+		
+	var probe := move_and_collide(Vector2(0, -8), true)
+	var probe2 := test_move(transform, Vector2(0, -8))
+	if mode == MODE_PLAYBACK:
+		print(probe, " ", probe2)
+	if probe != null and probe.get_normal().dot(Vector2.UP) > 0.9:
+		_is_on_floor = 3.0 / 60.0
 
 func _physics_process(delta: float) -> void:
 	var encoded_inputs := get_inputs()
@@ -100,9 +109,15 @@ func _physics_process(delta: float) -> void:
 	elif encoded_inputs.y == 2:
 		jump_pressed = true
 
+	if mode == MODE_PLAYBACK:
+		if jump_just_pressed:
+			print("jump just pressed, ", is_on_floor())
+
 	# Hack for not sliding down ramps: don't add gravity when we're on floor
 	# and no inputs are pressed?
 	if not is_on_floor():
+		# NOTE: Getting rid of the if fixes our jumping problem, but it makes
+		# us get pushed in to the ground which is probably worse.
 		linear_velocity += get_gravity() * delta
 	
 	var target_x_vel := h_input * H_VEL
@@ -143,4 +158,8 @@ func _physics_process(delta: float) -> void:
 		var check := move_and_collide(Vector2(0, SNAP_AMOUNT), true)
 		if check != null:
 			move_and_collide(Vector2(0, SNAP_AMOUNT) - check.get_normal() * 8)
+			# _is_on_floor = true
+			
+	if _is_on_floor > 0:
+		_is_on_floor -= delta
 			
