@@ -2,41 +2,34 @@
 
 [ext_resource type="Texture2D" uid="uid://dio63mdcha2xf" path="res://button/button_base.svg" id="1_d301k"]
 [ext_resource type="Texture2D" uid="uid://7p3mru0ssigx" path="res://button/button_button.svg" id="1_h27qj"]
+[ext_resource type="Script" uid="uid://c1hnso5gjtwm5" path="res://button/button.gd" id="1_opf05"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_opf05"]
-size = Vector2(211.054, 37.7283)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_h27qj"]
-size = Vector2(253.113, 45.4749)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_38736"]
+size = Vector2(183.204, 20)
 
 [node name="Button" type="Node2D"]
+script = ExtResource("1_opf05")
 
-[node name="RigidBody2D" type="RigidBody2D" parent="."]
-collision_layer = 3
+[node name="button_body" type="AnimatableBody2D" parent="."]
 collision_mask = 0
-gravity_scale = 0.0
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D"]
-position = Vector2(0, -42.133)
-shape = SubResource("RectangleShape2D_opf05")
-
-[node name="ButtonBase2" type="Sprite2D" parent="RigidBody2D"]
-z_index = -8
-position = Vector2(-1, -40.0259)
+[node name="ButtonBase2" type="Sprite2D" parent="button_body"]
+z_index = 4
+position = Vector2(-1, 0)
 texture = ExtResource("1_h27qj")
 
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="button_body"]
+position = Vector2(0, 40.0259)
+polygon = PackedVector2Array(-96, -76.56, 96, -76.56, 96, -56.56, -96, -56.56)
+
 [node name="ButtonBase" type="Sprite2D" parent="."]
-z_index = -8
-position = Vector2(-1, -41.7046)
+z_index = 4
 texture = ExtResource("1_d301k")
 
-[node name="StaticBody2D" type="StaticBody2D" parent="."]
-collision_layer = 3
+[node name="detect_player" type="Area2D" parent="."]
+collision_layer = 4
+collision_mask = 4
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(0, -12.7374)
-shape = SubResource("RectangleShape2D_h27qj")
-
-[node name="DampedSpringJoint2D" type="DampedSpringJoint2D" parent="."]
-node_a = NodePath("../StaticBody2D")
-node_b = NodePath("../RigidBody2D")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="detect_player"]
+position = Vector2(0, -52)
+shape = SubResource("RectangleShape2D_38736")
