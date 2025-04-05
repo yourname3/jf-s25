@@ -100,7 +100,10 @@ func _physics_process(delta: float) -> void:
 	elif encoded_inputs.y == 2:
 		jump_pressed = true
 
-	linear_velocity += get_gravity() * delta
+	# Hack for not sliding down ramps: don't add gravity when we're on floor
+	# and no inputs are pressed?
+	if not is_on_floor():
+		linear_velocity += get_gravity() * delta
 	
 	var target_x_vel := h_input * H_VEL
 	var x_accel: float = sign(target_x_vel - linear_velocity.x) * H_ACCEL
@@ -133,3 +136,5 @@ func _physics_process(delta: float) -> void:
 	if linear_velocity.y > 0:
 		# Disable jumps if we ever lose our Y velocity.
 		jump_timer = 0
+		
+	#test_move()
