@@ -132,10 +132,10 @@ func _physics_process(delta: float) -> void:
 
 	# Hack for not sliding down ramps: don't add gravity when we're on floor
 	# and no inputs are pressed?
-	if not is_on_floor():
+	#if not is_on_floor():
 		# NOTE: Getting rid of the if fixes our jumping problem, but it makes
 		# us get pushed in to the ground which is probably worse.
-		linear_velocity += get_gravity() * delta
+	linear_velocity += get_gravity() * delta
 	#else:
 		#linear_velocity += get_gravity() * delta * 0.2
 	
