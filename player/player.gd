@@ -70,41 +70,62 @@ func _draw() -> void:
 	draw_line(Vector2.ZERO, velocity, Color.BLACK, 8)
 func _process(delta: float) -> void:
 	queue_redraw()
+	Engine.set_time_scale(0.5)
 
 func _do_move_and_slide(delta: float) -> void:
-	
-	if mode == MODE_PLAYER:
-		move_and_slide() # TODO
-		return
-	
 	if mode == MODE_PLAYBACK:
-		print("_do_move_and_slide: velocity = ", velocity)
-	var prev_position := position
-	var prev_velocity := velocity
-	#var retries = 4
-	#while retries > 0:
-	move_and_slide()
-	var do_retry := false
-	for i in range(0, get_slide_collision_count()):
-		if mode == MODE_PLAYBACK:
-			print("got col ", i, " ", get_slide_collision(i).get_collider())
-		var col := get_slide_collision(i)
-		var collider := col.get_collider()
-		if collider is Player:
-			if prev_velocity.y < 0:
-				print("retry: ", prev_velocity)
-				if collider.velocity.y > 0:
-					collider.velocity.y = 0
-				collider._do_move_and_slide_override(delta, col.get_remainder())
-				#collider.move_and_collide(prev_velocity * delta)
-				do_retry = true
+		print("want to move: ", velocity * delta)
 	
-	if do_retry:
-		# Reset position velocity
-		position = prev_position
-		velocity = prev_velocity
-		move_and_slide()
-		#retries -= 1
+	# First move carried objects.
+	if velocity.y < 0:
+		for object in $DetectOtherPlayers.get_overlapping_bodies():
+			if object == self:
+				continue
+			if object is Player:
+				var last_obj = object.position
+				#object.velocity.y = 0 #velocity.y
+				#object.move_and_collide(velocity * delta * 0.5)
+				#object._do_move_and_slide_override(delta, velocity)
+				object.move_and_collide(delta * velocity)
+				print("moved blocker: ", (object.position - last_obj), " attempted: ", velocity * delta)
+	
+	var last = position
+	move_and_slide()
+	if mode == MODE_PLAYBACK:
+		print("actually moved: ", (position - last))
+	
+	#if mode == MODE_PLAYER:
+		#move_and_slide() # TODO
+		#return
+	#
+	#if mode == MODE_PLAYBACK:
+		#print("_do_move_and_slide: velocity = ", velocity)
+	#var prev_position := position
+	#var prev_velocity := velocity
+	##var retries = 4
+	##while retries > 0:
+	#move_and_slide()
+	#var do_retry := false
+	#for i in range(0, get_slide_collision_count()):
+		#if mode == MODE_PLAYBACK:
+			#print("got col ", i, " ", get_slide_collision(i).get_collider())
+		#var col := get_slide_collision(i)
+		#var collider := col.get_collider()
+		#if collider is Player:
+			#if prev_velocity.y < 0:
+				#print("retry: ", prev_velocity)
+				#if collider.velocity.y > 0:
+					#collider.velocity.y = 0
+				#collider._do_move_and_slide_override(delta, col.get_remainder())
+				##collider.move_and_collide(prev_velocity * delta)
+				#do_retry = true
+	#
+	#if do_retry:
+		## Reset position velocity
+		#position = prev_position
+		#velocity = prev_velocity
+		#move_and_slide()
+		##retries -= 1
 		
 
 func _physics_process(delta: float) -> void:

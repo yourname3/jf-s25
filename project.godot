@@ -48,6 +48,7 @@ clone={
 
 [physics]
 
+common/physics_ticks_per_second=10
 2d/default_gravity=4096.0
 
 [rendering]
