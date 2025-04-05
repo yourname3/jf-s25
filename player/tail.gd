@@ -15,9 +15,9 @@ var _last_position = global_position
 var spring_x: Vector2 = Vector2.ZERO
 var spring_v: Vector2 = Vector2.ZERO
 
-const K = 800
+const K = 80
 const SEP = 0
-const B = 30
+const B = 16
 
 func spring_physics(delta: float, parent_x: Vector2) -> void:
 	var dir := spring_x - parent_x
@@ -29,6 +29,8 @@ func spring_physics(delta: float, parent_x: Vector2) -> void:
 		
 	spring_v += force * delta
 	spring_x += spring_v * delta
+	
+	spring_x = spring_x.limit_length(32)
 	# print(force)
 
 func _physics_process(delta: float) -> void:
@@ -39,11 +41,13 @@ func _physics_process(delta: float) -> void:
 		#current_offset += (p.current_offset - current_offset) * Global.get_lerp(0.3, delta)
 		position = original_position + current_offset
 	else:
-		current_offset = _last_position - global_position
+		var root = _last_position - global_position
+		spring_physics(delta, root)
+		#current_offset = 
 		#var noise_amount = clamp(current_offset.length() / 16.0, 0.0, 1.0)
 		#current_offset += current_offset.orthogonal() * noise_amount
 		#current_offset = current_offset.limit_length(16)
-		spring_x = current_offset
+		#spring_x = current_offset
 		#print(current_offset)
 		_last_position = global_position
 		

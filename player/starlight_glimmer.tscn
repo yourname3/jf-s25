@@ -5439,7 +5439,7 @@ metadata/_local_pose_override_enabled_ = true
 
 [node name="toe_back" type="Bone2D" parent="pony/root/body_root/body/hip_back/thigh_back/lowerleg_back" node_paths=PackedStringArray("target")]
 position = Vector2(-57.9717, 2.06892)
-rotation = 0.195326
+rotation = 0.195325
 scale = Vector2(0.999973, 0.999973)
 rest = Transform2D(0.980958, 0.19408, -0.19408, 0.980958, -57.9717, 2.06892)
 auto_calculate_length_and_angle = false
