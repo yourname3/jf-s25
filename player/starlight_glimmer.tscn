@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=3 uid="uid://b2cjwbuhd8mm3"]
+[gd_scene load_steps=40 format=3 uid="uid://b2cjwbuhd8mm3"]
 
 [ext_resource type="Script" uid="uid://bafpx8hxl2kgu" path="res://player/player_animation.gd" id="1_h4ksu"]
 [ext_resource type="Script" uid="uid://bodn4jw8tyemx" path="res://addons/gdvecrig/VecDrawing.gd" id="1_oyty2"]
@@ -267,6 +267,42 @@ tracks/12/keys = {
 "update": 0,
 "values": [-0.017567]
 }
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("pony/root/body_root/body/body2:position")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(46, 25)]
+}
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("pony/root/body_root/body/body2/neck1:rotation")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0164968]
+}
+tracks/15/type = "value"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("pony/root/body_root/body/body2/neck1/neck2:rotation")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.00994477]
+}
 
 [sub_resource type="Animation" id="Animation_h4ksu"]
 resource_name = "walk"
@@ -430,13 +466,398 @@ tracks/12/keys = {
 "values": [-0.017567, 0.0302037, -0.017567, 0.0302037]
 }
 
+[sub_resource type="Animation" id="Animation_wxjny"]
+resource_name = "idle"
+length = 8.0
+loop_mode = 1
+step = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("pony/root/ik_back_root/IK_backleg_front:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(63, -180)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("pony/root/ik_back_root/IK_backleg_front:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-0.346897]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("pony/root/ik_back_root/IK_backleg_back:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(95, -198)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("pony/root/ik_back_root/IK_backleg_back:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-0.395263]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("pony/root/ik_front_root/IK_frontleg_front:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(235, -121)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("pony/root/ik_front_root/IK_frontleg_front:rotation")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("pony/root/ik_front_root/IK_frontleg_back:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(253, -144)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("pony/root/ik_front_root/IK_frontleg_back:rotation")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("pony/root/body_root/body:position")
+tracks/8/interp = 2
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0, 2, 4, 6),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 8), Vector2(0, 3), Vector2(0, 10), Vector2(0, 5)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("pony/root/body_root/body/body2:position")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(46, 25)]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("pony/root/body_root/body/body2:rotation")
+tracks/10/interp = 2
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(1, 3, 5, 7),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [0.0342092, -0.0243611, 0.0294284, -0.0271591]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("pony/root/body_root/body/body2/neck1:rotation")
+tracks/11/interp = 2
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(1.2, 3.2, 5.2, 7.2),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [0.00747211, 0.0, 0.00747211, 0.0]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("pony/root/body_root/body/body2/neck1/neck2:rotation")
+tracks/12/interp = 2
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(1.4, 3.4, 5.4, 7.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [0.00574568, 0.0, 0.00574568, 0.0]
+}
+
+[sub_resource type="Animation" id="Animation_7wlmh"]
+resource_name = "jump_up"
+length = 8.0
+loop_mode = 1
+step = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("pony/root/ik_back_root/IK_backleg_front:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(28, -192)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("pony/root/ik_back_root/IK_backleg_front:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.152957]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("pony/root/ik_back_root/IK_backleg_back:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(60, -210)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("pony/root/ik_back_root/IK_backleg_back:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.104591]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("pony/root/ik_front_root/IK_frontleg_front:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(278, -191)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("pony/root/ik_front_root/IK_frontleg_front:rotation")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.856109]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("pony/root/ik_front_root/IK_frontleg_back:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(296, -214)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("pony/root/ik_front_root/IK_frontleg_back:rotation")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.856109]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("pony/root/body_root/body:position")
+tracks/8/interp = 2
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-15, 19)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("pony/root/body_root/body/body2:position")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(),
+"transitions": PackedFloat32Array(),
+"update": 0,
+"values": []
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("pony/root/body_root/body/body2:rotation")
+tracks/10/interp = 2
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-0.0507299]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("pony/root/body_root/body/body2/neck1:rotation")
+tracks/11/interp = 2
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(1.2, 3.2, 5.2, 7.2),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [0.00747211, 0.0, 0.00747211, 0.0]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("pony/root/body_root/body/body2/neck1/neck2:rotation")
+tracks/12/interp = 2
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(1.4, 3.4, 5.4, 7.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [0.00574568, 0.0, 0.00574568, 0.0]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("pony/root/body_root/body:rotation")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-0.105947]
+}
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("pony/root/body_root/body/hip_front/thigh_front/lowerleg_front/toe_front/toetip_front:rotation")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.718804]
+}
+tracks/15/type = "value"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("pony/root/body_root/body/hip_back/thigh_back/lowerleg_back/toe_back/toetip_back:rotation")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.66999]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_dl607"]
 _data = {
 &"RESET": SubResource("Animation_dl607"),
+&"idle": SubResource("Animation_wxjny"),
+&"jump_up": SubResource("Animation_7wlmh"),
 &"walk": SubResource("Animation_h4ksu")
 }
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_h4ksu"]
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_dl607"]
+animation = &"walk"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_wxjny"]
+animation = &"idle"
+
+[sub_resource type="AnimationNodeBlend2" id="AnimationNodeBlend2_7wlmh"]
+
+[sub_resource type="AnimationNodeTimeScale" id="AnimationNodeTimeScale_w3nq5"]
+
+[sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_5xcaa"]
+graph_offset = Vector2(-571.627, -41.69)
+nodes/Animation/node = SubResource("AnimationNodeAnimation_wxjny")
+nodes/Animation/position = Vector2(-40, 40)
+"nodes/Animation 2/node" = SubResource("AnimationNodeAnimation_dl607")
+"nodes/Animation 2/position" = Vector2(-260, 220)
+nodes/blend_to_walk/node = SubResource("AnimationNodeBlend2_7wlmh")
+nodes/blend_to_walk/position = Vector2(186, 145)
+nodes/output/position = Vector2(400, 180)
+nodes/walk_scaler/node = SubResource("AnimationNodeTimeScale_w3nq5")
+nodes/walk_scaler/position = Vector2(-60, 340)
+node_connections = [&"blend_to_walk", 0, &"Animation", &"blend_to_walk", 1, &"walk_scaler", &"output", 0, &"blend_to_walk", &"walk_scaler", 0, &"Animation 2"]
 
 [node name="StarlightGlimmer" type="Node2D"]
 script = ExtResource("1_h4ksu")
@@ -450,7 +871,7 @@ constraints = [1, 1, 1, 1, 1, 1, 1]
 metadata/_custom_type_script = "uid://bodn4jw8tyemx"
 
 [node name="VecStroke" type="Line2D" parent="frontleg_back"]
-points = PackedVector2Array(409.158, -268.014, 406.302, -259.539, 403.488, -249.172, 400.762, -237.338, 398.172, -224.465, 395.767, -210.978, 393.594, -197.304, 391.7, -183.87, 390.134, -171.102, 388.942, -159.425, 388.173, -149.268, 387.619, -137.285, 387.332, -124.855, 387.326, -112.213, 387.614, -99.5957, 388.209, -87.238, 389.126, -75.376, 390.377, -64.2454, 391.976, -54.0821, 393.936, -45.1217, 396.27, -37.6, 397.307, -35.993, 399.183, -34.4157, 401.868, -32.8992, 405.326, -31.4747, 409.526, -30.1734, 414.435, -29.0263, 420.019, -28.0647, 426.246, -27.3195, 433.082, -26.8221, 440.495, -26.6035, 449.488, -26.6982, 457.85, -27.1183, 465.482, -27.8182, 472.29, -28.7527, 478.176, -29.8764, 483.044, -31.144, 486.798, -32.51, 489.341, -33.9292, 490.577, -35.3562, 490.409, -36.7456, 487.121, -42.4422, 483.467, -50.0886, 479.575, -59.3361, 475.573, -69.8364, 471.59, -81.2408, 467.754, -93.2007, 464.191, -105.368, 461.031, -117.393, 458.4, -128.929, 456.428, -139.626, 455.022, -150.292, 453.881, -162.572, 453.018, -176.121, 452.448, -190.59, 452.182, -205.633, 452.235, -220.902, 452.62, -236.049, 453.35, -250.728, 454.438, -264.591, 455.897, -277.291)
+points = PackedVector2Array(407.125, -271.353, 402.742, -262.884, 399.044, -252.154, 395.978, -239.675, 393.491, -225.96, 391.531, -211.523, 390.044, -196.876, 388.979, -182.532, 388.281, -169.003, 387.897, -156.803, 387.776, -146.444, 387.773, -134.751, 387.818, -122.652, 387.962, -110.368, 388.256, -98.1162, 388.751, -86.1157, 389.5, -74.5849, 390.552, -63.7423, 391.96, -53.8067, 393.774, -44.9964, 396.046, -37.5302, 397.08, -35.9233, 398.954, -34.3453, 401.636, -32.8274, 405.091, -31.4008, 409.287, -30.0965, 414.191, -28.9458, 419.77, -27.9797, 425.992, -27.2295, 432.823, -26.7262, 440.231, -26.501, 449.219, -26.5875, 457.574, -26.9997, 465.203, -27.6922, 472.006, -28.62, 477.889, -29.7376, 482.755, -30.9999, 486.508, -32.3616, 489.05, -33.7775, 490.287, -35.2024, 490.12, -36.591, 486.899, -42.3361, 483.408, -50.1159, 479.737, -59.5625, 475.975, -70.3081, 472.211, -81.9852, 468.535, -94.2258, 465.036, -106.662, 461.803, -118.927, 458.926, -130.652, 456.494, -141.469, 454.404, -151.9, 452.338, -163.696, 450.447, -176.537, 448.881, -190.104, 447.789, -204.076, 447.32, -218.132, 447.626, -231.953, 448.856, -245.219, 451.159, -257.61, 454.686, -268.804)
 width = 4.3
 width_curve = SubResource("Curve_cystm")
 default_color = Color(0.67451, 0.490196, 0.788235, 1)
@@ -838,7 +1259,7 @@ constraints = [1, 1, 1, 1, 1]
 metadata/_custom_type_script = "uid://bodn4jw8tyemx"
 
 [node name="VecStroke" type="Line2D" parent="backleg_back_hip"]
-points = PackedVector2Array(289.132, -345.592, 284.638, -340.333, 280.798, -335.618, 277.57, -331.336, 274.914, -327.376, 272.788, -323.628, 271.15, -319.979, 269.961, -316.321, 269.178, -312.541, 268.761, -308.53, 268.668, -304.175, 269.162, -295.451, 270.342, -286.917, 272.078, -278.647, 274.239, -270.716, 276.694, -263.198, 279.312, -256.167, 281.964, -249.696, 284.518, -243.86, 286.845, -238.734, 288.812, -234.39, 290.535, -230.944, 293.319, -226.093, 296.993, -220.394, 301.389, -214.403, 306.338, -208.676, 311.67, -203.769, 317.217, -200.237, 322.808, -198.638, 328.275, -199.526, 333.449, -203.459, 338.388, -209.227, 343.207, -215.244, 347.82, -221.498, 352.139, -227.977, 356.077, -234.668, 359.549, -241.561, 362.467, -248.642, 364.745, -255.9, 366.295, -263.322, 367.032, -270.897)
+points = PackedVector2Array(288.92, -336.09, 284.637, -330.657, 280.985, -325.793, 277.928, -321.384, 275.428, -317.318, 273.452, -313.484, 271.961, -309.77, 270.92, -306.064, 270.294, -302.253, 270.045, -298.227, 270.138, -293.873, 271.014, -285.18, 272.578, -276.709, 274.695, -268.527, 277.227, -260.703, 280.04, -253.305, 282.997, -246.4, 285.962, -240.058, 288.798, -234.346, 291.37, -229.333, 293.541, -225.086, 295.18, -221.7, 297.539, -216.91, 300.544, -211.256, 304.121, -205.281, 308.197, -199.526, 312.698, -194.533, 317.55, -190.844, 322.68, -189.001, 328.013, -189.545, 333.476, -193.018, 340.031, -199.488, 346.012, -206.176, 351.39, -213.058, 356.138, -220.114, 360.227, -227.321, 363.63, -234.657, 366.32, -242.102, 368.267, -249.633, 369.444, -257.228, 369.824, -264.865)
 width = 4.8
 width_curve = SubResource("Curve_3yjpv")
 default_color = Color(0.67451, 0.490196, 0.788235, 1)
@@ -972,7 +1393,7 @@ constraints = [1, 1, 1, 1, 1, 1, 1, 1, 1]
 metadata/_custom_type_script = "uid://bodn4jw8tyemx"
 
 [node name="VecStroke" type="Line2D" parent="backleg_back_bottom"]
-points = PackedVector2Array(306.816, -223.706, 302.283, -225.104, 298.149, -226.163, 294.393, -226.927, 290.995, -227.438, 287.935, -227.738, 285.192, -227.87, 282.747, -227.876, 280.579, -227.8, 278.667, -227.684, 276.992, -227.57, 274.022, -227.555, 271.331, -227.666, 268.778, -227.545, 266.224, -226.831, 263.53, -225.165, 260.557, -222.187, 257.163, -217.538, 253.211, -210.857, 248.56, -201.786, 243.07, -189.964, 237.161, -175.5, 232.252, -160.911, 228.267, -146.247, 225.131, -131.556, 222.769, -116.885, 221.105, -102.283, 220.063, -87.7973, 219.569, -73.4772, 219.546, -59.3704, 219.921, -45.5249, 220.791, -41.0762, 222.914, -37.2631, 226.136, -34.0462, 230.298, -31.3863, 235.247, -29.2443, 240.826, -27.581, 246.879, -26.357, 253.25, -25.5333, 259.783, -25.0705, 266.322, -24.9294, 272.892, -25.0669, 279.342, -25.4472, 285.577, -26.0424, 291.508, -26.8248, 297.041, -27.7666, 302.084, -28.8399, 306.546, -30.0169, 310.334, -31.2699, 313.355, -32.5709, 315.519, -33.8923, 316.143, -35.9563, 315.047, -39.587, 312.617, -44.6969, 309.238, -51.1983, 305.298, -59.0037, 301.181, -68.0255, 297.274, -78.1762, 293.963, -89.3682, 291.634, -101.514, 290.672, -114.526, 291.304, -127.161, 293.343, -138.803, 296.565, -149.514, 300.747, -159.353, 305.664, -168.381, 311.093, -176.658, 316.81, -184.244, 322.591, -191.199, 328.212, -197.584, 333.449, -203.459, 338.388, -209.227, 343.207, -215.244, 347.82, -221.498, 352.139, -227.977, 356.077, -234.668, 359.549, -241.561, 362.467, -248.642, 364.745, -255.9, 366.295, -263.322, 367.032, -270.897)
+points = PackedVector2Array(312.02, -215.256, 307.271, -216.891, 302.988, -218.232, 299.141, -219.305, 295.699, -220.14, 292.631, -220.766, 289.906, -221.211, 287.494, -221.506, 285.365, -221.677, 283.486, -221.755, 281.828, -221.769, 278.8, -222.125, 275.918, -222.932, 273.052, -223.745, 270.074, -224.115, 266.854, -223.595, 263.263, -221.738, 259.172, -218.096, 254.451, -212.222, 248.972, -203.669, 242.605, -191.99, 235.913, -177.382, 230.579, -162.587, 226.462, -147.671, 223.422, -132.701, 221.319, -117.744, 220.012, -102.867, 219.362, -88.1372, 219.228, -73.6207, 219.469, -59.3848, 219.946, -45.4964, 220.816, -41.05, 222.938, -37.2388, 226.158, -34.0235, 230.319, -31.3651, 235.265, -29.2242, 240.841, -27.5617, 246.89, -26.3383, 253.258, -25.515, 259.788, -25.0524, 266.324, -24.9114, 272.891, -25.0488, 279.337, -25.4289, 285.569, -26.0239, 291.497, -26.8059, 297.027, -27.7472, 302.068, -28.8199, 306.527, -29.9963, 310.313, -31.2486, 313.333, -32.549, 315.496, -33.8697, 316.166, -35.9342, 315.191, -39.5667, 312.924, -44.679, 309.72, -51.1825, 305.933, -58.9888, 301.917, -68.0094, 298.028, -78.1559, 294.62, -89.3399, 292.047, -101.473, 290.663, -114.466, 290.871, -126.511, 292.627, -137.25, 295.717, -146.838, 299.923, -155.429, 305.03, -163.176, 310.822, -170.234, 317.083, -176.756, 323.597, -182.896, 330.148, -188.809, 336.519, -194.648, 342.455, -200.644, 347.9, -206.976, 352.821, -213.604, 357.186, -220.486, 360.961, -227.583, 364.113, -234.854, 366.608, -242.258, 368.414, -249.755, 369.497, -257.305, 369.824, -264.865)
 width = 4.8
 width_curve = SubResource("Curve_3yjpv")
 default_color = Color(0.67451, 0.490196, 0.788235, 1)
@@ -1952,7 +2373,7 @@ NodePath("../../../pony/root/body_root/body/tail/tail2/tail3"): 1.0
 }
 
 [node name="VecStroke" type="Line2D" parent="tail_main"]
-points = PackedVector2Array(297.538, -355.929, 296.416, -361.748, 294.413, -368.43, 291.63, -375.743, 288.166, -383.456, 284.121, -391.338, 279.594, -399.158, 274.687, -406.685, 269.498, -413.687, 264.127, -419.933, 258.674, -425.193, 252.922, -430.044, 246.522, -435.102, 239.383, -440.192, 231.409, -445.14, 222.508, -449.77, 212.587, -453.908, 201.55, -457.378, 189.306, -460.005, 175.761, -461.615, 160.82, -462.032, 145.824, -461.151, 132.135, -459.105, 119.696, -456.078, 108.45, -452.257, 98.3389, -447.826, 89.3062, -442.969, 81.2944, -437.872, 74.2462, -432.719, 68.1043, -427.696, 62.8114, -422.987, 55.8614, -415.858, 49.2922, -407.607, 43.1942, -398.34, 37.6578, -388.163, 32.7732, -377.181, 28.631, -365.5, 25.3214, -353.227, 22.9348, -340.466, 21.5617, -327.324, 21.2923, -313.907, 22.3158, -297.42, 24.5145, -281.714, 27.7522, -266.775, 31.8926, -252.589, 36.7993, -239.141, 42.3362, -226.416, 48.3668, -214.401, 54.755, -203.08, 61.3643, -192.44, 68.0585, -182.466, 73.8333, -173.254, 77.8985, -164.887, 80.4391, -157.329, 81.64, -150.546, 81.6861, -144.504, 80.7623, -139.166, 79.0537, -134.5, 76.7451, -130.469, 74.0214, -127.039, 71.0677, -124.176, 67.0071, -121.964, 62.1734, -121.523, 56.6834, -122.744, 50.6542, -125.52, 44.2026, -129.741, 37.4457, -135.301, 30.5002, -142.091, 23.4832, -150.003, 16.5117, -158.928, 9.70243, -168.759, 7.80644, -155.871, 7.88729, -142.106, 10.0993, -128.008, 14.5969, -114.121, 21.5343, -100.988, 31.066, -89.1539, 43.3463, -79.162, 58.5294, -71.5563, 76.7699, -66.8805, 98.2219, -65.6786, 120.968, -68.1158, 139.657, -73.5866, 154.674, -81.6458, 166.405, -91.8478, 175.235, -103.748, 181.55, -116.9, 185.736, -130.858, 188.178, -145.179, 189.262, -159.415, 189.373, -173.123, 187.991, -186.765, 184.654, -200.465, 179.814, -214.221, 173.923, -228.029, 167.434, -241.886, 160.8, -255.789, 154.473, -269.735, 148.906, -283.721, 144.55, -297.744, 141.86, -311.8, 141.413, -322.134, 142.571, -331.836, 145.212, -340.835, 149.218, -349.057, 154.467, -356.431, 160.84, -362.883, 168.217, -368.342, 176.477, -372.735, 185.499, -375.99, 195.165, -378.033, 204.852, -378.858, 214.038, -378.558, 222.718, -377.21, 230.884, -374.89, 238.529, -371.673, 245.648, -367.636, 252.233, -362.854, 258.277, -357.403, 263.775, -351.36, 268.719, -344.8)
+points = PackedVector2Array(296.91, -346.748, 295.56, -352.517, 293.295, -359.114, 290.226, -366.31, 286.461, -373.879, 282.109, -381.595, 277.279, -389.229, 272.079, -396.555, 266.619, -403.346, 261.007, -409.375, 255.352, -414.414, 249.413, -419.033, 242.821, -423.834, 235.487, -428.638, 227.326, -433.267, 218.251, -437.542, 208.176, -441.284, 197.013, -444.316, 184.677, -446.458, 171.081, -447.532, 156.138, -447.36, 141.19, -445.888, 127.595, -443.304, 115.287, -439.79, 104.202, -435.529, 94.2759, -430.703, 85.4433, -425.495, 77.6401, -420.087, 70.8018, -414.661, 64.8638, -409.4, 59.7615, -404.487, 53.0992, -397.091, 46.8616, -388.589, 41.1348, -379.09, 36.0049, -368.704, 31.558, -357.54, 27.8803, -345.707, 25.0578, -333.315, 23.1767, -320.472, 22.323, -307.288, 22.583, -293.873, 24.2556, -277.442, 27.0716, -261.838, 30.8953, -247.041, 35.5912, -233.031, 41.0236, -219.789, 47.057, -207.295, 53.5557, -195.528, 60.3842, -184.471, 67.4068, -174.101, 74.488, -164.4, 80.6206, -155.425, 85.0119, -147.226, 87.8481, -139.775, 89.3153, -133.046, 89.5996, -127.011, 88.8872, -121.643, 87.3642, -116.913, 85.2167, -112.795, 82.6309, -109.261, 79.7929, -106.284, 75.8234, -103.914, 71.0116, -103.283, 65.4787, -104.286, 59.3457, -106.822, 52.7338, -110.785, 45.764, -116.073, 38.5573, -122.583, 31.235, -130.21, 23.9181, -138.852, 16.7276, -148.405, 15.3416, -135.455, 15.9652, -121.706, 18.7311, -107.709, 23.772, -94.0118, 31.2207, -81.1651, 41.21, -69.718, 53.8727, -60.2197, 69.3414, -53.2199, 87.7489, -49.2678, 109.228, -48.9129, 131.856, -52.2447, 150.312, -58.4473, 164.997, -67.091, 176.314, -77.746, 184.667, -89.9827, 190.458, -103.371, 194.089, -117.482, 195.965, -131.885, 196.486, -146.151, 196.056, -159.85, 194.138, -173.424, 190.264, -186.98, 184.886, -200.532, 178.456, -214.095, 171.427, -227.683, 164.251, -241.311, 157.38, -254.995, 151.266, -268.748, 146.362, -282.585, 143.12, -296.522, 142.266, -306.829, 143.04, -316.568, 145.324, -325.662, 149.002, -334.034, 153.955, -341.608, 160.068, -348.306, 167.222, -354.05, 175.301, -358.765, 184.187, -362.372, 193.763, -364.795, 203.408, -366, 212.597, -366.063, 221.322, -365.059, 229.572, -363.063, 237.337, -360.151, 244.608, -356.398, 251.375, -351.88, 257.629, -346.673, 263.359, -340.852, 268.557, -334.493)
 width = 4.8
 width_curve = SubResource("Curve_vrli8")
 default_color = Color(0.337255, 0.156863, 0.458824, 1)
@@ -2241,56 +2662,97 @@ NodePath("../../pony/root/body_root/body/tail"): 1.0
 [node name="mane_hollow_bg" type="Node2D" parent="."]
 script = ExtResource("1_oyty2")
 fill = Color(0.372549, 0.176471, 0.498039, 1)
+show_rest = false
+skeleton = NodePath("../pony")
 constraints = [1, 1, 1, 1]
 metadata/_custom_type_script = "uid://bodn4jw8tyemx"
 
-[node name="@Node@47653" type="Node" parent="mane_hollow_bg"]
+[node name="@Node@47653" type="Node" parent="mane_hollow_bg" node_paths=PackedStringArray("weights")]
 script = ExtResource("3_3ekgy")
 value = Vector2(453.325, -586.7)
+weights = {
+NodePath("../../pony/root/body_root/body/body2/neck1/neck2/head"): 1.0
+}
 
-[node name="@Node@47654" type="Node" parent="mane_hollow_bg"]
+[node name="@Node@47654" type="Node" parent="mane_hollow_bg" node_paths=PackedStringArray("weights")]
 script = ExtResource("3_3ekgy")
 value = Vector2(476.134, -574.753)
+weights = {
+NodePath("../../pony/root/body_root/body/body2/neck1/neck2/head"): 1.0
+}
 
-[node name="@Node@47655" type="Node" parent="mane_hollow_bg"]
+[node name="@Node@47655" type="Node" parent="mane_hollow_bg" node_paths=PackedStringArray("weights")]
 script = ExtResource("3_3ekgy")
 value = Vector2(498.944, -562.806)
+weights = {
+NodePath("../../pony/root/body_root/body/body2/neck1/neck2/head"): 1.0
+}
 
-[node name="@Node@47660" type="Node" parent="mane_hollow_bg"]
+[node name="@Node@47660" type="Node" parent="mane_hollow_bg" node_paths=PackedStringArray("weights")]
 script = ExtResource("3_3ekgy")
 value = Vector2(541.561, -545.075)
+weights = {
+NodePath("../../pony/root/body_root/body/body2/neck1/neck2/head"): 1.0
+}
 
-[node name="@Node@47661" type="Node" parent="mane_hollow_bg"]
+[node name="@Node@47661" type="Node" parent="mane_hollow_bg" node_paths=PackedStringArray("weights")]
 script = ExtResource("3_3ekgy")
 value = Vector2(550.421, -559.926)
+weights = {
+NodePath("../../pony/root/body_root/body/body2/neck1/neck2/head"): 1.0
+}
 
-[node name="@Node@47662" type="Node" parent="mane_hollow_bg"]
+[node name="@Node@47662" type="Node" parent="mane_hollow_bg" node_paths=PackedStringArray("weights")]
 script = ExtResource("3_3ekgy")
 value = Vector2(559.989, -575.965)
+weights = {
+NodePath("../../pony/root/body_root/body/body2/neck1/neck2/head"): 1.0
+}
 
-[node name="@Node@47663" type="Node" parent="mane_hollow_bg"]
+[node name="@Node@47663" type="Node" parent="mane_hollow_bg" node_paths=PackedStringArray("weights")]
 script = ExtResource("3_3ekgy")
 value = Vector2(577.865, -651.203)
+weights = {
+NodePath("../../pony/root/body_root/body/body2/neck1/neck2/head/mane_small"): 1.0
+}
 
-[node name="@Node@47664" type="Node" parent="mane_hollow_bg"]
+[node name="@Node@47664" type="Node" parent="mane_hollow_bg" node_paths=PackedStringArray("weights")]
 script = ExtResource("3_3ekgy")
 value = Vector2(552.182, -660.086)
+weights = {
+NodePath("../../pony/root/body_root/body/body2/neck1/neck2/head/mane_small"): 1.0
+}
 
-[node name="@Node@47665" type="Node" parent="mane_hollow_bg"]
+[node name="@Node@47665" type="Node" parent="mane_hollow_bg" node_paths=PackedStringArray("weights")]
 script = ExtResource("3_3ekgy")
 value = Vector2(526.498, -668.969)
+weights = {
+NodePath("../../pony/root/body_root/body/body2/neck1/neck2/head/mane_small"): 1.0
+}
 
-[node name="@Node@47666" type="Node" parent="mane_hollow_bg"]
+[node name="@Node@47666" type="Node" parent="mane_hollow_bg" node_paths=PackedStringArray("weights")]
 script = ExtResource("3_3ekgy")
 value = Vector2(507.388, -630.656)
+weights = {
+NodePath("../../pony/root/body_root/body/body2/neck1/neck2/head/mane_small"): 1.0,
+NodePath("../../pony/root/body_root/body/body2/neck1/neck2/head/mane_small/mane_small2"): 1.0
+}
 
-[node name="@Node@47667" type="Node" parent="mane_hollow_bg"]
+[node name="@Node@47667" type="Node" parent="mane_hollow_bg" node_paths=PackedStringArray("weights")]
 script = ExtResource("3_3ekgy")
 value = Vector2(467.028, -638.107)
+weights = {
+NodePath("../../pony/root/body_root/body/body2/neck1/neck2/head/mane_small"): 1.0,
+NodePath("../../pony/root/body_root/body/body2/neck1/neck2/head/mane_small/mane_small2"): 1.0
+}
 
-[node name="@Node@47668" type="Node" parent="mane_hollow_bg"]
+[node name="@Node@47668" type="Node" parent="mane_hollow_bg" node_paths=PackedStringArray("weights")]
 script = ExtResource("3_3ekgy")
 value = Vector2(444.56, -642.255)
+weights = {
+NodePath("../../pony/root/body_root/body/body2/neck1/neck2/head/mane_small"): 1.0,
+NodePath("../../pony/root/body_root/body/body2/neck1/neck2/head/mane_small/mane_small2"): 1.0
+}
 
 [node name="mane_complex_back" type="Node2D" parent="."]
 script = ExtResource("1_oyty2")
@@ -2301,7 +2763,7 @@ constraints = [1, 1, 0, 0, 1, 1]
 metadata/_custom_type_script = "uid://bodn4jw8tyemx"
 
 [node name="VecStroke" type="Line2D" parent="mane_complex_back"]
-points = PackedVector2Array(549.951, -679.609, 554.07, -679.031, 558.441, -677.527, 562.894, -675.078, 567.259, -671.661, 571.367, -667.256, 575.047, -661.841, 578.13, -655.396, 580.445, -647.899, 581.823, -639.329, 582.094, -629.665, 581.532, -619.463, 580.562, -610.227, 579.19, -601.775, 577.42, -593.921, 575.257, -586.484, 572.706, -579.278, 569.772, -572.12, 566.46, -564.827, 562.775, -557.215, 558.721, -549.1, 557.781, -549.558, 556.727, -550.078, 555.596, -550.646, 554.427, -551.245, 553.259, -551.859, 552.13, -552.472, 551.077, -553.069, 550.139, -553.633, 549.355, -554.148, 548.762, -554.599, 551.631, -562.157, 554.096, -569.681, 556.174, -577.055, 557.884, -584.163, 559.241, -590.887, 560.264, -597.112, 560.97, -602.72, 561.376, -607.597, 561.5, -611.625, 561.359, -614.688, 561.061, -617.342, 560.672, -620.158, 560.147, -623.038, 559.44, -625.888, 558.507, -628.61, 557.301, -631.11, 555.778, -633.29, 553.893, -635.056, 551.6, -636.31, 548.854, -636.958)
+points = PackedVector2Array(531.634, -682.304, 535.774, -681.94, 540.214, -680.666, 544.786, -678.452, 549.319, -675.268, 553.647, -671.084, 557.6, -665.871, 561.01, -659.598, 563.709, -652.235, 565.528, -643.754, 566.299, -634.123, 566.267, -623.912, 565.777, -614.645, 564.845, -606.138, 563.485, -598.209, 561.712, -590.674, 559.539, -583.35, 556.982, -576.055, 554.054, -568.605, 550.77, -560.817, 547.145, -552.508, 546.183, -552.916, 545.104, -553.381, 543.946, -553.889, 542.749, -554.426, 541.551, -554.979, 540.392, -555.532, 539.31, -556.073, 538.345, -556.587, 537.536, -557.061, 536.921, -557.48, 539.393, -565.172, 541.463, -572.809, 543.156, -580.276, 544.493, -587.458, 545.5, -594.239, 546.198, -600.504, 546.612, -606.139, 546.765, -611.026, 546.68, -615.053, 546.381, -618.102, 545.946, -620.736, 545.412, -623.526, 544.739, -626.373, 543.886, -629.181, 542.813, -631.849, 541.481, -634.281, 539.848, -636.379, 537.875, -638.043, 535.522, -639.177, 532.748, -639.681)
 width = 4.8
 width_curve = SubResource("Curve_vrli8")
 default_color = Color(0.337255, 0.156863, 0.458824, 1)
@@ -2445,7 +2907,7 @@ constraints = [1, 1, 1, 1]
 metadata/_custom_type_script = "uid://bodn4jw8tyemx"
 
 [node name="VecStroke" type="Line2D" parent="mane_big"]
-points = PackedVector2Array(514.136, -605.712, 516.773, -617.13, 517.165, -627.256, 515.514, -636.117, 512.023, -643.741, 506.892, -650.152, 500.325, -655.379, 492.523, -659.448, 483.688, -662.384, 474.023, -664.216, 463.73, -664.969, 453.011, -664.671, 442.067, -663.347, 431.102, -661.025, 420.316, -657.731, 409.913, -653.491, 399.321, -648.033, 389.583, -641.936, 380.681, -635.28, 372.597, -628.147, 365.312, -620.618, 358.809, -612.773, 353.068, -604.692, 348.072, -596.458, 343.802, -588.15, 340.239, -579.849, 337.366, -571.637, 335.165, -563.594, 333.616, -555.8, 332.701, -548.337, 332.403, -541.286, 332.761, -533.492, 333.825, -525.367, 335.597, -517.012, 338.075, -508.524, 341.26, -500.002, 345.152, -491.546, 349.751, -483.253, 355.056, -475.223, 361.068, -467.554, 367.786, -460.344, 375.211, -453.694, 383.343, -447.701, 392.18, -442.464, 401.725, -438.082, 411.975, -434.653)
+points = PackedVector2Array(499.717, -606.699, 501.757, -618.23, 501.624, -628.357, 499.518, -637.115, 495.638, -644.542, 490.186, -650.676, 483.361, -655.552, 475.363, -659.208, 466.394, -661.682, 456.654, -663.009, 446.342, -663.228, 435.659, -662.375, 424.806, -660.487, 413.983, -657.602, 403.389, -653.755, 393.226, -648.985, 382.937, -642.99, 373.535, -636.4, 364.995, -629.297, 357.297, -621.76, 350.416, -613.868, 344.332, -605.701, 339.021, -597.34, 334.461, -588.863, 330.63, -580.35, 327.504, -571.882, 325.062, -563.537, 323.281, -555.396, 322.139, -547.537, 321.613, -540.042, 321.681, -532.989, 322.441, -525.229, 323.924, -517.175, 326.125, -508.928, 329.038, -500.586, 332.658, -492.246, 336.98, -484.008, 341.999, -475.97, 347.71, -468.23, 354.107, -460.887, 361.185, -454.04, 368.94, -447.788, 377.366, -442.228, 386.457, -437.459, 396.209, -433.579, 406.617, -430.688)
 width = 4.8
 width_curve = SubResource("Curve_vrli8")
 default_color = Color(0.337255, 0.156863, 0.458824, 1)
@@ -2610,7 +3072,7 @@ NodePath("../../pony/root/body_root/body/body2/neck1/neck2/head"): 1.0
 }
 
 [node name="VecStroke" type="Line2D" parent="mane_big_line"]
-points = PackedVector2Array(393.535, -466.809, 391.922, -471.098, 390.3, -475.913, 388.69, -481.197, 387.109, -486.893, 385.577, -492.944, 384.114, -499.292, 382.737, -505.88, 381.467, -512.651, 380.322, -519.547, 379.321, -526.511, 378.485, -533.486, 377.83, -540.415, 377.378, -547.24, 377.147, -553.904, 377.155, -560.349, 377.423, -566.519, 377.968, -572.356, 378.812, -577.803, 379.971, -582.802, 381.466, -587.297, 383.165, -591.184, 385.191, -595.074, 387.524, -598.918, 390.147, -602.666, 393.04, -606.269, 396.186, -609.679, 399.564, -612.847, 403.156, -615.722, 406.944, -618.257, 410.909, -620.402, 415.033, -622.108, 419.295, -623.326, 423.678, -624.007, 428.163, -624.102, 432.731, -623.562, 437.364, -622.337, 442.043, -620.379, 446.748, -617.639, 451.462, -614.067, 456.165, -609.615)
+points = PackedVector2Array(386.548, -461.826, 384.716, -466.022, 382.849, -470.744, 380.968, -475.934, 379.095, -481.537, 377.253, -487.497, 375.463, -493.756, 373.748, -500.26, 372.13, -506.951, 370.63, -513.775, 369.271, -520.673, 368.075, -527.591, 367.063, -534.472, 366.258, -541.26, 365.682, -547.899, 365.357, -554.332, 365.304, -560.504, 365.547, -566.357, 366.106, -571.837, 367.004, -576.886, 368.263, -581.45, 369.758, -585.417, 371.578, -589.404, 373.708, -593.361, 376.131, -597.237, 378.832, -600.984, 381.795, -604.55, 385.002, -607.886, 388.439, -610.942, 392.088, -613.668, 395.934, -616.014, 399.961, -617.93, 404.151, -619.367, 408.491, -620.273, 412.962, -620.6, 417.549, -620.297, 422.236, -619.315, 427.007, -617.603, 431.845, -615.112, 436.734, -611.792, 441.658, -607.592)
 width = 2.0
 default_color = Color(0.337255, 0.156863, 0.458824, 1)
 script = ExtResource("2_27k37")
@@ -2626,7 +3088,7 @@ constraints = [1, 1, 1, 1, 1, 1]
 metadata/_custom_type_script = "uid://bodn4jw8tyemx"
 
 [node name="VecStroke" type="Line2D" parent="body"]
-points = PackedVector2Array(252.604, -335.973, 255.81, -339.515, 259.031, -342.693, 262.262, -345.524, 265.496, -348.025, 268.729, -350.214, 271.954, -352.107, 275.167, -353.722, 278.36, -355.076, 281.53, -356.186, 284.669, -357.069, 287.773, -357.743, 290.836, -358.224, 293.853, -358.53, 296.816, -358.678, 299.722, -358.684, 302.564, -358.567, 305.338, -358.344, 308.036, -358.03, 310.653, -357.645, 313.185, -357.204, 315.722, -356.639, 318.356, -355.879, 321.08, -354.935, 323.89, -353.823, 326.778, -352.553, 329.738, -351.14, 332.766, -349.596, 335.854, -347.935, 338.997, -346.17, 342.188, -344.313, 345.422, -342.378, 348.694, -340.377, 351.995, -338.324, 355.322, -336.232, 358.667, -334.114, 362.025, -331.982, 365.39, -329.85, 368.755, -327.732, 372.115, -325.639, 375.464, -323.585, 379.572, -321.032, 384.306, -317.987, 389.571, -314.51, 395.272, -310.661, 401.314, -306.502, 407.601, -302.092, 414.037, -297.491, 420.529, -292.762, 426.979, -287.963, 433.294, -283.156, 439.377, -278.402, 445.134, -273.76, 450.469, -269.291, 455.286, -265.055, 459.491, -261.114, 462.989, -257.528, 465.683, -254.357, 467.479, -251.662, 468.281, -249.503, 467.994, -247.941, 464.546, -243.18, 461.015, -238.725, 457.387, -234.569, 453.647, -230.706, 449.779, -227.13, 445.77, -223.834, 441.603, -220.811, 437.264, -218.057, 432.738, -215.564, 428.01, -213.326, 423.065, -211.336, 417.889, -209.589, 412.466, -208.078, 406.781, -206.796, 400.819, -205.738, 394.566, -204.897, 388.006, -204.267, 381.125, -203.842, 373.908, -203.614, 366.339, -203.578, 358.78, -203.687, 351.595, -203.905, 344.772, -204.243, 338.302, -204.714, 332.174, -205.327, 326.377, -206.095, 320.9, -207.029, 315.733, -208.14, 310.865, -209.439, 306.284, -210.939, 301.982, -212.649, 297.946, -214.582, 294.167, -216.748, 290.633, -219.159, 287.334, -221.827, 284.26, -224.763, 281.398, -227.977, 278.74, -231.482, 276.274, -235.289, 273.989, -239.408)
+points = PackedVector2Array(252.806, -325.039, 255.869, -328.705, 258.962, -332.008, 262.079, -334.966, 265.212, -337.596, 268.356, -339.913, 271.504, -341.935, 274.65, -343.679, 277.788, -345.161, 280.911, -346.398, 284.013, -347.407, 287.088, -348.205, 290.129, -348.808, 293.131, -349.234, 296.086, -349.498, 298.988, -349.618, 301.832, -349.61, 304.611, -349.492, 307.318, -349.279, 309.947, -348.989, 312.492, -348.639, 315.015, -348.17, 317.647, -347.511, 320.381, -346.675, 323.211, -345.676, 326.129, -344.525, 329.129, -343.236, 332.203, -341.821, 335.346, -340.295, 338.551, -338.669, 341.809, -336.956, 345.116, -335.17, 348.463, -333.324, 351.845, -331.429, 355.254, -329.5, 358.683, -327.549, 362.126, -325.589, 365.576, -323.633, 369.026, -321.694, 372.47, -319.785, 375.899, -317.918, 380.133, -315.585, 385.019, -312.793, 390.458, -309.598, 396.352, -306.056, 402.602, -302.221, 409.11, -298.15, 415.778, -293.897, 422.507, -289.518, 429.199, -285.068, 435.756, -280.603, 442.08, -276.177, 448.072, -271.847, 453.633, -267.668, 458.666, -263.694, 463.072, -259.982, 466.752, -256.587, 469.609, -253.564, 471.544, -250.969, 472.459, -248.856, 472.255, -247.282, 469.063, -242.347, 465.774, -237.711, 462.371, -233.369, 458.841, -229.312, 455.169, -225.534, 451.34, -222.028, 447.34, -218.787, 443.154, -215.804, 438.767, -213.072, 434.166, -210.585, 429.335, -208.336, 424.259, -206.317, 418.925, -204.521, 413.318, -202.943, 407.422, -201.574, 401.224, -200.409, 394.709, -199.439, 387.862, -198.659, 380.668, -198.061, 373.114, -197.639, 365.455, -197.359, 358.172, -197.209, 351.252, -197.2, 344.685, -197.345, 338.458, -197.652, 332.56, -198.135, 326.979, -198.803, 321.704, -199.668, 316.722, -200.74, 312.023, -202.032, 307.594, -203.553, 303.424, -205.315, 299.501, -207.329, 295.813, -209.606, 292.349, -212.157, 289.098, -214.993, 286.046, -218.125, 283.184, -221.564, 280.498, -225.322, 277.978, -229.409)
 width = 4.8
 width_curve = SubResource("Curve_1my0b")
 default_color = Color(0.741176, 0.541176, 0.843137, 1)
@@ -2783,7 +3245,7 @@ constraints = [1, 1, 1, 1, 1]
 metadata/_custom_type_script = "uid://bodn4jw8tyemx"
 
 [node name="VecStroke" type="Line2D" parent="neck"]
-points = PackedVector2Array(426.221, -212.738, 432.432, -216.297, 438.219, -219.809, 443.6, -223.299, 448.589, -226.792, 453.203, -230.312, 457.458, -233.884, 461.37, -237.533, 464.954, -241.285, 468.228, -245.163, 471.206, -249.192, 473.906, -253.398, 476.342, -257.806, 478.531, -262.439, 480.488, -267.323, 482.231, -272.483, 483.775, -277.944, 485.135, -283.73, 486.328, -289.866, 487.37, -296.377, 488.277, -303.288, 488.864, -308.913, 489.29, -314.5, 489.565, -320.042, 489.695, -325.526, 489.688, -330.945, 489.551, -336.288, 489.294, -341.546, 488.922, -346.709, 488.444, -351.766, 487.868, -356.709, 487.201, -361.528, 486.451, -366.213, 485.625, -370.754, 484.732, -375.142, 483.778, -379.367, 482.772, -383.419, 481.722, -387.288, 480.634, -390.965, 479.517, -394.44, 478.378, -397.704, 476.86, -400.906, 474.653, -404.183, 471.837, -407.503, 468.49, -410.835, 464.691, -414.148, 460.521, -417.41, 456.057, -420.59, 451.38, -423.657, 446.568, -426.579, 441.701, -429.326, 436.858, -431.866, 432.117, -434.167, 427.559, -436.198, 423.262, -437.929, 419.306, -439.327, 415.769, -440.362, 412.732, -441.002, 410.272, -441.215, 408.47, -440.971, 407.404, -440.239, 406.455, -437.9, 405.874, -434.352, 405.607, -429.722, 405.601, -424.134, 405.802, -417.715, 406.157, -410.59, 406.61, -402.884, 407.11, -394.723, 407.602, -386.232, 408.031, -377.537, 408.346, -368.764, 408.492, -360.038, 408.414, -351.484, 408.061, -343.228, 407.377, -335.396, 406.309, -328.113, 404.803, -321.504, 402.807, -315.696, 400.265, -310.813, 397.124, -306.981)
+points = PackedVector2Array(432.348, -209.93, 438.362, -213.805, 443.957, -217.611, 449.146, -221.374, 453.945, -225.119, 458.368, -228.873, 462.429, -232.659, 466.145, -236.505, 469.528, -240.436, 472.594, -244.477, 475.358, -248.654, 477.833, -252.993, 480.036, -257.518, 481.98, -262.257, 483.681, -267.234, 485.152, -272.475, 486.409, -278.006, 487.467, -283.852, 488.339, -290.039, 489.041, -296.592, 489.587, -303.538, 489.88, -309.182, 490.016, -314.782, 490.002, -320.327, 489.846, -325.808, 489.558, -331.216, 489.144, -336.541, 488.613, -341.775, 487.974, -346.908, 487.234, -351.93, 486.402, -356.833, 485.486, -361.608, 484.493, -366.244, 483.433, -370.733, 482.314, -375.065, 481.143, -379.232, 479.928, -383.223, 478.679, -387.03, 477.402, -390.643, 476.107, -394.053, 474.802, -397.251, 473.121, -400.369, 470.749, -403.525, 467.766, -406.692, 464.253, -409.844, 460.291, -412.954, 455.96, -415.993, 451.34, -418.936, 446.513, -421.755, 441.56, -424.422, 436.56, -426.911, 431.595, -429.195, 426.744, -431.246, 422.09, -433.038, 417.712, -434.542, 413.691, -435.733, 410.108, -436.582, 407.043, -437.064, 404.577, -437.149, 402.791, -436.813, 401.766, -436.027, 400.94, -433.643, 400.544, -430.072, 400.517, -425.437, 400.801, -419.86, 401.334, -413.464, 402.057, -406.371, 402.909, -398.703, 403.83, -390.583, 404.76, -382.135, 405.64, -373.479, 406.408, -364.739, 407.006, -356.036, 407.372, -347.495, 407.446, -339.236, 407.169, -331.383, 406.481, -324.058, 405.321, -317.384, 403.629, -311.483, 401.345, -306.477, 398.409, -302.489)
 width = 4.3
 default_color = Color(0.741176, 0.541176, 0.843137, 1)
 script = ExtResource("2_27k37")
@@ -2920,7 +3382,7 @@ constraints = [1, 1, 1, 1, 1, 1, 1, 1, 1]
 metadata/_custom_type_script = "uid://bodn4jw8tyemx"
 
 [node name="VecStroke" type="Line2D" parent="head"]
-points = PackedVector2Array(418.75, -387.33, 412.514, -396.966, 406.795, -407.27, 401.68, -418.048, 397.255, -429.106, 393.605, -440.25, 390.818, -451.286, 388.978, -462.021, 388.174, -472.26, 388.49, -481.809, 390.013, -490.475, 392.609, -499.406, 396.168, -509.572, 400.809, -520.508, 406.652, -531.751, 413.817, -542.837, 422.426, -553.302, 432.598, -562.682, 444.452, -570.514, 458.11, -576.334, 473.692, -579.677, 490.94, -581.097, 506.782, -581.173, 521.257, -579.962, 534.403, -577.526, 546.26, -573.924, 556.868, -569.217, 566.265, -563.463, 574.49, -556.724, 581.583, -549.058, 587.583, -540.526, 593.919, -529.01, 598.872, -517.68, 602.579, -506.63, 605.179, -495.96, 606.811, -485.764, 607.612, -476.142, 607.721, -467.189, 607.275, -459.003, 606.414, -451.68, 605.275, -445.317, 604.071, -439.906, 602.946, -435.308, 601.936, -431.429, 601.076, -428.173, 600.401, -425.445, 599.948, -423.15, 599.752, -421.193, 599.848, -419.478, 600.272, -417.911, 601.059, -416.396, 602.458, -414.974, 604.561, -413.711, 607.168, -412.549, 610.08, -411.433, 613.098, -410.305, 616.022, -409.109, 618.655, -407.787, 620.796, -406.282, 622.246, -404.538, 622.806, -402.498, 622.457, -399.594, 621.212, -395.491, 618.922, -390.477, 615.438, -384.84, 610.609, -378.869, 604.286, -372.853, 596.321, -367.08, 586.563, -361.84, 574.862, -357.42, 561.07, -354.109, 548.386, -352.373, 535.689, -351.614, 523.103, -351.735, 510.752, -352.639, 498.761, -354.23, 487.256, -356.409, 476.36, -359.08, 466.199, -362.146, 456.898, -365.509, 448.58, -369.073)
+points = PackedVector2Array(415.829, -383.81, 409.107, -393.104, 402.866, -403.091, 397.202, -413.583, 392.213, -424.39, 387.993, -435.323, 384.64, -446.193, 382.249, -456.811, 380.915, -466.988, 380.736, -476.535, 381.808, -485.262, 383.936, -494.31, 386.961, -504.64, 391.026, -515.794, 396.276, -527.318, 402.853, -538.753, 410.903, -549.643, 420.568, -559.531, 431.994, -567.962, 445.324, -574.477, 460.701, -578.621, 477.842, -580.932, 493.648, -581.827, 508.157, -581.369, 521.403, -579.618, 533.423, -576.638, 544.254, -572.489, 553.93, -567.233, 562.488, -560.933, 569.964, -553.65, 576.394, -545.446, 583.314, -534.281, 588.843, -523.229, 593.115, -512.394, 596.263, -501.879, 598.42, -491.789, 599.717, -482.227, 600.289, -473.297, 600.269, -465.104, 599.788, -457.751, 598.981, -451.342, 598.06, -445.879, 597.175, -441.232, 596.368, -437.308, 595.678, -434.014, 595.146, -431.257, 594.813, -428.943, 594.718, -426.979, 594.903, -425.273, 595.407, -423.731, 596.271, -422.26, 597.741, -420.913, 599.905, -419.761, 602.567, -418.737, 605.531, -417.774, 608.602, -416.805, 611.582, -415.762, 614.278, -414.579, 616.493, -413.188, 618.03, -411.523, 618.695, -409.516, 618.497, -406.6, 617.467, -402.44, 615.441, -397.317, 612.256, -391.511, 607.746, -385.302, 601.747, -378.97, 594.097, -372.796, 584.629, -367.061, 573.181, -362.044, 559.587, -358.025, 547.019, -355.636, 534.386, -354.221, 521.818, -353.69, 509.445, -353.953, 497.396, -354.919, 485.801, -356.498, 474.788, -358.599, 464.489, -361.133, 455.031, -364.008, 446.546, -367.134)
 width = 4.9
 width_curve = SubResource("Curve_sj0ay")
 default_color = Color(0.741176, 0.541176, 0.843137, 1)
@@ -3192,7 +3654,7 @@ NodePath("../../../pony/root/body_root/body/body2/neck1/neck2/head/jaw"): 1.0
 }
 
 [node name="VecStroke" type="Line2D" parent="head/mouth_simple"]
-points = PackedVector2Array(578.81, -390.619, 580.232, -386.326, 581.996, -382.67, 584.045, -379.609, 586.326, -377.101, 588.782, -375.105, 591.358, -373.579, 593.999, -372.481, 596.65, -371.769, 599.254, -371.401, 601.758, -371.337)
+points = PackedVector2Array(575.401, -395.382, 577.043, -391.171, 578.992, -387.613, 581.197, -384.665, 583.602, -382.28, 586.157, -380.415, 588.807, -379.025, 591.5, -378.066, 594.182, -377.493, 596.801, -377.261, 599.302, -377.326)
 width = 4.3
 width_curve = SubResource("Curve_27k37")
 default_color = Color(0.741176, 0.541176, 0.843137, 1)
@@ -3251,12 +3713,146 @@ NodePath("../../../pony/root/body_root/body/body2/neck1/neck2/head/jaw"): 1.0
 }
 
 [node name="VecStroke" type="Line2D" parent="head/nose"]
-points = PackedVector2Array(600.824, -404.474, 600.811, -403.475, 600.905, -402.528, 601.103, -401.642, 601.401, -400.825, 601.798, -400.087, 602.29, -399.436, 602.874, -398.883, 603.547, -398.436, 604.306, -398.104, 605.149, -397.897, 606.072, -397.823, 607.073, -397.891, 608.148, -398.111, 609.295, -398.492, 610.51, -399.042)
+points = PackedVector2Array(596.654, -410.349, 596.693, -409.352, 596.836, -408.411, 597.079, -407.537, 597.419, -406.737, 597.854, -406.021, 598.378, -405.397, 598.989, -404.876, 599.684, -404.464, 600.459, -404.172, 601.311, -404.009, 602.236, -403.983, 603.231, -404.103, 604.293, -404.378, 605.418, -404.817, 606.602, -405.43)
 width = 3.699
 width_curve = SubResource("Curve_4njp3")
 default_color = Color(0.741176, 0.541176, 0.843137, 1)
 script = ExtResource("2_27k37")
 metadata/_custom_type_script = "uid://csgt88iv3c4ke"
+
+[node name="tail_flair" type="Node2D" parent="."]
+script = ExtResource("1_oyty2")
+fill = Color(0.411765, 0.196078, 0.560784, 1)
+show_rest = false
+skeleton = NodePath("../pony")
+constraints = [1, 1, 0, 1, 1]
+metadata/_custom_type_script = "uid://bodn4jw8tyemx"
+
+[node name="@Node@24811" type="Node" parent="tail_flair" node_paths=PackedStringArray("weights")]
+script = ExtResource("3_3ekgy")
+value = Vector2(119.889, -118.326)
+weights = {
+NodePath("../../pony/root/body_root/body/tail"): 0.0,
+NodePath("../../pony/root/body_root/body/tail/tail2/tail3/tail4/tail5"): 1.0
+}
+
+[node name="@Node@24812" type="Node" parent="tail_flair" node_paths=PackedStringArray("weights")]
+script = ExtResource("3_3ekgy")
+value = Vector2(86.3826, -113.239)
+weights = {
+NodePath("../../pony/root/body_root/body/tail"): 0.0,
+NodePath("../../pony/root/body_root/body/tail/tail2/tail3/tail4/tail5"): 1.0
+}
+
+[node name="@Node@24813" type="Node" parent="tail_flair" node_paths=PackedStringArray("weights")]
+script = ExtResource("3_3ekgy")
+value = Vector2(52.7239, -108.128)
+weights = {
+NodePath("../../pony/root/body_root/body/tail"): 0.0,
+NodePath("../../pony/root/body_root/body/tail/tail2/tail3/tail4/tail5"): 1.0
+}
+
+[node name="@Node@24820" type="Node" parent="tail_flair" node_paths=PackedStringArray("weights")]
+script = ExtResource("3_3ekgy")
+value = Vector2(29.4097, -127.985)
+weights = {
+NodePath("../../pony/root/body_root/body/tail"): 0.0,
+NodePath("../../pony/root/body_root/body/tail/tail2/tail3/tail4/tail5"): 1.0
+}
+
+[node name="@Node@24821" type="Node" parent="tail_flair" node_paths=PackedStringArray("weights")]
+script = ExtResource("3_3ekgy")
+value = Vector2(26.5887, -155.296)
+weights = {
+NodePath("../../pony/root/body_root/body/tail"): 0.0,
+NodePath("../../pony/root/body_root/body/tail/tail2/tail3/tail4/tail5"): 1.0
+}
+
+[node name="@Node@24822" type="Node" parent="tail_flair" node_paths=PackedStringArray("weights")]
+script = ExtResource("3_3ekgy")
+value = Vector2(24.3195, -177.265)
+weights = {
+NodePath("../../pony/root/body_root/body/tail"): 0.0,
+NodePath("../../pony/root/body_root/body/tail/tail2/tail3/tail4/tail5"): 1.0
+}
+
+[node name="@Node@24823" type="Node" parent="tail_flair" node_paths=PackedStringArray("weights")]
+script = ExtResource("3_3ekgy")
+value = Vector2(29.2466, -184.603)
+weights = {
+NodePath("../../pony/root/body_root/body/tail"): 0.0,
+NodePath("../../pony/root/body_root/body/tail/tail2/tail3/tail4/tail5"): 1.0
+}
+
+[node name="@Node@24824" type="Node" parent="tail_flair" node_paths=PackedStringArray("weights")]
+script = ExtResource("3_3ekgy")
+value = Vector2(37.743, -196.974)
+weights = {
+NodePath("../../pony/root/body_root/body/tail"): 0.0,
+NodePath("../../pony/root/body_root/body/tail/tail2/tail3/tail4/tail5"): 1.0
+}
+
+[node name="@Node@24825" type="Node" parent="tail_flair" node_paths=PackedStringArray("weights")]
+script = ExtResource("3_3ekgy")
+value = Vector2(41.1707, -175.826)
+weights = {
+NodePath("../../pony/root/body_root/body/tail"): 0.0,
+NodePath("../../pony/root/body_root/body/tail/tail2/tail3/tail4/tail5"): 1.0
+}
+
+[node name="@Node@24826" type="Node" parent="tail_flair" node_paths=PackedStringArray("weights")]
+script = ExtResource("3_3ekgy")
+value = Vector2(42.6391, -161.988)
+weights = {
+NodePath("../../pony/root/body_root/body/tail"): 0.0,
+NodePath("../../pony/root/body_root/body/tail/tail2/tail3/tail4/tail5"): 1.0
+}
+
+[node name="@Node@24827" type="Node" parent="tail_flair" node_paths=PackedStringArray("weights")]
+script = ExtResource("3_3ekgy")
+value = Vector2(63.5315, -153.065)
+weights = {
+NodePath("../../pony/root/body_root/body/tail"): 0.0,
+NodePath("../../pony/root/body_root/body/tail/tail2/tail3/tail4/tail5"): 1.0
+}
+
+[node name="@Node@24828" type="Node" parent="tail_flair" node_paths=PackedStringArray("weights")]
+script = ExtResource("3_3ekgy")
+value = Vector2(84.4239, -144.142)
+weights = {
+NodePath("../../pony/root/body_root/body/tail"): 0.0,
+NodePath("../../pony/root/body_root/body/tail/tail2/tail3/tail4/tail5"): 1.0
+}
+
+[node name="@Node@24829" type="Node" parent="tail_flair" node_paths=PackedStringArray("weights")]
+script = ExtResource("3_3ekgy")
+value = Vector2(115.797, -153.245)
+weights = {
+NodePath("../../pony/root/body_root/body/tail/tail2/tail3/tail4"): 1.0
+}
+
+[node name="@Node@24830" type="Node" parent="tail_flair" node_paths=PackedStringArray("weights")]
+script = ExtResource("3_3ekgy")
+value = Vector2(119.68, -162.423)
+weights = {
+NodePath("../../pony/root/body_root/body/tail/tail2/tail3/tail4"): 1.0
+}
+
+[node name="@Node@24831" type="Node" parent="tail_flair" node_paths=PackedStringArray("weights")]
+script = ExtResource("3_3ekgy")
+value = Vector2(126.862, -179.398)
+weights = {
+NodePath("../../pony/root/body_root/body/tail/tail2/tail3/tail4"): 1.0
+}
+
+[node name="VecStroke" type="Line2D" parent="tail_flair"]
+points = PackedVector2Array(95.5246, -95.9615, 85.7883, -94.775, 76.678, -95.0071, 68.2587, -96.5551, 60.5953, -99.3165, 53.7529, -103.189, 47.7964, -108.069, 42.7907, -113.855, 38.8009, -120.444, 35.892, -127.733, 34.1288, -135.621, 33.4174, -141.768, 33.1456, -147.172, 33.287, -151.95, 33.8151, -156.219, 34.7037, -160.097, 35.9264, -163.699, 37.4566, -167.143, 39.2681, -170.547, 41.3344, -174.027, 43.6291, -177.699, 44.8607, -171.617, 46.0863, -165.958, 47.4346, -160.715, 49.0345, -155.877, 51.0146, -151.436, 53.5036, -147.381, 56.6304, -143.705, 60.5237, -140.397, 65.3122, -137.448, 71.1246, -134.849, 77.7476, -132.955, 84.7327, -132.05, 91.8567, -132.016, 98.8963, -132.739, 105.628, -134.1, 111.828, -135.984, 117.274, -138.274, 121.742, -140.853, 125.009, -143.604, 126.851, -146.412)
+width = 4.3
+width_curve = SubResource("Curve_vrli8")
+default_color = Color(0.337255, 0.156863, 0.458824, 1)
+script = ExtResource("2_27k37")
+metadata/_custom_type_script = "uid://csgt88iv3c4ke"
+metadata/_edit_lock_ = true
 
 [node name="backleg_front_B" type="Node2D" parent="."]
 script = ExtResource("1_oyty2")
@@ -3267,7 +3863,7 @@ constraints = [1, 1, 1, 1, 1, 1, 1, 1, 1]
 metadata/_custom_type_script = "uid://bodn4jw8tyemx"
 
 [node name="VecStroke" type="Line2D" parent="backleg_front_B"]
-points = PackedVector2Array(267.056, -198.004, 265.005, -200.021, 262.614, -201.863, 259.975, -203.525, 257.179, -204.999, 254.319, -206.278, 251.488, -207.357, 248.777, -208.228, 246.278, -208.885, 244.083, -209.321, 242.286, -209.529, 240.224, -209.68, 238.21, -209.684, 236.135, -209.242, 233.893, -208.053, 231.376, -205.82, 228.475, -202.243, 225.083, -197.022, 221.092, -189.858, 216.395, -180.453, 210.883, -168.506, 204.975, -154.042, 200.066, -139.453, 196.081, -124.789, 192.945, -110.098, 190.582, -95.427, 188.918, -80.8249, 187.876, -66.3397, 187.382, -52.0197, 187.359, -37.9128, 187.734, -24.0674, 188.604, -19.6187, 190.727, -15.8055, 193.949, -12.5886, 198.111, -9.92881, 203.06, -7.78682, 208.639, -6.12345, 214.691, -4.89949, 221.062, -4.07572, 227.595, -3.61291, 234.134, -3.47185, 240.704, -3.60937, 247.154, -3.98966, 253.389, -4.58492, 259.32, -5.36733, 264.853, -6.3091, 269.896, -7.3824, 274.358, -8.55943, 278.146, -9.81238, 281.167, -11.1134, 283.331, -12.4348, 283.995, -14.5234, 282.997, -18.2204, 280.687, -23.4269, 277.418, -30.0441, 273.54, -37.9732, 269.406, -47.1155, 265.366, -57.372, 261.772, -68.644, 258.975, -80.8327, 257.328, -93.8392, 257.034, -106.759, 257.96, -118.774, 259.949, -129.917, 262.844, -140.221, 266.489, -149.719, 270.726, -158.442, 275.399, -166.423, 280.351, -173.696, 285.426, -180.291, 290.466, -186.242, 295.968, -192.397, 302.329, -199.461, 309.24, -207.256, 316.395, -215.602, 323.484, -224.318, 330.2, -233.226, 336.236, -242.145, 341.284, -250.896, 345.035, -259.299, 347.182, -267.174)
+points = PackedVector2Array(269.514, -192.526, 267.192, -195.243, 264.653, -197.743, 261.967, -200.016, 259.205, -202.05, 256.436, -203.836, 253.731, -205.364, 251.161, -206.622, 248.797, -207.601, 246.708, -208.291, 244.966, -208.68, 242.936, -209.021, 240.94, -209.211, 238.843, -208.964, 236.512, -207.993, 233.81, -206.013, 230.605, -202.736, 226.761, -197.875, 222.145, -191.144, 216.621, -182.257, 210.056, -170.926, 203.142, -156.978, 197.701, -142.541, 193.571, -127.739, 190.589, -112.691, 188.595, -97.5194, 187.426, -82.3451, 186.92, -67.2893, 186.915, -52.4735, 187.25, -38.0188, 187.762, -24.0464, 188.632, -19.6004, 190.754, -15.7894, 193.973, -12.5744, 198.134, -9.91609, 203.079, -7.77534, 208.655, -6.11295, 214.704, -4.8897, 221.071, -4.0664, 227.6, -3.60387, 234.135, -3.46289, 240.702, -3.60033, 247.147, -3.9804, 253.38, -4.57531, 259.306, -5.35726, 264.836, -6.29848, 269.877, -7.37115, 274.336, -8.5475, 278.121, -9.79972, 281.141, -11.1, 283.304, -12.4206, 284.023, -14.5133, 283.168, -18.2216, 281.051, -23.4433, 277.988, -30.0762, 274.292, -38.018, 270.277, -47.1665, 266.259, -57.4196, 262.55, -68.6748, 259.465, -80.8301, 257.319, -93.7831, 256.504, -106.378, 257.05, -117.997, 258.804, -128.673, 261.615, -138.436, 265.331, -147.317, 269.8, -155.35, 274.87, -162.564, 280.388, -168.991, 286.203, -174.663, 292.164, -179.612, 298.21, -184.638, 304.999, -190.982, 312.23, -198.402, 319.602, -206.654, 326.816, -215.495, 333.572, -224.683, 339.569, -233.974, 344.507, -243.125, 348.086, -251.893, 350.007, -260.035)
 width = 4.8
 width_curve = SubResource("Curve_3yjpv")
 default_color = Color(0.741176, 0.541176, 0.843137, 1)
@@ -3630,7 +4226,7 @@ constraints = [1, 1, 1]
 metadata/_custom_type_script = "uid://bodn4jw8tyemx"
 
 [node name="VecStroke" type="Line2D" parent="backleg_front_TopLine"]
-points = PackedVector2Array(257.715, -341.484, 253.22, -336.208, 249.375, -331.371, 246.132, -326.76, 243.447, -322.158, 241.274, -317.351, 239.567, -312.124, 238.279, -306.262, 237.366, -299.55, 236.782, -291.773, 236.48, -282.717, 236.895, -273.789, 238.274, -264.664, 240.339, -255.451, 242.814, -246.259, 245.425, -237.195, 247.893, -228.369, 249.945, -219.889, 251.302, -211.863, 251.69, -204.4, 250.832, -197.608)
+points = PackedVector2Array(257.695, -330.747, 253.416, -325.299, 249.776, -320.317, 246.731, -315.587, 244.243, -310.893, 242.271, -306.02, 240.774, -300.754, 239.711, -294.878, 239.043, -288.178, 238.729, -280.439, 238.728, -271.446, 239.424, -262.543, 241.063, -253.518, 243.36, -244.518, 246.028, -235.692, 248.782, -227.186, 251.336, -219.15, 253.405, -211.73, 254.703, -205.075, 254.944, -199.332, 253.842, -194.65)
 width = 4.8
 width_curve = SubResource("Curve_3yjpv")
 default_color = Color(0.741176, 0.541176, 0.843137, 1)
@@ -3972,7 +4568,7 @@ constraints = [1, 1, 1, 1, 1, 1, 1]
 metadata/_custom_type_script = "uid://bodn4jw8tyemx"
 
 [node name="VecStroke" type="Line2D" parent="frontleg_front"]
-points = PackedVector2Array(393.297, -244.689, 390.441, -236.214, 387.627, -225.847, 384.901, -214.013, 382.311, -201.14, 379.906, -187.653, 377.733, -173.979, 375.839, -160.545, 374.273, -147.777, 373.081, -136.1, 372.312, -125.943, 371.758, -113.96, 371.471, -101.53, 371.465, -88.8879, 371.753, -76.2702, 372.348, -63.9124, 373.265, -52.0504, 374.516, -40.9199, 376.115, -30.7565, 378.075, -21.7962, 380.409, -14.2746, 381.446, -12.6676, 383.322, -11.0903, 386.007, -9.57385, 389.465, -8.14939, 393.666, -6.84806, 398.574, -5.70099, 404.158, -4.73933, 410.385, -3.99421, 417.221, -3.49678, 424.634, -3.27817, 433.627, -3.37291, 441.989, -3.79292, 449.621, -4.49285, 456.429, -5.42735, 462.315, -6.55105, 467.183, -7.8186, 470.937, -9.18465, 473.48, -10.6038, 474.716, -12.0308, 474.548, -13.4202, 471.26, -19.1168, 467.606, -26.7631, 463.714, -36.0107, 459.712, -46.511, 455.729, -57.9154, 451.893, -69.8755, 448.33, -82.0426, 445.17, -94.0683, 442.539, -105.604, 440.567, -116.301, 439.161, -126.967, 438.02, -139.247, 437.157, -152.796, 436.587, -167.265, 436.321, -182.308, 436.374, -197.577, 436.758, -212.724, 437.488, -227.403, 438.576, -241.266, 440.035, -253.966)
+points = PackedVector2Array(391.53, -248.047, 386.819, -239.753, 382.916, -229.121, 379.748, -216.683, 377.241, -202.975, 375.322, -188.529, 373.918, -173.879, 372.956, -159.56, 372.362, -146.105, 372.063, -134.047, 371.985, -123.921, 371.997, -112.105, 372.044, -99.889, 372.182, -87.4931, 372.462, -75.138, 372.94, -63.0444, 373.669, -51.4329, 374.702, -40.5241, 376.092, -30.5386, 377.895, -21.697, 380.162, -14.2199, 381.197, -12.613, 383.071, -11.0351, 385.752, -9.51727, 389.207, -8.09065, 393.403, -6.7864, 398.307, -5.63566, 403.887, -4.66959, 410.109, -3.91934, 416.94, -3.41606, 424.347, -3.19088, 433.335, -3.27741, 441.691, -3.68956, 449.319, -4.3821, 456.122, -5.30979, 462.005, -6.42739, 466.871, -7.68967, 470.624, -9.05139, 473.166, -10.4673, 474.403, -11.8922, 474.237, -13.2808, 471.01, -19.0212, 467.506, -26.7871, 463.816, -36.2113, 460.033, -46.9265, 456.25, -58.5652, 452.558, -70.7602, 449.05, -83.1442, 445.819, -95.3498, 442.957, -107.01, 440.556, -117.757, 438.402, -128.353, 436.216, -140.192, 434.175, -152.966, 432.457, -166.366, 431.238, -180.085, 430.697, -193.816, 431.01, -207.251, 432.357, -220.082, 434.913, -232.001, 438.857, -242.702)
 width = 4.3
 width_curve = SubResource("Curve_cystm")
 default_color = Color(0.741176, 0.541176, 0.843137, 1)
@@ -4172,7 +4768,7 @@ constraints = [1, 1, 1, 1, 1]
 metadata/_custom_type_script = "uid://bodn4jw8tyemx"
 
 [node name="VecStroke" type="Line2D" parent="ear"]
-points = PackedVector2Array(407.171, -456.936, 403.158, -463.042, 399.206, -469.84, 395.4, -477.2, 391.83, -484.992, 388.582, -493.084, 385.745, -501.348, 383.405, -509.651, 381.652, -517.865, 380.571, -525.857, 380.252, -533.498, 381.262, -545.272, 383.785, -556.441, 387.498, -566.895, 392.078, -576.519, 397.204, -585.201, 402.552, -592.828, 407.8, -599.288, 412.627, -604.468, 416.708, -608.256, 419.722, -610.538, 421.262, -611.416, 422.68, -612.033, 423.994, -612.397, 425.218, -612.511, 426.367, -612.381, 427.456, -612.012, 428.502, -611.409, 429.519, -610.577, 430.523, -609.522, 431.529, -608.249, 435.731, -602.074, 439.351, -595.792, 442.408, -589.36, 444.921, -582.736, 446.907, -575.877, 448.384, -568.742, 449.371, -561.288, 449.886, -553.472, 449.946, -545.252, 449.57, -536.587)
+points = PackedVector2Array(400.668, -452.678, 396.348, -458.564, 392.051, -465.144, 387.871, -472.293, 383.905, -479.884, 380.244, -487.792, 376.985, -495.892, 374.22, -504.058, 372.045, -512.164, 370.552, -520.085, 369.838, -527.694, 370.236, -539.497, 372.176, -550.775, 375.34, -561.4, 379.413, -571.242, 384.079, -580.172, 389.021, -588.062, 393.925, -594.781, 398.473, -600.201, 402.35, -604.192, 405.24, -606.626, 406.731, -607.581, 408.115, -608.271, 409.407, -608.702, 410.622, -608.879, 411.776, -608.809, 412.882, -608.497, 413.957, -607.949, 415.016, -607.172, 416.072, -606.171, 417.142, -604.953, 421.655, -599.008, 425.594, -592.926, 428.978, -586.665, 431.829, -580.184, 434.166, -573.442, 436.01, -566.397, 437.381, -559.008, 438.299, -551.235, 438.785, -543.035, 438.858, -534.367)
 width = 4.3
 width_curve = SubResource("Curve_bwgdn")
 default_color = Color(0.741176, 0.541176, 0.843137, 1)
@@ -4346,146 +4942,12 @@ NodePath("../../../pony/root/body_root/body/body2/neck1/neck2/head"): 1.0
 }
 
 [node name="VecStroke" type="Line2D" parent="ear/ear_line"]
-points = PackedVector2Array(409.381, -570.57, 406.869, -564.6, 405.243, -558.141, 404.458, -551.336, 404.469, -544.332, 405.231, -537.275, 406.7, -530.31, 408.829, -523.583, 411.575, -517.24, 414.891, -511.425, 418.734, -506.285)
+points = PackedVector2Array(396.989, -566.201, 394.791, -560.113, 393.503, -553.582, 393.072, -546.75, 393.446, -539.761, 394.572, -532.758, 396.398, -525.883, 398.872, -519.279, 401.94, -513.09, 405.552, -507.459, 409.653, -502.528)
 width = 4.3
 width_curve = SubResource("Curve_3ekgy")
 default_color = Color(0.741176, 0.541176, 0.843137, 1)
 script = ExtResource("2_27k37")
 metadata/_custom_type_script = "uid://csgt88iv3c4ke"
-
-[node name="tail_flair" type="Node2D" parent="."]
-script = ExtResource("1_oyty2")
-fill = Color(0.411765, 0.196078, 0.560784, 1)
-show_rest = false
-skeleton = NodePath("../pony")
-constraints = [1, 1, 0, 1, 1]
-metadata/_custom_type_script = "uid://bodn4jw8tyemx"
-
-[node name="@Node@24811" type="Node" parent="tail_flair" node_paths=PackedStringArray("weights")]
-script = ExtResource("3_3ekgy")
-value = Vector2(119.889, -118.326)
-weights = {
-NodePath("../../pony/root/body_root/body/tail"): 0.0,
-NodePath("../../pony/root/body_root/body/tail/tail2/tail3/tail4/tail5"): 1.0
-}
-
-[node name="@Node@24812" type="Node" parent="tail_flair" node_paths=PackedStringArray("weights")]
-script = ExtResource("3_3ekgy")
-value = Vector2(86.3826, -113.239)
-weights = {
-NodePath("../../pony/root/body_root/body/tail"): 0.0,
-NodePath("../../pony/root/body_root/body/tail/tail2/tail3/tail4/tail5"): 1.0
-}
-
-[node name="@Node@24813" type="Node" parent="tail_flair" node_paths=PackedStringArray("weights")]
-script = ExtResource("3_3ekgy")
-value = Vector2(52.7239, -108.128)
-weights = {
-NodePath("../../pony/root/body_root/body/tail"): 0.0,
-NodePath("../../pony/root/body_root/body/tail/tail2/tail3/tail4/tail5"): 1.0
-}
-
-[node name="@Node@24820" type="Node" parent="tail_flair" node_paths=PackedStringArray("weights")]
-script = ExtResource("3_3ekgy")
-value = Vector2(29.4097, -127.985)
-weights = {
-NodePath("../../pony/root/body_root/body/tail"): 0.0,
-NodePath("../../pony/root/body_root/body/tail/tail2/tail3/tail4/tail5"): 1.0
-}
-
-[node name="@Node@24821" type="Node" parent="tail_flair" node_paths=PackedStringArray("weights")]
-script = ExtResource("3_3ekgy")
-value = Vector2(26.5887, -155.296)
-weights = {
-NodePath("../../pony/root/body_root/body/tail"): 0.0,
-NodePath("../../pony/root/body_root/body/tail/tail2/tail3/tail4/tail5"): 1.0
-}
-
-[node name="@Node@24822" type="Node" parent="tail_flair" node_paths=PackedStringArray("weights")]
-script = ExtResource("3_3ekgy")
-value = Vector2(24.3195, -177.265)
-weights = {
-NodePath("../../pony/root/body_root/body/tail"): 0.0,
-NodePath("../../pony/root/body_root/body/tail/tail2/tail3/tail4/tail5"): 1.0
-}
-
-[node name="@Node@24823" type="Node" parent="tail_flair" node_paths=PackedStringArray("weights")]
-script = ExtResource("3_3ekgy")
-value = Vector2(29.2466, -184.603)
-weights = {
-NodePath("../../pony/root/body_root/body/tail"): 0.0,
-NodePath("../../pony/root/body_root/body/tail/tail2/tail3/tail4/tail5"): 1.0
-}
-
-[node name="@Node@24824" type="Node" parent="tail_flair" node_paths=PackedStringArray("weights")]
-script = ExtResource("3_3ekgy")
-value = Vector2(37.743, -196.974)
-weights = {
-NodePath("../../pony/root/body_root/body/tail"): 0.0,
-NodePath("../../pony/root/body_root/body/tail/tail2/tail3/tail4/tail5"): 1.0
-}
-
-[node name="@Node@24825" type="Node" parent="tail_flair" node_paths=PackedStringArray("weights")]
-script = ExtResource("3_3ekgy")
-value = Vector2(41.1707, -175.826)
-weights = {
-NodePath("../../pony/root/body_root/body/tail"): 0.0,
-NodePath("../../pony/root/body_root/body/tail/tail2/tail3/tail4/tail5"): 1.0
-}
-
-[node name="@Node@24826" type="Node" parent="tail_flair" node_paths=PackedStringArray("weights")]
-script = ExtResource("3_3ekgy")
-value = Vector2(42.6391, -161.988)
-weights = {
-NodePath("../../pony/root/body_root/body/tail"): 0.0,
-NodePath("../../pony/root/body_root/body/tail/tail2/tail3/tail4/tail5"): 1.0
-}
-
-[node name="@Node@24827" type="Node" parent="tail_flair" node_paths=PackedStringArray("weights")]
-script = ExtResource("3_3ekgy")
-value = Vector2(63.5315, -153.065)
-weights = {
-NodePath("../../pony/root/body_root/body/tail"): 0.0,
-NodePath("../../pony/root/body_root/body/tail/tail2/tail3/tail4/tail5"): 1.0
-}
-
-[node name="@Node@24828" type="Node" parent="tail_flair" node_paths=PackedStringArray("weights")]
-script = ExtResource("3_3ekgy")
-value = Vector2(84.4239, -144.142)
-weights = {
-NodePath("../../pony/root/body_root/body/tail"): 0.0,
-NodePath("../../pony/root/body_root/body/tail/tail2/tail3/tail4/tail5"): 1.0
-}
-
-[node name="@Node@24829" type="Node" parent="tail_flair" node_paths=PackedStringArray("weights")]
-script = ExtResource("3_3ekgy")
-value = Vector2(115.797, -153.245)
-weights = {
-NodePath("../../pony/root/body_root/body/tail/tail2/tail3/tail4"): 1.0
-}
-
-[node name="@Node@24830" type="Node" parent="tail_flair" node_paths=PackedStringArray("weights")]
-script = ExtResource("3_3ekgy")
-value = Vector2(119.68, -162.423)
-weights = {
-NodePath("../../pony/root/body_root/body/tail/tail2/tail3/tail4"): 1.0
-}
-
-[node name="@Node@24831" type="Node" parent="tail_flair" node_paths=PackedStringArray("weights")]
-script = ExtResource("3_3ekgy")
-value = Vector2(126.862, -179.398)
-weights = {
-NodePath("../../pony/root/body_root/body/tail/tail2/tail3/tail4"): 1.0
-}
-
-[node name="VecStroke" type="Line2D" parent="tail_flair"]
-points = PackedVector2Array(86.3826, -113.239, 76.6055, -112.437, 67.5099, -113.029, 59.1568, -114.908, 51.607, -117.97, 44.9215, -122.109, 39.1611, -127.222, 34.3867, -133.202, 30.6593, -139.944, 28.0396, -147.344, 26.5887, -155.296, 26.1202, -161.467, 26.0617, -166.879, 26.3915, -171.649, 27.0878, -175.894, 28.1287, -179.734, 29.4927, -183.286, 31.1579, -186.668, 33.1025, -189.998, 35.3048, -193.394, 37.743, -196.974, 38.7339, -190.846, 39.7356, -185.143, 40.8763, -179.85, 42.2843, -174.952, 44.088, -170.435, 46.4156, -166.285, 49.3955, -162.487, 53.1559, -159.028, 57.8251, -155.892, 63.5315, -153.065, 70.0757, -150.911, 77.0209, -149.731, 84.1392, -149.417, 91.203, -149.861, 97.9842, -150.956, 104.255, -152.594, 109.788, -154.668, 114.355, -157.069, 117.728, -159.69, 119.68, -162.423)
-width = 4.3
-width_curve = SubResource("Curve_vrli8")
-default_color = Color(0.337255, 0.156863, 0.458824, 1)
-script = ExtResource("2_27k37")
-metadata/_custom_type_script = "uid://csgt88iv3c4ke"
-metadata/_edit_lock_ = true
 
 [node name="pony" type="Skeleton2D" parent="."]
 modification_stack = SubResource("SkeletonModificationStack2D_27k37")
@@ -4502,19 +4964,25 @@ rest = Transform2D(1, 0, 0, 1, 124, -340)
 [node name="body" type="Bone2D" parent="pony/root/body_root"]
 position = Vector2(0, 7)
 rotation = -0.0394493
+scale = Vector2(0.999832, 0.999832)
 rest = Transform2D(1, 0, 0, 1, 0, 0)
 
 [node name="body2" type="Bone2D" parent="pony/root/body_root/body"]
 position = Vector2(46, 25)
 rotation = -0.017567
+scale = Vector2(0.999822, 0.999822)
 rest = Transform2D(1, 0, 0, 1, 46, 25)
 
 [node name="neck1" type="Bone2D" parent="pony/root/body_root/body/body2"]
 position = Vector2(61, 23)
+rotation = 0.0164968
+scale = Vector2(0.999871, 0.999871)
 rest = Transform2D(1, 0, 0, 1, 61, 23)
 
 [node name="neck2" type="Bone2D" parent="pony/root/body_root/body/body2/neck1"]
 position = Vector2(24, -56)
+rotation = 0.00994477
+scale = Vector2(0.999835, 0.999835)
 rest = Transform2D(1, 0, 0, 1, 24, -56)
 
 [node name="head" type="Bone2D" parent="pony/root/body_root/body/body2/neck1/neck2"]
@@ -5356,7 +5824,8 @@ metadata/_local_pose_override_enabled_ = true
 
 [node name="forearm_front" type="Bone2D" parent="pony/root/body_root/body/body2/shoulder_front/arm_front" node_paths=PackedStringArray("target")]
 position = Vector2(0, 105)
-scale = Vector2(0.999997, 0.999997)
+rotation = 0.080653
+scale = Vector2(0.999851, 0.999851)
 rest = Transform2D(0.999997, -3.2584e-07, 3.2584e-07, 0.999997, 0, 105)
 auto_calculate_length_and_angle = false
 length = 100.334
@@ -5377,7 +5846,8 @@ metadata/_local_pose_override_enabled_ = true
 
 [node name="forearm_back" type="Bone2D" parent="pony/root/body_root/body/body2/shoulder_back/arm_back" node_paths=PackedStringArray("target")]
 position = Vector2(0, 105)
-scale = Vector2(0.999997, 0.999997)
+rotation = 0.0729076
+scale = Vector2(0.999837, 0.999837)
 rest = Transform2D(0.999997, 2.17755e-06, -2.17755e-06, 0.999997, 0, 105)
 auto_calculate_length_and_angle = false
 length = 100.334
@@ -5404,8 +5874,8 @@ metadata/_local_pose_override_enabled_ = true
 
 [node name="toe_front" type="Bone2D" parent="pony/root/body_root/body/hip_front/thigh_front/lowerleg_front" node_paths=PackedStringArray("target")]
 position = Vector2(-57.2776, -1.80989)
-rotation = 0.19518
-scale = Vector2(0.999992, 0.999992)
+rotation = 0.00779834
+scale = Vector2(0.999831, 0.999831)
 rest = Transform2D(0.981005, 0.193941, -0.193941, 0.981005, -57.2776, -1.80989)
 auto_calculate_length_and_angle = false
 length = 158.222
@@ -5415,6 +5885,7 @@ target = NodePath("../../../../../../ik_back_root/IK_backleg_front")
 
 [node name="toetip_front" type="Bone2D" parent="pony/root/body_root/body/hip_front/thigh_front/lowerleg_front/toe_front"]
 position = Vector2(-47.2889, 120.087)
+scale = Vector2(0.999871, 0.999871)
 rest = Transform2D(1, -2.98023e-08, 2.98023e-08, 1, -47.2889, 120.087)
 auto_calculate_length_and_angle = false
 length = 41.111
@@ -5439,8 +5910,8 @@ metadata/_local_pose_override_enabled_ = true
 
 [node name="toe_back" type="Bone2D" parent="pony/root/body_root/body/hip_back/thigh_back/lowerleg_back" node_paths=PackedStringArray("target")]
 position = Vector2(-57.9717, 2.06892)
-rotation = 0.195325
-scale = Vector2(0.999973, 0.999973)
+rotation = 0.0337269
+scale = Vector2(0.999842, 0.999842)
 rest = Transform2D(0.980958, 0.19408, -0.19408, 0.980958, -57.9717, 2.06892)
 auto_calculate_length_and_angle = false
 length = 158.222
@@ -5450,6 +5921,7 @@ target = NodePath("../../../../../../ik_back_root/IK_backleg_back")
 
 [node name="toetip_back" type="Bone2D" parent="pony/root/body_root/body/hip_back/thigh_back/lowerleg_back/toe_back"]
 position = Vector2(-47.2889, 120.087)
+scale = Vector2(0.999917, 0.999917)
 rest = Transform2D(1, -2.98023e-08, 2.98023e-08, 1, -47.2889, 120.087)
 auto_calculate_length_and_angle = false
 length = 41.111
@@ -5491,7 +5963,7 @@ rest = Transform2D(1, 0, 0, 1, 0, 0)
 [node name="IK_backleg_front" type="Bone2D" parent="pony/root/ik_back_root"]
 position = Vector2(101, -180)
 rotation = -0.346897
-scale = Vector2(1, 1)
+scale = Vector2(0.999926, 0.999926)
 rest = Transform2D(0.940432, -0.339981, 0.339981, 0.940432, 63, -180)
 auto_calculate_length_and_angle = false
 length = 42.745
@@ -5500,7 +5972,7 @@ bone_angle = 77.647
 [node name="IK_backleg_back" type="Bone2D" parent="pony/root/ik_back_root"]
 position = Vector2(42, -201)
 rotation = -0.395263
-scale = Vector2(1, 1)
+scale = Vector2(0.999882, 0.999882)
 rest = Transform2D(0.922895, -0.385051, 0.385051, 0.922895, 95, -198)
 auto_calculate_length_and_angle = false
 length = 42.745
@@ -5512,6 +5984,7 @@ rest = Transform2D(1, 0, 0, 1, 0, 0)
 [node name="IK_frontleg_front" type="Bone2D" parent="pony/root/ik_front_root"]
 position = Vector2(229, -116)
 rotation = 0.568486
+scale = Vector2(0.99987, 0.99987)
 rest = Transform2D(1, 0, 0, 1, 235, -121)
 auto_calculate_length_and_angle = false
 length = 42.745
@@ -5519,6 +5992,7 @@ bone_angle = 77.647
 
 [node name="IK_frontleg_back" type="Bone2D" parent="pony/root/ik_front_root"]
 position = Vector2(253, -144)
+scale = Vector2(0.999892, 0.999892)
 rest = Transform2D(1, 0, 0, 1, 253, -144)
 auto_calculate_length_and_angle = false
 length = 42.745
@@ -5648,9 +6122,12 @@ NodePath("../../../pony/root/body_root/body/body2/neck1/neck2/head/mane_small/ma
 NodePath("../../../pony/root/body_root/body/body2/neck1/neck2/head/mane_small"): 1.0
 }
 
-[node name="@Node@30964" type="Node" parent="mane_complex_front/mane_complex_purple"]
+[node name="@Node@30964" type="Node" parent="mane_complex_front/mane_complex_purple" node_paths=PackedStringArray("weights")]
 script = ExtResource("3_3ekgy")
 value = Vector2(502.139, -659.801)
+weights = {
+NodePath("../../../pony/root/body_root/body/body2/neck1/neck2/head/mane_small"): 1.0
+}
 
 [node name="@Node@30965" type="Node" parent="mane_complex_front/mane_complex_purple" node_paths=PackedStringArray("weights")]
 script = ExtResource("3_3ekgy")
@@ -5931,7 +6408,7 @@ NodePath("../../../pony/root/body_root/body/body2/neck1/neck2/head/mane_small"):
 }
 
 [node name="VecStroke" type="Line2D" parent="mane_complex_front"]
-points = PackedVector2Array(551.541, -679.632, 544.784, -679.21, 538.584, -677.82, 532.871, -675.695, 527.573, -673.066, 522.62, -670.167, 517.943, -667.229, 513.47, -664.487, 509.131, -662.172, 504.856, -660.518, 500.574, -659.756, 494.12, -659.65, 488.001, -659.893, 482.184, -660.221, 476.637, -660.376, 471.328, -660.095, 466.224, -659.118, 461.292, -657.184, 456.501, -654.031, 451.817, -649.4, 447.209, -643.029, 444.731, -637.781, 443.318, -631.943, 442.814, -625.673, 443.063, -619.132, 443.907, -612.479, 445.19, -605.873, 446.756, -599.475, 448.448, -593.443, 450.111, -587.937, 451.586, -583.117, 454.657, -571.372, 456.677, -560.09, 457.591, -549.487, 457.345, -539.782, 455.882, -531.193, 453.15, -523.935, 449.092, -518.228, 443.653, -514.289, 436.78, -512.335, 428.417, -512.583, 426.551, -507.877, 425.239, -503.346, 424.437, -499.005, 424.105, -494.866, 424.199, -490.944, 424.678, -487.251, 425.499, -483.801, 426.62, -480.609, 427.999, -477.687, 429.593, -475.049, 432.384, -471.539, 435.629, -468.522, 439.285, -465.979, 443.309, -463.894, 447.656, -462.248, 452.284, -461.025, 457.148, -460.205, 462.206, -459.773, 467.414, -459.709, 472.729, -459.996, 478.597, -460.991, 485.292, -463.068, 492.508, -466.237, 499.941, -470.508, 507.287, -475.89, 514.241, -482.393, 520.499, -490.027, 525.757, -498.8, 529.709, -508.724, 532.052, -519.807, 533.112, -529.488, 533.778, -537.932, 534.108, -545.337, 534.159, -551.9, 533.989, -557.819, 533.655, -563.289, 533.215, -568.51, 532.727, -573.677, 532.249, -578.988, 531.837, -584.641, 531.717, -590.876, 532.065, -597.62, 532.864, -604.598, 534.098, -611.536, 535.75, -618.16, 537.805, -624.195, 540.245, -629.367, 543.055, -633.401, 546.218, -636.022, 549.718, -636.957)
+points = PackedVector2Array(533.219, -682.409, 526.498, -681.638, 520.382, -679.93, 514.79, -677.513, 509.639, -674.615, 504.846, -671.465, 500.33, -668.291, 496.008, -665.323, 491.797, -662.788, 487.617, -660.915, 483.383, -659.933, 476.947, -659.494, 470.828, -659.418, 465.005, -659.445, 459.461, -659.312, 454.177, -658.757, 449.134, -657.517, 444.312, -655.332, 439.693, -651.937, 435.259, -647.073, 430.99, -640.476, 428.789, -635.11, 427.681, -629.21, 427.503, -622.927, 428.089, -616.412, 429.276, -609.815, 430.899, -603.289, 432.793, -596.984, 434.795, -591.052, 436.739, -585.643, 438.461, -580.909, 442.134, -569.347, 444.735, -558.191, 446.196, -547.657, 446.452, -537.959, 445.438, -529.31, 443.086, -521.926, 439.332, -516.02, 434.108, -511.807, 427.35, -509.5, 418.991, -509.315, 417.372, -504.522, 416.297, -499.932, 415.722, -495.558, 415.604, -491.41, 415.902, -487.5, 416.571, -483.84, 417.569, -480.439, 418.853, -477.311, 420.38, -474.467, 422.108, -471.917, 425.075, -468.558, 428.47, -465.715, 432.251, -463.367, 436.374, -461.494, 440.798, -460.077, 445.48, -459.095, 450.377, -458.529, 455.448, -458.359, 460.649, -458.565, 465.938, -459.127, 471.743, -460.424, 478.317, -462.844, 485.354, -466.381, 492.552, -471.028, 499.604, -476.78, 506.208, -483.63, 512.058, -491.572, 516.851, -500.601, 520.282, -510.709, 522.046, -521.892, 522.603, -531.608, 522.83, -540.07, 522.776, -547.478, 522.487, -554.031, 522.01, -559.928, 521.394, -565.371, 520.685, -570.558, 519.93, -575.69, 519.177, -580.966, 518.474, -586.586, 518.031, -592.802, 518.029, -599.551, 518.465, -606.557, 519.337, -613.545, 520.643, -620.242, 522.381, -626.371, 524.549, -631.659, 527.145, -635.83, 530.165, -638.61, 533.61, -639.724)
 width = 4.8
 width_curve = SubResource("Curve_qdun2")
 default_color = Color(0.337255, 0.156863, 0.458824, 1)
@@ -6322,7 +6799,7 @@ constraints = [1, 1, 0, 1, 1, 1, 1]
 metadata/_custom_type_script = "uid://bodn4jw8tyemx"
 
 [node name="VecStroke" type="Line2D" parent="mane_complex_front/mane_complex_flair_line"]
-points = PackedVector2Array(442.967, -495.761, 441.022, -496.948, 438.905, -498.469, 436.709, -500.338, 434.526, -502.573, 432.448, -505.187, 430.567, -508.198, 428.977, -511.62, 427.768, -515.469, 427.034, -519.761, 426.866, -524.511, 427.174, -528.522, 427.831, -532.344, 428.792, -535.944, 430.015, -539.292, 431.457, -542.357, 433.076, -545.106, 434.829, -547.51, 436.673, -549.535, 438.565, -551.152, 440.462, -552.329, 440.728, -548.318, 441.034, -544.339, 441.444, -540.437, 442.024, -536.653, 442.838, -533.031, 443.95, -529.615, 445.426, -526.447, 447.331, -523.57, 449.728, -521.027, 452.683, -518.862, 456.116, -517.078, 459.852, -515.638, 463.812, -514.522, 467.916, -513.712, 472.087, -513.188, 476.243, -512.932, 480.308, -512.924, 484.201, -513.146, 487.843, -513.579, 491.156, -514.203, 494.402, -515.227, 497.838, -516.806, 501.377, -518.839, 504.931, -521.228, 508.412, -523.872, 511.732, -526.673, 514.804, -529.529, 517.54, -532.343, 519.853, -535.014, 521.654, -537.443, 523.182, -540.05, 524.71, -543.246, 526.202, -546.915, 527.623, -550.94, 528.937, -555.206, 530.108, -559.597, 531.101, -563.996, 531.88, -568.289, 532.409, -572.359, 532.653, -576.09)
+points = PackedVector2Array(434.383, -493.28, 432.38, -494.364, 430.189, -495.772, 427.9, -497.524, 425.606, -499.641, 423.396, -502.143, 421.364, -505.05, 419.599, -508.383, 418.193, -512.162, 417.238, -516.407, 416.825, -521.139, 416.925, -525.159, 417.382, -529.006, 418.154, -532.649, 419.202, -536.054, 420.483, -539.187, 421.956, -542.015, 423.581, -544.505, 425.316, -546.622, 427.121, -548.333, 428.953, -549.606, 429.426, -545.617, 429.938, -541.662, 430.549, -537.788, 431.324, -534.042, 432.324, -530.47, 433.611, -527.118, 435.248, -524.032, 437.298, -521.26, 439.822, -518.846, 442.883, -516.838, 446.402, -515.236, 450.205, -513.992, 454.215, -513.083, 458.353, -512.487, 462.542, -512.181, 466.704, -512.14, 470.761, -512.343, 474.635, -512.766, 478.247, -513.387, 481.521, -514.181, 484.708, -515.371, 488.055, -517.125, 491.482, -519.337, 494.905, -521.905, 498.242, -524.725, 501.411, -527.692, 504.329, -530.702, 506.914, -533.652, 509.083, -536.437, 510.755, -538.954, 512.145, -541.636, 513.505, -544.904, 514.804, -548.643, 516.014, -552.734, 517.104, -557.059, 518.045, -561.502, 518.808, -565.944, 519.363, -570.269, 519.681, -574.358, 519.731, -578.094)
 width = 4.8
 width_curve = SubResource("Curve_ieh4o")
 default_color = Color(0.337255, 0.156863, 0.458824, 1)
@@ -6498,9 +6975,12 @@ weights = {
 NodePath("../../pony/root/body_root/body/body2/neck1/neck2/head/mane_small"): 1.0
 }
 
-[node name="@Node@42012" type="Node" parent="mane_complex_front"]
+[node name="@Node@42012" type="Node" parent="mane_complex_front" node_paths=PackedStringArray("weights")]
 script = ExtResource("3_3ekgy")
 value = Vector2(514.936, -660.549)
+weights = {
+NodePath("../../pony/root/body_root/body/body2/neck1/neck2/head/mane_small"): 1.0
+}
 
 [node name="@Node@42013" type="Node" parent="mane_complex_front" node_paths=PackedStringArray("weights")]
 script = ExtResource("3_3ekgy")
@@ -7095,7 +7575,7 @@ NodePath("../../../pony/root/body_root/body/body2/neck1/neck2/head/mane_big/mane
 }
 
 [node name="VecStroke" type="Line2D" parent="mane_long"]
-points = PackedVector2Array(343.326, -588.338, 339.403, -573.28, 337.778, -559.518, 338.139, -546.964, 340.169, -535.529, 343.556, -525.125, 347.985, -515.665, 353.141, -507.059, 358.71, -499.221, 364.378, -492.061, 369.831, -485.491, 375.586, -478.757, 381.73, -471.893, 388.182, -464.936, 394.859, -457.928, 401.678, -450.906, 408.556, -443.911, 415.411, -436.982, 422.161, -430.157, 428.723, -423.478, 435.013, -416.982, 442.347, -409.104, 449.744, -400.535, 456.96, -391.271, 463.752, -381.313, 469.876, -370.658, 475.09, -359.305, 479.151, -347.253, 481.814, -334.499, 482.838, -321.043, 481.978, -306.882, 479.845, -297.577, 475.944, -288.38, 470.431, -279.73, 463.466, -272.064, 455.206, -265.818, 445.809, -261.431, 435.435, -259.338, 424.241, -259.978, 412.384, -263.788, 400.025, -271.204, 395.414, -275.421, 391.782, -280.291, 389.03, -285.621, 387.063, -291.222, 385.784, -296.903, 385.097, -302.471, 384.904, -307.736, 385.108, -312.507, 385.614, -316.592, 386.325, -319.801, 389.041, -317.904, 391.279, -316.607, 393.098, -315.913, 394.555, -315.822, 395.708, -316.338, 396.616, -317.463, 397.337, -319.197, 397.927, -321.544, 398.445, -324.506, 398.95, -328.084, 398.436, -332.815, 397.504, -337.492, 396.118, -342.197, 394.239, -347.011, 391.83, -352.016, 388.852, -357.293, 385.268, -362.924, 381.039, -368.989, 376.128, -375.57, 370.497, -382.749, 364.539, -390.276, 358.731, -397.843, 353.161, -405.442, 347.914, -413.064, 343.078, -420.702, 338.739, -428.348, 334.986, -435.993, 331.903, -443.631, 329.579, -451.254, 328.101, -458.852, 326.864, -466.843, 325.412, -475.706, 324.057, -485.527, 323.108, -496.392, 322.876, -508.388, 323.672, -521.6, 325.804, -536.115, 329.583, -552.018, 335.321, -569.398)
+points = PackedVector2Array(330.145, -580.513, 327.009, -565.282, 326.101, -551.463, 327.111, -538.952, 329.73, -527.645, 333.649, -517.438, 338.558, -508.226, 344.15, -499.904, 350.114, -492.37, 356.142, -485.517, 361.924, -479.243, 368.016, -472.821, 374.503, -466.288, 381.303, -459.68, 388.329, -453.031, 395.498, -446.376, 402.725, -439.751, 409.926, -433.19, 417.016, -426.729, 423.91, -420.403, 430.524, -414.245, 438.252, -406.763, 446.078, -398.594, 453.759, -389.722, 461.053, -380.136, 467.717, -369.819, 473.509, -358.759, 478.186, -346.941, 481.504, -334.35, 483.223, -320.973, 483.098, -306.796, 481.452, -297.399, 478.034, -288.019, 472.98, -279.1, 466.426, -271.088, 458.505, -264.427, 449.355, -259.562, 439.109, -256.936, 427.904, -256.995, 415.874, -260.183, 403.155, -266.945, 398.335, -270.915, 394.458, -275.586, 391.436, -280.764, 389.183, -286.252, 387.612, -291.855, 386.637, -297.377, 386.172, -302.621, 386.129, -307.393, 386.423, -311.497, 386.966, -314.736, 389.774, -312.983, 392.075, -311.805, 393.926, -311.206, 395.385, -311.191, 396.51, -311.766, 397.358, -312.935, 397.987, -314.703, 398.454, -317.076, 398.818, -320.059, 399.137, -323.656, 398.378, -328.351, 397.207, -332.971, 395.58, -337.595, 393.455, -342.302, 390.792, -347.172, 387.546, -352.285, 383.677, -357.718, 379.143, -363.552, 373.901, -369.866, 367.909, -376.739, 361.573, -383.943, 355.385, -391.194, 349.432, -398.489, 343.801, -405.824, 338.579, -413.197, 333.853, -420.603, 329.711, -428.039, 326.239, -435.502, 323.525, -442.989, 321.656, -450.496, 320.007, -458.407, 318.1, -467.177, 316.239, -476.908, 314.729, -487.703, 313.877, -499.662, 313.986, -512.89, 315.362, -527.486, 318.311, -543.554, 323.137, -561.196)
 closed = true
 width = 4.8
 width_curve = SubResource("Curve_vrli8")
@@ -7423,7 +7903,7 @@ constraints = [1, 0, 1, 1, 1]
 metadata/_custom_type_script = "uid://bodn4jw8tyemx"
 
 [node name="VecStroke" type="Line2D" parent="mane_long/mane_long_flair_line"]
-points = PackedVector2Array(401.271, -303.328, 397.802, -304.012, 394.098, -305.042, 390.362, -306.581, 386.795, -308.798, 383.602, -311.858, 380.985, -315.928, 379.145, -321.173, 378.287, -327.76, 378.613, -335.855, 380.325, -345.624, 383.974, -340.348, 388.281, -335.299, 393.133, -330.714, 398.418, -326.83, 404.026, -323.883, 409.845, -322.111, 415.762, -321.75, 421.668, -323.038, 427.449, -326.21, 432.995, -331.504, 436.742, -336.101, 439.746, -340.093, 442.087, -343.626, 443.845, -346.847, 445.103, -349.901, 445.941, -352.936, 446.439, -356.096, 446.68, -359.529, 446.743, -363.381, 446.71, -367.798, 445.958, -373.392, 443.946, -380.442, 440.878, -388.595, 436.958, -397.499, 432.39, -406.8, 427.378, -416.147, 422.125, -425.187, 416.835, -433.567, 411.713, -440.934, 406.962, -446.936)
+points = PackedVector2Array(402.735, -299.07, 399.238, -299.573, 395.488, -300.408, 391.679, -301.752, 388.005, -303.779, 384.66, -306.668, 381.836, -310.594, 379.729, -315.733, 378.532, -322.263, 378.438, -330.358, 379.64, -340.197, 383.556, -335.12, 388.115, -330.305, 393.195, -325.98, 398.671, -322.377, 404.42, -319.727, 410.319, -318.26, 416.244, -318.206, 422.071, -319.797, 427.676, -323.262, 432.937, -328.833, 436.439, -333.615, 439.23, -337.754, 441.383, -341.402, 442.971, -344.707, 444.068, -347.821, 444.747, -350.892, 445.081, -354.072, 445.143, -357.511, 445.007, -361.358, 444.745, -365.765, 443.705, -371.309, 441.332, -378.24, 437.848, -386.218, 433.475, -394.902, 428.434, -403.948, 422.947, -413.017, 417.237, -421.767, 411.524, -429.856, 406.03, -436.943, 400.978, -442.687)
 width = 4.8
 width_curve = SubResource("Curve_ieh4o")
 default_color = Color(0.337255, 0.156863, 0.458824, 1)
@@ -8192,7 +8672,7 @@ script = ExtResource("7_1my0b")
 libraries = {
 &"": SubResource("AnimationLibrary_dl607")
 }
-autoplay = "walk"
+autoplay = "idle"
 
 [node name="foot_back" type="StaticBody2D" parent="."]
 position = Vector2(258, -36)
@@ -8211,3 +8691,9 @@ collision_mask = 2
 [node name="CollisionShape2D" type="CollisionShape2D" parent="foot_front"]
 shape = SubResource("CircleShape2D_h4ksu")
 metadata/_edit_lock_ = true
+
+[node name="AnimationTree" type="AnimationTree" parent="."]
+tree_root = SubResource("AnimationNodeBlendTree_5xcaa")
+anim_player = NodePath("../AnimationPlayer")
+parameters/blend_to_walk/blend_amount = 0.0
+parameters/walk_scaler/scale = 1.0

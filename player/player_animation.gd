@@ -12,6 +12,15 @@ class_name PlayerAnimation
 
 var player_parent: Player = null
 
+@onready var animation_player := $AnimationPlayer
+@onready var tree := $AnimationTree
+
+func set_animation(anim: StringName):
+	animation_player.play(anim, 0.3)
+	
+func set_walkvel(scale: float) -> void:
+	tree["parameters/walk_scaler/scale"] = scale
+
 func _ready() -> void:
 	$"Pony-color-ref".queue_free()
 	$"Pony-ref".queue_free()

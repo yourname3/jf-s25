@@ -20,6 +20,7 @@ const MODE_PLAYER = 0
 const MODE_PLAYBACK = 1
 
 var original_position: Vector2
+@onready var animator: PlayerAnimation = $pivot/pony
 
 @onready var player_jump_detector = $PlayerJumpDetector
 
@@ -87,6 +88,12 @@ func _integrate_forces(state: PhysicsDirectBodyState2D) -> void:
 	if player_jump_detector.has_overlapping_bodies():
 		_is_on_floor = 3.0 / 60.0
 	
+# Hystersis for the walking animation. Increase this when we're definitely walking,
+# decrease it when we're definitely not.
+var walking_accumulator: float = 0.0
+
+# In pixels/second
+const WALK_BASE_SPEED = (101 - 29)
 
 func _physics_process(delta: float) -> void:
 	var encoded_inputs := get_inputs()
@@ -154,6 +161,27 @@ func _physics_process(delta: float) -> void:
 			move_and_collide(Vector2(0, SNAP_AMOUNT) - check.get_normal() * 8)
 			# _is_on_floor = true
 			
+	# Choose animation.
+	#var anim = "idle"
+	#if is_on_floor():
+		#if linear_velocity.length() > 32:
+			#walking_accumulator += delta
+		#else:
+			#walking_accumulator -= delta
+			#
+		#if walking_accumulator > 0:
+			#anim = "walk"
+	#walking_accumulator = clamp(walking_accumulator, -0.1, 0.1)
+	#animator.set_animation(anim)
+	# For no foot sliding, do this: But it is very slow and not compatible with
+	# fast movement speeds.
+	# If we can get a gallop animation, we can make it look better.
+	# For now, just do foot sliding.
+	# animator.set_walkvel(abs(linear_velocity.x) / WALK_BASE_SPEED)
+	animator.set_walkvel(abs(linear_velocity.x) / (WALK_BASE_SPEED * 6))
+			
 	if _is_on_floor > 0:
 		_is_on_floor -= delta
+	
+	
 			
