@@ -180,6 +180,7 @@ func _physics_process(delta: float) -> void:
 	# animator.set_walkvel(abs(linear_velocity.x) / WALK_BASE_SPEED)
 	animator.want_air = not is_on_floor()
 	animator.want_walk = (abs(linear_velocity.x) > 32)
+	animator.want_jump_down = linear_velocity.y > 0
 	animator.set_walkvel(abs(linear_velocity.x) / (WALK_BASE_SPEED * 6))
 			
 	if _is_on_floor > 0:

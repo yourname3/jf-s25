@@ -17,9 +17,11 @@ var player_parent: Player = null
 
 var want_walk: bool = false
 var want_air: bool = false
+var want_jump_down: bool = false
 
 var walk_blend: float = 0.0
 var air_blend: float = 0.0
+var jump_down_blend: float = 0.0
 
 func target(b: bool) -> float:
 	return 1.0 if b else 0.0
@@ -30,12 +32,15 @@ func set_walkvel(scale: float) -> void:
 func _process(delta: float) -> void:
 	var wb_t = target(want_walk)
 	var ab_t = target(want_air)
+	var jd_t = target(want_jump_down)
 	
 	walk_blend = move_toward(walk_blend, wb_t, delta * 3.0)
 	air_blend = move_toward(air_blend, ab_t, delta * 2.0)
+	jump_down_blend = move_toward(jump_down_blend, jd_t, delta * 2.0)
 	
 	tree["parameters/blend_to_walk/blend_amount"] = walk_blend
 	tree["parameters/blend_to_air/blend_amount"] = air_blend
+	tree["parameters/blend_to_jumpdown/blend_amount"] = jump_down_blend
 
 func _ready() -> void:
 	$"Pony-color-ref".queue_free()
