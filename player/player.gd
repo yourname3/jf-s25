@@ -9,13 +9,67 @@ const JUMP_SPEED := 1024.0 + 512.0
 
 var jump_timer: float = 0.0
 
+var recording: Array[Vector2] = []
+var mode: int = 0
+
+var playback_frame: int = 0
+
+const MODE_PLAYER = 0
+const MODE_PLAYBACK = 1
+
+var original_position: Vector2
+
+func _ready() -> void:
+	original_position = global_position
+
 func h_input() -> float:
 	return Input.get_axis("left", "right")
+	
+## Returns the encoded inputs, either from the player itself or from the recording.
+func get_inputs() -> Vector2:
+	var input: Vector2 = Vector2.ZERO
+	if mode == MODE_PLAYER:
+		input.x = h_input()
+		# Some ad-hoc enccoding for the jump inputs.
+		if Input.is_action_just_pressed("jump"):
+			input.y = 1
+		elif Input.is_action_pressed("jump"):
+			input.y = 2
+	if mode == MODE_PLAYBACK:
+		if playback_frame < recording.size():
+			input = recording[playback_frame]
+			playback_frame += 1
+	return input
+	
+func spawn_clone() -> void:
+	# SAFETY: Do not let clones clone.
+	if mode != MODE_PLAYER:
+		return
+	
+	var clone := preload("res://player/player.tscn").instantiate()
+	clone.global_position = original_position
+	clone.recording = recording
+	clone.mode = MODE_PLAYBACK
+	recording = []
+	add_sibling(clone)
 
 func _physics_process(delta: float) -> void:
+	var encoded_inputs := get_inputs()
+	if mode == MODE_PLAYER:
+		recording.push_back(encoded_inputs)
+	
+	var h_input := encoded_inputs.x
+	var jump_pressed := false
+	var jump_just_pressed := false
+	if encoded_inputs.y == 1:
+		jump_pressed = true
+		jump_just_pressed = true
+	elif encoded_inputs.y == 2:
+		jump_pressed = true
+
 	velocity += get_gravity() * delta
 	
-	var target_x_vel := h_input() * H_VEL
+	var target_x_vel := h_input * H_VEL
 	var x_accel: float = sign(target_x_vel - velocity.x) * H_ACCEL
 	
 	if target_x_vel == 0:
@@ -30,9 +84,9 @@ func _physics_process(delta: float) -> void:
 	
 	velocity.x += x_accel_integrated
 	
-	if is_on_floor() and Input.is_action_just_pressed("jump"):
+	if is_on_floor() and jump_just_pressed:
 		jump_timer = JUMP_TIME
-	if not Input.is_action_pressed("jump"):
+	if not jump_pressed:
 		jump_timer = 0
 		
 	if jump_timer > 0:
@@ -45,3 +99,6 @@ func _physics_process(delta: float) -> void:
 	if velocity.y > 0:
 		# Disable jumps if we ever lose our Y velocity.
 		jump_timer = 0
+		
+	if Input.is_action_just_pressed("clone"):
+		spawn_clone()
