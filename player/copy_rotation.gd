@@ -2,6 +2,8 @@
 extends Bone2D
 
 @export var target: Bone2D
+@export var enabled: bool = true
 
 func _process(delta: float) -> void:
-	global_rotation = target.global_rotation
+	if enabled:
+		global_rotation = target.global_rotation

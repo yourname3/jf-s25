@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://b2cjwbuhd8mm3"]
+[gd_scene load_steps=30 format=3 uid="uid://b2cjwbuhd8mm3"]
 
 [ext_resource type="Script" uid="uid://bafpx8hxl2kgu" path="res://player/player_animation.gd" id="1_h4ksu"]
 [ext_resource type="Script" uid="uid://bodn4jw8tyemx" path="res://addons/gdvecrig/VecDrawing.gd" id="1_oyty2"]
@@ -45,6 +45,13 @@ point_count = 4
 _data = [Vector2(0, 0), 0.0, 5.08542, 0, 0, Vector2(0.499025, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), -5.05575, 0.0, 0, 0]
 point_count = 3
 
+[sub_resource type="SkeletonModification2DTwoBoneIK" id="SkeletonModification2DTwoBoneIK_h4ksu"]
+target_nodepath = NodePath("root/IK_backleg_back")
+joint_one_bone_idx = 21
+joint_one_bone2d_node = NodePath("root/body_root/body/hip_back/thigh_back")
+joint_two_bone_idx = 22
+joint_two_bone2d_node = NodePath("root/body_root/body/hip_back/thigh_back/lowerleg_back")
+
 [sub_resource type="SkeletonModification2DTwoBoneIK" id="SkeletonModification2DTwoBoneIK_oyty2"]
 target_nodepath = NodePath("root/IK_frontleg_front")
 flip_bend_direction = true
@@ -53,27 +60,6 @@ joint_one_bone2d_node = NodePath("root/body_root/body/body2/shoulder_front")
 joint_two_bone_idx = 10
 joint_two_bone2d_node = NodePath("root/body_root/body/body2/shoulder_front/arm_front")
 
-[sub_resource type="SkeletonModification2DCCDIK" id="SkeletonModification2DCCDIK_1my0b"]
-enabled = false
-target_nodepath = NodePath("root/IK_backleg_front")
-tip_nodepath = NodePath("root/body_root/body/hip_front/thigh_front/lowerleg_front/toe_front")
-ccdik_data_chain_length = 3
-joint_data/0/bone_index = 15
-joint_data/0/bone2d_node = NodePath("root/body_root/body/hip_front")
-joint_data/0/rotate_from_joint = false
-joint_data/0/enable_constraint = false
-joint_data/0/editor_draw_gizmo = true
-joint_data/1/bone_index = 16
-joint_data/1/bone2d_node = NodePath("root/body_root/body/hip_front/thigh_front")
-joint_data/1/rotate_from_joint = false
-joint_data/1/enable_constraint = false
-joint_data/1/editor_draw_gizmo = true
-joint_data/2/bone_index = 17
-joint_data/2/bone2d_node = NodePath("root/body_root/body/hip_front/thigh_front/lowerleg_front")
-joint_data/2/rotate_from_joint = false
-joint_data/2/enable_constraint = false
-joint_data/2/editor_draw_gizmo = true
-
 [sub_resource type="SkeletonModification2DTwoBoneIK" id="SkeletonModification2DTwoBoneIK_1my0b"]
 target_nodepath = NodePath("root/IK_backleg_front")
 joint_one_bone_idx = 16
@@ -81,11 +67,21 @@ joint_one_bone2d_node = NodePath("root/body_root/body/hip_front/thigh_front")
 joint_two_bone_idx = 17
 joint_two_bone2d_node = NodePath("root/body_root/body/hip_front/thigh_front/lowerleg_front")
 
+[sub_resource type="SkeletonModification2DTwoBoneIK" id="SkeletonModification2DTwoBoneIK_dl607"]
+target_nodepath = NodePath("root/IK_frontleg_back")
+flip_bend_direction = true
+joint_one_bone_idx = 12
+joint_one_bone2d_node = NodePath("root/body_root/body/body2/shoulder_back")
+joint_two_bone_idx = 13
+joint_two_bone2d_node = NodePath("root/body_root/body/body2/shoulder_back/arm_back")
+
 [sub_resource type="SkeletonModificationStack2D" id="SkeletonModificationStack2D_27k37"]
-modification_count = 3
-modifications/0 = SubResource("SkeletonModification2DTwoBoneIK_oyty2")
-modifications/1 = SubResource("SkeletonModification2DCCDIK_1my0b")
+enabled = true
+modification_count = 4
+modifications/0 = SubResource("SkeletonModification2DTwoBoneIK_h4ksu")
+modifications/1 = SubResource("SkeletonModification2DTwoBoneIK_oyty2")
 modifications/2 = SubResource("SkeletonModification2DTwoBoneIK_1my0b")
+modifications/3 = SubResource("SkeletonModification2DTwoBoneIK_dl607")
 
 [sub_resource type="Curve" id="Curve_oyty2"]
 _data = [Vector2(0, 0.649351), 0.0, 1.32087, 0, 0, Vector2(0.506823, 1), 0.0, 0.0, 0, 0, Vector2(1, 0.727273), -1.64216, 0.0, 0, 0]
@@ -106,6 +102,14 @@ point_count = 3
 [sub_resource type="Curve" id="Curve_ieh4o"]
 _data = [Vector2(0, 0), 0.0, 13.6025, 0, 0, Vector2(0.0917108, 1), 0.0, 0.0, 0, 0, Vector2(0.885362, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
 point_count = 4
+
+[sub_resource type="Animation" id="Animation_h4ksu"]
+resource_name = "walk"
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_dl607"]
+_data = {
+&"walk": SubResource("Animation_h4ksu")
+}
 
 [node name="StarlightGlimmer" type="Node2D"]
 script = ExtResource("1_h4ksu")
@@ -641,7 +645,7 @@ constraints = [1, 1, 1, 1, 1, 1, 1, 1, 1]
 metadata/_custom_type_script = "uid://bodn4jw8tyemx"
 
 [node name="VecStroke" type="Line2D" parent="backleg_back_bottom"]
-points = PackedVector2Array(306.816, -223.706, 302.283, -225.104, 298.148, -226.164, 294.392, -226.928, 290.995, -227.438, 287.935, -227.738, 285.192, -227.87, 282.747, -227.876, 280.579, -227.8, 278.667, -227.684, 276.992, -227.57, 274.022, -227.555, 271.331, -227.666, 268.778, -227.545, 266.224, -226.831, 263.53, -225.165, 260.557, -222.187, 257.163, -217.538, 253.211, -210.857, 248.56, -201.786, 243.07, -189.964, 237.161, -175.5, 232.252, -160.911, 228.267, -146.247, 225.131, -131.556, 222.769, -116.885, 221.104, -102.283, 220.063, -87.7973, 219.569, -73.4772, 219.546, -59.3703, 219.921, -45.5249, 220.791, -41.0762, 222.914, -37.263, 226.136, -34.0461, 230.298, -31.3863, 235.247, -29.2443, 240.826, -27.581, 246.879, -26.357, 253.25, -25.5333, 259.783, -25.0705, 266.322, -24.9294, 272.892, -25.0669, 279.342, -25.4472, 285.577, -26.0424, 291.508, -26.8248, 297.041, -27.7666, 302.084, -28.8399, 306.546, -30.0169, 310.334, -31.2699, 313.355, -32.5709, 315.519, -33.8923, 316.143, -35.9563, 315.047, -39.587, 312.617, -44.6969, 309.238, -51.1983, 305.298, -59.0037, 301.181, -68.0255, 297.274, -78.1762, 293.963, -89.3682, 291.634, -101.514, 290.672, -114.526, 291.304, -127.161, 293.343, -138.803, 296.565, -149.514, 300.747, -159.353, 305.664, -168.381, 311.093, -176.658, 316.81, -184.244, 322.591, -191.199, 328.212, -197.584, 333.449, -203.459, 338.388, -209.227, 343.207, -215.244, 347.82, -221.498, 352.139, -227.977, 356.077, -234.668, 359.549, -241.561, 362.467, -248.642, 364.745, -255.9, 366.295, -263.322, 367.032, -270.897)
+points = PackedVector2Array(306.816, -223.706, 302.283, -225.104, 298.149, -226.163, 294.393, -226.927, 290.995, -227.438, 287.935, -227.738, 285.192, -227.87, 282.747, -227.876, 280.579, -227.8, 278.667, -227.684, 276.992, -227.57, 274.022, -227.555, 271.331, -227.666, 268.778, -227.545, 266.224, -226.831, 263.53, -225.165, 260.557, -222.187, 257.163, -217.538, 253.211, -210.857, 248.56, -201.786, 243.07, -189.964, 237.161, -175.5, 232.252, -160.911, 228.267, -146.247, 225.131, -131.556, 222.769, -116.885, 221.104, -102.283, 220.063, -87.7973, 219.569, -73.4772, 219.546, -59.3703, 219.921, -45.5249, 220.791, -41.0762, 222.914, -37.263, 226.136, -34.0461, 230.298, -31.3863, 235.247, -29.2443, 240.826, -27.581, 246.879, -26.357, 253.25, -25.5333, 259.783, -25.0704, 266.322, -24.9294, 272.892, -25.0669, 279.342, -25.4472, 285.577, -26.0424, 291.508, -26.8248, 297.041, -27.7666, 302.084, -28.8399, 306.546, -30.0169, 310.334, -31.2698, 313.355, -32.5709, 315.519, -33.8923, 316.143, -35.9563, 315.047, -39.587, 312.617, -44.6969, 309.238, -51.1983, 305.298, -59.0037, 301.181, -68.0255, 297.274, -78.1762, 293.963, -89.3682, 291.634, -101.514, 290.672, -114.526, 291.304, -127.161, 293.343, -138.803, 296.565, -149.514, 300.747, -159.353, 305.664, -168.381, 311.093, -176.658, 316.81, -184.244, 322.591, -191.199, 328.212, -197.584, 333.449, -203.459, 338.388, -209.227, 343.207, -215.244, 347.82, -221.498, 352.139, -227.977, 356.077, -234.668, 359.549, -241.561, 362.467, -248.642, 364.745, -255.9, 366.295, -263.322, 367.032, -270.897)
 width = 4.8
 width_curve = SubResource("Curve_3yjpv")
 default_color = Color(0.67451, 0.490196, 0.788235, 1)
@@ -651,7 +655,7 @@ metadata/_edit_lock_ = true
 
 [node name="_Node_41463" type="Node" parent="backleg_back_bottom" node_paths=PackedStringArray("weights")]
 script = ExtResource("3_3ekgy")
-value = Vector2(327.271, -216.881)
+value = Vector2(327.271, -216.88)
 weights = {
 NodePath("../../pony/root/body_root/body/hip_back/thigh_back"): 1.0
 }
@@ -665,7 +669,7 @@ NodePath("../../pony/root/body_root/body/hip_back/thigh_back"): 1.0
 
 [node name="_Node_41465" type="Node" parent="backleg_back_bottom" node_paths=PackedStringArray("weights")]
 script = ExtResource("3_3ekgy")
-value = Vector2(291.019, -228.978)
+value = Vector2(291.019, -228.977)
 weights = {
 NodePath("../../pony/root/body_root/body/hip_back/thigh_back"): 1.0,
 NodePath("../../pony/root/body_root/body/hip_back/thigh_back/lowerleg_back"): 1.0
@@ -2368,7 +2372,7 @@ constraints = [1, 1, 1, 1, 1, 1, 1, 1, 1]
 metadata/_custom_type_script = "uid://bodn4jw8tyemx"
 
 [node name="VecStroke" type="Line2D" parent="backleg_front_B"]
-points = PackedVector2Array(267.056, -198.004, 265.005, -200.021, 262.614, -201.863, 259.975, -203.525, 257.179, -204.999, 254.319, -206.278, 251.488, -207.357, 248.777, -208.228, 246.278, -208.885, 244.083, -209.321, 242.286, -209.529, 240.224, -209.68, 238.21, -209.684, 236.135, -209.242, 233.893, -208.053, 231.376, -205.82, 228.475, -202.243, 225.083, -197.022, 221.092, -189.858, 216.395, -180.453, 210.883, -168.506, 204.975, -154.042, 200.066, -139.453, 196.081, -124.789, 192.945, -110.098, 190.582, -95.4269, 188.918, -80.8249, 187.876, -66.3397, 187.382, -52.0197, 187.359, -37.9128, 187.734, -24.0674, 188.604, -19.6187, 190.727, -15.8055, 193.949, -12.5886, 198.111, -9.9288, 203.06, -7.78681, 208.639, -6.12344, 214.691, -4.89948, 221.062, -4.07571, 227.595, -3.6129, 234.134, -3.47184, 240.704, -3.60936, 247.154, -3.98965, 253.389, -4.58491, 259.32, -5.36732, 264.853, -6.30908, 269.896, -7.38238, 274.358, -8.55941, 278.146, -9.81236, 281.167, -11.1134, 283.331, -12.4348, 283.995, -14.5234, 282.997, -18.2203, 280.687, -23.4268, 277.418, -30.0441, 273.54, -37.9732, 269.406, -47.1155, 265.366, -57.372, 261.772, -68.644, 258.975, -80.8327, 257.328, -93.8392, 257.034, -106.759, 257.96, -118.774, 259.949, -129.917, 262.844, -140.221, 266.489, -149.719, 270.726, -158.442, 275.399, -166.423, 280.351, -173.696, 285.426, -180.291, 290.466, -186.242, 295.968, -192.397, 302.329, -199.461, 309.24, -207.256, 316.395, -215.602, 323.484, -224.318, 330.2, -233.226, 336.236, -242.145, 341.284, -250.896, 345.035, -259.299, 347.182, -267.174)
+points = PackedVector2Array(267.056, -198.004, 265.005, -200.021, 262.614, -201.863, 259.975, -203.525, 257.179, -204.999, 254.319, -206.278, 251.488, -207.357, 248.777, -208.228, 246.278, -208.885, 244.083, -209.321, 242.286, -209.529, 240.224, -209.68, 238.21, -209.684, 236.135, -209.242, 233.893, -208.053, 231.376, -205.82, 228.475, -202.243, 225.083, -197.022, 221.092, -189.858, 216.395, -180.453, 210.883, -168.506, 204.975, -154.042, 200.066, -139.453, 196.081, -124.789, 192.945, -110.098, 190.582, -95.427, 188.918, -80.8249, 187.876, -66.3397, 187.382, -52.0197, 187.359, -37.9128, 187.734, -24.0674, 188.604, -19.6187, 190.727, -15.8055, 193.949, -12.5886, 198.111, -9.92881, 203.06, -7.78682, 208.639, -6.12345, 214.691, -4.89949, 221.062, -4.07572, 227.595, -3.61291, 234.134, -3.47185, 240.704, -3.60937, 247.154, -3.98966, 253.389, -4.58492, 259.32, -5.36733, 264.853, -6.30909, 269.896, -7.3824, 274.358, -8.55943, 278.146, -9.81238, 281.167, -11.1134, 283.331, -12.4348, 283.995, -14.5234, 282.997, -18.2204, 280.687, -23.4269, 277.418, -30.0441, 273.54, -37.9732, 269.406, -47.1155, 265.366, -57.372, 261.772, -68.644, 258.975, -80.8327, 257.328, -93.8392, 257.034, -106.759, 257.96, -118.774, 259.949, -129.917, 262.844, -140.221, 266.489, -149.719, 270.726, -158.442, 275.399, -166.423, 280.351, -173.696, 285.426, -180.291, 290.466, -186.242, 295.968, -192.397, 302.329, -199.461, 309.24, -207.256, 316.395, -215.602, 323.484, -224.318, 330.2, -233.226, 336.236, -242.145, 341.284, -250.896, 345.035, -259.299, 347.182, -267.174)
 width = 4.8
 width_curve = SubResource("Curve_3yjpv")
 default_color = Color(0.741176, 0.541176, 0.843137, 1)
@@ -4345,10 +4349,12 @@ value = Vector2(448.379, -495.087)
 [node name="shoulder_front" type="Bone2D" parent="pony/root/body_root/body/body2"]
 position = Vector2(69, 50)
 rest = Transform2D(1, -8.34465e-07, 8.34465e-07, 1, 69, 50)
+metadata/_local_pose_override_enabled_ = true
 
 [node name="arm_front" type="Bone2D" parent="pony/root/body_root/body/body2/shoulder_front"]
 position = Vector2(-4, 39)
 rest = Transform2D(1, 3.25841e-07, -3.25841e-07, 1, -4, 39)
+metadata/_local_pose_override_enabled_ = true
 
 [node name="forearm_front" type="Bone2D" parent="pony/root/body_root/body/body2/shoulder_front/arm_front" node_paths=PackedStringArray("target")]
 position = Vector2(0, 105)
@@ -4363,18 +4369,22 @@ target = NodePath("../../../../../../IK_frontleg_front")
 [node name="shoulder_back" type="Bone2D" parent="pony/root/body_root/body/body2"]
 position = Vector2(87, 27)
 rest = Transform2D(1, -8.34465e-07, 8.34465e-07, 1, 87, 27)
+metadata/_local_pose_override_enabled_ = true
 
 [node name="arm_back" type="Bone2D" parent="pony/root/body_root/body/body2/shoulder_back"]
 position = Vector2(-4, 39)
 rest = Transform2D(1, 3.25841e-07, -3.25841e-07, 1, -4, 39)
+metadata/_local_pose_override_enabled_ = true
 
-[node name="forearm_back" type="Bone2D" parent="pony/root/body_root/body/body2/shoulder_back/arm_back"]
+[node name="forearm_back" type="Bone2D" parent="pony/root/body_root/body/body2/shoulder_back/arm_back" node_paths=PackedStringArray("target")]
 position = Vector2(0, 105)
 scale = Vector2(0.999997, 0.999997)
 rest = Transform2D(0.999997, 5.08622e-07, -5.08622e-07, 0.999997, 0, 105)
 auto_calculate_length_and_angle = false
 length = 100.334
 bone_angle = 77.419
+script = ExtResource("5_27k37")
+target = NodePath("../../../../../../IK_frontleg_back")
 
 [node name="hip_front" type="Bone2D" parent="pony/root/body_root/body"]
 rest = Transform2D(1, 0, 0, 1, 0, 0)
@@ -4384,21 +4394,25 @@ position = Vector2(-40, 52)
 rotation = -0.613467
 scale = Vector2(1, 1)
 rest = Transform2D(0.817657, -0.575706, 0.575706, 0.817657, -40, 52)
+metadata/_local_pose_override_enabled_ = true
 
 [node name="lowerleg_front" type="Bone2D" parent="pony/root/body_root/body/hip_front/thigh_front"]
 position = Vector2(-22.3444, 82.108)
-rotation = 0.0713909
+rotation = 0.0713904
 scale = Vector2(1, 1)
-rest = Transform2D(0.997453, 0.0713303, -0.0713303, 0.997453, -22.3444, 82.108)
+rest = Transform2D(0.997453, 0.0713298, -0.0713298, 0.997453, -22.3444, 82.108)
+metadata/_local_pose_override_enabled_ = true
 
-[node name="toe_front" type="Bone2D" parent="pony/root/body_root/body/hip_front/thigh_front/lowerleg_front"]
+[node name="toe_front" type="Bone2D" parent="pony/root/body_root/body/hip_front/thigh_front/lowerleg_front" node_paths=PackedStringArray("target")]
 position = Vector2(-57.2776, -1.80989)
-rotation = 0.197934
-scale = Vector2(0.999995, 0.999995)
-rest = Transform2D(0.98047, 0.196643, -0.196643, 0.98047, -57.2776, -1.80989)
+rotation = 0.19518
+scale = Vector2(0.999992, 0.999992)
+rest = Transform2D(0.981005, 0.193941, -0.193941, 0.981005, -57.2776, -1.80989)
 auto_calculate_length_and_angle = false
 length = 158.222
 bone_angle = 114.409
+script = ExtResource("5_27k37")
+target = NodePath("../../../../../../IK_backleg_front")
 
 [node name="toetip_front" type="Bone2D" parent="pony/root/body_root/body/hip_front/thigh_front/lowerleg_front/toe_front"]
 position = Vector2(-47.2889, 120.087)
@@ -4415,21 +4429,25 @@ position = Vector2(-20, 28)
 rotation = -0.661979
 scale = Vector2(1, 1)
 rest = Transform2D(0.788777, -0.614679, 0.614679, 0.788777, -20, 28)
+metadata/_local_pose_override_enabled_ = true
 
 [node name="lowerleg_back" type="Bone2D" parent="pony/root/body_root/body/hip_back/thigh_back"]
 position = Vector2(-19.2008, 86.46)
 rotation = 0.0713909
 scale = Vector2(1, 1)
 rest = Transform2D(0.997453, 0.0713303, -0.0713303, 0.997453, -19.2008, 86.46)
+metadata/_local_pose_override_enabled_ = true
 
-[node name="toe_back" type="Bone2D" parent="pony/root/body_root/body/hip_back/thigh_back/lowerleg_back"]
+[node name="toe_back" type="Bone2D" parent="pony/root/body_root/body/hip_back/thigh_back/lowerleg_back" node_paths=PackedStringArray("target")]
 position = Vector2(-57.9717, 2.06892)
-rotation = 0.197934
-scale = Vector2(0.999995, 0.999995)
-rest = Transform2D(0.98047, 0.196643, -0.196643, 0.98047, -57.9717, 2.06892)
+rotation = 0.195325
+scale = Vector2(0.999973, 0.999973)
+rest = Transform2D(0.980958, 0.19408, -0.19408, 0.980958, -57.9717, 2.06892)
 auto_calculate_length_and_angle = false
 length = 158.222
 bone_angle = 114.409
+script = ExtResource("5_27k37")
+target = NodePath("../../../../../../IK_backleg_back")
 
 [node name="toetip_back" type="Bone2D" parent="pony/root/body_root/body/hip_back/thigh_back/lowerleg_back/toe_back"]
 position = Vector2(-47.2889, 120.087)
@@ -4445,14 +4463,30 @@ auto_calculate_length_and_angle = false
 length = 42.745
 bone_angle = 77.647
 
-[node name="IK_backleg_front" type="Bone2D" parent="pony/root"]
-position = Vector2(50, -100)
-rotation = -0.542797
-scale = Vector2(1, 1)
-rest = Transform2D(0.856267, -0.516533, 0.516533, 0.856267, 50, -100)
+[node name="IK_frontleg_back" type="Bone2D" parent="pony/root"]
+position = Vector2(253, -144)
+rest = Transform2D(1, 0, 0, 1, 253, -144)
 auto_calculate_length_and_angle = false
 length = 42.745
 bone_angle = 77.647
+
+[node name="IK_backleg_front" type="Bone2D" parent="pony/root"]
+position = Vector2(63, -180)
+rotation = -0.346897
+scale = Vector2(0.999999, 0.999999)
+rest = Transform2D(0.940432, -0.339981, 0.339981, 0.940432, 63, -180)
+auto_calculate_length_and_angle = false
+length = 42.745
+bone_angle = 77.647
+
+[node name="IK_backleg_back" type="Bone2D" parent="pony/root"]
+position = Vector2(95, -198)
+rotation = -0.395263
+scale = Vector2(1, 1)
+rest = Transform2D(0.922895, -0.385051, 0.385051, 0.922895, 95, -198)
+auto_calculate_length_and_angle = false
+length = 42.745
+bone_angle = -31.1
 
 [node name="mane_complex_front" type="Node2D" parent="."]
 script = ExtResource("1_oyty2")
@@ -6201,3 +6235,8 @@ texture = ExtResource("6_3ekgy")
 
 [node name="VecEditCanvas" type="Node2D" parent="."]
 script = ExtResource("7_1my0b")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_dl607")
+}
