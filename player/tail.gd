@@ -9,6 +9,7 @@ class_name TailPhysics
 
 var current_offset: Vector2 = Vector2.ZERO
 @onready var original_position := position
+@onready var original_angle := rotation
 
 var _last_position = global_position
 
@@ -18,6 +19,9 @@ var spring_v: Vector2 = Vector2.ZERO
 const K = 80
 const SEP = 0
 const B = 4
+
+@onready var ba = get_bone_angle()
+@onready var bl = get_length()
 
 func spring_physics(delta: float, parent_x: Vector2) -> void:
 	var dir := spring_x - parent_x
@@ -36,14 +40,29 @@ func spring_physics(delta: float, parent_x: Vector2) -> void:
 func _physics_process(delta: float) -> void:
 	var p = get_parent()
 	
-	var spring_zone = _last_position - global_position
-	spring_physics(delta, spring_zone)
-	_last_position = global_position
+	
 	
 	if p is TailPhysics:
+		spring_physics(delta, p.spring_x)
+		
+		
+	else:
+		var spring_zone = _last_position - global_position
+		spring_physics(delta, spring_zone)
+		_last_position = global_position	
+		
+	var effector: Vector2 = Vector2.from_angle(ba) * bl
+	var to_effector = effector + spring_x
+	
+	rotation = original_angle + effector.angle_to(to_effector)
+		#rotation = original_angle + spring_x.angle()
 		#spring_physics(delta, p.spring_x)
 		#current_offset = spring_x
-		position = original_position + spring_x
+		#var target_position = original_position + spring_x
+		#var angle = original_position.angle_to(target_position)
+		
+		#p.rotation = p.original_angle + angle
+		#position = original_position + spring_x
 		
 		
 	#return # TODO
