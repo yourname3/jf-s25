@@ -1,6 +1,6 @@
 @tool
 extends Node
-class_name VecWaypointOld
+class_name VecWaypoint
 
 @export var value: Vector2
 var computed_value: Vector2 = Vector2.ZERO

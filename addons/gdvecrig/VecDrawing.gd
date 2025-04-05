@@ -11,13 +11,8 @@ class_name VecDrawing
 @export var show_rest: bool = true
 @export var always_show_points: bool = false
 
-# @export var waypoints: Array[VecWaypointOld]
-var strokes: Array[VecStroke]
-
-@export var waypoints: Array[VecWaypoint]
-@export var weights: Array[Dictionary]
-
-@export var waypoints_new: Array[VecWaypoint]
+var waypoints = [VecWaypoint]
+var strokes = [VecStroke]
 
 @export_node_path("Skeleton2D") var skeleton
 @onready var skeleton_node = get_skeleton_from_tree()
@@ -259,11 +254,11 @@ func get_skeleton_from_tree() -> Skeleton2D:
 	return null if skeleton == null else get_node_or_null(skeleton)
 
 func collect_children():
-	#waypoints.clear()
+	waypoints.clear()
 	strokes.clear()
 	for child in get_children(true):
-		#if child is VecWaypoint:
-			#waypoints.push_back(child)
+		if child is VecWaypoint:
+			waypoints.push_back(child)
 		if child is VecStroke:
 			strokes.push_back(child)
 	
@@ -368,7 +363,7 @@ func paint_from_target(plugin: GDVecRig, target: Vector2):
 	for i in range(0, waypoint_count()):
 		var center = get_waypoint_place(i)
 		if (target - center).length_squared() <= (radius * radius):
-			get_waypoint(i).edit_weight(plugin.weight_painting_bone, plugin, weights[i])
+			get_waypoint(i).edit_weight(plugin.weight_painting_bone, plugin)
 
 func compute_pivot_point(plugin: GDVecRig):
 	var point: Vector2 = Vector2.ZERO
@@ -449,9 +444,6 @@ func handle_editing_mouse_motion(plugin: GDVecRig, event: InputEventMouseMotion)
 	return false
 	
 func delete_entire_points(group_idx: int, plugin: GDVecRig) -> void:
-	print("TODO: FIX THIS FOR WEIGHTS")
-	return
-	
 	# We don't want to mess up the selection.
 	plugin.point_selection.clear()
 	
@@ -490,7 +482,7 @@ func handle_editing_mouse_button(plugin: GDVecRig, event: InputEventMouseButton)
 				var index = find_point_index_at_target(10, plugin, get_local_mouse_position())
 				if index >= 0 and index % 3 == 1:
 					var c: ConstraintType = constraints[index / 3]
-					c = (c - 1) % 3
+					c = (c + 1) % 3
 					constraints[index / 3] = c
 				return true
 			
@@ -578,23 +570,8 @@ func _ready():
 	#for child in ordered:
 		#add_child(child, false, CURRENT_INTERNAL_MODE)
 		#child.owner = owner
-	waypoints = []
-	for wp in waypoints_new:
-		print("append a waypoint: ", wp)
-		waypoints.append(wp)
-	#collect_children()
-	#
-	#weights = []
-	#waypoints_new = []
-	#
-	#for waypoint in waypoints:
-		#var dict: Dictionary[Bone2D, float] = {}
-		#weights.push_back(dict)
-		#var wp = VecWaypoint2.new()
-		#wp.value = waypoint.value
-		#wp.computed_value = waypoint.computed_value
-		#waypoints_new.push_back(wp)
 	
+	collect_children()
 	pass # Replace with function body.
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -618,7 +595,7 @@ func _process(delta):
 		var s = skeleton_node
 		if Engine.is_editor_hint() and skeleton != null:
 			s = get_node_or_null(skeleton)
-		get_waypoint(i).compute_value(s, transform_cache, weights[i])
+		get_waypoint(i).compute_value(s, transform_cache)
 	
 	# Extremely strange behavior:
 	# If this condition is 'skeleton != null', the constraints work
@@ -664,11 +641,11 @@ func _do_ui_draw(canvas: VecEditCanvas) -> void:
 			i = 0
 			while (i + 2) <= waypoint_count():
 				var p0 = get_waypoint_place(i)
-				var p0s = get_waypoint(i).get_weight(plugin.weight_painting_bone, weights[i])
+				var p0s = get_waypoint(i).get_weight(plugin.weight_painting_bone)
 				var p1 = get_waypoint_place(i + 1)
-				var p1s = get_waypoint(i + 1).get_weight(plugin.weight_painting_bone, weights[i])
+				var p1s = get_waypoint(i + 1).get_weight(plugin.weight_painting_bone)
 				var p2 = get_waypoint_place(i + 2)
-				var p2s = get_waypoint(i + 2).get_weight(plugin.weight_painting_bone, weights[i])
+				var p2s = get_waypoint(i + 2).get_weight(plugin.weight_painting_bone)
 				canvas.draw_editor_weights(radius, p0, p1, p2, p0s, p1s, p2s, constraints[i / 3])
 				
 				i += 3
