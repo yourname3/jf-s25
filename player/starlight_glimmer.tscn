@@ -325,13 +325,14 @@ weights = {
 NodePath("../../Skeleton2D/root/body_root/body/body2/shoulder_front"): 0.0
 }
 
-[node name="backleg_back" type="Node2D" parent="."]
+[node name="backleg_back_whole" type="Node2D" parent="."]
+visible = false
 script = ExtResource("1_oyty2")
 fill = Color(0.854902, 0.690196, 0.913725, 1)
 constraints = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
 metadata/_custom_type_script = "uid://bodn4jw8tyemx"
 
-[node name="VecStroke" type="Line2D" parent="backleg_back"]
+[node name="VecStroke" type="Line2D" parent="backleg_back_whole"]
 points = PackedVector2Array(289.132, -345.592, 284.638, -340.333, 280.798, -335.618, 277.57, -331.336, 274.914, -327.376, 272.788, -323.628, 271.15, -319.979, 269.961, -316.321, 269.178, -312.541, 268.761, -308.53, 268.668, -304.175, 269.162, -295.451, 270.342, -286.917, 272.078, -278.647, 274.239, -270.716, 276.694, -263.198, 279.312, -256.167, 281.964, -249.696, 284.518, -243.86, 286.845, -238.734, 288.812, -234.39, 289.542, -232.135, 289.538, -230.437, 288.915, -229.217, 287.789, -228.399, 286.277, -227.904, 284.495, -227.656, 282.56, -227.576, 280.586, -227.586, 278.692, -227.61, 276.992, -227.57, 274.022, -227.555, 271.331, -227.666, 268.778, -227.545, 266.224, -226.831, 263.53, -225.165, 260.557, -222.187, 257.163, -217.538, 253.211, -210.857, 248.56, -201.786, 243.07, -189.964, 237.161, -175.5, 232.252, -160.911, 228.267, -146.247, 225.131, -131.556, 222.769, -116.885, 221.104, -102.283, 220.063, -87.7973, 219.569, -73.4772, 219.546, -59.3703, 219.921, -45.5249, 220.791, -41.0762, 222.914, -37.263, 226.136, -34.0462, 230.298, -31.3863, 235.247, -29.2443, 240.826, -27.581, 246.879, -26.357, 253.25, -25.5333, 259.783, -25.0705, 266.322, -24.9294, 272.892, -25.0669, 279.342, -25.4472, 285.577, -26.0424, 291.508, -26.8248, 297.041, -27.7666, 302.084, -28.8399, 306.546, -30.0169, 310.334, -31.2699, 313.355, -32.5709, 315.519, -33.8923, 316.143, -35.9563, 315.047, -39.587, 312.617, -44.6969, 309.238, -51.1983, 305.298, -59.0037, 301.181, -68.0255, 297.274, -78.1762, 293.963, -89.3682, 291.634, -101.514, 290.672, -114.526, 291.304, -127.161, 293.343, -138.803, 296.565, -149.514, 300.747, -159.353, 305.664, -168.381, 311.093, -176.658, 316.81, -184.244, 322.591, -191.199, 328.212, -197.584, 333.449, -203.459, 338.388, -209.227, 343.207, -215.244, 347.82, -221.498, 352.139, -227.977, 356.077, -234.668, 359.549, -241.561, 362.467, -248.642, 364.745, -255.9, 366.295, -263.322, 367.032, -270.897)
 width = 4.8
 width_curve = SubResource("Curve_3yjpv")
@@ -340,135 +341,333 @@ script = ExtResource("2_27k37")
 metadata/_custom_type_script = "uid://csgt88iv3c4ke"
 metadata/_edit_lock_ = true
 
-[node name="_Node_41457" type="Node" parent="backleg_back"]
+[node name="_Node_41457" type="Node" parent="backleg_back_whole"]
 script = ExtResource("3_3ekgy")
 value = Vector2(301.852, -360.243)
 
-[node name="_Node_41458" type="Node" parent="backleg_back"]
+[node name="_Node_41458" type="Node" parent="backleg_back_whole"]
 script = ExtResource("3_3ekgy")
 value = Vector2(289.132, -345.592)
 
-[node name="_Node_41459" type="Node" parent="backleg_back"]
+[node name="_Node_41459" type="Node" parent="backleg_back_whole"]
 script = ExtResource("3_3ekgy")
 value = Vector2(273.018, -327.033)
 
-[node name="_Node_41460" type="Node" parent="backleg_back"]
+[node name="_Node_41460" type="Node" parent="backleg_back_whole"]
 script = ExtResource("3_3ekgy")
 value = Vector2(268.482, -319.385)
 
-[node name="_Node_41461" type="Node" parent="backleg_back"]
+[node name="_Node_41461" type="Node" parent="backleg_back_whole"]
 script = ExtResource("3_3ekgy")
 value = Vector2(268.668, -304.175)
 
-[node name="_Node_41462" type="Node" parent="backleg_back"]
+[node name="_Node_41462" type="Node" parent="backleg_back_whole"]
 script = ExtResource("3_3ekgy")
 value = Vector2(269.026, -274.859)
 
-[node name="_Node_41463" type="Node" parent="backleg_back"]
+[node name="_Node_41463" type="Node" parent="backleg_back_whole"]
 script = ExtResource("3_3ekgy")
 value = Vector2(282.997, -247.481)
 
-[node name="_Node_41464" type="Node" parent="backleg_back"]
+[node name="_Node_41464" type="Node" parent="backleg_back_whole"]
 script = ExtResource("3_3ekgy")
 value = Vector2(288.812, -234.39)
 
-[node name="_Node_41465" type="Node" parent="backleg_back"]
+[node name="_Node_41465" type="Node" parent="backleg_back_whole"]
 script = ExtResource("3_3ekgy")
 value = Vector2(292.601, -225.86)
 
-[node name="_Node_41466" type="Node" parent="backleg_back"]
+[node name="_Node_41466" type="Node" parent="backleg_back_whole"]
 script = ExtResource("3_3ekgy")
 value = Vector2(282.204, -227.898)
 
-[node name="_Node_41467" type="Node" parent="backleg_back"]
+[node name="_Node_41467" type="Node" parent="backleg_back_whole"]
 script = ExtResource("3_3ekgy")
 value = Vector2(276.992, -227.57)
 
-[node name="_Node_41468" type="Node" parent="backleg_back"]
+[node name="_Node_41468" type="Node" parent="backleg_back_whole"]
 script = ExtResource("3_3ekgy")
 value = Vector2(266.473, -226.909)
 
-[node name="_Node_41469" type="Node" parent="backleg_back"]
+[node name="_Node_41469" type="Node" parent="backleg_back_whole"]
 script = ExtResource("3_3ekgy")
 value = Vector2(262.921, -234.354)
 
-[node name="_Node_41470" type="Node" parent="backleg_back"]
+[node name="_Node_41470" type="Node" parent="backleg_back_whole"]
 script = ExtResource("3_3ekgy")
 value = Vector2(243.07, -189.964)
 
-[node name="_Node_41471" type="Node" parent="backleg_back"]
+[node name="_Node_41471" type="Node" parent="backleg_back_whole"]
 script = ExtResource("3_3ekgy")
 value = Vector2(221.625, -142.009)
 
-[node name="_Node_41472" type="Node" parent="backleg_back"]
+[node name="_Node_41472" type="Node" parent="backleg_back_whole"]
 script = ExtResource("3_3ekgy")
 value = Vector2(218.095, -91.1872)
 
-[node name="_Node_41473" type="Node" parent="backleg_back"]
+[node name="_Node_41473" type="Node" parent="backleg_back_whole"]
 script = ExtResource("3_3ekgy")
 value = Vector2(219.921, -45.5249)
 
-[node name="_Node_41474" type="Node" parent="backleg_back"]
+[node name="_Node_41474" type="Node" parent="backleg_back_whole"]
 script = ExtResource("3_3ekgy")
 value = Vector2(220.558, -29.5932)
 
-[node name="_Node_41475" type="Node" parent="backleg_back"]
+[node name="_Node_41475" type="Node" parent="backleg_back_whole"]
 script = ExtResource("3_3ekgy")
 value = Vector2(244.687, -24.9069)
 
-[node name="_Node_41476" type="Node" parent="backleg_back"]
+[node name="_Node_41476" type="Node" parent="backleg_back_whole"]
 script = ExtResource("3_3ekgy")
 value = Vector2(266.322, -24.9294)
 
-[node name="_Node_41477" type="Node" parent="backleg_back"]
+[node name="_Node_41477" type="Node" parent="backleg_back_whole"]
 script = ExtResource("3_3ekgy")
 value = Vector2(288.323, -24.9522)
 
-[node name="_Node_41478" type="Node" parent="backleg_back"]
+[node name="_Node_41478" type="Node" parent="backleg_back_whole"]
 script = ExtResource("3_3ekgy")
 value = Vector2(309.839, -29.4848)
 
-[node name="_Node_41479" type="Node" parent="backleg_back"]
+[node name="_Node_41479" type="Node" parent="backleg_back_whole"]
 script = ExtResource("3_3ekgy")
 value = Vector2(315.519, -33.8923)
 
-[node name="_Node_41480" type="Node" parent="backleg_back"]
+[node name="_Node_41480" type="Node" parent="backleg_back_whole"]
 script = ExtResource("3_3ekgy")
 value = Vector2(320.895, -38.064)
 
-[node name="_Node_41481" type="Node" parent="backleg_back"]
+[node name="_Node_41481" type="Node" parent="backleg_back_whole"]
 script = ExtResource("3_3ekgy")
 value = Vector2(291.169, -69.8064)
 
-[node name="_Node_41482" type="Node" parent="backleg_back"]
+[node name="_Node_41482" type="Node" parent="backleg_back_whole"]
 script = ExtResource("3_3ekgy")
 value = Vector2(290.672, -114.526)
 
-[node name="_Node_41483" type="Node" parent="backleg_back"]
+[node name="_Node_41483" type="Node" parent="backleg_back_whole"]
 script = ExtResource("3_3ekgy")
 value = Vector2(290.185, -158.362)
 
-[node name="_Node_41484" type="Node" parent="backleg_back"]
+[node name="_Node_41484" type="Node" parent="backleg_back_whole"]
 script = ExtResource("3_3ekgy")
 value = Vector2(316.88, -184.659)
 
-[node name="_Node_41485" type="Node" parent="backleg_back"]
+[node name="_Node_41485" type="Node" parent="backleg_back_whole"]
 script = ExtResource("3_3ekgy")
 value = Vector2(333.449, -203.459)
 
-[node name="_Node_41486" type="Node" parent="backleg_back"]
+[node name="_Node_41486" type="Node" parent="backleg_back_whole"]
 script = ExtResource("3_3ekgy")
 value = Vector2(350.017, -222.257)
 
-[node name="_Node_41487" type="Node" parent="backleg_back"]
+[node name="_Node_41487" type="Node" parent="backleg_back_whole"]
 script = ExtResource("3_3ekgy")
 value = Vector2(366.029, -245.406)
 
-[node name="_Node_41488" type="Node" parent="backleg_back"]
+[node name="_Node_41488" type="Node" parent="backleg_back_whole"]
 script = ExtResource("3_3ekgy")
 value = Vector2(367.032, -270.897)
 
-[node name="_Node_41489" type="Node" parent="backleg_back"]
+[node name="_Node_41489" type="Node" parent="backleg_back_whole"]
+script = ExtResource("3_3ekgy")
+value = Vector2(367.704, -287.972)
+
+[node name="backleg_back_hip" type="Node2D" parent="."]
+script = ExtResource("1_oyty2")
+fill = Color(0.854902, 0.690196, 0.913725, 1)
+constraints = [1, 1, 1, 1, 1]
+metadata/_custom_type_script = "uid://bodn4jw8tyemx"
+
+[node name="VecStroke" type="Line2D" parent="backleg_back_hip"]
+points = PackedVector2Array(289.132, -345.592, 284.638, -340.333, 280.798, -335.618, 277.57, -331.336, 274.914, -327.376, 272.788, -323.628, 271.15, -319.979, 269.961, -316.321, 269.178, -312.541, 268.761, -308.53, 268.668, -304.175, 269.162, -295.451, 270.342, -286.917, 272.078, -278.647, 274.239, -270.716, 276.694, -263.198, 279.312, -256.167, 281.964, -249.696, 284.518, -243.86, 286.845, -238.734, 288.812, -234.39, 290.535, -230.944, 293.319, -226.093, 296.993, -220.394, 301.389, -214.403, 306.338, -208.676, 311.67, -203.769, 317.217, -200.237, 322.808, -198.638, 328.275, -199.526, 333.449, -203.459, 338.388, -209.227, 343.207, -215.244, 347.82, -221.498, 352.139, -227.977, 356.077, -234.668, 359.549, -241.561, 362.467, -248.642, 364.745, -255.9, 366.295, -263.322, 367.032, -270.897)
+width = 4.8
+width_curve = SubResource("Curve_3yjpv")
+default_color = Color(0.67451, 0.490196, 0.788235, 1)
+script = ExtResource("2_27k37")
+metadata/_custom_type_script = "uid://csgt88iv3c4ke"
+metadata/_edit_lock_ = true
+
+[node name="_Node_41457" type="Node" parent="backleg_back_hip"]
+script = ExtResource("3_3ekgy")
+value = Vector2(301.852, -360.243)
+
+[node name="_Node_41458" type="Node" parent="backleg_back_hip"]
+script = ExtResource("3_3ekgy")
+value = Vector2(289.132, -345.592)
+
+[node name="_Node_41459" type="Node" parent="backleg_back_hip"]
+script = ExtResource("3_3ekgy")
+value = Vector2(273.018, -327.033)
+
+[node name="_Node_41460" type="Node" parent="backleg_back_hip"]
+script = ExtResource("3_3ekgy")
+value = Vector2(268.482, -319.385)
+
+[node name="_Node_41461" type="Node" parent="backleg_back_hip"]
+script = ExtResource("3_3ekgy")
+value = Vector2(268.668, -304.175)
+
+[node name="_Node_41462" type="Node" parent="backleg_back_hip"]
+script = ExtResource("3_3ekgy")
+value = Vector2(269.026, -274.859)
+
+[node name="_Node_41463" type="Node" parent="backleg_back_hip"]
+script = ExtResource("3_3ekgy")
+value = Vector2(282.997, -247.481)
+
+[node name="_Node_41464" type="Node" parent="backleg_back_hip"]
+script = ExtResource("3_3ekgy")
+value = Vector2(288.812, -234.39)
+
+[node name="_Node_41465" type="Node" parent="backleg_back_hip"]
+script = ExtResource("3_3ekgy")
+value = Vector2(292.601, -225.86)
+
+[node name="_Node_41484" type="Node" parent="backleg_back_hip"]
+script = ExtResource("3_3ekgy")
+value = Vector2(316.88, -184.659)
+
+[node name="_Node_41485" type="Node" parent="backleg_back_hip"]
+script = ExtResource("3_3ekgy")
+value = Vector2(333.449, -203.459)
+
+[node name="_Node_41486" type="Node" parent="backleg_back_hip"]
+script = ExtResource("3_3ekgy")
+value = Vector2(350.017, -222.257)
+
+[node name="_Node_41487" type="Node" parent="backleg_back_hip"]
+script = ExtResource("3_3ekgy")
+value = Vector2(366.029, -245.406)
+
+[node name="_Node_41488" type="Node" parent="backleg_back_hip"]
+script = ExtResource("3_3ekgy")
+value = Vector2(367.032, -270.897)
+
+[node name="_Node_41489" type="Node" parent="backleg_back_hip"]
+script = ExtResource("3_3ekgy")
+value = Vector2(367.704, -287.972)
+
+[node name="backleg_back_bottom" type="Node2D" parent="."]
+script = ExtResource("1_oyty2")
+fill = Color(0.854902, 0.690196, 0.913725, 1)
+constraints = [1, 1, 1, 1, 1, 1, 1, 1, 1]
+metadata/_custom_type_script = "uid://bodn4jw8tyemx"
+
+[node name="VecStroke" type="Line2D" parent="backleg_back_bottom"]
+points = PackedVector2Array(306.816, -223.706, 302.283, -225.104, 298.148, -226.164, 294.392, -226.928, 290.995, -227.438, 287.935, -227.738, 285.192, -227.87, 282.747, -227.876, 280.579, -227.8, 278.667, -227.684, 276.992, -227.57, 274.022, -227.555, 271.331, -227.666, 268.778, -227.545, 266.224, -226.831, 263.53, -225.165, 260.557, -222.187, 257.163, -217.538, 253.211, -210.857, 248.56, -201.786, 243.07, -189.964, 237.161, -175.5, 232.252, -160.911, 228.267, -146.247, 225.131, -131.556, 222.769, -116.885, 221.104, -102.283, 220.063, -87.7973, 219.569, -73.4772, 219.546, -59.3703, 219.921, -45.5249, 220.791, -41.0762, 222.914, -37.263, 226.136, -34.0462, 230.298, -31.3863, 235.247, -29.2443, 240.826, -27.581, 246.879, -26.357, 253.25, -25.5333, 259.783, -25.0705, 266.322, -24.9294, 272.892, -25.0669, 279.342, -25.4472, 285.577, -26.0424, 291.508, -26.8248, 297.041, -27.7666, 302.084, -28.8399, 306.546, -30.0169, 310.334, -31.2699, 313.355, -32.5709, 315.519, -33.8923, 316.143, -35.9563, 315.047, -39.587, 312.617, -44.6969, 309.238, -51.1983, 305.298, -59.0037, 301.181, -68.0255, 297.274, -78.1762, 293.963, -89.3682, 291.634, -101.514, 290.672, -114.526, 291.304, -127.161, 293.343, -138.803, 296.565, -149.514, 300.747, -159.353, 305.664, -168.381, 311.093, -176.658, 316.81, -184.244, 322.591, -191.199, 328.212, -197.584, 333.449, -203.459, 338.388, -209.227, 343.207, -215.244, 347.82, -221.498, 352.139, -227.977, 356.077, -234.668, 359.549, -241.561, 362.467, -248.642, 364.745, -255.9, 366.295, -263.322, 367.032, -270.897)
+width = 4.8
+width_curve = SubResource("Curve_3yjpv")
+default_color = Color(0.67451, 0.490196, 0.788235, 1)
+script = ExtResource("2_27k37")
+metadata/_custom_type_script = "uid://csgt88iv3c4ke"
+metadata/_edit_lock_ = true
+
+[node name="_Node_41463" type="Node" parent="backleg_back_bottom"]
+script = ExtResource("3_3ekgy")
+value = Vector2(327.271, -216.881)
+
+[node name="_Node_41464" type="Node" parent="backleg_back_bottom"]
+script = ExtResource("3_3ekgy")
+value = Vector2(306.816, -223.706)
+
+[node name="_Node_41465" type="Node" parent="backleg_back_bottom"]
+script = ExtResource("3_3ekgy")
+value = Vector2(291.019, -228.978)
+
+[node name="_Node_41466" type="Node" parent="backleg_back_bottom"]
+script = ExtResource("3_3ekgy")
+value = Vector2(282.204, -227.898)
+
+[node name="_Node_41467" type="Node" parent="backleg_back_bottom"]
+script = ExtResource("3_3ekgy")
+value = Vector2(276.992, -227.57)
+
+[node name="_Node_41468" type="Node" parent="backleg_back_bottom"]
+script = ExtResource("3_3ekgy")
+value = Vector2(266.473, -226.909)
+
+[node name="_Node_41469" type="Node" parent="backleg_back_bottom"]
+script = ExtResource("3_3ekgy")
+value = Vector2(262.921, -234.354)
+
+[node name="_Node_41470" type="Node" parent="backleg_back_bottom"]
+script = ExtResource("3_3ekgy")
+value = Vector2(243.07, -189.964)
+
+[node name="_Node_41471" type="Node" parent="backleg_back_bottom"]
+script = ExtResource("3_3ekgy")
+value = Vector2(221.625, -142.009)
+
+[node name="_Node_41472" type="Node" parent="backleg_back_bottom"]
+script = ExtResource("3_3ekgy")
+value = Vector2(218.095, -91.1872)
+
+[node name="_Node_41473" type="Node" parent="backleg_back_bottom"]
+script = ExtResource("3_3ekgy")
+value = Vector2(219.921, -45.5249)
+
+[node name="_Node_41474" type="Node" parent="backleg_back_bottom"]
+script = ExtResource("3_3ekgy")
+value = Vector2(220.558, -29.5932)
+
+[node name="_Node_41475" type="Node" parent="backleg_back_bottom"]
+script = ExtResource("3_3ekgy")
+value = Vector2(244.687, -24.9069)
+
+[node name="_Node_41476" type="Node" parent="backleg_back_bottom"]
+script = ExtResource("3_3ekgy")
+value = Vector2(266.322, -24.9294)
+
+[node name="_Node_41477" type="Node" parent="backleg_back_bottom"]
+script = ExtResource("3_3ekgy")
+value = Vector2(288.323, -24.9522)
+
+[node name="_Node_41478" type="Node" parent="backleg_back_bottom"]
+script = ExtResource("3_3ekgy")
+value = Vector2(309.839, -29.4848)
+
+[node name="_Node_41479" type="Node" parent="backleg_back_bottom"]
+script = ExtResource("3_3ekgy")
+value = Vector2(315.519, -33.8923)
+
+[node name="_Node_41480" type="Node" parent="backleg_back_bottom"]
+script = ExtResource("3_3ekgy")
+value = Vector2(320.895, -38.064)
+
+[node name="_Node_41481" type="Node" parent="backleg_back_bottom"]
+script = ExtResource("3_3ekgy")
+value = Vector2(291.169, -69.8064)
+
+[node name="_Node_41482" type="Node" parent="backleg_back_bottom"]
+script = ExtResource("3_3ekgy")
+value = Vector2(290.672, -114.526)
+
+[node name="_Node_41483" type="Node" parent="backleg_back_bottom"]
+script = ExtResource("3_3ekgy")
+value = Vector2(290.185, -158.362)
+
+[node name="_Node_41484" type="Node" parent="backleg_back_bottom"]
+script = ExtResource("3_3ekgy")
+value = Vector2(316.88, -184.659)
+
+[node name="_Node_41485" type="Node" parent="backleg_back_bottom"]
+script = ExtResource("3_3ekgy")
+value = Vector2(333.449, -203.459)
+
+[node name="_Node_41486" type="Node" parent="backleg_back_bottom"]
+script = ExtResource("3_3ekgy")
+value = Vector2(350.017, -222.257)
+
+[node name="_Node_41487" type="Node" parent="backleg_back_bottom"]
+script = ExtResource("3_3ekgy")
+value = Vector2(366.029, -245.406)
+
+[node name="_Node_41488" type="Node" parent="backleg_back_bottom"]
+script = ExtResource("3_3ekgy")
+value = Vector2(367.032, -270.897)
+
+[node name="_Node_41489" type="Node" parent="backleg_back_bottom"]
 script = ExtResource("3_3ekgy")
 value = Vector2(367.704, -287.972)
 
@@ -1343,6 +1542,7 @@ script = ExtResource("2_27k37")
 metadata/_custom_type_script = "uid://csgt88iv3c4ke"
 
 [node name="body" type="Node2D" parent="."]
+visible = false
 script = ExtResource("1_oyty2")
 fill = Color(0.972549, 0.772549, 1, 1)
 steps = 20
@@ -1985,6 +2185,7 @@ script = ExtResource("2_27k37")
 metadata/_custom_type_script = "uid://csgt88iv3c4ke"
 
 [node name="backleg_front_B" type="Node2D" parent="."]
+visible = false
 script = ExtResource("1_oyty2")
 fill = Color(0.972549, 0.772549, 1, 1)
 show_rest = false
@@ -1993,7 +2194,7 @@ constraints = [1, 1, 1, 1, 1, 1, 1, 1, 1]
 metadata/_custom_type_script = "uid://bodn4jw8tyemx"
 
 [node name="VecStroke" type="Line2D" parent="backleg_front_B"]
-points = PackedVector2Array(267.056, -198.004, 265.005, -200.021, 262.614, -201.863, 259.975, -203.525, 257.179, -204.999, 254.319, -206.278, 251.488, -207.357, 248.777, -208.228, 246.278, -208.885, 244.083, -209.321, 242.286, -209.529, 240.224, -209.68, 238.21, -209.684, 236.135, -209.242, 233.893, -208.053, 231.376, -205.82, 228.475, -202.243, 225.083, -197.022, 221.092, -189.858, 216.395, -180.453, 210.883, -168.506, 204.975, -154.042, 200.066, -139.453, 196.081, -124.789, 192.945, -110.098, 190.582, -95.4271, 188.918, -80.825, 187.876, -66.3399, 187.382, -52.0199, 187.359, -37.9131, 187.734, -24.0676, 188.604, -19.619, 190.727, -15.8058, 193.948, -12.5889, 198.111, -9.92906, 203.06, -7.78707, 208.639, -6.1237, 214.691, -4.89974, 221.062, -4.07596, 227.595, -3.61315, 234.134, -3.47209, 240.704, -3.60961, 247.153, -3.9899, 253.389, -4.58515, 259.32, -5.36757, 264.853, -6.30933, 269.896, -7.38263, 274.358, -8.55966, 278.145, -9.8126, 281.167, -11.1137, 283.331, -12.435, 283.995, -14.5236, 282.997, -18.2206, 280.687, -23.4271, 277.418, -30.0443, 273.54, -37.9734, 269.406, -47.1157, 265.366, -57.3722, 261.772, -68.6442, 258.975, -80.8328, 257.328, -93.8393, 257.034, -106.759, 257.96, -118.774, 259.949, -129.917, 262.844, -140.221, 266.489, -149.719, 270.726, -158.442, 275.399, -166.423, 280.351, -173.696, 285.426, -180.291, 290.466, -186.242, 295.968, -192.397, 302.329, -199.461, 309.24, -207.256, 316.395, -215.602, 323.484, -224.318, 330.2, -233.226, 336.236, -242.145, 341.284, -250.896, 345.035, -259.299, 347.182, -267.174)
+points = PackedVector2Array(267.056, -198.004, 265.005, -200.021, 262.614, -201.863, 259.975, -203.525, 257.179, -204.999, 254.319, -206.278, 251.488, -207.357, 248.777, -208.228, 246.278, -208.885, 244.083, -209.321, 242.286, -209.529, 240.224, -209.68, 238.21, -209.684, 236.135, -209.242, 233.893, -208.053, 231.376, -205.82, 228.475, -202.243, 225.083, -197.022, 221.092, -189.858, 216.395, -180.453, 210.883, -168.506, 204.975, -154.042, 200.066, -139.453, 196.081, -124.789, 192.945, -110.098, 190.582, -95.4269, 188.918, -80.8249, 187.876, -66.3397, 187.382, -52.0197, 187.359, -37.9128, 187.734, -24.0674, 188.604, -19.6187, 190.727, -15.8055, 193.949, -12.5886, 198.111, -9.9288, 203.06, -7.78681, 208.639, -6.12344, 214.691, -4.89948, 221.062, -4.07571, 227.595, -3.6129, 234.134, -3.47184, 240.704, -3.60936, 247.154, -3.98965, 253.389, -4.58491, 259.32, -5.36732, 264.853, -6.30908, 269.896, -7.38238, 274.358, -8.55941, 278.146, -9.81236, 281.167, -11.1134, 283.331, -12.4348, 283.995, -14.5234, 282.997, -18.2203, 280.687, -23.4268, 277.418, -30.0441, 273.54, -37.9732, 269.406, -47.1155, 265.366, -57.372, 261.772, -68.644, 258.975, -80.8327, 257.328, -93.8392, 257.034, -106.759, 257.96, -118.774, 259.949, -129.917, 262.844, -140.221, 266.489, -149.719, 270.726, -158.442, 275.399, -166.423, 280.351, -173.696, 285.426, -180.291, 290.466, -186.242, 295.968, -192.397, 302.329, -199.461, 309.24, -207.256, 316.395, -215.602, 323.484, -224.318, 330.2, -233.226, 336.236, -242.145, 341.284, -250.896, 345.035, -259.299, 347.182, -267.174)
 width = 4.8
 width_curve = SubResource("Curve_3yjpv")
 default_color = Color(0.741176, 0.541176, 0.843137, 1)
@@ -2222,6 +2423,7 @@ NodePath("../../Skeleton2D/root/body_root/body/hip_front"): 1.0
 }
 
 [node name="backleg_front_TopFill" type="Node2D" parent="."]
+visible = false
 script = ExtResource("1_oyty2")
 fill = Color(0.972549, 0.772549, 1, 1)
 show_rest = false
@@ -2347,6 +2549,7 @@ NodePath("../../Skeleton2D/root/body_root/body/hip_front"): 1.0
 }
 
 [node name="backleg_front_TopLine" type="Node2D" parent="."]
+visible = false
 script = ExtResource("1_oyty2")
 fill = Color(0.972549, 0.772549, 1, 1)
 do_fill = false
@@ -2439,7 +2642,7 @@ constraints = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
 metadata/_custom_type_script = "uid://bodn4jw8tyemx"
 
 [node name="VecStroke" type="Line2D" parent="backleg_whole"]
-points = PackedVector2Array(257.715, -341.484, 253.22, -336.208, 249.375, -331.371, 246.132, -326.76, 243.447, -322.158, 241.274, -317.351, 239.567, -312.124, 238.279, -306.262, 237.366, -299.55, 236.782, -291.773, 236.48, -282.717, 236.759, -273.993, 237.814, -265.46, 239.5, -257.191, 241.668, -249.26, 244.174, -241.742, 246.869, -234.71, 249.609, -228.239, 252.245, -222.403, 254.633, -217.276, 256.624, -212.932, 257.354, -210.677, 257.35, -208.979, 256.727, -207.76, 255.601, -206.941, 254.089, -206.447, 252.307, -206.198, 250.372, -206.118, 248.398, -206.128, 246.504, -206.152, 244.804, -206.112, 241.834, -206.097, 239.143, -206.208, 236.59, -206.087, 234.036, -205.373, 231.343, -203.707, 228.369, -200.729, 224.976, -196.08, 221.023, -189.399, 216.372, -180.328, 210.883, -168.506, 204.975, -154.042, 200.066, -139.453, 196.081, -124.789, 192.945, -110.098, 190.582, -95.427, 188.918, -80.8249, 187.876, -66.3398, 187.382, -52.0197, 187.36, -37.9129, 187.734, -24.0675, 188.604, -19.6188, 190.727, -15.8056, 193.949, -12.5887, 198.111, -9.9289, 203.06, -7.78691, 208.639, -6.12354, 214.691, -4.89958, 221.062, -4.07581, 227.595, -3.61301, 234.134, -3.47195, 240.704, -3.60947, 247.154, -3.98976, 253.39, -4.58502, 259.32, -5.36744, 264.853, -6.3092, 269.896, -7.3825, 274.358, -8.55954, 278.146, -9.81249, 281.167, -11.1136, 283.331, -12.4349, 283.995, -14.5235, 282.997, -18.2205, 280.687, -23.427, 277.418, -30.0442, 273.54, -37.9733, 269.406, -47.1156, 265.366, -57.3721, 261.772, -68.6441, 258.975, -80.8328, 257.328, -93.8393, 257.034, -106.759, 257.96, -118.774, 259.949, -129.917, 262.844, -140.221, 266.489, -149.719, 270.726, -158.442, 275.399, -166.423, 280.351, -173.696, 285.426, -180.291, 290.466, -186.242, 295.968, -192.397, 302.329, -199.461, 309.24, -207.256, 316.395, -215.602, 323.484, -224.318, 330.2, -233.226, 336.236, -242.145, 341.284, -250.896, 345.035, -259.299, 347.182, -267.174)
+points = PackedVector2Array(257.715, -341.484, 253.22, -336.208, 249.375, -331.371, 246.132, -326.76, 243.447, -322.158, 241.274, -317.351, 239.567, -312.124, 238.279, -306.262, 237.366, -299.55, 236.782, -291.773, 236.48, -282.717, 236.787, -274.005, 237.914, -265.5, 239.696, -257.269, 241.968, -249.379, 244.564, -241.897, 247.319, -234.889, 250.067, -228.422, 252.645, -222.562, 254.885, -217.376, 256.624, -212.932, 257.145, -210.737, 257.02, -209.073, 256.348, -207.868, 255.23, -207.047, 253.767, -206.538, 252.06, -206.268, 250.209, -206.164, 248.316, -206.152, 246.481, -206.159, 244.804, -206.112, 241.834, -206.097, 239.143, -206.208, 236.59, -206.087, 234.036, -205.373, 231.343, -203.707, 228.369, -200.729, 224.976, -196.08, 221.023, -189.399, 216.372, -180.328, 210.883, -168.506, 204.975, -154.042, 200.066, -139.453, 196.081, -124.789, 192.945, -110.098, 190.582, -95.4269, 188.918, -80.8249, 187.876, -66.3397, 187.382, -52.0197, 187.359, -37.9128, 187.734, -24.0674, 188.604, -19.6187, 190.727, -15.8055, 193.949, -12.5886, 198.111, -9.9288, 203.06, -7.78681, 208.639, -6.12344, 214.691, -4.89948, 221.062, -4.07571, 227.595, -3.6129, 234.134, -3.47184, 240.704, -3.60936, 247.154, -3.98965, 253.389, -4.58491, 259.32, -5.36732, 264.853, -6.30908, 269.896, -7.38238, 274.358, -8.55941, 278.146, -9.81236, 281.167, -11.1134, 283.331, -12.4348, 283.995, -14.5234, 282.997, -18.2203, 280.687, -23.4268, 277.418, -30.0441, 273.54, -37.9732, 269.406, -47.1155, 265.366, -57.372, 261.772, -68.644, 258.975, -80.8327, 257.328, -93.8392, 257.034, -106.759, 257.96, -118.774, 259.949, -129.917, 262.844, -140.221, 266.489, -149.719, 270.726, -158.442, 275.399, -166.423, 280.351, -173.696, 285.426, -180.291, 290.466, -186.242, 295.968, -192.397, 302.329, -199.461, 309.24, -207.256, 316.395, -215.602, 323.484, -224.318, 330.2, -233.226, 336.236, -242.145, 341.284, -250.896, 345.035, -259.299, 347.182, -267.174)
 width = 4.8
 width_curve = SubResource("Curve_3yjpv")
 default_color = Color(0.741176, 0.541176, 0.843137, 1)
@@ -2698,7 +2901,7 @@ constraints = [1, 1, 1, 1, 1, 1, 1]
 metadata/_custom_type_script = "uid://bodn4jw8tyemx"
 
 [node name="VecStroke" type="Line2D" parent="frontleg_front"]
-points = PackedVector2Array(393.297, -244.689, 390.441, -236.214, 387.627, -225.847, 384.901, -214.013, 382.311, -201.14, 379.906, -187.653, 377.733, -173.979, 375.839, -160.545, 374.273, -147.777, 373.081, -136.1, 372.312, -125.943, 371.757, -113.96, 371.471, -101.53, 371.464, -88.8879, 371.753, -76.2702, 372.348, -63.9124, 373.265, -52.0504, 374.516, -40.9199, 376.115, -30.7565, 378.075, -21.7962, 380.409, -14.2746, 381.445, -12.6676, 383.322, -11.0903, 386.007, -9.57385, 389.465, -8.14939, 393.665, -6.84805, 398.574, -5.70098, 404.158, -4.73932, 410.385, -3.9942, 417.221, -3.49677, 424.634, -3.27816, 433.627, -3.3729, 441.989, -3.79291, 449.621, -4.49284, 456.429, -5.42734, 462.315, -6.55104, 467.183, -7.81859, 470.937, -9.18464, 473.48, -10.6038, 474.715, -12.0308, 474.548, -13.4202, 471.259, -19.1168, 467.605, -26.7631, 463.714, -36.0107, 459.712, -46.511, 455.729, -57.9154, 451.892, -69.8755, 448.33, -82.0426, 445.169, -94.0683, 442.539, -105.604, 440.567, -116.301, 439.161, -126.967, 438.02, -139.247, 437.157, -152.796, 436.586, -167.265, 436.321, -182.308, 436.374, -197.577, 436.758, -212.724, 437.488, -227.403, 438.576, -241.266, 440.035, -253.966)
+points = PackedVector2Array(393.297, -244.689, 390.441, -236.214, 387.627, -225.847, 384.901, -214.013, 382.311, -201.14, 379.906, -187.653, 377.733, -173.979, 375.839, -160.545, 374.273, -147.777, 373.081, -136.1, 372.312, -125.943, 371.758, -113.96, 371.471, -101.53, 371.465, -88.8879, 371.753, -76.2702, 372.348, -63.9124, 373.265, -52.0504, 374.516, -40.9199, 376.115, -30.7565, 378.075, -21.7962, 380.409, -14.2746, 381.446, -12.6676, 383.322, -11.0903, 386.007, -9.57385, 389.465, -8.14939, 393.666, -6.84806, 398.574, -5.70099, 404.158, -4.73933, 410.385, -3.99421, 417.221, -3.49678, 424.634, -3.27817, 433.627, -3.37291, 441.989, -3.79292, 449.621, -4.49285, 456.429, -5.42735, 462.315, -6.55105, 467.183, -7.8186, 470.937, -9.18465, 473.48, -10.6038, 474.716, -12.0308, 474.548, -13.4202, 471.26, -19.1168, 467.606, -26.7631, 463.714, -36.0107, 459.712, -46.511, 455.729, -57.9154, 451.893, -69.8755, 448.33, -82.0426, 445.17, -94.0683, 442.539, -105.604, 440.567, -116.301, 439.161, -126.967, 438.02, -139.247, 437.157, -152.796, 436.587, -167.265, 436.321, -182.308, 436.374, -197.577, 436.758, -212.724, 437.488, -227.403, 438.576, -241.266, 440.035, -253.966)
 width = 4.3
 width_curve = SubResource("Curve_cystm")
 default_color = Color(0.741176, 0.541176, 0.843137, 1)
@@ -3991,23 +4194,56 @@ rest = Transform2D(1, 0, 0, 1, 0, 0)
 [node name="thigh_front" type="Bone2D" parent="Skeleton2D/root/body_root/body/hip_front"]
 position = Vector2(-40, 52)
 rotation = -0.613467
+scale = Vector2(1, 1)
 rest = Transform2D(0.817657, -0.575706, 0.575706, 0.817657, -40, 52)
 
 [node name="lowerleg_front" type="Bone2D" parent="Skeleton2D/root/body_root/body/hip_front/thigh_front"]
 position = Vector2(-22.3444, 82.108)
 rotation = 0.0713909
+scale = Vector2(1, 1)
 rest = Transform2D(0.997453, 0.0713303, -0.0713303, 0.997453, -22.3444, 82.108)
 
 [node name="toe_front" type="Bone2D" parent="Skeleton2D/root/body_root/body/hip_front/thigh_front/lowerleg_front"]
 position = Vector2(-57.2776, -1.80989)
 rotation = 0.197934
-scale = Vector2(0.999994, 0.999994)
+scale = Vector2(0.999995, 0.999995)
 rest = Transform2D(0.98047, 0.196643, -0.196643, 0.98047, -57.2776, -1.80989)
 auto_calculate_length_and_angle = false
 length = 158.222
 bone_angle = 114.409
 
 [node name="toetip_front" type="Bone2D" parent="Skeleton2D/root/body_root/body/hip_front/thigh_front/lowerleg_front/toe_front"]
+position = Vector2(-47.2889, 120.087)
+rest = Transform2D(1, -2.98023e-08, 2.98023e-08, 1, -47.2889, 120.087)
+auto_calculate_length_and_angle = false
+length = 41.111
+bone_angle = 99.863
+
+[node name="hip_back" type="Bone2D" parent="Skeleton2D/root/body_root/body"]
+rest = Transform2D(1, 0, 0, 1, 0, 0)
+
+[node name="thigh_back" type="Bone2D" parent="Skeleton2D/root/body_root/body/hip_back"]
+position = Vector2(-20, 28)
+rotation = -0.661979
+scale = Vector2(1, 1)
+rest = Transform2D(0.817657, -0.575706, 0.575706, 0.817657, -40, 52)
+
+[node name="lowerleg_back" type="Bone2D" parent="Skeleton2D/root/body_root/body/hip_back/thigh_back"]
+position = Vector2(-19.2008, 86.46)
+rotation = 0.0713909
+scale = Vector2(1, 1)
+rest = Transform2D(0.997453, 0.0713303, -0.0713303, 0.997453, -22.3444, 82.108)
+
+[node name="toe_back" type="Bone2D" parent="Skeleton2D/root/body_root/body/hip_back/thigh_back/lowerleg_back"]
+position = Vector2(-57.9717, 2.06892)
+rotation = 0.197934
+scale = Vector2(0.999995, 0.999995)
+rest = Transform2D(0.98047, 0.196643, -0.196643, 0.98047, -57.2776, -1.80989)
+auto_calculate_length_and_angle = false
+length = 158.222
+bone_angle = 114.409
+
+[node name="toetip_back" type="Bone2D" parent="Skeleton2D/root/body_root/body/hip_back/thigh_back/lowerleg_back/toe_back"]
 position = Vector2(-47.2889, 120.087)
 rest = Transform2D(1, -2.98023e-08, 2.98023e-08, 1, -47.2889, 120.087)
 auto_calculate_length_and_angle = false
@@ -4024,6 +4260,7 @@ bone_angle = 77.647
 [node name="IK_backleg_front" type="Bone2D" parent="Skeleton2D/root"]
 position = Vector2(50, -100)
 rotation = -0.542797
+scale = Vector2(1, 1)
 rest = Transform2D(0.856267, -0.516533, 0.516533, 0.856267, 50, -100)
 auto_calculate_length_and_angle = false
 length = 42.745
@@ -5325,6 +5562,7 @@ script = ExtResource("3_3ekgy")
 value = Vector2(324.678, -484.132)
 
 [node name="cm_bigmagic" type="Node2D" parent="."]
+visible = false
 script = ExtResource("1_oyty2")
 cyclic = true
 fill = Color(0.607843, 0.913725, 0.847059, 1)
@@ -5405,6 +5643,7 @@ script = ExtResource("3_3ekgy")
 value = Vector2(287.374, -297.431)
 
 [node name="cm_bigmagic2" type="Node2D" parent="."]
+visible = false
 script = ExtResource("1_oyty2")
 cyclic = true
 fill = Color(0.0313726, 0.729412, 0.717647, 1)
@@ -5485,6 +5724,7 @@ script = ExtResource("3_3ekgy")
 value = Vector2(287.374, -297.431)
 
 [node name="cm_littlemagic" type="Node2D" parent="."]
+visible = false
 script = ExtResource("1_oyty2")
 cyclic = true
 fill = Color(0.607843, 0.913725, 0.847059, 1)
@@ -5565,6 +5805,7 @@ script = ExtResource("3_3ekgy")
 value = Vector2(308.8, -265.408)
 
 [node name="cm_littlemagic2" type="Node2D" parent="."]
+visible = false
 script = ExtResource("1_oyty2")
 cyclic = true
 fill = Color(0.0313726, 0.729412, 0.717647, 1)
