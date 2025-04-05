@@ -15,11 +15,27 @@ var player_parent: Player = null
 @onready var animation_player := $AnimationPlayer
 @onready var tree := $AnimationTree
 
-func set_animation(anim: StringName):
-	animation_player.play(anim, 0.3)
+var want_walk: bool = false
+var want_air: bool = false
+
+var walk_blend: float = 0.0
+var air_blend: float = 0.0
+
+func target(b: bool) -> float:
+	return 1.0 if b else 0.0
 	
 func set_walkvel(scale: float) -> void:
 	tree["parameters/walk_scaler/scale"] = scale
+	
+func _process(delta: float) -> void:
+	var wb_t = target(want_walk)
+	var ab_t = target(want_air)
+	
+	walk_blend = move_toward(walk_blend, wb_t, delta * 3.0)
+	air_blend = move_toward(air_blend, ab_t, delta * 2.0)
+	
+	tree["parameters/blend_to_walk/blend_amount"] = walk_blend
+	tree["parameters/blend_to_air/blend_amount"] = air_blend
 
 func _ready() -> void:
 	$"Pony-color-ref".queue_free()
