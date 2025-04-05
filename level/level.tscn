@@ -1,4 +1,4 @@
-[gd_scene load_steps=49 format=3 uid="uid://bda6bue7aop33"]
+[gd_scene load_steps=51 format=3 uid="uid://bda6bue7aop33"]
 
 [ext_resource type="PackedScene" uid="uid://d0u0o1s2jxhbj" path="res://player/player.tscn" id="1_7lnir"]
 [ext_resource type="Script" uid="uid://clts7ttaac1qj" path="res://addons/rmsmartshape/shapes/shape.gd" id="2_0v1st"]
@@ -280,9 +280,27 @@ z_as_relative = true
 offset = -0.9
 metadata/_custom_type_script = "uid://cs7sfcttk45ir"
 
+[sub_resource type="Resource" id="Resource_w18mj"]
+script = ExtResource("9_rhqlf")
+begin = 156.0
+distance = 76.0
+edgeRendering = Vector2(0, 0)
+
+[sub_resource type="Resource" id="Resource_j1fdq"]
+script = ExtResource("6_rhqlf")
+edge_material = SubResource("Resource_sui6v")
+normal_range = SubResource("Resource_w18mj")
+weld = true
+taper_sharp_corners = false
+render = true
+z_index = -1
+z_as_relative = true
+offset = -0.7
+metadata/_custom_type_script = "uid://cs7sfcttk45ir"
+
 [sub_resource type="Resource" id="Resource_1vdk1"]
 script = ExtResource("7_l5lfc")
-_edge_meta_materials = Array[ExtResource("6_rhqlf")]([SubResource("Resource_4vkke"), SubResource("Resource_3dv6e")])
+_edge_meta_materials = Array[ExtResource("6_rhqlf")]([SubResource("Resource_4vkke"), SubResource("Resource_3dv6e"), SubResource("Resource_j1fdq")])
 fill_textures = Array[Texture2D]([ExtResource("11_m3nah")])
 fill_texture_z_index = -10
 fill_texture_show_behind_parent = false
