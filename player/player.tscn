@@ -8,7 +8,7 @@
 friction = 0.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rkbax"]
-size = Vector2(257, 325)
+size = Vector2(181, 325)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g1dw6"]
 size = Vector2(254, 24)
@@ -37,7 +37,7 @@ texture = ExtResource("2_rkbax")
 
 [node name="pony" parent="pivot" instance=ExtResource("3_g1dw6")]
 z_index = 10
-position = Vector2(-227, 197)
+position = Vector2(-197, 197)
 scale = Vector2(0.567864, 0.567864)
 
 [node name="PlayerJumpDetector" type="Area2D" parent="."]

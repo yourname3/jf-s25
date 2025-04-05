@@ -1,4 +1,4 @@
-[gd_scene load_steps=63 format=3 uid="uid://bda6bue7aop33"]
+[gd_scene load_steps=69 format=3 uid="uid://bda6bue7aop33"]
 
 [ext_resource type="PackedScene" uid="uid://d0u0o1s2jxhbj" path="res://player/player.tscn" id="1_7lnir"]
 [ext_resource type="Script" uid="uid://clts7ttaac1qj" path="res://addons/rmsmartshape/shapes/shape.gd" id="2_0v1st"]
@@ -236,7 +236,7 @@ width = 1.0
 
 [sub_resource type="Resource" id="Resource_jexi8"]
 script = ExtResource("4_cw150")
-position = Vector2(6464, 1344)
+position = Vector2(9344, 1088)
 point_in = Vector2(0, 0)
 point_out = Vector2(0, 0)
 properties = SubResource("Resource_wsbnc")
@@ -253,6 +253,45 @@ position = Vector2(7168, 640)
 point_in = Vector2(0, 0)
 point_out = Vector2(0, 0)
 properties = SubResource("Resource_53vbi")
+
+[sub_resource type="Resource" id="Resource_5sooq"]
+script = ExtResource("3_6gtgk")
+texture_idx = 0
+flip = false
+width = 1.0
+
+[sub_resource type="Resource" id="Resource_xr58e"]
+script = ExtResource("4_cw150")
+position = Vector2(7552, 960)
+point_in = Vector2(0, 0)
+point_out = Vector2(0, 0)
+properties = SubResource("Resource_5sooq")
+
+[sub_resource type="Resource" id="Resource_gii56"]
+script = ExtResource("3_6gtgk")
+texture_idx = 0
+flip = false
+width = 1.0
+
+[sub_resource type="Resource" id="Resource_mgtwu"]
+script = ExtResource("4_cw150")
+position = Vector2(8320, 960)
+point_in = Vector2(0, 0)
+point_out = Vector2(0, 0)
+properties = SubResource("Resource_gii56")
+
+[sub_resource type="Resource" id="Resource_6vmcb"]
+script = ExtResource("3_6gtgk")
+texture_idx = 0
+flip = false
+width = 1.0
+
+[sub_resource type="Resource" id="Resource_8kjaj"]
+script = ExtResource("4_cw150")
+position = Vector2(9344, 1344)
+point_in = Vector2(0, 0)
+point_out = Vector2(0, 0)
+properties = SubResource("Resource_6vmcb")
 
 [sub_resource type="Resource" id="Resource_8yb03"]
 script = ExtResource("5_xii2b")
@@ -274,13 +313,16 @@ _points = {
 20: SubResource("Resource_3xl46"),
 21: SubResource("Resource_idjqq"),
 22: SubResource("Resource_jexi8"),
-23: SubResource("Resource_mj7mg")
+23: SubResource("Resource_mj7mg"),
+24: SubResource("Resource_xr58e"),
+25: SubResource("Resource_mgtwu"),
+26: SubResource("Resource_8kjaj")
 }
-_point_order = PackedInt32Array(0, 15, 18, 2, 17, 3, 19, 21, 23, 22, 20, 4, 5, 6, 9, 10, 12, 11)
+_point_order = PackedInt32Array(0, 15, 18, 2, 17, 3, 19, 21, 23, 24, 25, 22, 26, 20, 4, 5, 6, 9, 10, 12, 11)
 _constraints = {
 Vector2i(0, 11): 15
 }
-_next_key = 24
+_next_key = 27
 _material_overrides = {}
 tessellation_stages = 3
 tessellation_tolerance = 6.0
@@ -460,5 +502,5 @@ metadata/_edit_lock_ = true
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
 visible = false
-polygon = PackedVector2Array(-256, 1024, -256, -384, 640, -384, 640, 1024, 3392, 1024, 5120, 896, 6016, 896, 6464, 640, 7168, 640, 6464, 1344, 6016, 1344, 5120, 1344, 5115.88, 1357.75, 5099, 1394, 5062.63, 1445.25, 5000, 1504, 4904.38, 1562.75, 4769, 1614, 4587.13, 1650.25, 4352, 1664, 2048, 1664, -192, 1664, -768, 1664, -768, 1024, -256, 1024)
+polygon = PackedVector2Array(-256, 1024, -256, -384, 640, -384, 640, 1024, 3392, 1024, 5120, 896, 6016, 896, 6464, 640, 7168, 640, 7552, 960, 8320, 960, 9344, 1088, 9344, 1344, 6016, 1344, 5120, 1344, 5115.88, 1357.75, 5099, 1394, 5062.63, 1445.25, 5000, 1504, 4904.38, 1562.75, 4769, 1614, 4587.13, 1650.25, 4352, 1664, 2048, 1664, -192, 1664, -768, 1664, -768, 1024, -256, 1024)
 metadata/_edit_lock_ = true
