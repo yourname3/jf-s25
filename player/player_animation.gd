@@ -35,8 +35,12 @@ func _process(delta: float) -> void:
 	var jd_t = target(want_jump_down)
 	
 	walk_blend = move_toward(walk_blend, wb_t, delta * 3.0)
-	air_blend = move_toward(air_blend, ab_t, delta * 2.0)
+	air_blend = move_toward(air_blend, ab_t, delta * 4.0)
 	jump_down_blend = move_toward(jump_down_blend, jd_t, delta * 2.0)
+	if air_blend == 0.0:
+		# Whenever we haven't jumped in the air yet, reset jump down blend,
+		# so that we go straight into jump up.
+		jump_down_blend = 0.0
 	
 	tree["parameters/blend_to_walk/blend_amount"] = walk_blend
 	tree["parameters/blend_to_air/blend_amount"] = air_blend
