@@ -29,7 +29,9 @@ visible = false
 scale = Vector2(2, 2.76563)
 texture = ExtResource("2_rkbax")
 
-[node name="Node2D" parent="." instance=ExtResource("3_g1dw6")]
+[node name="pivot" type="Node2D" parent="."]
+
+[node name="Node2D" parent="pivot" instance=ExtResource("3_g1dw6")]
 z_index = 10
 position = Vector2(-227, 197)
 scale = Vector2(0.567864, 0.567864)
