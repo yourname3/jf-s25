@@ -1,5 +1,6 @@
-[gd_scene load_steps=26 format=3 uid="uid://b2cjwbuhd8mm3"]
+[gd_scene load_steps=27 format=3 uid="uid://b2cjwbuhd8mm3"]
 
+[ext_resource type="Script" uid="uid://bafpx8hxl2kgu" path="res://player/player_animation.gd" id="1_h4ksu"]
 [ext_resource type="Script" uid="uid://bodn4jw8tyemx" path="res://addons/gdvecrig/VecDrawing.gd" id="1_oyty2"]
 [ext_resource type="Script" uid="uid://csgt88iv3c4ke" path="res://addons/gdvecrig/VecStroke.gd" id="2_27k37"]
 [ext_resource type="Script" uid="uid://druaxt2ugybtj" path="res://addons/gdvecrig/VecWaypoint.gd" id="3_3ekgy"]
@@ -106,7 +107,8 @@ point_count = 3
 _data = [Vector2(0, 0), 0.0, 13.6025, 0, 0, Vector2(0.0917108, 1), 0.0, 0.0, 0, 0, Vector2(0.885362, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
 point_count = 4
 
-[node name="Node2D" type="Node2D"]
+[node name="StarlightGlimmer" type="Node2D"]
+script = ExtResource("1_h4ksu")
 
 [node name="frontleg_back" type="Node2D" parent="."]
 script = ExtResource("1_oyty2")

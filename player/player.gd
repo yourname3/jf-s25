@@ -65,8 +65,17 @@ func _draw() -> void:
 func _process(delta: float) -> void:
 	queue_redraw()
 		
+var _is_on_floor: bool = false
+		
 func is_on_floor() -> bool:
-	return true
+	return _is_on_floor
+	
+func _integrate_forces(state: PhysicsDirectBodyState2D) -> void:
+	_is_on_floor = false
+	for i in range(0, state.get_contact_count()):
+		var normal := state.get_contact_local_normal(i)
+		if normal.dot(Vector2.UP) > cos(deg_to_rad(45)):
+			_is_on_floor = true
 
 func _physics_process(delta: float) -> void:
 	var encoded_inputs := get_inputs()
