@@ -137,4 +137,10 @@ func _physics_process(delta: float) -> void:
 		# Disable jumps if we ever lose our Y velocity.
 		jump_timer = 0
 		
-	#test_move()
+	# Manually perform a snap to the floor.
+	const SNAP_AMOUNT = 32.0
+	if linear_velocity.y > 0:
+		var check := move_and_collide(Vector2(0, SNAP_AMOUNT), true)
+		if check != null:
+			move_and_collide(Vector2(0, SNAP_AMOUNT) - check.get_normal() * 8)
+			
