@@ -17,7 +17,7 @@ var spring_v: Vector2 = Vector2.ZERO
 
 const K = 80
 const SEP = 0
-const B = 16
+const B = 4
 
 func spring_physics(delta: float, parent_x: Vector2) -> void:
 	var dir := spring_x - parent_x
@@ -35,21 +35,16 @@ func spring_physics(delta: float, parent_x: Vector2) -> void:
 
 func _physics_process(delta: float) -> void:
 	var p = get_parent()
+	
+	var spring_zone = _last_position - global_position
+	spring_physics(delta, spring_zone)
+	_last_position = global_position
+	
 	if p is TailPhysics:
-		spring_physics(delta, p.spring_x)
-		current_offset = spring_x
-		#current_offset += (p.current_offset - current_offset) * Global.get_lerp(0.3, delta)
-		position = original_position + current_offset
-	else:
-		var root = _last_position - global_position
-		spring_physics(delta, root)
-		#current_offset = 
-		#var noise_amount = clamp(current_offset.length() / 16.0, 0.0, 1.0)
-		#current_offset += current_offset.orthogonal() * noise_amount
-		#current_offset = current_offset.limit_length(16)
-		#spring_x = current_offset
-		#print(current_offset)
-		_last_position = global_position
+		#spring_physics(delta, p.spring_x)
+		#current_offset = spring_x
+		position = original_position + spring_x
+		
 		
 	#return # TODO
 	#var pos := global_position
