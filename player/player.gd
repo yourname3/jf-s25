@@ -74,15 +74,11 @@ func _integrate_forces(state: PhysicsDirectBodyState2D) -> void:
 	#_is_on_floor = false
 	for i in range(0, state.get_contact_count()):
 		var normal := state.get_contact_local_normal(i)
-		#if mode == MODE_PLAYBACK:
-			#print(normal, " ", normal.dot(Vector2.UP), " ", cos(deg_to_rad(45)))
 		if normal.dot(Vector2.UP) > cos(deg_to_rad(45)):
 			_is_on_floor = 3.0 / 60.0
 		
 	var probe := move_and_collide(Vector2(0, -8), true)
 	var probe2 := test_move(transform, Vector2(0, -8))
-	if mode == MODE_PLAYBACK:
-		print(probe, " ", probe2)
 	if probe != null and probe.get_normal().dot(Vector2.UP) > 0.9:
 		_is_on_floor = 3.0 / 60.0
 
@@ -108,10 +104,6 @@ func _physics_process(delta: float) -> void:
 		jump_just_pressed = true
 	elif encoded_inputs.y == 2:
 		jump_pressed = true
-
-	if mode == MODE_PLAYBACK:
-		if jump_just_pressed:
-			print("jump just pressed, ", is_on_floor())
 
 	# Hack for not sliding down ramps: don't add gravity when we're on floor
 	# and no inputs are pressed?
@@ -143,10 +135,6 @@ func _physics_process(delta: float) -> void:
 	if jump_timer > 0:
 		jump_timer -= delta
 		linear_velocity.y = -JUMP_SPEED
-	
-	# floor_max_angle = deg_to_rad(15)
-	# move_and_slide()
-	#_do_move_and_slide(delta)
 	
 	if linear_velocity.y > 0:
 		# Disable jumps if we ever lose our Y velocity.

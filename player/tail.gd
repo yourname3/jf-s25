@@ -17,7 +17,7 @@ var spring_v: Vector2 = Vector2.ZERO
 
 const K = 80
 const SEP = 0
-const B = 4
+const B = 8
 
 func spring_physics(delta: float, parent_x: Vector2) -> void:
 	var dir := spring_x - parent_x
