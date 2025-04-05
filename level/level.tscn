@@ -1,4 +1,4 @@
-[gd_scene load_steps=44 format=3 uid="uid://bda6bue7aop33"]
+[gd_scene load_steps=49 format=3 uid="uid://bda6bue7aop33"]
 
 [ext_resource type="PackedScene" uid="uid://d0u0o1s2jxhbj" path="res://player/player.tscn" id="1_7lnir"]
 [ext_resource type="Script" uid="uid://clts7ttaac1qj" path="res://addons/rmsmartshape/shapes/shape.gd" id="2_0v1st"]
@@ -8,19 +8,21 @@
 [ext_resource type="Script" uid="uid://cs7sfcttk45ir" path="res://addons/rmsmartshape/materials/edge_material_metadata.gd" id="6_rhqlf"]
 [ext_resource type="Script" uid="uid://b5pdeqxbhw7y7" path="res://addons/rmsmartshape/materials/edge_material.gd" id="7_cw150"]
 [ext_resource type="Script" uid="uid://igcmftw7hkgq" path="res://addons/rmsmartshape/materials/shape_material.gd" id="7_l5lfc"]
-[ext_resource type="Texture2D" uid="uid://dxyu74jyy6a5l" path="res://whitebox/whitebox_round.png" id="8_xii2b"]
+[ext_resource type="Texture2D" uid="uid://8ua0t4npmfyt" path="res://level/tiles/tile_basic.svg" id="9_l5lfc"]
 [ext_resource type="Script" uid="uid://53mvvatpbra5" path="res://addons/rmsmartshape/normal_range.gd" id="9_rhqlf"]
+[ext_resource type="Texture2D" uid="uid://d2hbodlpyo7u7" path="res://level/tiles/tile_sides.svg" id="11_l5lfc"]
+[ext_resource type="Texture2D" uid="uid://0nhdgcdcd0x6" path="res://level/tiles/tile_darker.svg" id="11_m3nah"]
 [ext_resource type="Script" uid="uid://c666aimbmpet3" path="res://level/recorder_ui.gd" id="11_xii2b"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cw150"]
-bg_color = Color(0, 0, 0, 1)
+bg_color = Color(0.221236, 0.490525, 0.438929, 1)
 corner_radius_top_left = 100
 corner_radius_top_right = 100
 corner_radius_bottom_right = 100
 corner_radius_bottom_left = 100
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xii2b"]
-bg_color = Color(0.310522, 0.707209, 0, 1)
+bg_color = Color(0.607843, 0.913725, 0.847059, 1)
 
 [sub_resource type="Resource" id="Resource_s1aav"]
 script = ExtResource("3_6gtgk")
@@ -212,9 +214,9 @@ tessellation_stages = 3
 tessellation_tolerance = 6.0
 curve_bake_interval = 20.0
 
-[sub_resource type="Resource" id="Resource_l5lfc"]
+[sub_resource type="Resource" id="Resource_sui6v"]
 script = ExtResource("7_cw150")
-textures = Array[Texture2D]([ExtResource("8_xii2b")])
+textures = Array[Texture2D]([ExtResource("11_l5lfc")])
 textures_corner_outer = Array[Texture2D]([])
 textures_corner_inner = Array[Texture2D]([])
 textures_taper_left = Array[Texture2D]([])
@@ -222,15 +224,48 @@ textures_taper_right = Array[Texture2D]([])
 textures_taper_corner_left = Array[Texture2D]([])
 textures_taper_corner_right = Array[Texture2D]([])
 randomize_texture = false
-use_corner_texture = true
-use_taper_texture = true
+use_corner_texture = false
+use_taper_texture = false
+fit_mode = 0
+metadata/_custom_type_script = "uid://b5pdeqxbhw7y7"
+
+[sub_resource type="Resource" id="Resource_q4dhf"]
+script = ExtResource("9_rhqlf")
+begin = 313.0
+distance = 76.0
+edgeRendering = Vector2(0, 0)
+
+[sub_resource type="Resource" id="Resource_4vkke"]
+script = ExtResource("6_rhqlf")
+edge_material = SubResource("Resource_sui6v")
+normal_range = SubResource("Resource_q4dhf")
+weld = true
+taper_sharp_corners = false
+render = true
+z_index = -1
+z_as_relative = true
+offset = -0.7
+metadata/_custom_type_script = "uid://cs7sfcttk45ir"
+
+[sub_resource type="Resource" id="Resource_l5lfc"]
+script = ExtResource("7_cw150")
+textures = Array[Texture2D]([ExtResource("9_l5lfc")])
+textures_corner_outer = Array[Texture2D]([])
+textures_corner_inner = Array[Texture2D]([])
+textures_taper_left = Array[Texture2D]([])
+textures_taper_right = Array[Texture2D]([])
+textures_taper_corner_left = Array[Texture2D]([])
+textures_taper_corner_right = Array[Texture2D]([])
+randomize_texture = false
+use_corner_texture = false
+use_taper_texture = false
 fit_mode = 0
 metadata/_custom_type_script = "uid://b5pdeqxbhw7y7"
 
 [sub_resource type="Resource" id="Resource_m3nah"]
 script = ExtResource("9_rhqlf")
-begin = 0.0
-distance = 360.0
+begin = 20.0
+distance = 134.0
 edgeRendering = Vector2(0, 0)
 
 [sub_resource type="Resource" id="Resource_3dv6e"]
@@ -242,19 +277,19 @@ taper_sharp_corners = false
 render = true
 z_index = 0
 z_as_relative = true
-offset = -1.0
+offset = -0.9
 metadata/_custom_type_script = "uid://cs7sfcttk45ir"
 
 [sub_resource type="Resource" id="Resource_1vdk1"]
 script = ExtResource("7_l5lfc")
-_edge_meta_materials = Array[ExtResource("6_rhqlf")]([SubResource("Resource_3dv6e")])
-fill_textures = Array[Texture2D]([ExtResource("8_xii2b")])
+_edge_meta_materials = Array[ExtResource("6_rhqlf")]([SubResource("Resource_4vkke"), SubResource("Resource_3dv6e")])
+fill_textures = Array[Texture2D]([ExtResource("11_m3nah")])
 fill_texture_z_index = -10
 fill_texture_show_behind_parent = false
 fill_texture_scale = 1.0
 fill_texture_absolute_position = false
 fill_texture_absolute_rotation = false
-fill_texture_offset = Vector2(59.955, 0)
+fill_texture_offset = Vector2(0, 0)
 fill_texture_angle_offset = 0.0
 fill_mesh_offset = 0.0
 render_offset = 0.0
@@ -309,7 +344,7 @@ offset_right = 3.5
 offset_bottom = 18.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0, 0, 0, 1)
+color = Color(0.0313726, 0.729412, 0.717647, 1)
 
 [node name="Player" parent="." instance=ExtResource("1_7lnir")]
 position = Vector2(2230, 611)
