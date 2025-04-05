@@ -58,17 +58,17 @@ enabled = false
 target_nodepath = NodePath("root/IK_backleg_front")
 tip_nodepath = NodePath("root/body_root/body/hip_front/thigh_front/lowerleg_front/toe_front")
 ccdik_data_chain_length = 3
-joint_data/0/bone_index = 12
+joint_data/0/bone_index = 15
 joint_data/0/bone2d_node = NodePath("root/body_root/body/hip_front")
 joint_data/0/rotate_from_joint = false
 joint_data/0/enable_constraint = false
 joint_data/0/editor_draw_gizmo = true
-joint_data/1/bone_index = 13
+joint_data/1/bone_index = 16
 joint_data/1/bone2d_node = NodePath("root/body_root/body/hip_front/thigh_front")
 joint_data/1/rotate_from_joint = false
 joint_data/1/enable_constraint = false
 joint_data/1/editor_draw_gizmo = true
-joint_data/2/bone_index = 14
+joint_data/2/bone_index = 17
 joint_data/2/bone2d_node = NodePath("root/body_root/body/hip_front/thigh_front/lowerleg_front")
 joint_data/2/rotate_from_joint = false
 joint_data/2/enable_constraint = false
@@ -76,9 +76,9 @@ joint_data/2/editor_draw_gizmo = true
 
 [sub_resource type="SkeletonModification2DTwoBoneIK" id="SkeletonModification2DTwoBoneIK_1my0b"]
 target_nodepath = NodePath("root/IK_backleg_front")
-joint_one_bone_idx = 13
+joint_one_bone_idx = 16
 joint_one_bone2d_node = NodePath("root/body_root/body/hip_front/thigh_front")
-joint_two_bone_idx = 14
+joint_two_bone_idx = 17
 joint_two_bone2d_node = NodePath("root/body_root/body/hip_front/thigh_front/lowerleg_front")
 
 [sub_resource type="SkeletonModificationStack2D" id="SkeletonModificationStack2D_27k37"]
@@ -114,7 +114,7 @@ script = ExtResource("1_h4ksu")
 script = ExtResource("1_oyty2")
 fill = Color(0.854902, 0.690196, 0.913725, 1)
 show_rest = false
-skeleton = NodePath("../Skeleton2D")
+skeleton = NodePath("../pony")
 constraints = [1, 1, 1, 1, 1, 1, 1]
 metadata/_custom_type_script = "uid://bodn4jw8tyemx"
 
@@ -131,16 +131,16 @@ metadata/_edit_lock_ = true
 script = ExtResource("3_3ekgy")
 value = Vector2(418.369, -291.8)
 weights = {
-NodePath("../../Skeleton2D/root/body_root/body/body2/shoulder_front"): 0.0,
-NodePath("../../Skeleton2D/root/body_root/body/body2/shoulder_back"): 1.0
+NodePath("../../pony/root/body_root/body/body2/shoulder_front"): 0.0,
+NodePath("../../pony/root/body_root/body/body2/shoulder_back"): 1.0
 }
 
 [node name="_Node_43390" type="Node" parent="frontleg_back" node_paths=PackedStringArray("weights")]
 script = ExtResource("3_3ekgy")
 value = Vector2(409.158, -268.014)
 weights = {
-NodePath("../../Skeleton2D/root/body_root/body/body2/shoulder_front"): 0.0,
-NodePath("../../Skeleton2D/root/body_root/body/body2/shoulder_back"): 1.0,
+NodePath("../../pony/root/body_root/body/body2/shoulder_front"): 0.0,
+NodePath("../../pony/root/body_root/body/body2/shoulder_back"): 1.0,
 null: 1.0
 }
 
@@ -148,10 +148,10 @@ null: 1.0
 script = ExtResource("3_3ekgy")
 value = Vector2(399.623, -243.393)
 weights = {
-NodePath("../../Skeleton2D/root/body_root/body/body2/shoulder_front"): 0.0,
-NodePath("../../Skeleton2D/root/body_root/body/body2/shoulder_front/arm_front"): 0.0,
-NodePath("../../Skeleton2D/root/body_root/body/body2/shoulder_back"): 1.0,
-NodePath("../../Skeleton2D/root/body_root/body/body2/shoulder_back/arm_back"): 0.5,
+NodePath("../../pony/root/body_root/body/body2/shoulder_front"): 0.0,
+NodePath("../../pony/root/body_root/body/body2/shoulder_front/arm_front"): 0.0,
+NodePath("../../pony/root/body_root/body/body2/shoulder_back"): 1.0,
+NodePath("../../pony/root/body_root/body/body2/shoulder_back/arm_back"): 0.5,
 null: 1.0
 }
 
@@ -159,11 +159,11 @@ null: 1.0
 script = ExtResource("3_3ekgy")
 value = Vector2(389.979, -180.121)
 weights = {
-NodePath("../../Skeleton2D/root/body_root/body/body2/shoulder_front/arm_front"): 0.0,
-NodePath("../../Skeleton2D/root/body_root/body/body2/shoulder_front"): 0.0,
-NodePath("../../Skeleton2D/root/body_root/body/body2/shoulder_front/arm_front/forearm_front"): 0.0,
-NodePath("../../Skeleton2D/root/IK_frontleg_front"): 0.0,
-NodePath("../../Skeleton2D/root/body_root/body/body2/shoulder_back/arm_back"): 1.0,
+NodePath("../../pony/root/body_root/body/body2/shoulder_front/arm_front"): 0.0,
+NodePath("../../pony/root/body_root/body/body2/shoulder_front"): 0.0,
+NodePath("../../pony/root/body_root/body/body2/shoulder_front/arm_front/forearm_front"): 0.0,
+NodePath("../../pony/root/IK_frontleg_front"): 0.0,
+NodePath("../../pony/root/body_root/body/body2/shoulder_back/arm_back"): 1.0,
 null: 1.0
 }
 
@@ -171,11 +171,11 @@ null: 1.0
 script = ExtResource("3_3ekgy")
 value = Vector2(388.173, -149.268)
 weights = {
-NodePath("../../Skeleton2D/root/body_root/body/body2/shoulder_front/arm_front"): 0.0,
-NodePath("../../Skeleton2D/root/body_root/body/body2/shoulder_front/arm_front/forearm_front"): 0.0,
-NodePath("../../Skeleton2D/root/body_root/body/body2/shoulder_front"): 0.0,
-NodePath("../../Skeleton2D/root/IK_frontleg_front"): 0.0,
-NodePath("../../Skeleton2D/root/body_root/body/body2/shoulder_back/arm_back"): 1.0,
+NodePath("../../pony/root/body_root/body/body2/shoulder_front/arm_front"): 0.0,
+NodePath("../../pony/root/body_root/body/body2/shoulder_front/arm_front/forearm_front"): 0.0,
+NodePath("../../pony/root/body_root/body/body2/shoulder_front"): 0.0,
+NodePath("../../pony/root/IK_frontleg_front"): 0.0,
+NodePath("../../pony/root/body_root/body/body2/shoulder_back/arm_back"): 1.0,
 null: 1.0
 }
 
@@ -183,11 +183,11 @@ null: 1.0
 script = ExtResource("3_3ekgy")
 value = Vector2(385.894, -110.333)
 weights = {
-NodePath("../../Skeleton2D/root/body_root/body/body2/shoulder_front/arm_front"): 0.0,
-NodePath("../../Skeleton2D/root/body_root/body/body2/shoulder_front/arm_front/forearm_front"): 0.0,
-NodePath("../../Skeleton2D/root/body_root/body/body2/shoulder_front"): 0.0,
-NodePath("../../Skeleton2D/root/body_root/body/body2/shoulder_back/arm_back"): 1.0,
-NodePath("../../Skeleton2D/root/body_root/body/body2/shoulder_back/arm_back/forearm_back"): 0.5,
+NodePath("../../pony/root/body_root/body/body2/shoulder_front/arm_front"): 0.0,
+NodePath("../../pony/root/body_root/body/body2/shoulder_front/arm_front/forearm_front"): 0.0,
+NodePath("../../pony/root/body_root/body/body2/shoulder_front"): 0.0,
+NodePath("../../pony/root/body_root/body/body2/shoulder_back/arm_back"): 1.0,
+NodePath("../../pony/root/body_root/body/body2/shoulder_back/arm_back/forearm_back"): 0.5,
 null: 1.0
 }
 
@@ -195,10 +195,10 @@ null: 1.0
 script = ExtResource("3_3ekgy")
 value = Vector2(387.85, -60.0123)
 weights = {
-NodePath("../../Skeleton2D/root/body_root/body/body2/shoulder_front/arm_front/forearm_front"): 0.0,
-NodePath("../../Skeleton2D/root/IK_frontleg_front"): 0.0,
-NodePath("../../Skeleton2D/root/body_root/body/hip_front"): 0.0,
-NodePath("../../Skeleton2D/root/body_root/body/body2/shoulder_back/arm_back/forearm_back"): 1.0,
+NodePath("../../pony/root/body_root/body/body2/shoulder_front/arm_front/forearm_front"): 0.0,
+NodePath("../../pony/root/IK_frontleg_front"): 0.0,
+NodePath("../../pony/root/body_root/body/hip_front"): 0.0,
+NodePath("../../pony/root/body_root/body/body2/shoulder_back/arm_back/forearm_back"): 1.0,
 null: 1.0
 }
 
@@ -206,10 +206,10 @@ null: 1.0
 script = ExtResource("3_3ekgy")
 value = Vector2(396.27, -37.6)
 weights = {
-NodePath("../../Skeleton2D/root/body_root/body/body2/shoulder_front/arm_front/forearm_front"): 0.0,
-NodePath("../../Skeleton2D/root/body_root/body/body2/shoulder_front/arm_front"): 0.0,
-NodePath("../../Skeleton2D/root/body_root/body/hip_front"): 0.0,
-NodePath("../../Skeleton2D/root/body_root/body/body2/shoulder_back/arm_back/forearm_back"): 1.0,
+NodePath("../../pony/root/body_root/body/body2/shoulder_front/arm_front/forearm_front"): 0.0,
+NodePath("../../pony/root/body_root/body/body2/shoulder_front/arm_front"): 0.0,
+NodePath("../../pony/root/body_root/body/hip_front"): 0.0,
+NodePath("../../pony/root/body_root/body/body2/shoulder_back/arm_back/forearm_back"): 1.0,
 null: 1.0
 }
 
@@ -217,10 +217,10 @@ null: 1.0
 script = ExtResource("3_3ekgy")
 value = Vector2(398.288, -32.2283)
 weights = {
-NodePath("../../Skeleton2D/root/body_root/body/body2/shoulder_front/arm_front/forearm_front"): 0.0,
-NodePath("../../Skeleton2D/root/body_root/body/body2/shoulder_front/arm_front"): 0.0,
-NodePath("../../Skeleton2D/root/body_root/body/hip_front"): 0.0,
-NodePath("../../Skeleton2D/root/body_root/body/body2/shoulder_back/arm_back/forearm_back"): 1.0,
+NodePath("../../pony/root/body_root/body/body2/shoulder_front/arm_front/forearm_front"): 0.0,
+NodePath("../../pony/root/body_root/body/body2/shoulder_front/arm_front"): 0.0,
+NodePath("../../pony/root/body_root/body/hip_front"): 0.0,
+NodePath("../../pony/root/body_root/body/body2/shoulder_back/arm_back/forearm_back"): 1.0,
 null: 1.0
 }
 
@@ -228,9 +228,9 @@ null: 1.0
 script = ExtResource("3_3ekgy")
 value = Vector2(414.861, -26.8329)
 weights = {
-NodePath("../../Skeleton2D/root/body_root/body/body2/shoulder_front/arm_front/forearm_front"): 0.0,
-NodePath("../../Skeleton2D/root/body_root/body/hip_front"): 0.0,
-NodePath("../../Skeleton2D/root/body_root/body/body2/shoulder_back/arm_back/forearm_back"): 1.0,
+NodePath("../../pony/root/body_root/body/body2/shoulder_front/arm_front/forearm_front"): 0.0,
+NodePath("../../pony/root/body_root/body/hip_front"): 0.0,
+NodePath("../../pony/root/body_root/body/body2/shoulder_back/arm_back/forearm_back"): 1.0,
 null: 1.0
 }
 
@@ -238,10 +238,10 @@ null: 1.0
 script = ExtResource("3_3ekgy")
 value = Vector2(440.495, -26.6035)
 weights = {
-NodePath("../../Skeleton2D/root/body_root/body/body2/shoulder_front/arm_front/forearm_front"): 0.0,
-NodePath("../../Skeleton2D/root/body_root/body/hip_front"): 0.0,
-NodePath("../../Skeleton2D/root/IK_frontleg_front"): 0.0,
-NodePath("../../Skeleton2D/root/body_root/body/body2/shoulder_back/arm_back/forearm_back"): 1.0,
+NodePath("../../pony/root/body_root/body/body2/shoulder_front/arm_front/forearm_front"): 0.0,
+NodePath("../../pony/root/body_root/body/hip_front"): 0.0,
+NodePath("../../pony/root/IK_frontleg_front"): 0.0,
+NodePath("../../pony/root/body_root/body/body2/shoulder_back/arm_back/forearm_back"): 1.0,
 null: 1.0
 }
 
@@ -249,9 +249,9 @@ null: 1.0
 script = ExtResource("3_3ekgy")
 value = Vector2(471.42, -26.3268)
 weights = {
-NodePath("../../Skeleton2D/root/body_root/body/body2/shoulder_front/arm_front/forearm_front"): 0.0,
-NodePath("../../Skeleton2D/root/body_root/body/body2/shoulder_front/arm_front"): 0.0,
-NodePath("../../Skeleton2D/root/body_root/body/body2/shoulder_back/arm_back/forearm_back"): 1.0,
+NodePath("../../pony/root/body_root/body/body2/shoulder_front/arm_front/forearm_front"): 0.0,
+NodePath("../../pony/root/body_root/body/body2/shoulder_front/arm_front"): 0.0,
+NodePath("../../pony/root/body_root/body/body2/shoulder_back/arm_back/forearm_back"): 1.0,
 null: 1.0
 }
 
@@ -259,10 +259,10 @@ null: 1.0
 script = ExtResource("3_3ekgy")
 value = Vector2(493.414, -32.2273)
 weights = {
-NodePath("../../Skeleton2D/root/body_root/body/body2/shoulder_front/arm_front/forearm_front"): 0.0,
-NodePath("../../Skeleton2D/root/body_root/body/hip_front"): 0.0,
-NodePath("../../Skeleton2D/root/body_root/body/body2/shoulder_front/arm_front"): 0.0,
-NodePath("../../Skeleton2D/root/body_root/body/body2/shoulder_back/arm_back/forearm_back"): 1.0,
+NodePath("../../pony/root/body_root/body/body2/shoulder_front/arm_front/forearm_front"): 0.0,
+NodePath("../../pony/root/body_root/body/hip_front"): 0.0,
+NodePath("../../pony/root/body_root/body/body2/shoulder_front/arm_front"): 0.0,
+NodePath("../../pony/root/body_root/body/body2/shoulder_back/arm_back/forearm_back"): 1.0,
 null: 1.0
 }
 
@@ -270,9 +270,9 @@ null: 1.0
 script = ExtResource("3_3ekgy")
 value = Vector2(490.409, -36.7456)
 weights = {
-NodePath("../../Skeleton2D/root/body_root/body/body2/shoulder_front/arm_front/forearm_front"): 0.0,
-NodePath("../../Skeleton2D/root/body_root/body/hip_front"): 0.0,
-NodePath("../../Skeleton2D/root/body_root/body/body2/shoulder_back/arm_back/forearm_back"): 1.0,
+NodePath("../../pony/root/body_root/body/body2/shoulder_front/arm_front/forearm_front"): 0.0,
+NodePath("../../pony/root/body_root/body/hip_front"): 0.0,
+NodePath("../../pony/root/body_root/body/body2/shoulder_back/arm_back/forearm_back"): 1.0,
 null: 1.0
 }
 
@@ -280,10 +280,10 @@ null: 1.0
 script = ExtResource("3_3ekgy")
 value = Vector2(480.199, -52.0975)
 weights = {
-NodePath("../../Skeleton2D/root/body_root/body/body2/shoulder_front/arm_front/forearm_front"): 0.0,
-NodePath("../../Skeleton2D/root/body_root/body/body2/shoulder_front"): 0.0,
-NodePath("../../Skeleton2D/root/body_root/body/hip_front"): 0.0,
-NodePath("../../Skeleton2D/root/body_root/body/body2/shoulder_back/arm_back/forearm_back"): 1.0,
+NodePath("../../pony/root/body_root/body/body2/shoulder_front/arm_front/forearm_front"): 0.0,
+NodePath("../../pony/root/body_root/body/body2/shoulder_front"): 0.0,
+NodePath("../../pony/root/body_root/body/hip_front"): 0.0,
+NodePath("../../pony/root/body_root/body/body2/shoulder_back/arm_back/forearm_back"): 1.0,
 null: 1.0
 }
 
@@ -291,11 +291,11 @@ null: 1.0
 script = ExtResource("3_3ekgy")
 value = Vector2(461.763, -105.754)
 weights = {
-NodePath("../../Skeleton2D/root/body_root/body/body2/shoulder_front/arm_front"): 0.0,
-NodePath("../../Skeleton2D/root/body_root/body/body2/shoulder_front/arm_front/forearm_front"): 0.0,
-NodePath("../../Skeleton2D/root/body_root/body/body2/shoulder_front"): 0.0,
-NodePath("../../Skeleton2D/root/body_root/body/body2/shoulder_back/arm_back"): 1.0,
-NodePath("../../Skeleton2D/root/body_root/body/body2/shoulder_back/arm_back/forearm_back"): 0.5,
+NodePath("../../pony/root/body_root/body/body2/shoulder_front/arm_front"): 0.0,
+NodePath("../../pony/root/body_root/body/body2/shoulder_front/arm_front/forearm_front"): 0.0,
+NodePath("../../pony/root/body_root/body/body2/shoulder_front"): 0.0,
+NodePath("../../pony/root/body_root/body/body2/shoulder_back/arm_back"): 1.0,
+NodePath("../../pony/root/body_root/body/body2/shoulder_back/arm_back/forearm_back"): 0.5,
 null: 1.0
 }
 
@@ -303,10 +303,10 @@ null: 1.0
 script = ExtResource("3_3ekgy")
 value = Vector2(456.428, -139.626)
 weights = {
-NodePath("../../Skeleton2D/root/body_root/body/body2/shoulder_front/arm_front"): 0.0,
-NodePath("../../Skeleton2D/root/body_root/body/body2/shoulder_front/arm_front/forearm_front"): 0.0,
-NodePath("../../Skeleton2D/root/body_root/body/body2/shoulder_front"): 0.0,
-NodePath("../../Skeleton2D/root/body_root/body/body2/shoulder_back/arm_back"): 1.0,
+NodePath("../../pony/root/body_root/body/body2/shoulder_front/arm_front"): 0.0,
+NodePath("../../pony/root/body_root/body/body2/shoulder_front/arm_front/forearm_front"): 0.0,
+NodePath("../../pony/root/body_root/body/body2/shoulder_front"): 0.0,
+NodePath("../../pony/root/body_root/body/body2/shoulder_back/arm_back"): 1.0,
 null: 1.0
 }
 
@@ -314,11 +314,11 @@ null: 1.0
 script = ExtResource("3_3ekgy")
 value = Vector2(451.313, -172.1)
 weights = {
-NodePath("../../Skeleton2D/root/body_root/body/body2/shoulder_front/arm_front"): 0.0,
-NodePath("../../Skeleton2D/root/body_root/body/body2/shoulder_front"): 0.0,
-NodePath("../../Skeleton2D/root/body_root/body/hip_front"): 0.0,
-NodePath("../../Skeleton2D/root/body_root/body/body2/shoulder_front/arm_front/forearm_front"): 0.0,
-NodePath("../../Skeleton2D/root/body_root/body/body2/shoulder_back/arm_back"): 1.0,
+NodePath("../../pony/root/body_root/body/body2/shoulder_front/arm_front"): 0.0,
+NodePath("../../pony/root/body_root/body/body2/shoulder_front"): 0.0,
+NodePath("../../pony/root/body_root/body/hip_front"): 0.0,
+NodePath("../../pony/root/body_root/body/body2/shoulder_front/arm_front/forearm_front"): 0.0,
+NodePath("../../pony/root/body_root/body/body2/shoulder_back/arm_back"): 1.0,
 null: 1.0
 }
 
@@ -326,10 +326,10 @@ null: 1.0
 script = ExtResource("3_3ekgy")
 value = Vector2(450.398, -237.282)
 weights = {
-NodePath("../../Skeleton2D/root/body_root/body/body2/shoulder_front"): 0.0,
-NodePath("../../Skeleton2D/root/body_root/body/body2/shoulder_front/arm_front"): 0.0,
-NodePath("../../Skeleton2D/root/body_root/body/body2/shoulder_back"): 1.0,
-NodePath("../../Skeleton2D/root/body_root/body/body2/shoulder_back/arm_back"): 0.5,
+NodePath("../../pony/root/body_root/body/body2/shoulder_front"): 0.0,
+NodePath("../../pony/root/body_root/body/body2/shoulder_front/arm_front"): 0.0,
+NodePath("../../pony/root/body_root/body/body2/shoulder_back"): 1.0,
+NodePath("../../pony/root/body_root/body/body2/shoulder_back/arm_back"): 0.5,
 null: 1.0
 }
 
@@ -337,8 +337,8 @@ null: 1.0
 script = ExtResource("3_3ekgy")
 value = Vector2(455.897, -277.291)
 weights = {
-NodePath("../../Skeleton2D/root/body_root/body/body2/shoulder_front"): 0.0,
-NodePath("../../Skeleton2D/root/body_root/body/body2/shoulder_back"): 1.0,
+NodePath("../../pony/root/body_root/body/body2/shoulder_front"): 0.0,
+NodePath("../../pony/root/body_root/body/body2/shoulder_back"): 1.0,
 null: 1.0
 }
 
@@ -346,8 +346,8 @@ null: 1.0
 script = ExtResource("3_3ekgy")
 value = Vector2(461.359, -317.032)
 weights = {
-NodePath("../../Skeleton2D/root/body_root/body/body2/shoulder_front"): 0.0,
-NodePath("../../Skeleton2D/root/body_root/body/body2/shoulder_back"): 1.0
+NodePath("../../pony/root/body_root/body/body2/shoulder_front"): 0.0,
+NodePath("../../pony/root/body_root/body/body2/shoulder_back"): 1.0
 }
 
 [node name="backleg_back_whole" type="Node2D" parent="."]
@@ -501,11 +501,13 @@ value = Vector2(367.704, -287.972)
 [node name="backleg_back_hip" type="Node2D" parent="."]
 script = ExtResource("1_oyty2")
 fill = Color(0.854902, 0.690196, 0.913725, 1)
+show_rest = false
+skeleton = NodePath("../pony")
 constraints = [1, 1, 1, 1, 1]
 metadata/_custom_type_script = "uid://bodn4jw8tyemx"
 
 [node name="VecStroke" type="Line2D" parent="backleg_back_hip"]
-points = PackedVector2Array(289.132, -345.592, 284.638, -340.333, 280.798, -335.618, 277.57, -331.336, 274.914, -327.376, 272.788, -323.628, 271.15, -319.979, 269.961, -316.321, 269.178, -312.541, 268.761, -308.53, 268.668, -304.175, 269.162, -295.451, 270.342, -286.917, 272.078, -278.647, 274.239, -270.716, 276.694, -263.198, 279.312, -256.167, 281.964, -249.696, 284.518, -243.86, 286.845, -238.734, 288.812, -234.39, 290.535, -230.944, 293.319, -226.093, 296.993, -220.394, 301.389, -214.403, 306.338, -208.676, 311.67, -203.769, 317.217, -200.237, 322.808, -198.638, 328.275, -199.526, 333.449, -203.459, 338.388, -209.227, 343.207, -215.244, 347.82, -221.498, 352.139, -227.977, 356.077, -234.668, 359.549, -241.561, 362.467, -248.642, 364.745, -255.9, 366.295, -263.322, 367.032, -270.897)
+points = PackedVector2Array(289.132, -345.592, 284.672, -340.368, 280.915, -335.749, 277.789, -331.611, 275.226, -327.83, 273.154, -324.283, 271.505, -320.845, 270.207, -317.393, 269.192, -313.804, 268.388, -309.952, 267.726, -305.715, 266.66, -297.129, 265.821, -288.658, 265.195, -280.382, 264.768, -272.381, 264.526, -264.735, 264.453, -257.524, 264.536, -250.828, 264.761, -244.728, 265.112, -239.302, 265.577, -234.632, 266.477, -230.838, 268.422, -225.416, 271.288, -218.96, 274.95, -212.067, 279.285, -205.333, 284.167, -199.353, 289.473, -194.723, 295.078, -192.041, 300.857, -191.9, 306.688, -194.898, 314.454, -201.285, 321.837, -207.484, 328.77, -213.566, 335.186, -219.601, 341.017, -225.658, 346.196, -231.809, 350.656, -238.123, 354.329, -244.67, 357.149, -251.521, 359.048, -258.746)
 width = 4.8
 width_curve = SubResource("Curve_3yjpv")
 default_color = Color(0.67451, 0.490196, 0.788235, 1)
@@ -513,74 +515,133 @@ script = ExtResource("2_27k37")
 metadata/_custom_type_script = "uid://csgt88iv3c4ke"
 metadata/_edit_lock_ = true
 
-[node name="_Node_41457" type="Node" parent="backleg_back_hip"]
+[node name="_Node_41457" type="Node" parent="backleg_back_hip" node_paths=PackedStringArray("weights")]
 script = ExtResource("3_3ekgy")
 value = Vector2(301.852, -360.243)
+weights = {
+NodePath("../../pony/root/body_root/body/hip_back"): 1.0,
+NodePath("../../pony/root/body_root/body"): 0.0
+}
 
-[node name="_Node_41458" type="Node" parent="backleg_back_hip"]
+[node name="_Node_41458" type="Node" parent="backleg_back_hip" node_paths=PackedStringArray("weights")]
 script = ExtResource("3_3ekgy")
 value = Vector2(289.132, -345.592)
+weights = {
+NodePath("../../pony/root/body_root/body/hip_back"): 1.0,
+NodePath("../../pony/root/body_root/body"): 0.0
+}
 
-[node name="_Node_41459" type="Node" parent="backleg_back_hip"]
+[node name="_Node_41459" type="Node" parent="backleg_back_hip" node_paths=PackedStringArray("weights")]
 script = ExtResource("3_3ekgy")
 value = Vector2(273.018, -327.033)
+weights = {
+NodePath("../../pony/root/body_root/body/hip_back"): 1.0,
+NodePath("../../pony/root/body_root/body"): 0.0
+}
 
-[node name="_Node_41460" type="Node" parent="backleg_back_hip"]
+[node name="_Node_41460" type="Node" parent="backleg_back_hip" node_paths=PackedStringArray("weights")]
 script = ExtResource("3_3ekgy")
 value = Vector2(268.482, -319.385)
+weights = {
+NodePath("../../pony/root/body_root/body/hip_back"): 1.0,
+NodePath("../../pony/root/body_root/body/hip_back/thigh_back"): 1.0
+}
 
-[node name="_Node_41461" type="Node" parent="backleg_back_hip"]
+[node name="_Node_41461" type="Node" parent="backleg_back_hip" node_paths=PackedStringArray("weights")]
 script = ExtResource("3_3ekgy")
 value = Vector2(268.668, -304.175)
+weights = {
+NodePath("../../pony/root/body_root/body/hip_back"): 1.0,
+NodePath("../../pony/root/body_root/body/hip_back/thigh_back"): 1.0
+}
 
-[node name="_Node_41462" type="Node" parent="backleg_back_hip"]
+[node name="_Node_41462" type="Node" parent="backleg_back_hip" node_paths=PackedStringArray("weights")]
 script = ExtResource("3_3ekgy")
 value = Vector2(269.026, -274.859)
+weights = {
+NodePath("../../pony/root/body_root/body/hip_back"): 1.0,
+NodePath("../../pony/root/body_root/body/hip_back/thigh_back"): 1.0
+}
 
-[node name="_Node_41463" type="Node" parent="backleg_back_hip"]
+[node name="_Node_41463" type="Node" parent="backleg_back_hip" node_paths=PackedStringArray("weights")]
 script = ExtResource("3_3ekgy")
 value = Vector2(282.997, -247.481)
+weights = {
+NodePath("../../pony/root/body_root/body/hip_back/thigh_back"): 1.0
+}
 
-[node name="_Node_41464" type="Node" parent="backleg_back_hip"]
+[node name="_Node_41464" type="Node" parent="backleg_back_hip" node_paths=PackedStringArray("weights")]
 script = ExtResource("3_3ekgy")
 value = Vector2(288.812, -234.39)
+weights = {
+NodePath("../../pony/root/body_root/body/hip_back/thigh_back"): 1.0
+}
 
-[node name="_Node_41465" type="Node" parent="backleg_back_hip"]
+[node name="_Node_41465" type="Node" parent="backleg_back_hip" node_paths=PackedStringArray("weights")]
 script = ExtResource("3_3ekgy")
 value = Vector2(292.601, -225.86)
+weights = {
+NodePath("../../pony/root/body_root/body/hip_back/thigh_back"): 1.0
+}
 
-[node name="_Node_41484" type="Node" parent="backleg_back_hip"]
+[node name="_Node_41484" type="Node" parent="backleg_back_hip" node_paths=PackedStringArray("weights")]
 script = ExtResource("3_3ekgy")
 value = Vector2(316.88, -184.659)
+weights = {
+NodePath("../../pony/root/body_root/body/hip_back/thigh_back"): 0.0,
+NodePath("../../pony/root/body_root/body/hip_back/thigh_back/lowerleg_back"): 1.0
+}
 
-[node name="_Node_41485" type="Node" parent="backleg_back_hip"]
+[node name="_Node_41485" type="Node" parent="backleg_back_hip" node_paths=PackedStringArray("weights")]
 script = ExtResource("3_3ekgy")
 value = Vector2(333.449, -203.459)
+weights = {
+NodePath("../../pony/root/body_root/body/hip_back/thigh_back"): 0.0,
+NodePath("../../pony/root/body_root/body/hip_back/thigh_back/lowerleg_back"): 1.0
+}
 
-[node name="_Node_41486" type="Node" parent="backleg_back_hip"]
+[node name="_Node_41486" type="Node" parent="backleg_back_hip" node_paths=PackedStringArray("weights")]
 script = ExtResource("3_3ekgy")
 value = Vector2(350.017, -222.257)
+weights = {
+NodePath("../../pony/root/body_root/body/hip_back"): 1.0,
+NodePath("../../pony/root/body_root/body/hip_back/thigh_back"): 1.0
+}
 
-[node name="_Node_41487" type="Node" parent="backleg_back_hip"]
+[node name="_Node_41487" type="Node" parent="backleg_back_hip" node_paths=PackedStringArray("weights")]
 script = ExtResource("3_3ekgy")
 value = Vector2(366.029, -245.406)
+weights = {
+NodePath("../../pony/root/body_root/body/hip_back"): 1.0,
+NodePath("../../pony/root/body_root/body/hip_back/thigh_back"): 1.0
+}
 
-[node name="_Node_41488" type="Node" parent="backleg_back_hip"]
+[node name="_Node_41488" type="Node" parent="backleg_back_hip" node_paths=PackedStringArray("weights")]
 script = ExtResource("3_3ekgy")
 value = Vector2(367.032, -270.897)
+weights = {
+NodePath("../../pony/root/body_root/body/hip_back"): 1.0,
+NodePath("../../pony/root/body_root/body/hip_back/thigh_back"): 1.0
+}
 
-[node name="_Node_41489" type="Node" parent="backleg_back_hip"]
+[node name="_Node_41489" type="Node" parent="backleg_back_hip" node_paths=PackedStringArray("weights")]
 script = ExtResource("3_3ekgy")
 value = Vector2(367.704, -287.972)
+weights = {
+NodePath("../../pony/root/body_root/body/hip_back"): 1.0,
+NodePath("../../pony/root/body_root/body/hip_back/thigh_back"): 1.0
+}
 
 [node name="backleg_back_bottom" type="Node2D" parent="."]
 script = ExtResource("1_oyty2")
 fill = Color(0.854902, 0.690196, 0.913725, 1)
+show_rest = false
+skeleton = NodePath("../pony")
 constraints = [1, 1, 1, 1, 1, 1, 1, 1, 1]
 metadata/_custom_type_script = "uid://bodn4jw8tyemx"
 
 [node name="VecStroke" type="Line2D" parent="backleg_back_bottom"]
-points = PackedVector2Array(306.816, -223.706, 302.283, -225.104, 298.148, -226.164, 294.392, -226.928, 290.995, -227.438, 287.935, -227.738, 285.192, -227.87, 282.747, -227.876, 280.579, -227.8, 278.667, -227.684, 276.992, -227.57, 274.022, -227.555, 271.331, -227.666, 268.778, -227.545, 266.224, -226.831, 263.53, -225.165, 260.557, -222.187, 257.163, -217.538, 253.211, -210.857, 248.56, -201.786, 243.07, -189.964, 237.161, -175.5, 232.252, -160.911, 228.267, -146.247, 225.131, -131.556, 222.769, -116.885, 221.104, -102.283, 220.063, -87.7973, 219.569, -73.4772, 219.546, -59.3703, 219.921, -45.5249, 220.791, -41.0762, 222.914, -37.263, 226.136, -34.0462, 230.298, -31.3863, 235.247, -29.2443, 240.826, -27.581, 246.879, -26.357, 253.25, -25.5333, 259.783, -25.0705, 266.322, -24.9294, 272.892, -25.0669, 279.342, -25.4472, 285.577, -26.0424, 291.508, -26.8248, 297.041, -27.7666, 302.084, -28.8399, 306.546, -30.0169, 310.334, -31.2699, 313.355, -32.5709, 315.519, -33.8923, 316.143, -35.9563, 315.047, -39.587, 312.617, -44.6969, 309.238, -51.1983, 305.298, -59.0037, 301.181, -68.0255, 297.274, -78.1762, 293.963, -89.3682, 291.634, -101.514, 290.672, -114.526, 291.304, -127.161, 293.343, -138.803, 296.565, -149.514, 300.747, -159.353, 305.664, -168.381, 311.093, -176.658, 316.81, -184.244, 322.591, -191.199, 328.212, -197.584, 333.449, -203.459, 338.388, -209.227, 343.207, -215.244, 347.82, -221.498, 352.139, -227.977, 356.077, -234.668, 359.549, -241.561, 362.467, -248.642, 364.745, -255.9, 366.295, -263.322, 367.032, -270.897)
+points = PackedVector2Array(279.656, -219.138, 275.832, -221.229, 272.234, -222.872, 268.865, -224.125, 265.728, -225.047, 262.827, -225.695, 260.165, -226.127, 257.746, -226.401, 255.572, -226.576, 253.647, -226.709, 251.975, -226.859, 249.182, -227.089, 246.87, -226.944, 244.787, -226.239, 242.679, -224.791, 240.292, -222.416, 237.372, -218.932, 233.666, -214.154, 228.921, -207.899, 222.883, -199.983, 215.298, -190.224, 206.084, -178.317, 197.119, -166.205, 188.523, -153.808, 180.413, -141.043, 172.907, -127.828, 166.123, -114.081, 160.179, -99.7208, 155.193, -84.6647, 151.283, -68.8312, 148.568, -52.1382, 148.756, -47.6467, 150.354, -43.6546, 153.186, -40.1399, 157.074, -37.0806, 161.842, -34.4546, 167.314, -32.24, 173.313, -30.4146, 179.662, -28.9566, 186.185, -27.8438, 192.704, -27.0543, 199.256, -26.5412, 205.711, -26.2818, 211.975, -26.2573, 217.954, -26.4493, 223.553, -26.8392, 228.678, -27.4084, 233.234, -28.1383, 237.127, -29.0105, 240.263, -30.0063, 242.547, -31.1072, 243.299, -32.9908, 242.424, -36.4049, 240.408, -41.2517, 237.737, -47.4336, 234.899, -54.853, 232.379, -63.4122, 230.665, -73.0135, 230.242, -83.5593, 231.598, -94.952, 235.218, -107.094, 240.929, -119.912, 247.434, -131.749, 254.524, -142.624, 261.989, -152.556, 269.621, -161.565, 277.209, -169.67, 284.544, -176.889, 291.416, -183.244, 297.616, -188.752, 302.934, -193.434, 308.013, -197.647, 313.673, -201.972, 319.739, -206.56, 326.039, -211.563, 332.4, -217.13, 338.648, -223.415, 344.61, -230.568, 350.113, -238.74, 354.983, -248.082, 359.048, -258.746)
 width = 4.8
 width_curve = SubResource("Curve_3yjpv")
 default_color = Color(0.67451, 0.490196, 0.788235, 1)
@@ -588,113 +649,203 @@ script = ExtResource("2_27k37")
 metadata/_custom_type_script = "uid://csgt88iv3c4ke"
 metadata/_edit_lock_ = true
 
-[node name="_Node_41463" type="Node" parent="backleg_back_bottom"]
+[node name="_Node_41463" type="Node" parent="backleg_back_bottom" node_paths=PackedStringArray("weights")]
 script = ExtResource("3_3ekgy")
 value = Vector2(327.271, -216.881)
+weights = {
+NodePath("../../pony/root/body_root/body/hip_back/thigh_back"): 1.0
+}
 
-[node name="_Node_41464" type="Node" parent="backleg_back_bottom"]
+[node name="_Node_41464" type="Node" parent="backleg_back_bottom" node_paths=PackedStringArray("weights")]
 script = ExtResource("3_3ekgy")
 value = Vector2(306.816, -223.706)
+weights = {
+NodePath("../../pony/root/body_root/body/hip_back/thigh_back"): 1.0
+}
 
-[node name="_Node_41465" type="Node" parent="backleg_back_bottom"]
+[node name="_Node_41465" type="Node" parent="backleg_back_bottom" node_paths=PackedStringArray("weights")]
 script = ExtResource("3_3ekgy")
 value = Vector2(291.019, -228.978)
+weights = {
+NodePath("../../pony/root/body_root/body/hip_back/thigh_back"): 1.0,
+NodePath("../../pony/root/body_root/body/hip_back/thigh_back/lowerleg_back"): 1.0
+}
 
-[node name="_Node_41466" type="Node" parent="backleg_back_bottom"]
+[node name="_Node_41466" type="Node" parent="backleg_back_bottom" node_paths=PackedStringArray("weights")]
 script = ExtResource("3_3ekgy")
 value = Vector2(282.204, -227.898)
+weights = {
+NodePath("../../pony/root/body_root/body/hip_back/thigh_back/lowerleg_back"): 1.0,
+NodePath("../../pony/root/body_root/body/hip_back/thigh_back"): 1.0
+}
 
-[node name="_Node_41467" type="Node" parent="backleg_back_bottom"]
+[node name="_Node_41467" type="Node" parent="backleg_back_bottom" node_paths=PackedStringArray("weights")]
 script = ExtResource("3_3ekgy")
 value = Vector2(276.992, -227.57)
+weights = {
+NodePath("../../pony/root/body_root/body/hip_back/thigh_back/lowerleg_back"): 1.0,
+NodePath("../../pony/root/body_root/body/hip_back/thigh_back"): 1.0
+}
 
-[node name="_Node_41468" type="Node" parent="backleg_back_bottom"]
+[node name="_Node_41468" type="Node" parent="backleg_back_bottom" node_paths=PackedStringArray("weights")]
 script = ExtResource("3_3ekgy")
 value = Vector2(266.473, -226.909)
+weights = {
+NodePath("../../pony/root/body_root/body/hip_back/thigh_back/lowerleg_back"): 1.0,
+NodePath("../../pony/root/body_root/body/hip_back/thigh_back"): 1.0
+}
 
-[node name="_Node_41469" type="Node" parent="backleg_back_bottom"]
+[node name="_Node_41469" type="Node" parent="backleg_back_bottom" node_paths=PackedStringArray("weights")]
 script = ExtResource("3_3ekgy")
 value = Vector2(262.921, -234.354)
+weights = {
+NodePath("../../pony/root/body_root/body/hip_back/thigh_back/lowerleg_back"): 1.0
+}
 
-[node name="_Node_41470" type="Node" parent="backleg_back_bottom"]
+[node name="_Node_41470" type="Node" parent="backleg_back_bottom" node_paths=PackedStringArray("weights")]
 script = ExtResource("3_3ekgy")
 value = Vector2(243.07, -189.964)
+weights = {
+NodePath("../../pony/root/body_root/body/hip_back/thigh_back/lowerleg_back"): 1.0,
+NodePath("../../pony/root/body_root/body/hip_back/thigh_back/lowerleg_back/toe_back"): 1.0
+}
 
-[node name="_Node_41471" type="Node" parent="backleg_back_bottom"]
+[node name="_Node_41471" type="Node" parent="backleg_back_bottom" node_paths=PackedStringArray("weights")]
 script = ExtResource("3_3ekgy")
 value = Vector2(221.625, -142.009)
+weights = {
+NodePath("../../pony/root/body_root/body/hip_back/thigh_back/lowerleg_back/toe_back"): 1.0
+}
 
-[node name="_Node_41472" type="Node" parent="backleg_back_bottom"]
+[node name="_Node_41472" type="Node" parent="backleg_back_bottom" node_paths=PackedStringArray("weights")]
 script = ExtResource("3_3ekgy")
 value = Vector2(218.095, -91.1872)
+weights = {
+NodePath("../../pony/root/body_root/body/hip_back/thigh_back/lowerleg_back/toe_back"): 1.0
+}
 
-[node name="_Node_41473" type="Node" parent="backleg_back_bottom"]
+[node name="_Node_41473" type="Node" parent="backleg_back_bottom" node_paths=PackedStringArray("weights")]
 script = ExtResource("3_3ekgy")
 value = Vector2(219.921, -45.5249)
+weights = {
+NodePath("../../pony/root/body_root/body/hip_back/thigh_back/lowerleg_back/toe_back/toetip_back"): 1.0
+}
 
-[node name="_Node_41474" type="Node" parent="backleg_back_bottom"]
+[node name="_Node_41474" type="Node" parent="backleg_back_bottom" node_paths=PackedStringArray("weights")]
 script = ExtResource("3_3ekgy")
 value = Vector2(220.558, -29.5932)
+weights = {
+NodePath("../../pony/root/body_root/body/hip_back/thigh_back/lowerleg_back/toe_back/toetip_back"): 1.0
+}
 
-[node name="_Node_41475" type="Node" parent="backleg_back_bottom"]
+[node name="_Node_41475" type="Node" parent="backleg_back_bottom" node_paths=PackedStringArray("weights")]
 script = ExtResource("3_3ekgy")
 value = Vector2(244.687, -24.9069)
+weights = {
+NodePath("../../pony/root/body_root/body/hip_back/thigh_back/lowerleg_back/toe_back/toetip_back"): 1.0
+}
 
-[node name="_Node_41476" type="Node" parent="backleg_back_bottom"]
+[node name="_Node_41476" type="Node" parent="backleg_back_bottom" node_paths=PackedStringArray("weights")]
 script = ExtResource("3_3ekgy")
 value = Vector2(266.322, -24.9294)
+weights = {
+NodePath("../../pony/root/body_root/body/hip_back/thigh_back/lowerleg_back/toe_back/toetip_back"): 1.0
+}
 
-[node name="_Node_41477" type="Node" parent="backleg_back_bottom"]
+[node name="_Node_41477" type="Node" parent="backleg_back_bottom" node_paths=PackedStringArray("weights")]
 script = ExtResource("3_3ekgy")
 value = Vector2(288.323, -24.9522)
+weights = {
+NodePath("../../pony/root/body_root/body/hip_back/thigh_back/lowerleg_back/toe_back/toetip_back"): 1.0
+}
 
-[node name="_Node_41478" type="Node" parent="backleg_back_bottom"]
+[node name="_Node_41478" type="Node" parent="backleg_back_bottom" node_paths=PackedStringArray("weights")]
 script = ExtResource("3_3ekgy")
 value = Vector2(309.839, -29.4848)
+weights = {
+NodePath("../../pony/root/body_root/body/hip_back/thigh_back/lowerleg_back/toe_back/toetip_back"): 1.0
+}
 
-[node name="_Node_41479" type="Node" parent="backleg_back_bottom"]
+[node name="_Node_41479" type="Node" parent="backleg_back_bottom" node_paths=PackedStringArray("weights")]
 script = ExtResource("3_3ekgy")
 value = Vector2(315.519, -33.8923)
+weights = {
+NodePath("../../pony/root/body_root/body/hip_back/thigh_back/lowerleg_back/toe_back/toetip_back"): 1.0
+}
 
-[node name="_Node_41480" type="Node" parent="backleg_back_bottom"]
+[node name="_Node_41480" type="Node" parent="backleg_back_bottom" node_paths=PackedStringArray("weights")]
 script = ExtResource("3_3ekgy")
 value = Vector2(320.895, -38.064)
+weights = {
+NodePath("../../pony/root/body_root/body/hip_back/thigh_back/lowerleg_back/toe_back/toetip_back"): 1.0
+}
 
-[node name="_Node_41481" type="Node" parent="backleg_back_bottom"]
+[node name="_Node_41481" type="Node" parent="backleg_back_bottom" node_paths=PackedStringArray("weights")]
 script = ExtResource("3_3ekgy")
 value = Vector2(291.169, -69.8064)
+weights = {
+NodePath("../../pony/root/body_root/body/hip_back/thigh_back/lowerleg_back/toe_back"): 1.0
+}
 
-[node name="_Node_41482" type="Node" parent="backleg_back_bottom"]
+[node name="_Node_41482" type="Node" parent="backleg_back_bottom" node_paths=PackedStringArray("weights")]
 script = ExtResource("3_3ekgy")
 value = Vector2(290.672, -114.526)
+weights = {
+NodePath("../../pony/root/body_root/body/hip_back/thigh_back/lowerleg_back/toe_back"): 1.0
+}
 
-[node name="_Node_41483" type="Node" parent="backleg_back_bottom"]
+[node name="_Node_41483" type="Node" parent="backleg_back_bottom" node_paths=PackedStringArray("weights")]
 script = ExtResource("3_3ekgy")
 value = Vector2(290.185, -158.362)
+weights = {
+NodePath("../../pony/root/body_root/body/hip_back/thigh_back/lowerleg_back"): 1.0,
+NodePath("../../pony/root/body_root/body/hip_back/thigh_back/lowerleg_back/toe_back"): 1.0
+}
 
-[node name="_Node_41484" type="Node" parent="backleg_back_bottom"]
+[node name="_Node_41484" type="Node" parent="backleg_back_bottom" node_paths=PackedStringArray("weights")]
 script = ExtResource("3_3ekgy")
 value = Vector2(316.88, -184.659)
+weights = {
+NodePath("../../pony/root/body_root/body/hip_back/thigh_back/lowerleg_back"): 1.0
+}
 
-[node name="_Node_41485" type="Node" parent="backleg_back_bottom"]
+[node name="_Node_41485" type="Node" parent="backleg_back_bottom" node_paths=PackedStringArray("weights")]
 script = ExtResource("3_3ekgy")
 value = Vector2(333.449, -203.459)
+weights = {
+NodePath("../../pony/root/body_root/body/hip_back/thigh_back"): 1.0,
+NodePath("../../pony/root/body_root/body/hip_back/thigh_back/lowerleg_back"): 1.0
+}
 
-[node name="_Node_41486" type="Node" parent="backleg_back_bottom"]
+[node name="_Node_41486" type="Node" parent="backleg_back_bottom" node_paths=PackedStringArray("weights")]
 script = ExtResource("3_3ekgy")
 value = Vector2(350.017, -222.257)
+weights = {
+NodePath("../../pony/root/body_root/body/hip_back/thigh_back"): 1.0
+}
 
-[node name="_Node_41487" type="Node" parent="backleg_back_bottom"]
+[node name="_Node_41487" type="Node" parent="backleg_back_bottom" node_paths=PackedStringArray("weights")]
 script = ExtResource("3_3ekgy")
 value = Vector2(366.029, -245.406)
+weights = {
+NodePath("../../pony/root/body_root/body/hip_back/thigh_back"): 1.0
+}
 
-[node name="_Node_41488" type="Node" parent="backleg_back_bottom"]
+[node name="_Node_41488" type="Node" parent="backleg_back_bottom" node_paths=PackedStringArray("weights")]
 script = ExtResource("3_3ekgy")
 value = Vector2(367.032, -270.897)
+weights = {
+NodePath("../../pony/root/body_root/body/hip_back"): 1.0,
+NodePath("../../pony/root/body_root/body/hip_back/thigh_back"): 1.0
+}
 
-[node name="_Node_41489" type="Node" parent="backleg_back_bottom"]
+[node name="_Node_41489" type="Node" parent="backleg_back_bottom" node_paths=PackedStringArray("weights")]
 script = ExtResource("3_3ekgy")
 value = Vector2(367.704, -287.972)
+weights = {
+NodePath("../../pony/root/body_root/body/hip_back"): 1.0,
+NodePath("../../pony/root/body_root/body/hip_back/thigh_back"): 1.0
+}
 
 [node name="tail_main" type="Node2D" parent="."]
 script = ExtResource("1_oyty2")
@@ -1572,7 +1723,7 @@ script = ExtResource("1_oyty2")
 fill = Color(0.972549, 0.772549, 1, 1)
 steps = 20
 show_rest = false
-skeleton = NodePath("../Skeleton2D")
+skeleton = NodePath("../pony")
 constraints = [1, 1, 1, 1, 1, 1]
 metadata/_custom_type_script = "uid://bodn4jw8tyemx"
 
@@ -1589,139 +1740,139 @@ metadata/_edit_lock_ = true
 script = ExtResource("3_3ekgy")
 value = Vector2(228.745, -308.135)
 weights = {
-NodePath("../../Skeleton2D/root/body_root/body"): 0.0,
-NodePath("../../Skeleton2D/root/body_root/body/hip_front"): 1.0
+NodePath("../../pony/root/body_root/body"): 0.0,
+NodePath("../../pony/root/body_root/body/hip_front"): 1.0
 }
 
 [node name="@Node@31029" type="Node" parent="body" node_paths=PackedStringArray("weights")]
 script = ExtResource("3_3ekgy")
 value = Vector2(252.604, -335.973)
 weights = {
-NodePath("../../Skeleton2D/root/body_root/body"): 0.0,
-NodePath("../../Skeleton2D/root/body_root/body/hip_front"): 1.0
+NodePath("../../pony/root/body_root/body"): 0.0,
+NodePath("../../pony/root/body_root/body/hip_front"): 1.0
 }
 
 [node name="@Node@31030" type="Node" parent="body" node_paths=PackedStringArray("weights")]
 script = ExtResource("3_3ekgy")
 value = Vector2(273.915, -360.838)
 weights = {
-NodePath("../../Skeleton2D/root/body_root/body"): 1.0
+NodePath("../../pony/root/body_root/body"): 1.0
 }
 
 [node name="@Node@31031" type="Node" parent="body" node_paths=PackedStringArray("weights")]
 script = ExtResource("3_3ekgy")
 value = Vector2(296.607, -360.288)
 weights = {
-NodePath("../../Skeleton2D/root/body_root/body"): 1.0
+NodePath("../../pony/root/body_root/body"): 1.0
 }
 
 [node name="@Node@31032" type="Node" parent="body" node_paths=PackedStringArray("weights")]
 script = ExtResource("3_3ekgy")
 value = Vector2(313.185, -357.204)
 weights = {
-NodePath("../../Skeleton2D/root/body_root/body"): 1.0
+NodePath("../../pony/root/body_root/body"): 1.0
 }
 
 [node name="@Node@31033" type="Node" parent="body" node_paths=PackedStringArray("weights")]
 script = ExtResource("3_3ekgy")
 value = Vector2(329.763, -354.12)
 weights = {
-NodePath("../../Skeleton2D/root/body_root/body"): 1.0,
-NodePath("../../Skeleton2D/root/body_root/body/body2"): 1.0
+NodePath("../../pony/root/body_root/body"): 1.0,
+NodePath("../../pony/root/body_root/body/body2"): 1.0
 }
 
 [node name="@Node@31034" type="Node" parent="body" node_paths=PackedStringArray("weights")]
 script = ExtResource("3_3ekgy")
 value = Vector2(353.189, -337.118)
 weights = {
-NodePath("../../Skeleton2D/root/body_root/body"): 1.0,
-NodePath("../../Skeleton2D/root/body_root/body/body2"): 1.0
+NodePath("../../pony/root/body_root/body"): 1.0,
+NodePath("../../pony/root/body_root/body/body2"): 1.0
 }
 
 [node name="@Node@31035" type="Node" parent="body" node_paths=PackedStringArray("weights")]
 script = ExtResource("3_3ekgy")
 value = Vector2(375.464, -323.585)
 weights = {
-NodePath("../../Skeleton2D/root/body_root/body"): 0.0,
-NodePath("../../Skeleton2D/root/body_root/body/body2"): 1.0
+NodePath("../../pony/root/body_root/body"): 0.0,
+NodePath("../../pony/root/body_root/body/body2"): 1.0
 }
 
 [node name="@Node@31036" type="Node" parent="body" node_paths=PackedStringArray("weights")]
 script = ExtResource("3_3ekgy")
 value = Vector2(400.549, -308.344)
 weights = {
-NodePath("../../Skeleton2D/root/body_root/body"): 0.0,
-NodePath("../../Skeleton2D/root/body_root/body/body2"): 1.0
+NodePath("../../pony/root/body_root/body"): 0.0,
+NodePath("../../pony/root/body_root/body/body2"): 1.0
 }
 
 [node name="@Node@31037" type="Node" parent="body" node_paths=PackedStringArray("weights")]
 script = ExtResource("3_3ekgy")
 value = Vector2(473.748, -256.231)
 weights = {
-NodePath("../../Skeleton2D/root/body_root/body"): 0.0,
-NodePath("../../Skeleton2D/root/body_root/body/body2"): 1.0
+NodePath("../../pony/root/body_root/body"): 0.0,
+NodePath("../../pony/root/body_root/body/body2"): 1.0
 }
 
 [node name="@Node@31038" type="Node" parent="body" node_paths=PackedStringArray("weights")]
 script = ExtResource("3_3ekgy")
 value = Vector2(467.994, -247.941)
 weights = {
-NodePath("../../Skeleton2D/root/body_root/body"): 0.0,
-NodePath("../../Skeleton2D/root/body_root/body/body2"): 1.0
+NodePath("../../pony/root/body_root/body"): 0.0,
+NodePath("../../pony/root/body_root/body/body2"): 1.0
 }
 
 [node name="@Node@31039" type="Node" parent="body" node_paths=PackedStringArray("weights")]
 script = ExtResource("3_3ekgy")
 value = Vector2(445.247, -215.17)
 weights = {
-NodePath("../../Skeleton2D/root/body_root/body"): 0.0,
-NodePath("../../Skeleton2D/root/body_root/body/body2"): 1.0
+NodePath("../../pony/root/body_root/body"): 0.0,
+NodePath("../../pony/root/body_root/body/body2"): 1.0
 }
 
 [node name="@Node@31040" type="Node" parent="body" node_paths=PackedStringArray("weights")]
 script = ExtResource("3_3ekgy")
 value = Vector2(418.002, -203.192)
 weights = {
-NodePath("../../Skeleton2D/root/body_root/body"): 0.0,
-NodePath("../../Skeleton2D/root/body_root/body/body2"): 1.0
+NodePath("../../pony/root/body_root/body"): 0.0,
+NodePath("../../pony/root/body_root/body/body2"): 1.0
 }
 
 [node name="@Node@31041" type="Node" parent="body" node_paths=PackedStringArray("weights")]
 script = ExtResource("3_3ekgy")
 value = Vector2(366.339, -203.578)
 weights = {
-NodePath("../../Skeleton2D/root/body_root/body"): 0.0,
-NodePath("../../Skeleton2D/root/body_root/body/body2"): 1.0
+NodePath("../../pony/root/body_root/body"): 0.0,
+NodePath("../../pony/root/body_root/body/body2"): 1.0
 }
 
 [node name="@Node@31042" type="Node" parent="body" node_paths=PackedStringArray("weights")]
 script = ExtResource("3_3ekgy")
 value = Vector2(314.676, -203.964)
 weights = {
-NodePath("../../Skeleton2D/root/body_root/body/body2"): 1.0,
-NodePath("../../Skeleton2D/root/body_root/body"): 1.0
+NodePath("../../pony/root/body_root/body/body2"): 1.0,
+NodePath("../../pony/root/body_root/body"): 1.0
 }
 
 [node name="@Node@31043" type="Node" parent="body" node_paths=PackedStringArray("weights")]
 script = ExtResource("3_3ekgy")
 value = Vector2(288.64, -210.877)
 weights = {
-NodePath("../../Skeleton2D/root/body_root/body"): 1.0,
-NodePath("../../Skeleton2D/root/body_root/body/body2"): 1.0
+NodePath("../../pony/root/body_root/body"): 1.0,
+NodePath("../../pony/root/body_root/body/body2"): 1.0
 }
 
 [node name="@Node@31044" type="Node" parent="body" node_paths=PackedStringArray("weights")]
 script = ExtResource("3_3ekgy")
 value = Vector2(273.989, -239.408)
 weights = {
-NodePath("../../Skeleton2D/root/body_root/body"): 1.0
+NodePath("../../pony/root/body_root/body"): 1.0
 }
 
 [node name="@Node@31045" type="Node" parent="body" node_paths=PackedStringArray("weights")]
 script = ExtResource("3_3ekgy")
 value = Vector2(259.339, -267.938)
 weights = {
-NodePath("../../Skeleton2D/root/body_root/body"): 1.0
+NodePath("../../pony/root/body_root/body"): 1.0
 }
 
 [node name="neck" type="Node2D" parent="."]
@@ -1729,7 +1880,7 @@ script = ExtResource("1_oyty2")
 fill = Color(0.972549, 0.772549, 1, 1)
 steps = 20
 show_rest = false
-skeleton = NodePath("../Skeleton2D")
+skeleton = NodePath("../pony")
 constraints = [1, 1, 1, 1, 1]
 metadata/_custom_type_script = "uid://bodn4jw8tyemx"
 
@@ -1745,7 +1896,7 @@ metadata/_edit_lock_ = true
 script = ExtResource("3_3ekgy")
 value = Vector2(400.367, -198.294)
 weights = {
-NodePath("../../Skeleton2D/root/body_root/body/body2/neck1"): 1.0,
+NodePath("../../pony/root/body_root/body/body2/neck1"): 1.0,
 null: 0.0
 }
 
@@ -1753,7 +1904,7 @@ null: 0.0
 script = ExtResource("3_3ekgy")
 value = Vector2(426.221, -212.738)
 weights = {
-NodePath("../../Skeleton2D/root/body_root/body/body2/neck1"): 1.0,
+NodePath("../../pony/root/body_root/body/body2/neck1"): 1.0,
 null: 0.0
 }
 
@@ -1761,7 +1912,7 @@ null: 0.0
 script = ExtResource("3_3ekgy")
 value = Vector2(469.072, -236.677)
 weights = {
-NodePath("../../Skeleton2D/root/body_root/body/body2/neck1"): 1.0,
+NodePath("../../pony/root/body_root/body/body2/neck1"): 1.0,
 null: 0.0
 }
 
@@ -1769,7 +1920,7 @@ null: 0.0
 script = ExtResource("3_3ekgy")
 value = Vector2(482.646, -255.827)
 weights = {
-NodePath("../../Skeleton2D/root/body_root/body/body2/neck1"): 1.0,
+NodePath("../../pony/root/body_root/body/body2/neck1"): 1.0,
 null: 0.0
 }
 
@@ -1777,8 +1928,8 @@ null: 0.0
 script = ExtResource("3_3ekgy")
 value = Vector2(488.277, -303.288)
 weights = {
-NodePath("../../Skeleton2D/root/body_root/body/body2/shoulder_front"): 0.0,
-NodePath("../../Skeleton2D/root/body_root/body/body2/neck1"): 1.0,
+NodePath("../../pony/root/body_root/body/body2/shoulder_front"): 0.0,
+NodePath("../../pony/root/body_root/body/body2/neck1"): 1.0,
 null: 0.0
 }
 
@@ -1786,7 +1937,7 @@ null: 0.0
 script = ExtResource("3_3ekgy")
 value = Vector2(492.738, -340.887)
 weights = {
-NodePath("../../Skeleton2D/root/body_root/body/body2/neck1"): 1.0,
+NodePath("../../pony/root/body_root/body/body2/neck1"): 1.0,
 null: 0.0
 }
 
@@ -1794,7 +1945,7 @@ null: 0.0
 script = ExtResource("3_3ekgy")
 value = Vector2(486.025, -376.674)
 weights = {
-NodePath("../../Skeleton2D/root/body_root/body/body2/neck1/neck2"): 1.0,
+NodePath("../../pony/root/body_root/body/body2/neck1/neck2"): 1.0,
 null: 1.0
 }
 
@@ -1802,7 +1953,7 @@ null: 1.0
 script = ExtResource("3_3ekgy")
 value = Vector2(478.378, -397.704)
 weights = {
-NodePath("../../Skeleton2D/root/body_root/body/body2/neck1/neck2"): 1.0,
+NodePath("../../pony/root/body_root/body/body2/neck1/neck2"): 1.0,
 null: 1.0
 }
 
@@ -1810,7 +1961,7 @@ null: 1.0
 script = ExtResource("3_3ekgy")
 value = Vector2(470.731, -418.734)
 weights = {
-NodePath("../../Skeleton2D/root/body_root/body/body2/neck1/neck2"): 1.0,
+NodePath("../../pony/root/body_root/body/body2/neck1/neck2"): 1.0,
 null: 1.0
 }
 
@@ -1818,7 +1969,7 @@ null: 1.0
 script = ExtResource("3_3ekgy")
 value = Vector2(411.878, -446.821)
 weights = {
-NodePath("../../Skeleton2D/root/body_root/body/body2/neck1/neck2"): 1.0,
+NodePath("../../pony/root/body_root/body/body2/neck1/neck2"): 1.0,
 null: 1.0
 }
 
@@ -1826,7 +1977,7 @@ null: 1.0
 script = ExtResource("3_3ekgy")
 value = Vector2(407.404, -440.239)
 weights = {
-NodePath("../../Skeleton2D/root/body_root/body/body2/neck1/neck2"): 1.0,
+NodePath("../../pony/root/body_root/body/body2/neck1/neck2"): 1.0,
 null: 1.0
 }
 
@@ -1834,7 +1985,7 @@ null: 1.0
 script = ExtResource("3_3ekgy")
 value = Vector2(399.731, -428.95)
 weights = {
-NodePath("../../Skeleton2D/root/body_root/body/body2/neck1/neck2"): 1.0,
+NodePath("../../pony/root/body_root/body/body2/neck1/neck2"): 1.0,
 null: 1.0
 }
 
@@ -1842,7 +1993,7 @@ null: 1.0
 script = ExtResource("3_3ekgy")
 value = Vector2(420.177, -328.743)
 weights = {
-NodePath("../../Skeleton2D/root/body_root/body/body2/neck1"): 1.0,
+NodePath("../../pony/root/body_root/body/body2/neck1"): 1.0,
 null: 1.0
 }
 
@@ -1850,7 +2001,7 @@ null: 1.0
 script = ExtResource("3_3ekgy")
 value = Vector2(397.124, -306.981)
 weights = {
-NodePath("../../Skeleton2D/root/body_root/body/body2/neck1"): 1.0,
+NodePath("../../pony/root/body_root/body/body2/neck1"): 1.0,
 null: 1.0
 }
 
@@ -1858,7 +2009,7 @@ null: 1.0
 script = ExtResource("3_3ekgy")
 value = Vector2(361.36, -273.22)
 weights = {
-NodePath("../../Skeleton2D/root/body_root/body/body2/neck1"): 1.0,
+NodePath("../../pony/root/body_root/body/body2/neck1"): 1.0,
 null: 1.0
 }
 
@@ -1866,7 +2017,7 @@ null: 1.0
 script = ExtResource("1_oyty2")
 fill = Color(0.972549, 0.772549, 1, 1)
 show_rest = false
-skeleton = NodePath("../Skeleton2D")
+skeleton = NodePath("../pony")
 constraints = [1, 1, 1, 1, 1, 1, 1, 1, 1]
 metadata/_custom_type_script = "uid://bodn4jw8tyemx"
 
@@ -1882,221 +2033,221 @@ metadata/_custom_type_script = "uid://csgt88iv3c4ke"
 script = ExtResource("3_3ekgy")
 value = Vector2(440.302, -356.541)
 weights = {
-NodePath("../../Skeleton2D/root/body_root/body/body2/neck1/neck2"): 1.0,
-NodePath("../../Skeleton2D/root/body_root/body/body2/neck1/neck2/head"): 1.0
+NodePath("../../pony/root/body_root/body/body2/neck1/neck2"): 1.0,
+NodePath("../../pony/root/body_root/body/body2/neck1/neck2/head"): 1.0
 }
 
 [node name="@Node@37806" type="Node" parent="head" node_paths=PackedStringArray("weights")]
 script = ExtResource("3_3ekgy")
 value = Vector2(418.75, -387.33)
 weights = {
-NodePath("../../Skeleton2D/root/body_root/body/body2/neck1/neck2"): 1.0,
-NodePath("../../Skeleton2D/root/body_root/body/body2/neck1/neck2/head"): 1.0
+NodePath("../../pony/root/body_root/body/body2/neck1/neck2"): 1.0,
+NodePath("../../pony/root/body_root/body/body2/neck1/neck2/head"): 1.0
 }
 
 [node name="@Node@37807" type="Node" parent="head" node_paths=PackedStringArray("weights")]
 script = ExtResource("3_3ekgy")
 value = Vector2(397.197, -418.12)
 weights = {
-NodePath("../../Skeleton2D/root/body_root/body/body2/neck1/neck2"): 1.0,
-NodePath("../../Skeleton2D/root/body_root/body/body2/neck1/neck2/head"): 1.0
+NodePath("../../pony/root/body_root/body/body2/neck1/neck2"): 1.0,
+NodePath("../../pony/root/body_root/body/body2/neck1/neck2/head"): 1.0
 }
 
 [node name="@Node@37808" type="Node" parent="head" node_paths=PackedStringArray("weights")]
 script = ExtResource("3_3ekgy")
 value = Vector2(382.829, -463.278)
 weights = {
-NodePath("../../Skeleton2D/root/body_root/body/body2/neck1/neck2"): 1.0,
-NodePath("../../Skeleton2D/root/body_root/body/body2/neck1/neck2/head"): 1.0
+NodePath("../../pony/root/body_root/body/body2/neck1/neck2"): 1.0,
+NodePath("../../pony/root/body_root/body/body2/neck1/neck2/head"): 1.0
 }
 
 [node name="@Node@37809" type="Node" parent="head" node_paths=PackedStringArray("weights")]
 script = ExtResource("3_3ekgy")
 value = Vector2(390.013, -490.475)
 weights = {
-NodePath("../../Skeleton2D/root/body_root/body/body2/neck1/neck2"): 0.0,
-NodePath("../../Skeleton2D/root/body_root/body/body2/neck1/neck2/head"): 1.0
+NodePath("../../pony/root/body_root/body/body2/neck1/neck2"): 0.0,
+NodePath("../../pony/root/body_root/body/body2/neck1/neck2/head"): 1.0
 }
 
 [node name="@Node@37810" type="Node" parent="head" node_paths=PackedStringArray("weights")]
 script = ExtResource("3_3ekgy")
 value = Vector2(397.198, -517.672)
 weights = {
-NodePath("../../Skeleton2D/root/body_root/body/body2/neck1/neck2"): 0.0,
-NodePath("../../Skeleton2D/root/body_root/body/body2/neck1/neck2/head"): 1.0
+NodePath("../../pony/root/body_root/body/body2/neck1/neck2"): 0.0,
+NodePath("../../pony/root/body_root/body/body2/neck1/neck2/head"): 1.0
 }
 
 [node name="@Node@37811" type="Node" parent="head" node_paths=PackedStringArray("weights")]
 script = ExtResource("3_3ekgy")
 value = Vector2(418.414, -573.175)
 weights = {
-NodePath("../../Skeleton2D/root/body_root/body/body2/neck1/neck2"): 0.0,
-NodePath("../../Skeleton2D/root/body_root/body/body2/neck1/neck2/head"): 1.0
+NodePath("../../pony/root/body_root/body/body2/neck1/neck2"): 0.0,
+NodePath("../../pony/root/body_root/body/body2/neck1/neck2/head"): 1.0
 }
 
 [node name="@Node@37812" type="Node" parent="head" node_paths=PackedStringArray("weights")]
 script = ExtResource("3_3ekgy")
 value = Vector2(473.692, -579.677)
 weights = {
-NodePath("../../Skeleton2D/root/body_root/body/body2/neck1/neck2"): 0.0,
-NodePath("../../Skeleton2D/root/body_root/body/body2/neck1/neck2/head"): 1.0
+NodePath("../../pony/root/body_root/body/body2/neck1/neck2"): 0.0,
+NodePath("../../pony/root/body_root/body/body2/neck1/neck2/head"): 1.0
 }
 
 [node name="@Node@37813" type="Node" parent="head" node_paths=PackedStringArray("weights")]
 script = ExtResource("3_3ekgy")
 value = Vector2(533.574, -586.721)
 weights = {
-NodePath("../../Skeleton2D/root/body_root/body/body2/neck1/neck2"): 0.0,
-NodePath("../../Skeleton2D/root/body_root/body/body2/neck1/neck2/head"): 1.0
+NodePath("../../pony/root/body_root/body/body2/neck1/neck2"): 0.0,
+NodePath("../../pony/root/body_root/body/body2/neck1/neck2/head"): 1.0
 }
 
 [node name="@Node@37814" type="Node" parent="head" node_paths=PackedStringArray("weights")]
 script = ExtResource("3_3ekgy")
 value = Vector2(569.362, -570.343)
 weights = {
-NodePath("../../Skeleton2D/root/body_root/body/body2/neck1/neck2"): 0.0,
-NodePath("../../Skeleton2D/root/body_root/body/body2/neck1/neck2/head"): 1.0
+NodePath("../../pony/root/body_root/body/body2/neck1/neck2"): 0.0,
+NodePath("../../pony/root/body_root/body/body2/neck1/neck2/head"): 1.0
 }
 
 [node name="@Node@37815" type="Node" parent="head" node_paths=PackedStringArray("weights")]
 script = ExtResource("3_3ekgy")
 value = Vector2(587.583, -540.526)
 weights = {
-NodePath("../../Skeleton2D/root/body_root/body/body2/neck1/neck2"): 0.0,
-NodePath("../../Skeleton2D/root/body_root/body/body2/neck1/neck2/head"): 1.0
+NodePath("../../pony/root/body_root/body/body2/neck1/neck2"): 0.0,
+NodePath("../../pony/root/body_root/body/body2/neck1/neck2/head"): 1.0
 }
 
 [node name="@Node@37816" type="Node" parent="head" node_paths=PackedStringArray("weights")]
 script = ExtResource("3_3ekgy")
 value = Vector2(611.163, -501.941)
 weights = {
-NodePath("../../Skeleton2D/root/body_root/body/body2/neck1/neck2"): 0.0,
-NodePath("../../Skeleton2D/root/body_root/body/body2/neck1/neck2/head"): 1.0
+NodePath("../../pony/root/body_root/body/body2/neck1/neck2"): 0.0,
+NodePath("../../pony/root/body_root/body/body2/neck1/neck2/head"): 1.0
 }
 
 [node name="@Node@37817" type="Node" parent="head" node_paths=PackedStringArray("weights")]
 script = ExtResource("3_3ekgy")
 value = Vector2(609.38, -464.817)
 weights = {
-NodePath("../../Skeleton2D/root/body_root/body/body2/neck1/neck2"): 0.0,
-NodePath("../../Skeleton2D/root/body_root/body/body2/neck1/neck2/head"): 1.0
+NodePath("../../pony/root/body_root/body/body2/neck1/neck2"): 0.0,
+NodePath("../../pony/root/body_root/body/body2/neck1/neck2/head"): 1.0
 }
 
 [node name="@Node@37818" type="Node" parent="head" node_paths=PackedStringArray("weights")]
 script = ExtResource("3_3ekgy")
 value = Vector2(605.275, -445.317)
 weights = {
-NodePath("../../Skeleton2D/root/body_root/body/body2/neck1/neck2"): 0.0,
-NodePath("../../Skeleton2D/root/body_root/body/body2/neck1/neck2/head"): 1.0
+NodePath("../../pony/root/body_root/body/body2/neck1/neck2"): 0.0,
+NodePath("../../pony/root/body_root/body/body2/neck1/neck2/head"): 1.0
 }
 
 [node name="@Node@37819" type="Node" parent="head" node_paths=PackedStringArray("weights")]
 script = ExtResource("3_3ekgy")
 value = Vector2(601.169, -425.817)
 weights = {
-NodePath("../../Skeleton2D/root/body_root/body/body2/neck1/neck2"): 0.0,
-NodePath("../../Skeleton2D/root/body_root/body/body2/neck1/neck2/head"): 1.0
+NodePath("../../pony/root/body_root/body/body2/neck1/neck2"): 0.0,
+NodePath("../../pony/root/body_root/body/body2/neck1/neck2/head"): 1.0
 }
 
 [node name="@Node@37820" type="Node" parent="head" node_paths=PackedStringArray("weights")]
 script = ExtResource("3_3ekgy")
 value = Vector2(597.789, -421.465)
 weights = {
-NodePath("../../Skeleton2D/root/body_root/body/body2/neck1/neck2"): 0.0,
-NodePath("../../Skeleton2D/root/body_root/body/body2/neck1/neck2/head"): 1.0
+NodePath("../../pony/root/body_root/body/body2/neck1/neck2"): 0.0,
+NodePath("../../pony/root/body_root/body/body2/neck1/neck2/head"): 1.0
 }
 
 [node name="@Node@37821" type="Node" parent="head" node_paths=PackedStringArray("weights")]
 script = ExtResource("3_3ekgy")
 value = Vector2(601.059, -416.396)
 weights = {
-NodePath("../../Skeleton2D/root/body_root/body/body2/neck1/neck2"): 0.0,
-NodePath("../../Skeleton2D/root/body_root/body/body2/neck1/neck2/head"): 1.0
+NodePath("../../pony/root/body_root/body/body2/neck1/neck2"): 0.0,
+NodePath("../../pony/root/body_root/body/body2/neck1/neck2/head"): 1.0
 }
 
 [node name="@Node@37822" type="Node" parent="head" node_paths=PackedStringArray("weights")]
 script = ExtResource("3_3ekgy")
 value = Vector2(604.329, -411.327)
 weights = {
-NodePath("../../Skeleton2D/root/body_root/body/body2/neck1/neck2"): 0.0,
-NodePath("../../Skeleton2D/root/body_root/body/body2/neck1/neck2/head"): 1.0
+NodePath("../../pony/root/body_root/body/body2/neck1/neck2"): 0.0,
+NodePath("../../pony/root/body_root/body/body2/neck1/neck2/head"): 1.0
 }
 
 [node name="@Node@37823" type="Node" parent="head" node_paths=PackedStringArray("weights")]
 script = ExtResource("3_3ekgy")
 value = Vector2(622.643, -409.856)
 weights = {
-NodePath("../../Skeleton2D/root/body_root/body/body2/neck1/neck2"): 0.0,
-NodePath("../../Skeleton2D/root/body_root/body/body2/neck1/neck2/head"): 1.0
+NodePath("../../pony/root/body_root/body/body2/neck1/neck2"): 0.0,
+NodePath("../../pony/root/body_root/body/body2/neck1/neck2/head"): 1.0
 }
 
 [node name="@Node@37824" type="Node" parent="head" node_paths=PackedStringArray("weights")]
 script = ExtResource("3_3ekgy")
 value = Vector2(622.806, -402.498)
 weights = {
-NodePath("../../Skeleton2D/root/body_root/body/body2/neck1/neck2/head/jaw"): 0.0,
-NodePath("../../Skeleton2D/root/body_root/body/body2/neck1/neck2/head"): 1.0
+NodePath("../../pony/root/body_root/body/body2/neck1/neck2/head/jaw"): 0.0,
+NodePath("../../pony/root/body_root/body/body2/neck1/neck2/head"): 1.0
 }
 
 [node name="@Node@37825" type="Node" parent="head" node_paths=PackedStringArray("weights")]
 script = ExtResource("3_3ekgy")
 value = Vector2(622.969, -395.14)
 weights = {
-NodePath("../../Skeleton2D/root/body_root/body/body2/neck1/neck2/head/jaw"): 0.0,
-NodePath("../../Skeleton2D/root/body_root/body/body2/neck1/neck2/head"): 1.0
+NodePath("../../pony/root/body_root/body/body2/neck1/neck2/head/jaw"): 0.0,
+NodePath("../../pony/root/body_root/body/body2/neck1/neck2/head"): 1.0
 }
 
 [node name="@Node@37826" type="Node" parent="head" node_paths=PackedStringArray("weights")]
 script = ExtResource("3_3ekgy")
 value = Vector2(610.696, -362.975)
 weights = {
-NodePath("../../Skeleton2D/root/body_root/body/body2/neck1/neck2/head/jaw"): 1.0
+NodePath("../../pony/root/body_root/body/body2/neck1/neck2/head/jaw"): 1.0
 }
 
 [node name="@Node@37827" type="Node" parent="head" node_paths=PackedStringArray("weights")]
 script = ExtResource("3_3ekgy")
 value = Vector2(561.07, -354.109)
 weights = {
-NodePath("../../Skeleton2D/root/body_root/body/body2/neck1/neck2"): 0.0,
-NodePath("../../Skeleton2D/root/body_root/body/body2/neck1/neck2/head/jaw"): 1.0
+NodePath("../../pony/root/body_root/body/body2/neck1/neck2"): 0.0,
+NodePath("../../pony/root/body_root/body/body2/neck1/neck2/head/jaw"): 1.0
 }
 
 [node name="@Node@37828" type="Node" parent="head" node_paths=PackedStringArray("weights")]
 script = ExtResource("3_3ekgy")
 value = Vector2(518.953, -346.585)
 weights = {
-NodePath("../../Skeleton2D/root/body_root/body/body2/neck1/neck2/head/jaw"): 1.0
+NodePath("../../pony/root/body_root/body/body2/neck1/neck2/head/jaw"): 1.0
 }
 
 [node name="@Node@37829" type="Node" parent="head" node_paths=PackedStringArray("weights")]
 script = ExtResource("3_3ekgy")
 value = Vector2(474.527, -356.967)
 weights = {
-NodePath("../../Skeleton2D/root/body_root/body/body2/neck1/neck2"): 1.0,
-NodePath("../../Skeleton2D/root/body_root/body/body2/neck1/neck2/head/jaw"): 1.0
+NodePath("../../pony/root/body_root/body/body2/neck1/neck2"): 1.0,
+NodePath("../../pony/root/body_root/body/body2/neck1/neck2/head/jaw"): 1.0
 }
 
 [node name="@Node@37830" type="Node" parent="head" node_paths=PackedStringArray("weights")]
 script = ExtResource("3_3ekgy")
 value = Vector2(448.58, -369.073)
 weights = {
-NodePath("../../Skeleton2D/root/body_root/body/body2/neck1/neck2"): 1.0,
-NodePath("../../Skeleton2D/root/body_root/body/body2/neck1/neck2/head"): 1.0
+NodePath("../../pony/root/body_root/body/body2/neck1/neck2"): 1.0,
+NodePath("../../pony/root/body_root/body/body2/neck1/neck2/head"): 1.0
 }
 
 [node name="@Node@37831" type="Node" parent="head" node_paths=PackedStringArray("weights")]
 script = ExtResource("3_3ekgy")
 value = Vector2(415.023, -384.73)
 weights = {
-NodePath("../../Skeleton2D/root/body_root/body/body2/neck1/neck2"): 1.0,
-NodePath("../../Skeleton2D/root/body_root/body/body2/neck1/neck2/head"): 1.0
+NodePath("../../pony/root/body_root/body/body2/neck1/neck2"): 1.0,
+NodePath("../../pony/root/body_root/body/body2/neck1/neck2/head"): 1.0
 }
 
 [node name="mouth_simple" type="Node2D" parent="head"]
 script = ExtResource("1_oyty2")
 do_fill = false
 show_rest = false
-skeleton = NodePath("../../Skeleton2D")
+skeleton = NodePath("../../pony")
 constraints = [1, 1]
 metadata/_custom_type_script = "uid://bodn4jw8tyemx"
 
@@ -2104,42 +2255,42 @@ metadata/_custom_type_script = "uid://bodn4jw8tyemx"
 script = ExtResource("3_3ekgy")
 value = Vector2(576.235, -400.28)
 weights = {
-NodePath("../../../Skeleton2D/root/body_root/body/body2/neck1/neck2/head/jaw"): 1.0
+NodePath("../../../pony/root/body_root/body/body2/neck1/neck2/head/jaw"): 1.0
 }
 
 [node name="_Node_64618" type="Node" parent="head/mouth_simple" node_paths=PackedStringArray("weights")]
 script = ExtResource("3_3ekgy")
 value = Vector2(578.81, -390.619)
 weights = {
-NodePath("../../../Skeleton2D/root/body_root/body/body2/neck1/neck2/head/jaw"): 1.0
+NodePath("../../../pony/root/body_root/body/body2/neck1/neck2/head/jaw"): 1.0
 }
 
 [node name="_Node_64619" type="Node" parent="head/mouth_simple" node_paths=PackedStringArray("weights")]
 script = ExtResource("3_3ekgy")
 value = Vector2(582.92, -375.202)
 weights = {
-NodePath("../../../Skeleton2D/root/body_root/body/body2/neck1/neck2/head/jaw"): 1.0
+NodePath("../../../pony/root/body_root/body/body2/neck1/neck2/head/jaw"): 1.0
 }
 
 [node name="_Node_64620" type="Node" parent="head/mouth_simple" node_paths=PackedStringArray("weights")]
 script = ExtResource("3_3ekgy")
 value = Vector2(593.643, -371.093)
 weights = {
-NodePath("../../../Skeleton2D/root/body_root/body/body2/neck1/neck2/head/jaw"): 1.0
+NodePath("../../../pony/root/body_root/body/body2/neck1/neck2/head/jaw"): 1.0
 }
 
 [node name="_Node_64621" type="Node" parent="head/mouth_simple" node_paths=PackedStringArray("weights")]
 script = ExtResource("3_3ekgy")
 value = Vector2(601.758, -371.337)
 weights = {
-NodePath("../../../Skeleton2D/root/body_root/body/body2/neck1/neck2/head/jaw"): 1.0
+NodePath("../../../pony/root/body_root/body/body2/neck1/neck2/head/jaw"): 1.0
 }
 
 [node name="_Node_64622" type="Node" parent="head/mouth_simple" node_paths=PackedStringArray("weights")]
 script = ExtResource("3_3ekgy")
 value = Vector2(606.153, -371.469)
 weights = {
-NodePath("../../../Skeleton2D/root/body_root/body/body2/neck1/neck2/head/jaw"): 1.0
+NodePath("../../../pony/root/body_root/body/body2/neck1/neck2/head/jaw"): 1.0
 }
 
 [node name="VecStroke" type="Line2D" parent="head/mouth_simple"]
@@ -2155,7 +2306,7 @@ script = ExtResource("1_oyty2")
 do_fill = false
 steps = 15
 show_rest = false
-skeleton = NodePath("../../Skeleton2D")
+skeleton = NodePath("../../pony")
 constraints = [1, 1]
 metadata/_custom_type_script = "uid://bodn4jw8tyemx"
 
@@ -2163,42 +2314,42 @@ metadata/_custom_type_script = "uid://bodn4jw8tyemx"
 script = ExtResource("3_3ekgy")
 value = Vector2(601.034, -407.662)
 weights = {
-NodePath("../../../Skeleton2D/root/body_root/body/body2/neck1/neck2/head/jaw"): 1.0
+NodePath("../../../pony/root/body_root/body/body2/neck1/neck2/head/jaw"): 1.0
 }
 
 [node name="_Node_64618" type="Node" parent="head/nose" node_paths=PackedStringArray("weights")]
 script = ExtResource("3_3ekgy")
 value = Vector2(600.824, -404.474)
 weights = {
-NodePath("../../../Skeleton2D/root/body_root/body/body2/neck1/neck2/head/jaw"): 1.0
+NodePath("../../../pony/root/body_root/body/body2/neck1/neck2/head/jaw"): 1.0
 }
 
 [node name="_Node_64619" type="Node" parent="head/nose" node_paths=PackedStringArray("weights")]
 script = ExtResource("3_3ekgy")
 value = Vector2(600.487, -399.367)
 weights = {
-NodePath("../../../Skeleton2D/root/body_root/body/body2/neck1/neck2/head/jaw"): 1.0
+NodePath("../../../pony/root/body_root/body/body2/neck1/neck2/head/jaw"): 1.0
 }
 
 [node name="_Node_64620" type="Node" parent="head/nose" node_paths=PackedStringArray("weights")]
 script = ExtResource("3_3ekgy")
 value = Vector2(604.266, -395.85)
 weights = {
-NodePath("../../../Skeleton2D/root/body_root/body/body2/neck1/neck2/head/jaw"): 1.0
+NodePath("../../../pony/root/body_root/body/body2/neck1/neck2/head/jaw"): 1.0
 }
 
 [node name="_Node_64621" type="Node" parent="head/nose" node_paths=PackedStringArray("weights")]
 script = ExtResource("3_3ekgy")
 value = Vector2(610.51, -399.042)
 weights = {
-NodePath("../../../Skeleton2D/root/body_root/body/body2/neck1/neck2/head/jaw"): 1.0
+NodePath("../../../pony/root/body_root/body/body2/neck1/neck2/head/jaw"): 1.0
 }
 
 [node name="_Node_64622" type="Node" parent="head/nose" node_paths=PackedStringArray("weights")]
 script = ExtResource("3_3ekgy")
 value = Vector2(612.613, -400.117)
 weights = {
-NodePath("../../../Skeleton2D/root/body_root/body/body2/neck1/neck2/head/jaw"): 1.0
+NodePath("../../../pony/root/body_root/body/body2/neck1/neck2/head/jaw"): 1.0
 }
 
 [node name="VecStroke" type="Line2D" parent="head/nose"]
@@ -2214,7 +2365,7 @@ visible = false
 script = ExtResource("1_oyty2")
 fill = Color(0.972549, 0.772549, 1, 1)
 show_rest = false
-skeleton = NodePath("../Skeleton2D")
+skeleton = NodePath("../pony")
 constraints = [1, 1, 1, 1, 1, 1, 1, 1, 1]
 metadata/_custom_type_script = "uid://bodn4jw8tyemx"
 
@@ -2231,220 +2382,220 @@ metadata/_edit_lock_ = true
 script = ExtResource("3_3ekgy")
 value = Vector2(274.37, -189.692)
 weights = {
-NodePath("../../Skeleton2D/root/body_root/body/hip_front/thigh_front"): 1.0,
-NodePath("../../Skeleton2D/root/body_root/body/hip_front/thigh_front/lowerleg_front/toe_front"): 1.0
+NodePath("../../pony/root/body_root/body/hip_front/thigh_front"): 1.0,
+NodePath("../../pony/root/body_root/body/hip_front/thigh_front/lowerleg_front/toe_front"): 1.0
 }
 
 [node name="_Node_41464" type="Node" parent="backleg_front_B" node_paths=PackedStringArray("weights")]
 script = ExtResource("3_3ekgy")
 value = Vector2(267.056, -198.004)
 weights = {
-NodePath("../../Skeleton2D/root/body_root/body/hip_front/thigh_front/lowerleg_front"): 1.0,
-NodePath("../../Skeleton2D/root/body_root/body/hip_front/thigh_front"): 1.0,
-NodePath("../../Skeleton2D/root/body_root/body/hip_front/thigh_front/lowerleg_front/toe_front"): 1.0
+NodePath("../../pony/root/body_root/body/hip_front/thigh_front/lowerleg_front"): 1.0,
+NodePath("../../pony/root/body_root/body/hip_front/thigh_front"): 1.0,
+NodePath("../../pony/root/body_root/body/hip_front/thigh_front/lowerleg_front/toe_front"): 1.0
 }
 
 [node name="_Node_41465" type="Node" parent="backleg_front_B" node_paths=PackedStringArray("weights")]
 script = ExtResource("3_3ekgy")
 value = Vector2(260.89, -205.01)
 weights = {
-NodePath("../../Skeleton2D/root/body_root/body/hip_front/thigh_front/lowerleg_front"): 1.0,
-NodePath("../../Skeleton2D/root/body_root/body/hip_front/thigh_front/lowerleg_front/toe_front"): 1.0
+NodePath("../../pony/root/body_root/body/hip_front/thigh_front/lowerleg_front"): 1.0,
+NodePath("../../pony/root/body_root/body/hip_front/thigh_front/lowerleg_front/toe_front"): 1.0
 }
 
 [node name="_Node_41466" type="Node" parent="backleg_front_B" node_paths=PackedStringArray("weights")]
 script = ExtResource("3_3ekgy")
 value = Vector2(247.514, -209.221)
 weights = {
-NodePath("../../Skeleton2D/root/body_root/body/hip_front/thigh_front/lowerleg_front"): 1.0,
-NodePath("../../Skeleton2D/root/body_root/body/hip_front/thigh_front/lowerleg_front/toe_front"): 1.0
+NodePath("../../pony/root/body_root/body/hip_front/thigh_front/lowerleg_front"): 1.0,
+NodePath("../../pony/root/body_root/body/hip_front/thigh_front/lowerleg_front/toe_front"): 1.0
 }
 
 [node name="_Node_41467" type="Node" parent="backleg_front_B" node_paths=PackedStringArray("weights")]
 script = ExtResource("3_3ekgy")
 value = Vector2(242.286, -209.529)
 weights = {
-NodePath("../../Skeleton2D/root/body_root/body/hip_front/thigh_front/lowerleg_front"): 1.0,
-NodePath("../../Skeleton2D/root/body_root/body/hip_front/thigh_front/lowerleg_front/toe_front"): 1.0
+NodePath("../../pony/root/body_root/body/hip_front/thigh_front/lowerleg_front"): 1.0,
+NodePath("../../pony/root/body_root/body/hip_front/thigh_front/lowerleg_front/toe_front"): 1.0
 }
 
 [node name="_Node_41468" type="Node" parent="backleg_front_B" node_paths=PackedStringArray("weights")]
 script = ExtResource("3_3ekgy")
 value = Vector2(235.213, -209.946)
 weights = {
-NodePath("../../Skeleton2D/root/body_root/body/hip_front/thigh_front/lowerleg_front"): 1.0,
-NodePath("../../Skeleton2D/root/body_root/body/hip_front/thigh_front/lowerleg_front/toe_front"): 1.0
+NodePath("../../pony/root/body_root/body/hip_front/thigh_front/lowerleg_front"): 1.0,
+NodePath("../../pony/root/body_root/body/hip_front/thigh_front/lowerleg_front/toe_front"): 1.0
 }
 
 [node name="_Node_41469" type="Node" parent="backleg_front_B" node_paths=PackedStringArray("weights")]
 script = ExtResource("3_3ekgy")
 value = Vector2(230.733, -212.896)
 weights = {
-NodePath("../../Skeleton2D/root/body_root/body/hip_front/thigh_front/lowerleg_front"): 1.0,
-NodePath("../../Skeleton2D/root/body_root/body/hip_front/thigh_front/lowerleg_front/toe_front"): 1.0
+NodePath("../../pony/root/body_root/body/hip_front/thigh_front/lowerleg_front"): 1.0,
+NodePath("../../pony/root/body_root/body/hip_front/thigh_front/lowerleg_front/toe_front"): 1.0
 }
 
 [node name="_Node_41470" type="Node" parent="backleg_front_B" node_paths=PackedStringArray("weights")]
 script = ExtResource("3_3ekgy")
 value = Vector2(210.883, -168.506)
 weights = {
-NodePath("../../Skeleton2D/root/body_root/body/hip_front/thigh_front/lowerleg_front"): 1.0,
-NodePath("../../Skeleton2D/root/body_root/body/hip_front/thigh_front/lowerleg_front/toe_front"): 1.0,
-NodePath("../../Skeleton2D/root/body_root/body/hip_front/thigh_front/lowerleg_front/toe_front/toetip_front"): 0.0
+NodePath("../../pony/root/body_root/body/hip_front/thigh_front/lowerleg_front"): 1.0,
+NodePath("../../pony/root/body_root/body/hip_front/thigh_front/lowerleg_front/toe_front"): 1.0,
+NodePath("../../pony/root/body_root/body/hip_front/thigh_front/lowerleg_front/toe_front/toetip_front"): 0.0
 }
 
 [node name="_Node_41471" type="Node" parent="backleg_front_B" node_paths=PackedStringArray("weights")]
 script = ExtResource("3_3ekgy")
 value = Vector2(189.439, -120.551)
 weights = {
-NodePath("../../Skeleton2D/root/body_root/body/hip_front/thigh_front/lowerleg_front/toe_front"): 0.0,
-NodePath("../../Skeleton2D/root/body_root/body/hip_front/thigh_front/lowerleg_front"): 1.0,
-NodePath("../../Skeleton2D/root/body_root/body/hip_front/thigh_front/lowerleg_front/toe_front/toetip_front"): 1.0
+NodePath("../../pony/root/body_root/body/hip_front/thigh_front/lowerleg_front/toe_front"): 0.0,
+NodePath("../../pony/root/body_root/body/hip_front/thigh_front/lowerleg_front"): 1.0,
+NodePath("../../pony/root/body_root/body/hip_front/thigh_front/lowerleg_front/toe_front/toetip_front"): 1.0
 }
 
 [node name="_Node_41472" type="Node" parent="backleg_front_B" node_paths=PackedStringArray("weights")]
 script = ExtResource("3_3ekgy")
 value = Vector2(185.908, -69.7297)
 weights = {
-NodePath("../../Skeleton2D/root/body_root/body/hip_front/thigh_front/lowerleg_front/toe_front"): 0.0,
-NodePath("../../Skeleton2D/root/body_root/body/hip_front/thigh_front/lowerleg_front/toe_front/toetip_front"): 1.0
+NodePath("../../pony/root/body_root/body/hip_front/thigh_front/lowerleg_front/toe_front"): 0.0,
+NodePath("../../pony/root/body_root/body/hip_front/thigh_front/lowerleg_front/toe_front/toetip_front"): 1.0
 }
 
 [node name="_Node_41473" type="Node" parent="backleg_front_B" node_paths=PackedStringArray("weights")]
 script = ExtResource("3_3ekgy")
 value = Vector2(187.734, -24.0674)
 weights = {
-NodePath("../../Skeleton2D/root/body_root/body/hip_front/thigh_front/lowerleg_front/toe_front"): 0.0,
-NodePath("../../Skeleton2D/root/body_root/body/hip_front/thigh_front/lowerleg_front/toe_front/toetip_front"): 1.0
+NodePath("../../pony/root/body_root/body/hip_front/thigh_front/lowerleg_front/toe_front"): 0.0,
+NodePath("../../pony/root/body_root/body/hip_front/thigh_front/lowerleg_front/toe_front/toetip_front"): 1.0
 }
 
 [node name="_Node_41474" type="Node" parent="backleg_front_B" node_paths=PackedStringArray("weights")]
 script = ExtResource("3_3ekgy")
 value = Vector2(188.371, -8.13572)
 weights = {
-NodePath("../../Skeleton2D/root/body_root/body/hip_front/thigh_front/lowerleg_front/toe_front"): 0.0,
-NodePath("../../Skeleton2D/root/body_root/body/hip_front/thigh_front/lowerleg_front/toe_front/toetip_front"): 1.0
+NodePath("../../pony/root/body_root/body/hip_front/thigh_front/lowerleg_front/toe_front"): 0.0,
+NodePath("../../pony/root/body_root/body/hip_front/thigh_front/lowerleg_front/toe_front/toetip_front"): 1.0
 }
 
 [node name="_Node_41475" type="Node" parent="backleg_front_B" node_paths=PackedStringArray("weights")]
 script = ExtResource("3_3ekgy")
 value = Vector2(212.5, -3.44937)
 weights = {
-NodePath("../../Skeleton2D/root/body_root/body/hip_front/thigh_front/lowerleg_front/toe_front"): 0.0,
-NodePath("../../Skeleton2D/root/body_root/body/hip_front/thigh_front/lowerleg_front/toe_front/toetip_front"): 1.0
+NodePath("../../pony/root/body_root/body/hip_front/thigh_front/lowerleg_front/toe_front"): 0.0,
+NodePath("../../pony/root/body_root/body/hip_front/thigh_front/lowerleg_front/toe_front/toetip_front"): 1.0
 }
 
 [node name="_Node_41476" type="Node" parent="backleg_front_B" node_paths=PackedStringArray("weights")]
 script = ExtResource("3_3ekgy")
 value = Vector2(234.134, -3.47185)
 weights = {
-NodePath("../../Skeleton2D/root/body_root/body/hip_front/thigh_front/lowerleg_front/toe_front"): 0.0,
-NodePath("../../Skeleton2D/root/body_root/body/hip_front/thigh_front/lowerleg_front/toe_front/toetip_front"): 1.0
+NodePath("../../pony/root/body_root/body/hip_front/thigh_front/lowerleg_front/toe_front"): 0.0,
+NodePath("../../pony/root/body_root/body/hip_front/thigh_front/lowerleg_front/toe_front/toetip_front"): 1.0
 }
 
 [node name="_Node_41477" type="Node" parent="backleg_front_B" node_paths=PackedStringArray("weights")]
 script = ExtResource("3_3ekgy")
 value = Vector2(256.135, -3.49471)
 weights = {
-NodePath("../../Skeleton2D/root/body_root/body/hip_front/thigh_front/lowerleg_front/toe_front"): 0.0,
-NodePath("../../Skeleton2D/root/body_root/body/hip_front/thigh_front/lowerleg_front/toe_front/toetip_front"): 1.0
+NodePath("../../pony/root/body_root/body/hip_front/thigh_front/lowerleg_front/toe_front"): 0.0,
+NodePath("../../pony/root/body_root/body/hip_front/thigh_front/lowerleg_front/toe_front/toetip_front"): 1.0
 }
 
 [node name="_Node_41478" type="Node" parent="backleg_front_B" node_paths=PackedStringArray("weights")]
 script = ExtResource("3_3ekgy")
 value = Vector2(277.651, -8.02732)
 weights = {
-NodePath("../../Skeleton2D/root/body_root/body/hip_front/thigh_front/lowerleg_front/toe_front"): 0.0,
-NodePath("../../Skeleton2D/root/body_root/body/hip_front/thigh_front/lowerleg_front/toe_front/toetip_front"): 1.0
+NodePath("../../pony/root/body_root/body/hip_front/thigh_front/lowerleg_front/toe_front"): 0.0,
+NodePath("../../pony/root/body_root/body/hip_front/thigh_front/lowerleg_front/toe_front/toetip_front"): 1.0
 }
 
 [node name="_Node_41479" type="Node" parent="backleg_front_B" node_paths=PackedStringArray("weights")]
 script = ExtResource("3_3ekgy")
 value = Vector2(283.331, -12.4348)
 weights = {
-NodePath("../../Skeleton2D/root/body_root/body/hip_front/thigh_front/lowerleg_front/toe_front"): 0.0,
-NodePath("../../Skeleton2D/root/body_root/body/hip_front/thigh_front/lowerleg_front/toe_front/toetip_front"): 1.0
+NodePath("../../pony/root/body_root/body/hip_front/thigh_front/lowerleg_front/toe_front"): 0.0,
+NodePath("../../pony/root/body_root/body/hip_front/thigh_front/lowerleg_front/toe_front/toetip_front"): 1.0
 }
 
 [node name="_Node_41480" type="Node" parent="backleg_front_B" node_paths=PackedStringArray("weights")]
 script = ExtResource("3_3ekgy")
 value = Vector2(288.707, -16.6064)
 weights = {
-NodePath("../../Skeleton2D/root/body_root/body/hip_front/thigh_front/lowerleg_front/toe_front"): 0.0,
-NodePath("../../Skeleton2D/root/body_root/body/hip_front/thigh_front/lowerleg_front/toe_front/toetip_front"): 1.0
+NodePath("../../pony/root/body_root/body/hip_front/thigh_front/lowerleg_front/toe_front"): 0.0,
+NodePath("../../pony/root/body_root/body/hip_front/thigh_front/lowerleg_front/toe_front/toetip_front"): 1.0
 }
 
 [node name="_Node_41481" type="Node" parent="backleg_front_B" node_paths=PackedStringArray("weights")]
 script = ExtResource("3_3ekgy")
 value = Vector2(260.514, -49.2309)
 weights = {
-NodePath("../../Skeleton2D/root/body_root/body/hip_front/thigh_front/lowerleg_front/toe_front"): 0.0,
-NodePath("../../Skeleton2D/root/body_root/body/hip_front/thigh_front/lowerleg_front/toe_front/toetip_front"): 1.0
+NodePath("../../pony/root/body_root/body/hip_front/thigh_front/lowerleg_front/toe_front"): 0.0,
+NodePath("../../pony/root/body_root/body/hip_front/thigh_front/lowerleg_front/toe_front/toetip_front"): 1.0
 }
 
 [node name="_Node_41482" type="Node" parent="backleg_front_B" node_paths=PackedStringArray("weights")]
 script = ExtResource("3_3ekgy")
 value = Vector2(257.328, -93.8392)
 weights = {
-NodePath("../../Skeleton2D/root/body_root/body/hip_front/thigh_front/lowerleg_front/toe_front"): 1.0,
-NodePath("../../Skeleton2D/root/body_root/body/hip_front/thigh_front/lowerleg_front/toe_front/toetip_front"): 0.0
+NodePath("../../pony/root/body_root/body/hip_front/thigh_front/lowerleg_front/toe_front"): 1.0,
+NodePath("../../pony/root/body_root/body/hip_front/thigh_front/lowerleg_front/toe_front/toetip_front"): 0.0
 }
 
 [node name="_Node_41483" type="Node" parent="backleg_front_B" node_paths=PackedStringArray("weights")]
 script = ExtResource("3_3ekgy")
 value = Vector2(254.142, -138.447)
 weights = {
-NodePath("../../Skeleton2D/root/body_root/body/hip_front/thigh_front/lowerleg_front"): 1.0,
-NodePath("../../Skeleton2D/root/body_root/body/hip_front/thigh_front/lowerleg_front/toe_front"): 1.0
+NodePath("../../pony/root/body_root/body/hip_front/thigh_front/lowerleg_front"): 1.0,
+NodePath("../../pony/root/body_root/body/hip_front/thigh_front/lowerleg_front/toe_front"): 1.0
 }
 
 [node name="_Node_41484" type="Node" parent="backleg_front_B" node_paths=PackedStringArray("weights")]
 script = ExtResource("3_3ekgy")
 value = Vector2(273.897, -167.443)
 weights = {
-NodePath("../../Skeleton2D/root/body_root/body/hip_front/thigh_front/lowerleg_front"): 1.0,
-NodePath("../../Skeleton2D/root/body_root/body/hip_front/thigh_front/lowerleg_front/toe_front"): 1.0
+NodePath("../../pony/root/body_root/body/hip_front/thigh_front/lowerleg_front"): 1.0,
+NodePath("../../pony/root/body_root/body/hip_front/thigh_front/lowerleg_front/toe_front"): 1.0
 }
 
 [node name="_Node_41485" type="Node" parent="backleg_front_B" node_paths=PackedStringArray("weights")]
 script = ExtResource("3_3ekgy")
 value = Vector2(290.466, -186.242)
 weights = {
-NodePath("../../Skeleton2D/root/body_root/body/hip_front/thigh_front/lowerleg_front"): 1.0,
-NodePath("../../Skeleton2D/root/body_root/body/hip_front/thigh_front"): 1.0,
-NodePath("../../Skeleton2D/root/body_root/body/hip_front/thigh_front/lowerleg_front/toe_front"): 1.0
+NodePath("../../pony/root/body_root/body/hip_front/thigh_front/lowerleg_front"): 1.0,
+NodePath("../../pony/root/body_root/body/hip_front/thigh_front"): 1.0,
+NodePath("../../pony/root/body_root/body/hip_front/thigh_front/lowerleg_front/toe_front"): 1.0
 }
 
 [node name="_Node_41486" type="Node" parent="backleg_front_B" node_paths=PackedStringArray("weights")]
 script = ExtResource("3_3ekgy")
 value = Vector2(307.034, -205.041)
 weights = {
-NodePath("../../Skeleton2D/root/body_root/body/hip_front/thigh_front/lowerleg_front"): 1.0,
-NodePath("../../Skeleton2D/root/body_root/body/hip_front/thigh_front"): 1.0
+NodePath("../../pony/root/body_root/body/hip_front/thigh_front/lowerleg_front"): 1.0,
+NodePath("../../pony/root/body_root/body/hip_front/thigh_front"): 1.0
 }
 
 [node name="_Node_41487" type="Node" parent="backleg_front_B" node_paths=PackedStringArray("weights")]
 script = ExtResource("3_3ekgy")
 value = Vector2(343.04, -242.002)
 weights = {
-NodePath("../../Skeleton2D/root/body_root/body/hip_front"): 1.0,
-NodePath("../../Skeleton2D/root/body_root/body/hip_front/thigh_front"): 1.0
+NodePath("../../pony/root/body_root/body/hip_front"): 1.0,
+NodePath("../../pony/root/body_root/body/hip_front/thigh_front"): 1.0
 }
 
 [node name="_Node_41488" type="Node" parent="backleg_front_B" node_paths=PackedStringArray("weights")]
 script = ExtResource("3_3ekgy")
 value = Vector2(347.182, -267.174)
 weights = {
-NodePath("../../Skeleton2D/root/body_root/body/hip_front/thigh_front"): 0.0,
-NodePath("../../Skeleton2D/root/body_root/body/hip_front"): 1.0
+NodePath("../../pony/root/body_root/body/hip_front/thigh_front"): 0.0,
+NodePath("../../pony/root/body_root/body/hip_front"): 1.0
 }
 
 [node name="_Node_41489" type="Node" parent="backleg_front_B" node_paths=PackedStringArray("weights")]
 script = ExtResource("3_3ekgy")
 value = Vector2(351.324, -292.346)
 weights = {
-NodePath("../../Skeleton2D/root/body_root/body/hip_front/thigh_front"): 0.0,
-NodePath("../../Skeleton2D/root/body_root/body/hip_front"): 1.0
+NodePath("../../pony/root/body_root/body/hip_front/thigh_front"): 0.0,
+NodePath("../../pony/root/body_root/body/hip_front"): 1.0
 }
 
 [node name="backleg_front_TopFill" type="Node2D" parent="."]
@@ -2452,7 +2603,7 @@ visible = false
 script = ExtResource("1_oyty2")
 fill = Color(0.972549, 0.772549, 1, 1)
 show_rest = false
-skeleton = NodePath("../Skeleton2D")
+skeleton = NodePath("../pony")
 constraints = [1, 1, 1, 1, 1]
 metadata/_custom_type_script = "uid://bodn4jw8tyemx"
 
@@ -2460,117 +2611,117 @@ metadata/_custom_type_script = "uid://bodn4jw8tyemx"
 script = ExtResource("3_3ekgy")
 value = Vector2(270.436, -356.134)
 weights = {
-NodePath("../../Skeleton2D/root/body_root/body/hip_front"): 0.0,
-NodePath("../../Skeleton2D/root/body_root/body"): 1.0
+NodePath("../../pony/root/body_root/body/hip_front"): 0.0,
+NodePath("../../pony/root/body_root/body"): 1.0
 }
 
 [node name="_Node_41458" type="Node" parent="backleg_front_TopFill" node_paths=PackedStringArray("weights")]
 script = ExtResource("3_3ekgy")
 value = Vector2(257.715, -341.484)
 weights = {
-NodePath("../../Skeleton2D/root/body_root/body/hip_front"): 1.0,
-NodePath("../../Skeleton2D/root/body_root/body"): 0.0
+NodePath("../../pony/root/body_root/body/hip_front"): 1.0,
+NodePath("../../pony/root/body_root/body"): 0.0
 }
 
 [node name="_Node_41459" type="Node" parent="backleg_front_TopFill" node_paths=PackedStringArray("weights")]
 script = ExtResource("3_3ekgy")
 value = Vector2(241.601, -322.925)
 weights = {
-NodePath("../../Skeleton2D/root/body_root/body/hip_front"): 1.0
+NodePath("../../pony/root/body_root/body/hip_front"): 1.0
 }
 
 [node name="_Node_41460" type="Node" parent="backleg_front_TopFill" node_paths=PackedStringArray("weights")]
 script = ExtResource("3_3ekgy")
 value = Vector2(237.065, -315.277)
 weights = {
-NodePath("../../Skeleton2D/root/body_root/body/hip_front"): 1.0
+NodePath("../../pony/root/body_root/body/hip_front"): 1.0
 }
 
 [node name="_Node_41461" type="Node" parent="backleg_front_TopFill" node_paths=PackedStringArray("weights")]
 script = ExtResource("3_3ekgy")
 value = Vector2(236.48, -282.717)
 weights = {
-NodePath("../../Skeleton2D/root/body_root/body/hip_front/thigh_front"): 1.0
+NodePath("../../pony/root/body_root/body/hip_front/thigh_front"): 1.0
 }
 
 [node name="_Node_41462" type="Node" parent="backleg_front_TopFill" node_paths=PackedStringArray("weights")]
 script = ExtResource("3_3ekgy")
 value = Vector2(235.953, -253.404)
 weights = {
-NodePath("../../Skeleton2D/root/body_root/body/hip_front/thigh_front"): 1.0,
-NodePath("../../Skeleton2D/root/body_root/body/hip_front/thigh_front/lowerleg_front"): 0.0
+NodePath("../../pony/root/body_root/body/hip_front/thigh_front"): 1.0,
+NodePath("../../pony/root/body_root/body/hip_front/thigh_front/lowerleg_front"): 0.0
 }
 
 [node name="_Node_41463" type="Node" parent="backleg_front_TopFill" node_paths=PackedStringArray("weights")]
 script = ExtResource("3_3ekgy")
 value = Vector2(249.127, -234.428)
 weights = {
-NodePath("../../Skeleton2D/root/body_root/body/hip_front/thigh_front"): 1.0,
-NodePath("../../Skeleton2D/root/body_root/body/hip_front/thigh_front/lowerleg_front"): 0.0
+NodePath("../../pony/root/body_root/body/hip_front/thigh_front"): 1.0,
+NodePath("../../pony/root/body_root/body/hip_front/thigh_front/lowerleg_front"): 0.0
 }
 
 [node name="_Node_41464" type="Node" parent="backleg_front_TopFill" node_paths=PackedStringArray("weights")]
 script = ExtResource("3_3ekgy")
 value = Vector2(252.189, -200.795)
 weights = {
-NodePath("../../Skeleton2D/root/body_root/body/hip_front/thigh_front/lowerleg_front"): 1.0,
-NodePath("../../Skeleton2D/root/body_root/body/hip_front/thigh_front"): 1.0
+NodePath("../../pony/root/body_root/body/hip_front/thigh_front/lowerleg_front"): 1.0,
+NodePath("../../pony/root/body_root/body/hip_front/thigh_front"): 1.0
 }
 
 [node name="_Node_41465" type="Node" parent="backleg_front_TopFill" node_paths=PackedStringArray("weights")]
 script = ExtResource("3_3ekgy")
 value = Vector2(253.772, -183.403)
 weights = {
-NodePath("../../Skeleton2D/root/body_root/body/hip_front/thigh_front/lowerleg_front"): 1.0,
-NodePath("../../Skeleton2D/root/body_root/body/hip_front/thigh_front"): 1.0
+NodePath("../../pony/root/body_root/body/hip_front/thigh_front/lowerleg_front"): 1.0,
+NodePath("../../pony/root/body_root/body/hip_front/thigh_front"): 1.0
 }
 
 [node name="@Node@115734" type="Node" parent="backleg_front_TopFill" node_paths=PackedStringArray("weights")]
 script = ExtResource("3_3ekgy")
 value = Vector2(274.115, -191.999)
 weights = {
-NodePath("../../Skeleton2D/root/body_root/body/hip_front/thigh_front"): 1.0,
-NodePath("../../Skeleton2D/root/body_root/body/hip_front/thigh_front/lowerleg_front"): 1.0
+NodePath("../../pony/root/body_root/body/hip_front/thigh_front"): 1.0,
+NodePath("../../pony/root/body_root/body/hip_front/thigh_front/lowerleg_front"): 1.0
 }
 
 [node name="@Node@115735" type="Node" parent="backleg_front_TopFill" node_paths=PackedStringArray("weights")]
 script = ExtResource("3_3ekgy")
 value = Vector2(282.024, -193.455)
 weights = {
-NodePath("../../Skeleton2D/root/body_root/body/hip_front/thigh_front"): 1.0,
-NodePath("../../Skeleton2D/root/body_root/body/hip_front/thigh_front/lowerleg_front"): 1.0
+NodePath("../../pony/root/body_root/body/hip_front/thigh_front"): 1.0,
+NodePath("../../pony/root/body_root/body/hip_front/thigh_front/lowerleg_front"): 1.0
 }
 
 [node name="@Node@115736" type="Node" parent="backleg_front_TopFill" node_paths=PackedStringArray("weights")]
 script = ExtResource("3_3ekgy")
 value = Vector2(289.183, -194.772)
 weights = {
-NodePath("../../Skeleton2D/root/body_root/body/hip_front/thigh_front"): 1.0,
-NodePath("../../Skeleton2D/root/body_root/body/hip_front/thigh_front/lowerleg_front"): 1.0
+NodePath("../../pony/root/body_root/body/hip_front/thigh_front"): 1.0,
+NodePath("../../pony/root/body_root/body/hip_front/thigh_front/lowerleg_front"): 1.0
 }
 
 [node name="@Node@115737" type="Node" parent="backleg_front_TopFill" node_paths=PackedStringArray("weights")]
 script = ExtResource("3_3ekgy")
 value = Vector2(319.416, -239.801)
 weights = {
-NodePath("../../Skeleton2D/root/body_root/body/hip_front/thigh_front"): 1.0,
-NodePath("../../Skeleton2D/root/body_root/body/hip_front"): 1.0
+NodePath("../../pony/root/body_root/body/hip_front/thigh_front"): 1.0,
+NodePath("../../pony/root/body_root/body/hip_front"): 1.0
 }
 
 [node name="@Node@115738" type="Node" parent="backleg_front_TopFill" node_paths=PackedStringArray("weights")]
 script = ExtResource("3_3ekgy")
 value = Vector2(339.43, -275.351)
 weights = {
-NodePath("../../Skeleton2D/root/body_root/body/hip_front/thigh_front"): 1.0,
-NodePath("../../Skeleton2D/root/body_root/body/hip_front"): 1.0
+NodePath("../../pony/root/body_root/body/hip_front/thigh_front"): 1.0,
+NodePath("../../pony/root/body_root/body/hip_front"): 1.0
 }
 
 [node name="@Node@115739" type="Node" parent="backleg_front_TopFill" node_paths=PackedStringArray("weights")]
 script = ExtResource("3_3ekgy")
 value = Vector2(359.443, -310.9)
 weights = {
-NodePath("../../Skeleton2D/root/body_root/body/hip_front/thigh_front"): 1.0,
-NodePath("../../Skeleton2D/root/body_root/body/hip_front"): 1.0
+NodePath("../../pony/root/body_root/body/hip_front/thigh_front"): 1.0,
+NodePath("../../pony/root/body_root/body/hip_front"): 1.0
 }
 
 [node name="backleg_front_TopLine" type="Node2D" parent="."]
@@ -2579,7 +2730,7 @@ script = ExtResource("1_oyty2")
 fill = Color(0.972549, 0.772549, 1, 1)
 do_fill = false
 show_rest = false
-skeleton = NodePath("../Skeleton2D")
+skeleton = NodePath("../pony")
 constraints = [1, 1, 1]
 metadata/_custom_type_script = "uid://bodn4jw8tyemx"
 
@@ -2596,65 +2747,65 @@ metadata/_edit_lock_ = true
 script = ExtResource("3_3ekgy")
 value = Vector2(270.436, -356.134)
 weights = {
-NodePath("../../Skeleton2D/root/body_root/body/hip_front"): 0.0,
-NodePath("../../Skeleton2D/root/body_root/body"): 1.0
+NodePath("../../pony/root/body_root/body/hip_front"): 0.0,
+NodePath("../../pony/root/body_root/body"): 1.0
 }
 
 [node name="_Node_41458" type="Node" parent="backleg_front_TopLine" node_paths=PackedStringArray("weights")]
 script = ExtResource("3_3ekgy")
 value = Vector2(257.715, -341.484)
 weights = {
-NodePath("../../Skeleton2D/root/body_root/body/hip_front"): 1.0,
-NodePath("../../Skeleton2D/root/body_root/body"): 0.0
+NodePath("../../pony/root/body_root/body/hip_front"): 1.0,
+NodePath("../../pony/root/body_root/body"): 0.0
 }
 
 [node name="_Node_41459" type="Node" parent="backleg_front_TopLine" node_paths=PackedStringArray("weights")]
 script = ExtResource("3_3ekgy")
 value = Vector2(241.601, -322.925)
 weights = {
-NodePath("../../Skeleton2D/root/body_root/body/hip_front"): 1.0
+NodePath("../../pony/root/body_root/body/hip_front"): 1.0
 }
 
 [node name="_Node_41460" type="Node" parent="backleg_front_TopLine" node_paths=PackedStringArray("weights")]
 script = ExtResource("3_3ekgy")
 value = Vector2(237.065, -315.277)
 weights = {
-NodePath("../../Skeleton2D/root/body_root/body/hip_front"): 1.0
+NodePath("../../pony/root/body_root/body/hip_front"): 1.0
 }
 
 [node name="_Node_41461" type="Node" parent="backleg_front_TopLine" node_paths=PackedStringArray("weights")]
 script = ExtResource("3_3ekgy")
 value = Vector2(236.48, -282.717)
 weights = {
-NodePath("../../Skeleton2D/root/body_root/body/hip_front/thigh_front"): 1.0
+NodePath("../../pony/root/body_root/body/hip_front/thigh_front"): 1.0
 }
 
 [node name="_Node_41462" type="Node" parent="backleg_front_TopLine" node_paths=PackedStringArray("weights")]
 script = ExtResource("3_3ekgy")
 value = Vector2(235.953, -253.404)
 weights = {
-NodePath("../../Skeleton2D/root/body_root/body/hip_front/thigh_front"): 1.0
+NodePath("../../pony/root/body_root/body/hip_front/thigh_front"): 1.0
 }
 
 [node name="@Node@116496" type="Node" parent="backleg_front_TopLine" node_paths=PackedStringArray("weights")]
 script = ExtResource("3_3ekgy")
 value = Vector2(256.075, -219.008)
 weights = {
-NodePath("../../Skeleton2D/root/body_root/body/hip_front/thigh_front"): 1.0
+NodePath("../../pony/root/body_root/body/hip_front/thigh_front"): 1.0
 }
 
 [node name="@Node@116497" type="Node" parent="backleg_front_TopLine" node_paths=PackedStringArray("weights")]
 script = ExtResource("3_3ekgy")
 value = Vector2(250.832, -197.608)
 weights = {
-NodePath("../../Skeleton2D/root/body_root/body/hip_front/thigh_front/lowerleg_front"): 1.0
+NodePath("../../pony/root/body_root/body/hip_front/thigh_front/lowerleg_front"): 1.0
 }
 
 [node name="@Node@116498" type="Node" parent="backleg_front_TopLine" node_paths=PackedStringArray("weights")]
 script = ExtResource("3_3ekgy")
 value = Vector2(247.299, -183.189)
 weights = {
-NodePath("../../Skeleton2D/root/body_root/body/hip_front/thigh_front/lowerleg_front"): 1.0
+NodePath("../../pony/root/body_root/body/hip_front/thigh_front/lowerleg_front"): 1.0
 }
 
 [node name="backleg_whole" type="Node2D" parent="."]
@@ -2662,7 +2813,7 @@ visible = false
 script = ExtResource("1_oyty2")
 fill = Color(0.972549, 0.772549, 1, 1)
 show_rest = false
-skeleton = NodePath("../Skeleton2D")
+skeleton = NodePath("../pony")
 constraints = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
 metadata/_custom_type_script = "uid://bodn4jw8tyemx"
 
@@ -2679,242 +2830,242 @@ metadata/_edit_lock_ = true
 script = ExtResource("3_3ekgy")
 value = Vector2(270.436, -356.134)
 weights = {
-NodePath("../../Skeleton2D/root/body_root/body/hip_front"): 0.0,
-NodePath("../../Skeleton2D/root/body_root/body"): 1.0
+NodePath("../../pony/root/body_root/body/hip_front"): 0.0,
+NodePath("../../pony/root/body_root/body"): 1.0
 }
 
 [node name="_Node_41458" type="Node" parent="backleg_whole" node_paths=PackedStringArray("weights")]
 script = ExtResource("3_3ekgy")
 value = Vector2(257.715, -341.484)
 weights = {
-NodePath("../../Skeleton2D/root/body_root/body/hip_front"): 1.0,
-NodePath("../../Skeleton2D/root/body_root/body"): 0.0
+NodePath("../../pony/root/body_root/body/hip_front"): 1.0,
+NodePath("../../pony/root/body_root/body"): 0.0
 }
 
 [node name="_Node_41459" type="Node" parent="backleg_whole" node_paths=PackedStringArray("weights")]
 script = ExtResource("3_3ekgy")
 value = Vector2(241.601, -322.925)
 weights = {
-NodePath("../../Skeleton2D/root/body_root/body/hip_front"): 1.0
+NodePath("../../pony/root/body_root/body/hip_front"): 1.0
 }
 
 [node name="_Node_41460" type="Node" parent="backleg_whole" node_paths=PackedStringArray("weights")]
 script = ExtResource("3_3ekgy")
 value = Vector2(237.065, -315.277)
 weights = {
-NodePath("../../Skeleton2D/root/body_root/body/hip_front"): 1.0
+NodePath("../../pony/root/body_root/body/hip_front"): 1.0
 }
 
 [node name="_Node_41461" type="Node" parent="backleg_whole" node_paths=PackedStringArray("weights")]
 script = ExtResource("3_3ekgy")
 value = Vector2(236.48, -282.717)
 weights = {
-NodePath("../../Skeleton2D/root/body_root/body/hip_front/thigh_front"): 1.0
+NodePath("../../pony/root/body_root/body/hip_front/thigh_front"): 1.0
 }
 
 [node name="_Node_41462" type="Node" parent="backleg_whole" node_paths=PackedStringArray("weights")]
 script = ExtResource("3_3ekgy")
 value = Vector2(235.953, -253.404)
 weights = {
-NodePath("../../Skeleton2D/root/body_root/body/hip_front/thigh_front"): 1.0
+NodePath("../../pony/root/body_root/body/hip_front/thigh_front"): 1.0
 }
 
 [node name="_Node_41463" type="Node" parent="backleg_whole" node_paths=PackedStringArray("weights")]
 script = ExtResource("3_3ekgy")
 value = Vector2(251.849, -226.438)
 weights = {
-NodePath("../../Skeleton2D/root/body_root/body/hip_front/thigh_front"): 1.0
+NodePath("../../pony/root/body_root/body/hip_front/thigh_front"): 1.0
 }
 
 [node name="_Node_41464" type="Node" parent="backleg_whole" node_paths=PackedStringArray("weights")]
 script = ExtResource("3_3ekgy")
 value = Vector2(256.624, -212.932)
 weights = {
-NodePath("../../Skeleton2D/root/body_root/body/hip_front/thigh_front/lowerleg_front"): 1.0,
-NodePath("../../Skeleton2D/root/body_root/body/hip_front/thigh_front"): 1.0
+NodePath("../../pony/root/body_root/body/hip_front/thigh_front/lowerleg_front"): 1.0,
+NodePath("../../pony/root/body_root/body/hip_front/thigh_front"): 1.0
 }
 
 [node name="_Node_41465" type="Node" parent="backleg_whole" node_paths=PackedStringArray("weights")]
 script = ExtResource("3_3ekgy")
 value = Vector2(259.553, -204.648)
 weights = {
-NodePath("../../Skeleton2D/root/body_root/body/hip_front/thigh_front/lowerleg_front"): 1.0
+NodePath("../../pony/root/body_root/body/hip_front/thigh_front/lowerleg_front"): 1.0
 }
 
 [node name="_Node_41466" type="Node" parent="backleg_whole" node_paths=PackedStringArray("weights")]
 script = ExtResource("3_3ekgy")
 value = Vector2(250.016, -206.44)
 weights = {
-NodePath("../../Skeleton2D/root/body_root/body/hip_front/thigh_front/lowerleg_front"): 1.0
+NodePath("../../pony/root/body_root/body/hip_front/thigh_front/lowerleg_front"): 1.0
 }
 
 [node name="_Node_41467" type="Node" parent="backleg_whole" node_paths=PackedStringArray("weights")]
 script = ExtResource("3_3ekgy")
 value = Vector2(244.804, -206.112)
 weights = {
-NodePath("../../Skeleton2D/root/body_root/body/hip_front/thigh_front/lowerleg_front"): 1.0
+NodePath("../../pony/root/body_root/body/hip_front/thigh_front/lowerleg_front"): 1.0
 }
 
 [node name="_Node_41468" type="Node" parent="backleg_whole" node_paths=PackedStringArray("weights")]
 script = ExtResource("3_3ekgy")
 value = Vector2(234.285, -205.451)
 weights = {
-NodePath("../../Skeleton2D/root/body_root/body/hip_front/thigh_front/lowerleg_front"): 1.0
+NodePath("../../pony/root/body_root/body/hip_front/thigh_front/lowerleg_front"): 1.0
 }
 
 [node name="_Node_41469" type="Node" parent="backleg_whole" node_paths=PackedStringArray("weights")]
 script = ExtResource("3_3ekgy")
 value = Vector2(230.733, -212.896)
 weights = {
-NodePath("../../Skeleton2D/root/body_root/body/hip_front/thigh_front/lowerleg_front"): 1.0,
-NodePath("../../Skeleton2D/root/body_root/body/hip_front/thigh_front/lowerleg_front/toe_front"): 0.0
+NodePath("../../pony/root/body_root/body/hip_front/thigh_front/lowerleg_front"): 1.0,
+NodePath("../../pony/root/body_root/body/hip_front/thigh_front/lowerleg_front/toe_front"): 0.0
 }
 
 [node name="_Node_41470" type="Node" parent="backleg_whole" node_paths=PackedStringArray("weights")]
 script = ExtResource("3_3ekgy")
 value = Vector2(210.883, -168.506)
 weights = {
-NodePath("../../Skeleton2D/root/body_root/body/hip_front/thigh_front/lowerleg_front"): 1.0,
-NodePath("../../Skeleton2D/root/body_root/body/hip_front/thigh_front/lowerleg_front/toe_front"): 0.0
+NodePath("../../pony/root/body_root/body/hip_front/thigh_front/lowerleg_front"): 1.0,
+NodePath("../../pony/root/body_root/body/hip_front/thigh_front/lowerleg_front/toe_front"): 0.0
 }
 
 [node name="_Node_41471" type="Node" parent="backleg_whole" node_paths=PackedStringArray("weights")]
 script = ExtResource("3_3ekgy")
 value = Vector2(189.439, -120.551)
 weights = {
-NodePath("../../Skeleton2D/root/body_root/body/hip_front/thigh_front/lowerleg_front/toe_front"): 1.0,
-NodePath("../../Skeleton2D/root/body_root/body/hip_front/thigh_front/lowerleg_front"): 1.0
+NodePath("../../pony/root/body_root/body/hip_front/thigh_front/lowerleg_front/toe_front"): 1.0,
+NodePath("../../pony/root/body_root/body/hip_front/thigh_front/lowerleg_front"): 1.0
 }
 
 [node name="_Node_41472" type="Node" parent="backleg_whole" node_paths=PackedStringArray("weights")]
 script = ExtResource("3_3ekgy")
 value = Vector2(185.908, -69.7297)
 weights = {
-NodePath("../../Skeleton2D/root/body_root/body/hip_front/thigh_front/lowerleg_front/toe_front"): 1.0
+NodePath("../../pony/root/body_root/body/hip_front/thigh_front/lowerleg_front/toe_front"): 1.0
 }
 
 [node name="_Node_41473" type="Node" parent="backleg_whole" node_paths=PackedStringArray("weights")]
 script = ExtResource("3_3ekgy")
 value = Vector2(187.734, -24.0674)
 weights = {
-NodePath("../../Skeleton2D/root/body_root/body/hip_front/thigh_front/lowerleg_front/toe_front"): 1.0
+NodePath("../../pony/root/body_root/body/hip_front/thigh_front/lowerleg_front/toe_front"): 1.0
 }
 
 [node name="_Node_41474" type="Node" parent="backleg_whole" node_paths=PackedStringArray("weights")]
 script = ExtResource("3_3ekgy")
 value = Vector2(188.371, -8.13572)
 weights = {
-NodePath("../../Skeleton2D/root/body_root/body/hip_front/thigh_front/lowerleg_front/toe_front"): 1.0
+NodePath("../../pony/root/body_root/body/hip_front/thigh_front/lowerleg_front/toe_front"): 1.0
 }
 
 [node name="_Node_41475" type="Node" parent="backleg_whole" node_paths=PackedStringArray("weights")]
 script = ExtResource("3_3ekgy")
 value = Vector2(212.5, -3.44937)
 weights = {
-NodePath("../../Skeleton2D/root/body_root/body/hip_front/thigh_front/lowerleg_front/toe_front"): 1.0
+NodePath("../../pony/root/body_root/body/hip_front/thigh_front/lowerleg_front/toe_front"): 1.0
 }
 
 [node name="_Node_41476" type="Node" parent="backleg_whole" node_paths=PackedStringArray("weights")]
 script = ExtResource("3_3ekgy")
 value = Vector2(234.134, -3.47185)
 weights = {
-NodePath("../../Skeleton2D/root/body_root/body/hip_front/thigh_front/lowerleg_front/toe_front"): 1.0
+NodePath("../../pony/root/body_root/body/hip_front/thigh_front/lowerleg_front/toe_front"): 1.0
 }
 
 [node name="_Node_41477" type="Node" parent="backleg_whole" node_paths=PackedStringArray("weights")]
 script = ExtResource("3_3ekgy")
 value = Vector2(256.135, -3.49471)
 weights = {
-NodePath("../../Skeleton2D/root/body_root/body/hip_front/thigh_front/lowerleg_front/toe_front"): 1.0
+NodePath("../../pony/root/body_root/body/hip_front/thigh_front/lowerleg_front/toe_front"): 1.0
 }
 
 [node name="_Node_41478" type="Node" parent="backleg_whole" node_paths=PackedStringArray("weights")]
 script = ExtResource("3_3ekgy")
 value = Vector2(277.651, -8.02732)
 weights = {
-NodePath("../../Skeleton2D/root/body_root/body/hip_front/thigh_front/lowerleg_front/toe_front"): 1.0
+NodePath("../../pony/root/body_root/body/hip_front/thigh_front/lowerleg_front/toe_front"): 1.0
 }
 
 [node name="_Node_41479" type="Node" parent="backleg_whole" node_paths=PackedStringArray("weights")]
 script = ExtResource("3_3ekgy")
 value = Vector2(283.331, -12.4348)
 weights = {
-NodePath("../../Skeleton2D/root/body_root/body/hip_front/thigh_front/lowerleg_front/toe_front"): 1.0
+NodePath("../../pony/root/body_root/body/hip_front/thigh_front/lowerleg_front/toe_front"): 1.0
 }
 
 [node name="_Node_41480" type="Node" parent="backleg_whole" node_paths=PackedStringArray("weights")]
 script = ExtResource("3_3ekgy")
 value = Vector2(288.707, -16.6064)
 weights = {
-NodePath("../../Skeleton2D/root/body_root/body/hip_front/thigh_front/lowerleg_front/toe_front"): 1.0
+NodePath("../../pony/root/body_root/body/hip_front/thigh_front/lowerleg_front/toe_front"): 1.0
 }
 
 [node name="_Node_41481" type="Node" parent="backleg_whole" node_paths=PackedStringArray("weights")]
 script = ExtResource("3_3ekgy")
 value = Vector2(260.514, -49.2309)
 weights = {
-NodePath("../../Skeleton2D/root/body_root/body/hip_front/thigh_front/lowerleg_front/toe_front"): 1.0
+NodePath("../../pony/root/body_root/body/hip_front/thigh_front/lowerleg_front/toe_front"): 1.0
 }
 
 [node name="_Node_41482" type="Node" parent="backleg_whole" node_paths=PackedStringArray("weights")]
 script = ExtResource("3_3ekgy")
 value = Vector2(257.328, -93.8392)
 weights = {
-NodePath("../../Skeleton2D/root/body_root/body/hip_front/thigh_front/lowerleg_front/toe_front"): 1.0
+NodePath("../../pony/root/body_root/body/hip_front/thigh_front/lowerleg_front/toe_front"): 1.0
 }
 
 [node name="_Node_41483" type="Node" parent="backleg_whole" node_paths=PackedStringArray("weights")]
 script = ExtResource("3_3ekgy")
 value = Vector2(254.142, -138.447)
 weights = {
-NodePath("../../Skeleton2D/root/body_root/body/hip_front/thigh_front/lowerleg_front"): 1.0
+NodePath("../../pony/root/body_root/body/hip_front/thigh_front/lowerleg_front"): 1.0
 }
 
 [node name="_Node_41484" type="Node" parent="backleg_whole" node_paths=PackedStringArray("weights")]
 script = ExtResource("3_3ekgy")
 value = Vector2(273.897, -167.443)
 weights = {
-NodePath("../../Skeleton2D/root/body_root/body/hip_front/thigh_front/lowerleg_front"): 1.0
+NodePath("../../pony/root/body_root/body/hip_front/thigh_front/lowerleg_front"): 1.0
 }
 
 [node name="_Node_41485" type="Node" parent="backleg_whole" node_paths=PackedStringArray("weights")]
 script = ExtResource("3_3ekgy")
 value = Vector2(290.466, -186.242)
 weights = {
-NodePath("../../Skeleton2D/root/body_root/body/hip_front/thigh_front/lowerleg_front"): 1.0,
-NodePath("../../Skeleton2D/root/body_root/body/hip_front/thigh_front"): 1.0
+NodePath("../../pony/root/body_root/body/hip_front/thigh_front/lowerleg_front"): 1.0,
+NodePath("../../pony/root/body_root/body/hip_front/thigh_front"): 1.0
 }
 
 [node name="_Node_41486" type="Node" parent="backleg_whole" node_paths=PackedStringArray("weights")]
 script = ExtResource("3_3ekgy")
 value = Vector2(307.034, -205.041)
 weights = {
-NodePath("../../Skeleton2D/root/body_root/body/hip_front/thigh_front/lowerleg_front"): 1.0,
-NodePath("../../Skeleton2D/root/body_root/body/hip_front/thigh_front"): 1.0
+NodePath("../../pony/root/body_root/body/hip_front/thigh_front/lowerleg_front"): 1.0,
+NodePath("../../pony/root/body_root/body/hip_front/thigh_front"): 1.0
 }
 
 [node name="_Node_41487" type="Node" parent="backleg_whole" node_paths=PackedStringArray("weights")]
 script = ExtResource("3_3ekgy")
 value = Vector2(343.04, -242.002)
 weights = {
-NodePath("../../Skeleton2D/root/body_root/body/hip_front"): 1.0,
-NodePath("../../Skeleton2D/root/body_root/body/hip_front/thigh_front"): 1.0
+NodePath("../../pony/root/body_root/body/hip_front"): 1.0,
+NodePath("../../pony/root/body_root/body/hip_front/thigh_front"): 1.0
 }
 
 [node name="_Node_41488" type="Node" parent="backleg_whole" node_paths=PackedStringArray("weights")]
 script = ExtResource("3_3ekgy")
 value = Vector2(347.182, -267.174)
 weights = {
-NodePath("../../Skeleton2D/root/body_root/body/hip_front/thigh_front"): 0.0,
-NodePath("../../Skeleton2D/root/body_root/body/hip_front"): 1.0
+NodePath("../../pony/root/body_root/body/hip_front/thigh_front"): 0.0,
+NodePath("../../pony/root/body_root/body/hip_front"): 1.0
 }
 
 [node name="_Node_41489" type="Node" parent="backleg_whole" node_paths=PackedStringArray("weights")]
 script = ExtResource("3_3ekgy")
 value = Vector2(351.324, -292.346)
 weights = {
-NodePath("../../Skeleton2D/root/body_root/body/hip_front/thigh_front"): 0.0,
-NodePath("../../Skeleton2D/root/body_root/body/hip_front"): 1.0
+NodePath("../../pony/root/body_root/body/hip_front/thigh_front"): 0.0,
+NodePath("../../pony/root/body_root/body/hip_front"): 1.0
 }
 
 [node name="frontleg_front" type="Node2D" parent="."]
@@ -2922,7 +3073,7 @@ visible = false
 script = ExtResource("1_oyty2")
 fill = Color(0.972549, 0.772549, 1, 1)
 show_rest = false
-skeleton = NodePath("../Skeleton2D")
+skeleton = NodePath("../pony")
 constraints = [1, 1, 1, 1, 1, 1, 1]
 metadata/_custom_type_script = "uid://bodn4jw8tyemx"
 
@@ -2939,14 +3090,14 @@ metadata/_edit_lock_ = true
 script = ExtResource("3_3ekgy")
 value = Vector2(402.508, -268.475)
 weights = {
-NodePath("../../Skeleton2D/root/body_root/body/body2/shoulder_front"): 1.0
+NodePath("../../pony/root/body_root/body/body2/shoulder_front"): 1.0
 }
 
 [node name="@Node@43390" type="Node" parent="frontleg_front" node_paths=PackedStringArray("weights")]
 script = ExtResource("3_3ekgy")
 value = Vector2(393.297, -244.689)
 weights = {
-NodePath("../../Skeleton2D/root/body_root/body/body2/shoulder_front"): 1.0,
+NodePath("../../pony/root/body_root/body/body2/shoulder_front"): 1.0,
 null: 1.0
 }
 
@@ -2954,8 +3105,8 @@ null: 1.0
 script = ExtResource("3_3ekgy")
 value = Vector2(383.762, -220.068)
 weights = {
-NodePath("../../Skeleton2D/root/body_root/body/body2/shoulder_front"): 1.0,
-NodePath("../../Skeleton2D/root/body_root/body/body2/shoulder_front/arm_front"): 0.5,
+NodePath("../../pony/root/body_root/body/body2/shoulder_front"): 1.0,
+NodePath("../../pony/root/body_root/body/body2/shoulder_front/arm_front"): 0.5,
 null: 1.0
 }
 
@@ -2963,10 +3114,10 @@ null: 1.0
 script = ExtResource("3_3ekgy")
 value = Vector2(374.118, -156.796)
 weights = {
-NodePath("../../Skeleton2D/root/body_root/body/body2/shoulder_front/arm_front"): 1.0,
-NodePath("../../Skeleton2D/root/body_root/body/body2/shoulder_front"): 0.0,
-NodePath("../../Skeleton2D/root/body_root/body/body2/shoulder_front/arm_front/forearm_front"): 0.0,
-NodePath("../../Skeleton2D/root/IK_frontleg_front"): 0.0,
+NodePath("../../pony/root/body_root/body/body2/shoulder_front/arm_front"): 1.0,
+NodePath("../../pony/root/body_root/body/body2/shoulder_front"): 0.0,
+NodePath("../../pony/root/body_root/body/body2/shoulder_front/arm_front/forearm_front"): 0.0,
+NodePath("../../pony/root/IK_frontleg_front"): 0.0,
 null: 1.0
 }
 
@@ -2974,10 +3125,10 @@ null: 1.0
 script = ExtResource("3_3ekgy")
 value = Vector2(372.312, -125.943)
 weights = {
-NodePath("../../Skeleton2D/root/body_root/body/body2/shoulder_front/arm_front"): 1.0,
-NodePath("../../Skeleton2D/root/body_root/body/body2/shoulder_front/arm_front/forearm_front"): 0.5,
-NodePath("../../Skeleton2D/root/body_root/body/body2/shoulder_front"): 0.0,
-NodePath("../../Skeleton2D/root/IK_frontleg_front"): 0.0,
+NodePath("../../pony/root/body_root/body/body2/shoulder_front/arm_front"): 1.0,
+NodePath("../../pony/root/body_root/body/body2/shoulder_front/arm_front/forearm_front"): 0.5,
+NodePath("../../pony/root/body_root/body/body2/shoulder_front"): 0.0,
+NodePath("../../pony/root/IK_frontleg_front"): 0.0,
 null: 1.0
 }
 
@@ -2985,9 +3136,9 @@ null: 1.0
 script = ExtResource("3_3ekgy")
 value = Vector2(370.033, -87.0073)
 weights = {
-NodePath("../../Skeleton2D/root/body_root/body/body2/shoulder_front/arm_front"): 1.0,
-NodePath("../../Skeleton2D/root/body_root/body/body2/shoulder_front/arm_front/forearm_front"): 1.0,
-NodePath("../../Skeleton2D/root/body_root/body/body2/shoulder_front"): 0.0,
+NodePath("../../pony/root/body_root/body/body2/shoulder_front/arm_front"): 1.0,
+NodePath("../../pony/root/body_root/body/body2/shoulder_front/arm_front/forearm_front"): 1.0,
+NodePath("../../pony/root/body_root/body/body2/shoulder_front"): 0.0,
 null: 1.0
 }
 
@@ -2995,8 +3146,8 @@ null: 1.0
 script = ExtResource("3_3ekgy")
 value = Vector2(371.989, -36.6867)
 weights = {
-NodePath("../../Skeleton2D/root/body_root/body/body2/shoulder_front/arm_front/forearm_front"): 1.0,
-NodePath("../../Skeleton2D/root/IK_frontleg_front"): 0.0,
+NodePath("../../pony/root/body_root/body/body2/shoulder_front/arm_front/forearm_front"): 1.0,
+NodePath("../../pony/root/IK_frontleg_front"): 0.0,
 null: 1.0
 }
 
@@ -3004,8 +3155,8 @@ null: 1.0
 script = ExtResource("3_3ekgy")
 value = Vector2(380.409, -14.2746)
 weights = {
-NodePath("../../Skeleton2D/root/body_root/body/body2/shoulder_front/arm_front/forearm_front"): 1.0,
-NodePath("../../Skeleton2D/root/IK_frontleg_front"): 0.0,
+NodePath("../../pony/root/body_root/body/body2/shoulder_front/arm_front/forearm_front"): 1.0,
+NodePath("../../pony/root/IK_frontleg_front"): 0.0,
 null: 1.0
 }
 
@@ -3013,7 +3164,7 @@ null: 1.0
 script = ExtResource("3_3ekgy")
 value = Vector2(382.427, -8.90301)
 weights = {
-NodePath("../../Skeleton2D/root/body_root/body/body2/shoulder_front/arm_front/forearm_front"): 1.0,
+NodePath("../../pony/root/body_root/body/body2/shoulder_front/arm_front/forearm_front"): 1.0,
 null: 1.0
 }
 
@@ -3021,7 +3172,7 @@ null: 1.0
 script = ExtResource("3_3ekgy")
 value = Vector2(399, -3.50755)
 weights = {
-NodePath("../../Skeleton2D/root/body_root/body/body2/shoulder_front/arm_front/forearm_front"): 1.0,
+NodePath("../../pony/root/body_root/body/body2/shoulder_front/arm_front/forearm_front"): 1.0,
 null: 1.0
 }
 
@@ -3029,7 +3180,7 @@ null: 1.0
 script = ExtResource("3_3ekgy")
 value = Vector2(424.634, -3.27817)
 weights = {
-NodePath("../../Skeleton2D/root/body_root/body/body2/shoulder_front/arm_front/forearm_front"): 1.0,
+NodePath("../../pony/root/body_root/body/body2/shoulder_front/arm_front/forearm_front"): 1.0,
 null: 1.0
 }
 
@@ -3037,7 +3188,7 @@ null: 1.0
 script = ExtResource("3_3ekgy")
 value = Vector2(455.559, -3.00144)
 weights = {
-NodePath("../../Skeleton2D/root/body_root/body/body2/shoulder_front/arm_front/forearm_front"): 1.0,
+NodePath("../../pony/root/body_root/body/body2/shoulder_front/arm_front/forearm_front"): 1.0,
 null: 1.0
 }
 
@@ -3045,7 +3196,7 @@ null: 1.0
 script = ExtResource("3_3ekgy")
 value = Vector2(477.553, -8.9019)
 weights = {
-NodePath("../../Skeleton2D/root/body_root/body/body2/shoulder_front/arm_front/forearm_front"): 1.0,
+NodePath("../../pony/root/body_root/body/body2/shoulder_front/arm_front/forearm_front"): 1.0,
 null: 1.0
 }
 
@@ -3053,7 +3204,7 @@ null: 1.0
 script = ExtResource("3_3ekgy")
 value = Vector2(474.548, -13.4202)
 weights = {
-NodePath("../../Skeleton2D/root/body_root/body/body2/shoulder_front/arm_front/forearm_front"): 1.0,
+NodePath("../../pony/root/body_root/body/body2/shoulder_front/arm_front/forearm_front"): 1.0,
 null: 1.0
 }
 
@@ -3061,7 +3212,7 @@ null: 1.0
 script = ExtResource("3_3ekgy")
 value = Vector2(464.338, -28.7719)
 weights = {
-NodePath("../../Skeleton2D/root/body_root/body/body2/shoulder_front/arm_front/forearm_front"): 1.0,
+NodePath("../../pony/root/body_root/body/body2/shoulder_front/arm_front/forearm_front"): 1.0,
 null: 1.0
 }
 
@@ -3069,8 +3220,8 @@ null: 1.0
 script = ExtResource("3_3ekgy")
 value = Vector2(445.902, -82.4289)
 weights = {
-NodePath("../../Skeleton2D/root/body_root/body/body2/shoulder_front/arm_front"): 1.0,
-NodePath("../../Skeleton2D/root/body_root/body/body2/shoulder_front/arm_front/forearm_front"): 1.0,
+NodePath("../../pony/root/body_root/body/body2/shoulder_front/arm_front"): 1.0,
+NodePath("../../pony/root/body_root/body/body2/shoulder_front/arm_front/forearm_front"): 1.0,
 null: 1.0
 }
 
@@ -3078,9 +3229,9 @@ null: 1.0
 script = ExtResource("3_3ekgy")
 value = Vector2(440.567, -116.301)
 weights = {
-NodePath("../../Skeleton2D/root/body_root/body/body2/shoulder_front/arm_front"): 1.0,
-NodePath("../../Skeleton2D/root/body_root/body/body2/shoulder_front/arm_front/forearm_front"): 0.5,
-NodePath("../../Skeleton2D/root/body_root/body/body2/shoulder_front"): 0.0,
+NodePath("../../pony/root/body_root/body/body2/shoulder_front/arm_front"): 1.0,
+NodePath("../../pony/root/body_root/body/body2/shoulder_front/arm_front/forearm_front"): 0.5,
+NodePath("../../pony/root/body_root/body/body2/shoulder_front"): 0.0,
 null: 1.0
 }
 
@@ -3088,8 +3239,8 @@ null: 1.0
 script = ExtResource("3_3ekgy")
 value = Vector2(435.452, -148.775)
 weights = {
-NodePath("../../Skeleton2D/root/body_root/body/body2/shoulder_front/arm_front"): 1.0,
-NodePath("../../Skeleton2D/root/body_root/body/body2/shoulder_front"): 0.0,
+NodePath("../../pony/root/body_root/body/body2/shoulder_front/arm_front"): 1.0,
+NodePath("../../pony/root/body_root/body/body2/shoulder_front"): 0.0,
 null: 1.0
 }
 
@@ -3097,8 +3248,8 @@ null: 1.0
 script = ExtResource("3_3ekgy")
 value = Vector2(434.537, -213.957)
 weights = {
-NodePath("../../Skeleton2D/root/body_root/body/body2/shoulder_front"): 1.0,
-NodePath("../../Skeleton2D/root/body_root/body/body2/shoulder_front/arm_front"): 0.5,
+NodePath("../../pony/root/body_root/body/body2/shoulder_front"): 1.0,
+NodePath("../../pony/root/body_root/body/body2/shoulder_front/arm_front"): 0.5,
 null: 1.0
 }
 
@@ -3106,8 +3257,8 @@ null: 1.0
 script = ExtResource("3_3ekgy")
 value = Vector2(440.035, -253.966)
 weights = {
-NodePath("../../Skeleton2D/root/body_root/body/body2/shoulder_front"): 1.0,
-NodePath("../../Skeleton2D/root/IK_frontleg_front"): 0.0,
+NodePath("../../pony/root/body_root/body/body2/shoulder_front"): 1.0,
+NodePath("../../pony/root/IK_frontleg_front"): 0.0,
 null: 1.0
 }
 
@@ -3115,14 +3266,14 @@ null: 1.0
 script = ExtResource("3_3ekgy")
 value = Vector2(445.497, -293.707)
 weights = {
-NodePath("../../Skeleton2D/root/body_root/body/body2/shoulder_front"): 1.0
+NodePath("../../pony/root/body_root/body/body2/shoulder_front"): 1.0
 }
 
 [node name="ear" type="Node2D" parent="."]
 script = ExtResource("1_oyty2")
 fill = Color(0.972549, 0.772549, 1, 1)
 show_rest = false
-skeleton = NodePath("../Skeleton2D")
+skeleton = NodePath("../pony")
 constraints = [1, 1, 1, 1, 1]
 metadata/_custom_type_script = "uid://bodn4jw8tyemx"
 
@@ -3139,120 +3290,120 @@ metadata/_edit_lock_ = true
 script = ExtResource("3_3ekgy")
 value = Vector2(420.549, -437.882)
 weights = {
-NodePath("../../Skeleton2D/root/body_root/body/body2/neck1/neck2/head"): 1.0
+NodePath("../../pony/root/body_root/body/body2/neck1/neck2/head"): 1.0
 }
 
 [node name="@Node@57927" type="Node" parent="ear" node_paths=PackedStringArray("weights")]
 script = ExtResource("3_3ekgy")
 value = Vector2(407.171, -456.936)
 weights = {
-NodePath("../../Skeleton2D/root/body_root/body/body2/neck1/neck2/head"): 1.0,
-NodePath("../../Skeleton2D/root/body_root/body/body2/neck1/neck2/head/ear"): 0.0
+NodePath("../../pony/root/body_root/body/body2/neck1/neck2/head"): 1.0,
+NodePath("../../pony/root/body_root/body/body2/neck1/neck2/head/ear"): 0.0
 }
 
 [node name="@Node@57928" type="Node" parent="ear" node_paths=PackedStringArray("weights")]
 script = ExtResource("3_3ekgy")
 value = Vector2(393.793, -475.989)
 weights = {
-NodePath("../../Skeleton2D/root/body_root/body/body2/neck1/neck2/head/ear"): 1.0
+NodePath("../../pony/root/body_root/body/body2/neck1/neck2/head/ear"): 1.0
 }
 
 [node name="@Node@57929" type="Node" parent="ear" node_paths=PackedStringArray("weights")]
 script = ExtResource("3_3ekgy")
 value = Vector2(379.951, -508.758)
 weights = {
-NodePath("../../Skeleton2D/root/body_root/body/body2/neck1/neck2/head/ear"): 1.0
+NodePath("../../pony/root/body_root/body/body2/neck1/neck2/head/ear"): 1.0
 }
 
 [node name="@Node@57930" type="Node" parent="ear" node_paths=PackedStringArray("weights")]
 script = ExtResource("3_3ekgy")
 value = Vector2(380.252, -533.498)
 weights = {
-NodePath("../../Skeleton2D/root/body_root/body/body2/neck1/neck2/head/ear"): 1.0
+NodePath("../../pony/root/body_root/body/body2/neck1/neck2/head/ear"): 1.0
 }
 
 [node name="@Node@57931" type="Node" parent="ear" node_paths=PackedStringArray("weights")]
 script = ExtResource("3_3ekgy")
 value = Vector2(380.74, -573.625)
 weights = {
-NodePath("../../Skeleton2D/root/body_root/body/body2/neck1/neck2/head/ear"): 1.0
+NodePath("../../pony/root/body_root/body/body2/neck1/neck2/head/ear"): 1.0
 }
 
 [node name="@Node@57932" type="Node" parent="ear" node_paths=PackedStringArray("weights")]
 script = ExtResource("3_3ekgy")
 value = Vector2(411.812, -605.565)
 weights = {
-NodePath("../../Skeleton2D/root/body_root/body/body2/neck1/neck2/head/ear"): 1.0
+NodePath("../../pony/root/body_root/body/body2/neck1/neck2/head/ear"): 1.0
 }
 
 [node name="@Node@57933" type="Node" parent="ear" node_paths=PackedStringArray("weights")]
 script = ExtResource("3_3ekgy")
 value = Vector2(419.722, -610.538)
 weights = {
-NodePath("../../Skeleton2D/root/body_root/body/body2/neck1/neck2/head/ear"): 1.0,
-NodePath("../../Skeleton2D/root/body_root/body/body2/neck1/neck2/head"): 0.0
+NodePath("../../pony/root/body_root/body/body2/neck1/neck2/head/ear"): 1.0,
+NodePath("../../pony/root/body_root/body/body2/neck1/neck2/head"): 0.0
 }
 
 [node name="@Node@57934" type="Node" parent="ear" node_paths=PackedStringArray("weights")]
 script = ExtResource("3_3ekgy")
 value = Vector2(425.072, -613.902)
 weights = {
-NodePath("../../Skeleton2D/root/body_root/body/body2/neck1/neck2/head/ear"): 1.0,
-NodePath("../../Skeleton2D/root/body_root/body/body2/neck1/neck2/head"): 0.0
+NodePath("../../pony/root/body_root/body/body2/neck1/neck2/head/ear"): 1.0,
+NodePath("../../pony/root/body_root/body/body2/neck1/neck2/head"): 0.0
 }
 
 [node name="@Node@57935" type="Node" parent="ear" node_paths=PackedStringArray("weights")]
 script = ExtResource("3_3ekgy")
 value = Vector2(428.155, -612.851)
 weights = {
-NodePath("../../Skeleton2D/root/body_root/body/body2/neck1/neck2/head/ear"): 1.0,
-NodePath("../../Skeleton2D/root/body_root/body/body2/neck1/neck2/head"): 0.0
+NodePath("../../pony/root/body_root/body/body2/neck1/neck2/head/ear"): 1.0,
+NodePath("../../pony/root/body_root/body/body2/neck1/neck2/head"): 0.0
 }
 
 [node name="@Node@57936" type="Node" parent="ear" node_paths=PackedStringArray("weights")]
 script = ExtResource("3_3ekgy")
 value = Vector2(431.529, -608.249)
 weights = {
-NodePath("../../Skeleton2D/root/body_root/body/body2/neck1/neck2/head/ear"): 1.0,
-NodePath("../../Skeleton2D/root/body_root/body/body2/neck1/neck2/head"): 0.0
+NodePath("../../pony/root/body_root/body/body2/neck1/neck2/head/ear"): 1.0,
+NodePath("../../pony/root/body_root/body/body2/neck1/neck2/head"): 0.0
 }
 
 [node name="@Node@57937" type="Node" parent="ear" node_paths=PackedStringArray("weights")]
 script = ExtResource("3_3ekgy")
 value = Vector2(446.523, -587.799)
 weights = {
-NodePath("../../Skeleton2D/root/body_root/body/body2/neck1/neck2/head/ear"): 1.0
+NodePath("../../pony/root/body_root/body/body2/neck1/neck2/head/ear"): 1.0
 }
 
 [node name="@Node@57938" type="Node" parent="ear" node_paths=PackedStringArray("weights")]
 script = ExtResource("3_3ekgy")
 value = Vector2(451.53, -566.262)
 weights = {
-NodePath("../../Skeleton2D/root/body_root/body/body2/neck1/neck2/head/ear"): 1.0,
-NodePath("../../Skeleton2D/root/body_root/body/body2/neck1/neck2/head"): 1.0
+NodePath("../../pony/root/body_root/body/body2/neck1/neck2/head/ear"): 1.0,
+NodePath("../../pony/root/body_root/body/body2/neck1/neck2/head"): 1.0
 }
 
 [node name="@Node@57939" type="Node" parent="ear" node_paths=PackedStringArray("weights")]
 script = ExtResource("3_3ekgy")
 value = Vector2(449.57, -536.587)
 weights = {
-NodePath("../../Skeleton2D/root/body_root/body/body2/neck1/neck2/head"): 1.0,
-NodePath("../../Skeleton2D/root/body_root/body/body2/neck1/neck2/head/ear"): 0.0
+NodePath("../../pony/root/body_root/body/body2/neck1/neck2/head"): 1.0,
+NodePath("../../pony/root/body_root/body/body2/neck1/neck2/head/ear"): 0.0
 }
 
 [node name="@Node@57940" type="Node" parent="ear" node_paths=PackedStringArray("weights")]
 script = ExtResource("3_3ekgy")
 value = Vector2(448.409, -519.001)
 weights = {
-NodePath("../../Skeleton2D/root/body_root/body/body2/neck1/neck2/head"): 1.0,
-NodePath("../../Skeleton2D/root/body_root/body/body2/neck1/neck2/head/ear"): 0.0
+NodePath("../../pony/root/body_root/body/body2/neck1/neck2/head"): 1.0,
+NodePath("../../pony/root/body_root/body/body2/neck1/neck2/head/ear"): 0.0
 }
 
 [node name="ear_line" type="Node2D" parent="ear"]
 script = ExtResource("1_oyty2")
 do_fill = false
 show_rest = false
-skeleton = NodePath("../../Skeleton2D")
+skeleton = NodePath("../../pony")
 constraints = [1, 1]
 metadata/_custom_type_script = "uid://bodn4jw8tyemx"
 
@@ -3260,44 +3411,44 @@ metadata/_custom_type_script = "uid://bodn4jw8tyemx"
 script = ExtResource("3_3ekgy")
 value = Vector2(416.609, -584.383)
 weights = {
-NodePath("../../../Skeleton2D/root/body_root/body/body2/neck1/neck2/head/ear"): 1.0
+NodePath("../../../pony/root/body_root/body/body2/neck1/neck2/head/ear"): 1.0
 }
 
 [node name="@Node@64618" type="Node" parent="ear/ear_line" node_paths=PackedStringArray("weights")]
 script = ExtResource("3_3ekgy")
 value = Vector2(409.381, -570.57)
 weights = {
-NodePath("../../../Skeleton2D/root/body_root/body/body2/neck1/neck2/head/ear"): 1.0
+NodePath("../../../pony/root/body_root/body/body2/neck1/neck2/head/ear"): 1.0
 }
 
 [node name="@Node@64619" type="Node" parent="ear/ear_line" node_paths=PackedStringArray("weights")]
 script = ExtResource("3_3ekgy")
 value = Vector2(399.481, -551.65)
 weights = {
-NodePath("../../../Skeleton2D/root/body_root/body/body2/neck1/neck2/head/ear"): 1.0
+NodePath("../../../pony/root/body_root/body/body2/neck1/neck2/head/ear"): 1.0
 }
 
 [node name="@Node@64620" type="Node" parent="ear/ear_line" node_paths=PackedStringArray("weights")]
 script = ExtResource("3_3ekgy")
 value = Vector2(405.098, -522.132)
 weights = {
-NodePath("../../../Skeleton2D/root/body_root/body/body2/neck1/neck2/head/ear"): 1.0
+NodePath("../../../pony/root/body_root/body/body2/neck1/neck2/head/ear"): 1.0
 }
 
 [node name="@Node@64621" type="Node" parent="ear/ear_line" node_paths=PackedStringArray("weights")]
 script = ExtResource("3_3ekgy")
 value = Vector2(418.734, -506.285)
 weights = {
-NodePath("../../../Skeleton2D/root/body_root/body/body2/neck1/neck2/head/ear"): 1.0,
-NodePath("../../../Skeleton2D/root/body_root/body/body2/neck1/neck2/head"): 1.0
+NodePath("../../../pony/root/body_root/body/body2/neck1/neck2/head/ear"): 1.0,
+NodePath("../../../pony/root/body_root/body/body2/neck1/neck2/head"): 1.0
 }
 
 [node name="@Node@64622" type="Node" parent="ear/ear_line" node_paths=PackedStringArray("weights")]
 script = ExtResource("3_3ekgy")
 value = Vector2(429.757, -493.475)
 weights = {
-NodePath("../../../Skeleton2D/root/body_root/body/body2/neck1/neck2/head/ear"): 1.0,
-NodePath("../../../Skeleton2D/root/body_root/body/body2/neck1/neck2/head"): 1.0
+NodePath("../../../pony/root/body_root/body/body2/neck1/neck2/head/ear"): 1.0,
+NodePath("../../../pony/root/body_root/body/body2/neck1/neck2/head"): 1.0
 }
 
 [node name="VecStroke" type="Line2D" parent="ear/ear_line"]
@@ -3383,62 +3534,62 @@ script = ExtResource("2_27k37")
 metadata/_custom_type_script = "uid://csgt88iv3c4ke"
 metadata/_edit_lock_ = true
 
-[node name="Skeleton2D" type="Skeleton2D" parent="."]
+[node name="pony" type="Skeleton2D" parent="."]
 modification_stack = SubResource("SkeletonModificationStack2D_27k37")
 
-[node name="root" type="Bone2D" parent="Skeleton2D"]
+[node name="root" type="Bone2D" parent="pony"]
 position = Vector2(174, 0)
 rest = Transform2D(1, 0, 0, 1, 174, 0)
 editor_settings/show_bone_gizmo = false
 
-[node name="body_root" type="Bone2D" parent="Skeleton2D/root"]
+[node name="body_root" type="Bone2D" parent="pony/root"]
 position = Vector2(124, -340)
 rest = Transform2D(1, 0, 0, 1, 124, -340)
 
-[node name="body" type="Bone2D" parent="Skeleton2D/root/body_root"]
+[node name="body" type="Bone2D" parent="pony/root/body_root"]
 rest = Transform2D(1, 0, 0, 1, 0, 0)
 
-[node name="body2" type="Bone2D" parent="Skeleton2D/root/body_root/body"]
+[node name="body2" type="Bone2D" parent="pony/root/body_root/body"]
 position = Vector2(46, 25)
 rest = Transform2D(1, 0, 0, 1, 46, 25)
 
-[node name="neck1" type="Bone2D" parent="Skeleton2D/root/body_root/body/body2"]
+[node name="neck1" type="Bone2D" parent="pony/root/body_root/body/body2"]
 position = Vector2(61, 23)
 rest = Transform2D(1, 0, 0, 1, 61, 23)
 
-[node name="neck2" type="Bone2D" parent="Skeleton2D/root/body_root/body/body2/neck1"]
+[node name="neck2" type="Bone2D" parent="pony/root/body_root/body/body2/neck1"]
 position = Vector2(24, -56)
 rest = Transform2D(1, 0, 0, 1, 24, -56)
 
-[node name="head" type="Bone2D" parent="Skeleton2D/root/body_root/body/body2/neck1/neck2"]
+[node name="head" type="Bone2D" parent="pony/root/body_root/body/body2/neck1/neck2"]
 position = Vector2(8, -101)
 rest = Transform2D(1, 0, 0, 1, 8, -101)
 auto_calculate_length_and_angle = false
 length = 118.667
 bone_angle = 0.0
 
-[node name="ear" type="Bone2D" parent="Skeleton2D/root/body_root/body/body2/neck1/neck2/head"]
+[node name="ear" type="Bone2D" parent="pony/root/body_root/body/body2/neck1/neck2/head"]
 position = Vector2(-17, -51)
 rest = Transform2D(1, 0, 0, 1, -17, -51)
 auto_calculate_length_and_angle = false
 length = 63.667
 bone_angle = -90.323
 
-[node name="jaw" type="Bone2D" parent="Skeleton2D/root/body_root/body/body2/neck1/neck2/head"]
+[node name="jaw" type="Bone2D" parent="pony/root/body_root/body/body2/neck1/neck2/head"]
 position = Vector2(35, 70)
 rest = Transform2D(1, 0, 0, 1, 35, 70)
 auto_calculate_length_and_angle = false
 length = 118.667
 bone_angle = 0.0
 
-[node name="horn" type="Node2D" parent="Skeleton2D/root/body_root/body/body2/neck1/neck2/head"]
+[node name="horn" type="Node2D" parent="pony/root/body_root/body/body2/neck1/neck2/head"]
 position = Vector2(-437, 449)
 script = ExtResource("1_oyty2")
 fill = Color(0.972549, 0.772549, 1, 1)
 constraints = [1, 1, 1, 1, 1]
 metadata/_custom_type_script = "uid://bodn4jw8tyemx"
 
-[node name="VecStroke" type="Line2D" parent="Skeleton2D/root/body_root/body/body2/neck1/neck2/head/horn"]
+[node name="VecStroke" type="Line2D" parent="pony/root/body_root/body/body2/neck1/neck2/head/horn"]
 points = PackedVector2Array(558.546, -564.277, 561.844, -568.517, 565.813, -573.119, 570.285, -577.957, 575.094, -582.905, 580.073, -587.836, 585.055, -592.625, 589.873, -597.145, 594.36, -601.271, 598.351, -604.875, 601.677, -607.832, 604.252, -610.028, 607.21, -612.389, 610.443, -614.78, 613.842, -617.067, 617.297, -619.115, 620.7, -620.79, 623.942, -621.957, 626.914, -622.483, 629.506, -622.232, 631.611, -621.07, 633.036, -619.142, 633.727, -616.742, 633.781, -613.963, 633.297, -610.895, 632.37, -607.63, 631.099, -604.26, 629.58, -600.876, 627.912, -597.57, 626.19, -594.432, 624.514, -591.555, 622.415, -588.182, 619.47, -583.672, 615.843, -578.296, 611.697, -572.321, 607.194, -566.016, 602.499, -559.648, 597.774, -553.487, 593.183, -547.801, 588.89, -542.859, 585.056, -538.928)
 width = 4.3
 default_color = Color(0.741176, 0.541176, 0.843137, 1)
@@ -3446,97 +3597,97 @@ script = ExtResource("2_27k37")
 metadata/_custom_type_script = "uid://csgt88iv3c4ke"
 metadata/_edit_lock_ = true
 
-[node name="@Node@39491" type="Node" parent="Skeleton2D/root/body_root/body/body2/neck1/neck2/head/horn"]
+[node name="@Node@39491" type="Node" parent="pony/root/body_root/body/body2/neck1/neck2/head/horn"]
 script = ExtResource("3_3ekgy")
 value = Vector2(551.879, -555.066)
 
-[node name="@Node@39492" type="Node" parent="Skeleton2D/root/body_root/body/body2/neck1/neck2/head/horn"]
+[node name="@Node@39492" type="Node" parent="pony/root/body_root/body/body2/neck1/neck2/head/horn"]
 script = ExtResource("3_3ekgy")
 value = Vector2(558.546, -564.277)
 
-[node name="@Node@39493" type="Node" parent="Skeleton2D/root/body_root/body/body2/neck1/neck2/head/horn"]
+[node name="@Node@39493" type="Node" parent="pony/root/body_root/body/body2/neck1/neck2/head/horn"]
 script = ExtResource("3_3ekgy")
 value = Vector2(568.239, -577.667)
 
-[node name="@Node@39494" type="Node" parent="Skeleton2D/root/body_root/body/body2/neck1/neck2/head/horn"]
+[node name="@Node@39494" type="Node" parent="pony/root/body_root/body/body2/neck1/neck2/head/horn"]
 script = ExtResource("3_3ekgy")
 value = Vector2(591.881, -599.194)
 
-[node name="@Node@39495" type="Node" parent="Skeleton2D/root/body_root/body/body2/neck1/neck2/head/horn"]
+[node name="@Node@39495" type="Node" parent="pony/root/body_root/body/body2/neck1/neck2/head/horn"]
 script = ExtResource("3_3ekgy")
 value = Vector2(601.677, -607.832)
 
-[node name="@Node@39496" type="Node" parent="Skeleton2D/root/body_root/body/body2/neck1/neck2/head/horn"]
+[node name="@Node@39496" type="Node" parent="pony/root/body_root/body/body2/neck1/neck2/head/horn"]
 script = ExtResource("3_3ekgy")
 value = Vector2(609.499, -614.73)
 
-[node name="@Node@39497" type="Node" parent="Skeleton2D/root/body_root/body/body2/neck1/neck2/head/horn"]
+[node name="@Node@39497" type="Node" parent="pony/root/body_root/body/body2/neck1/neck2/head/horn"]
 script = ExtResource("3_3ekgy")
 value = Vector2(625.53, -626.61)
 
-[node name="@Node@39498" type="Node" parent="Skeleton2D/root/body_root/body/body2/neck1/neck2/head/horn"]
+[node name="@Node@39498" type="Node" parent="pony/root/body_root/body/body2/neck1/neck2/head/horn"]
 script = ExtResource("3_3ekgy")
 value = Vector2(631.611, -621.07)
 
-[node name="@Node@39499" type="Node" parent="Skeleton2D/root/body_root/body/body2/neck1/neck2/head/horn"]
+[node name="@Node@39499" type="Node" parent="pony/root/body_root/body/body2/neck1/neck2/head/horn"]
 script = ExtResource("3_3ekgy")
 value = Vector2(637.692, -615.53)
 
-[node name="@Node@39500" type="Node" parent="Skeleton2D/root/body_root/body/body2/neck1/neck2/head/horn"]
+[node name="@Node@39500" type="Node" parent="pony/root/body_root/body/body2/neck1/neck2/head/horn"]
 script = ExtResource("3_3ekgy")
 value = Vector2(629.92, -600.609)
 
-[node name="@Node@39501" type="Node" parent="Skeleton2D/root/body_root/body/body2/neck1/neck2/head/horn"]
+[node name="@Node@39501" type="Node" parent="pony/root/body_root/body/body2/neck1/neck2/head/horn"]
 script = ExtResource("3_3ekgy")
 value = Vector2(624.514, -591.555)
 
-[node name="@Node@39502" type="Node" parent="Skeleton2D/root/body_root/body/body2/neck1/neck2/head/horn"]
+[node name="@Node@39502" type="Node" parent="pony/root/body_root/body/body2/neck1/neck2/head/horn"]
 script = ExtResource("3_3ekgy")
 value = Vector2(619.109, -582.501)
 
-[node name="@Node@39503" type="Node" parent="Skeleton2D/root/body_root/body/body2/neck1/neck2/head/horn"]
+[node name="@Node@39503" type="Node" parent="pony/root/body_root/body/body2/neck1/neck2/head/horn"]
 script = ExtResource("3_3ekgy")
 value = Vector2(596.886, -550.046)
 
-[node name="@Node@39504" type="Node" parent="Skeleton2D/root/body_root/body/body2/neck1/neck2/head/horn"]
+[node name="@Node@39504" type="Node" parent="pony/root/body_root/body/body2/neck1/neck2/head/horn"]
 script = ExtResource("3_3ekgy")
 value = Vector2(585.056, -538.928)
 
-[node name="@Node@39505" type="Node" parent="Skeleton2D/root/body_root/body/body2/neck1/neck2/head/horn"]
+[node name="@Node@39505" type="Node" parent="pony/root/body_root/body/body2/neck1/neck2/head/horn"]
 script = ExtResource("3_3ekgy")
 value = Vector2(576.143, -530.551)
 
-[node name="detail" type="Node2D" parent="Skeleton2D/root/body_root/body/body2/neck1/neck2/head/horn"]
+[node name="detail" type="Node2D" parent="pony/root/body_root/body/body2/neck1/neck2/head/horn"]
 script = ExtResource("1_oyty2")
 do_fill = false
 constraints = [1, 1]
 metadata/_custom_type_script = "uid://bodn4jw8tyemx"
 
-[node name="_Node_64617" type="Node" parent="Skeleton2D/root/body_root/body/body2/neck1/neck2/head/horn/detail"]
+[node name="_Node_64617" type="Node" parent="pony/root/body_root/body/body2/neck1/neck2/head/horn/detail"]
 script = ExtResource("3_3ekgy")
 value = Vector2(577.72, -595.564)
 
-[node name="_Node_64618" type="Node" parent="Skeleton2D/root/body_root/body/body2/neck1/neck2/head/horn/detail"]
+[node name="_Node_64618" type="Node" parent="pony/root/body_root/body/body2/neck1/neck2/head/horn/detail"]
 script = ExtResource("3_3ekgy")
 value = Vector2(574.32, -581.599)
 
-[node name="_Node_64619" type="Node" parent="Skeleton2D/root/body_root/body/body2/neck1/neck2/head/horn/detail"]
+[node name="_Node_64619" type="Node" parent="pony/root/body_root/body/body2/neck1/neck2/head/horn/detail"]
 script = ExtResource("3_3ekgy")
 value = Vector2(569.42, -561.472)
 
-[node name="_Node_64620" type="Node" parent="Skeleton2D/root/body_root/body/body2/neck1/neck2/head/horn/detail"]
+[node name="_Node_64620" type="Node" parent="pony/root/body_root/body/body2/neck1/neck2/head/horn/detail"]
 script = ExtResource("3_3ekgy")
 value = Vector2(574.832, -551.036)
 
-[node name="_Node_64621" type="Node" parent="Skeleton2D/root/body_root/body/body2/neck1/neck2/head/horn/detail"]
+[node name="_Node_64621" type="Node" parent="pony/root/body_root/body/body2/neck1/neck2/head/horn/detail"]
 script = ExtResource("3_3ekgy")
 value = Vector2(592.216, -545.228)
 
-[node name="_Node_64622" type="Node" parent="Skeleton2D/root/body_root/body/body2/neck1/neck2/head/horn/detail"]
+[node name="_Node_64622" type="Node" parent="pony/root/body_root/body/body2/neck1/neck2/head/horn/detail"]
 script = ExtResource("3_3ekgy")
 value = Vector2(606.993, -540.291)
 
-[node name="VecStroke" type="Line2D" parent="Skeleton2D/root/body_root/body/body2/neck1/neck2/head/horn/detail"]
+[node name="VecStroke" type="Line2D" parent="pony/root/body_root/body/body2/neck1/neck2/head/horn/detail"]
 points = PackedVector2Array(574.32, -581.599, 573.161, -575.847, 572.631, -570.645, 572.739, -565.965, 573.496, -561.774, 574.911, -558.044, 576.995, -554.743, 579.758, -551.841, 583.209, -549.309, 587.358, -547.114, 592.216, -545.228)
 width = 2.142
 width_curve = SubResource("Curve_oyty2")
@@ -3544,37 +3695,37 @@ default_color = Color(0.741176, 0.541176, 0.843137, 1)
 script = ExtResource("2_27k37")
 metadata/_custom_type_script = "uid://csgt88iv3c4ke"
 
-[node name="detail2" type="Node2D" parent="Skeleton2D/root/body_root/body/body2/neck1/neck2/head/horn"]
+[node name="detail2" type="Node2D" parent="pony/root/body_root/body/body2/neck1/neck2/head/horn"]
 script = ExtResource("1_oyty2")
 do_fill = false
 constraints = [1, 1]
 metadata/_custom_type_script = "uid://bodn4jw8tyemx"
 
-[node name="_Node_64617" type="Node" parent="Skeleton2D/root/body_root/body/body2/neck1/neck2/head/horn/detail2"]
+[node name="_Node_64617" type="Node" parent="pony/root/body_root/body/body2/neck1/neck2/head/horn/detail2"]
 script = ExtResource("3_3ekgy")
 value = Vector2(595.462, -613.87)
 
-[node name="_Node_64618" type="Node" parent="Skeleton2D/root/body_root/body/body2/neck1/neck2/head/horn/detail2"]
+[node name="_Node_64618" type="Node" parent="pony/root/body_root/body/body2/neck1/neck2/head/horn/detail2"]
 script = ExtResource("3_3ekgy")
 value = Vector2(592.166, -599.88)
 
-[node name="_Node_64619" type="Node" parent="Skeleton2D/root/body_root/body/body2/neck1/neck2/head/horn/detail2"]
+[node name="_Node_64619" type="Node" parent="pony/root/body_root/body/body2/neck1/neck2/head/horn/detail2"]
 script = ExtResource("3_3ekgy")
 value = Vector2(587.806, -581.374)
 
-[node name="_Node_64620" type="Node" parent="Skeleton2D/root/body_root/body/body2/neck1/neck2/head/horn/detail2"]
+[node name="_Node_64620" type="Node" parent="pony/root/body_root/body/body2/neck1/neck2/head/horn/detail2"]
 script = ExtResource("3_3ekgy")
 value = Vector2(595.797, -569.745)
 
-[node name="_Node_64621" type="Node" parent="Skeleton2D/root/body_root/body/body2/neck1/neck2/head/horn/detail2"]
+[node name="_Node_64621" type="Node" parent="pony/root/body_root/body/body2/neck1/neck2/head/horn/detail2"]
 script = ExtResource("3_3ekgy")
 value = Vector2(606.953, -565.131)
 
-[node name="_Node_64622" type="Node" parent="Skeleton2D/root/body_root/body/body2/neck1/neck2/head/horn/detail2"]
+[node name="_Node_64622" type="Node" parent="pony/root/body_root/body/body2/neck1/neck2/head/horn/detail2"]
 script = ExtResource("3_3ekgy")
 value = Vector2(613.928, -562.246)
 
-[node name="VecStroke" type="Line2D" parent="Skeleton2D/root/body_root/body/body2/neck1/neck2/head/horn/detail2"]
+[node name="VecStroke" type="Line2D" parent="pony/root/body_root/body/body2/neck1/neck2/head/horn/detail2"]
 points = PackedVector2Array(592.166, -599.88, 591.219, -594.535, 590.959, -589.603, 591.329, -585.085, 592.275, -580.983, 593.741, -577.296, 595.673, -574.026, 598.015, -571.174, 600.713, -568.74, 603.71, -566.726, 606.953, -565.131)
 width = 2.142
 width_curve = SubResource("Curve_oyty2")
@@ -3582,37 +3733,37 @@ default_color = Color(0.741176, 0.541176, 0.843137, 1)
 script = ExtResource("2_27k37")
 metadata/_custom_type_script = "uid://csgt88iv3c4ke"
 
-[node name="detail3" type="Node2D" parent="Skeleton2D/root/body_root/body/body2/neck1/neck2/head/horn"]
+[node name="detail3" type="Node2D" parent="pony/root/body_root/body/body2/neck1/neck2/head/horn"]
 script = ExtResource("1_oyty2")
 do_fill = false
 constraints = [1, 1]
 metadata/_custom_type_script = "uid://bodn4jw8tyemx"
 
-[node name="_Node_64617" type="Node" parent="Skeleton2D/root/body_root/body/body2/neck1/neck2/head/horn/detail3"]
+[node name="_Node_64617" type="Node" parent="pony/root/body_root/body/body2/neck1/neck2/head/horn/detail3"]
 script = ExtResource("3_3ekgy")
 value = Vector2(613.73, -629.231)
 
-[node name="_Node_64618" type="Node" parent="Skeleton2D/root/body_root/body/body2/neck1/neck2/head/horn/detail3"]
+[node name="_Node_64618" type="Node" parent="pony/root/body_root/body/body2/neck1/neck2/head/horn/detail3"]
 script = ExtResource("3_3ekgy")
 value = Vector2(610.692, -615.184)
 
-[node name="_Node_64619" type="Node" parent="Skeleton2D/root/body_root/body/body2/neck1/neck2/head/horn/detail3"]
+[node name="_Node_64619" type="Node" parent="pony/root/body_root/body/body2/neck1/neck2/head/horn/detail3"]
 script = ExtResource("3_3ekgy")
 value = Vector2(607.684, -601.272)
 
-[node name="_Node_64620" type="Node" parent="Skeleton2D/root/body_root/body/body2/neck1/neck2/head/horn/detail3"]
+[node name="_Node_64620" type="Node" parent="pony/root/body_root/body/body2/neck1/neck2/head/horn/detail3"]
 script = ExtResource("3_3ekgy")
 value = Vector2(612.15, -592.188)
 
-[node name="_Node_64621" type="Node" parent="Skeleton2D/root/body_root/body/body2/neck1/neck2/head/horn/detail3"]
+[node name="_Node_64621" type="Node" parent="pony/root/body_root/body/body2/neck1/neck2/head/horn/detail3"]
 script = ExtResource("3_3ekgy")
 value = Vector2(622.507, -587.056)
 
-[node name="_Node_64622" type="Node" parent="Skeleton2D/root/body_root/body/body2/neck1/neck2/head/horn/detail3"]
+[node name="_Node_64622" type="Node" parent="pony/root/body_root/body/body2/neck1/neck2/head/horn/detail3"]
 script = ExtResource("3_3ekgy")
 value = Vector2(636.467, -580.138)
 
-[node name="VecStroke" type="Line2D" parent="Skeleton2D/root/body_root/body/body2/neck1/neck2/head/horn/detail3"]
+[node name="VecStroke" type="Line2D" parent="pony/root/body_root/body/body2/neck1/neck2/head/horn/detail3"]
 points = PackedVector2Array(610.692, -615.184, 610.012, -611.154, 609.771, -607.409, 609.96, -603.943, 610.569, -600.751, 611.588, -597.828, 613.008, -595.168, 614.819, -592.766, 617.012, -590.617, 619.578, -588.715, 622.507, -587.056)
 width = 2.142
 width_curve = SubResource("Curve_oyty2")
@@ -3620,7 +3771,7 @@ default_color = Color(0.741176, 0.541176, 0.843137, 1)
 script = ExtResource("2_27k37")
 metadata/_custom_type_script = "uid://csgt88iv3c4ke"
 
-[node name="eye_white" type="Node2D" parent="Skeleton2D/root/body_root/body/body2/neck1/neck2/head"]
+[node name="eye_white" type="Node2D" parent="pony/root/body_root/body/body2/neck1/neck2/head"]
 clip_children = 2
 position = Vector2(-437, 449)
 script = ExtResource("1_oyty2")
@@ -3628,390 +3779,390 @@ cyclic = true
 constraints = [1, 1, 1, 1]
 metadata/_custom_type_script = "uid://bodn4jw8tyemx"
 
-[node name="@Node@45076" type="Node" parent="Skeleton2D/root/body_root/body/body2/neck1/neck2/head/eye_white"]
+[node name="@Node@45076" type="Node" parent="pony/root/body_root/body/body2/neck1/neck2/head/eye_white"]
 script = ExtResource("3_3ekgy")
 value = Vector2(532.949, -388.481)
 
-[node name="@Node@45077" type="Node" parent="Skeleton2D/root/body_root/body/body2/neck1/neck2/head/eye_white"]
+[node name="@Node@45077" type="Node" parent="pony/root/body_root/body/body2/neck1/neck2/head/eye_white"]
 script = ExtResource("3_3ekgy")
 value = Vector2(548.776, -398.967)
 
-[node name="@Node@45078" type="Node" parent="Skeleton2D/root/body_root/body/body2/neck1/neck2/head/eye_white"]
+[node name="@Node@45078" type="Node" parent="pony/root/body_root/body/body2/neck1/neck2/head/eye_white"]
 script = ExtResource("3_3ekgy")
 value = Vector2(564.604, -409.453)
 
-[node name="@Node@45079" type="Node" parent="Skeleton2D/root/body_root/body/body2/neck1/neck2/head/eye_white"]
+[node name="@Node@45079" type="Node" parent="pony/root/body_root/body/body2/neck1/neck2/head/eye_white"]
 script = ExtResource("3_3ekgy")
 value = Vector2(575.436, -441.354)
 
-[node name="@Node@45080" type="Node" parent="Skeleton2D/root/body_root/body/body2/neck1/neck2/head/eye_white"]
+[node name="@Node@45080" type="Node" parent="pony/root/body_root/body/body2/neck1/neck2/head/eye_white"]
 script = ExtResource("3_3ekgy")
 value = Vector2(551.694, -478.351)
 
-[node name="@Node@45081" type="Node" parent="Skeleton2D/root/body_root/body/body2/neck1/neck2/head/eye_white"]
+[node name="@Node@45081" type="Node" parent="pony/root/body_root/body/body2/neck1/neck2/head/eye_white"]
 script = ExtResource("3_3ekgy")
 value = Vector2(527.953, -515.347)
 
-[node name="@Node@45082" type="Node" parent="Skeleton2D/root/body_root/body/body2/neck1/neck2/head/eye_white"]
+[node name="@Node@45082" type="Node" parent="pony/root/body_root/body/body2/neck1/neck2/head/eye_white"]
 script = ExtResource("3_3ekgy")
 value = Vector2(494.515, -500.364)
 
-[node name="@Node@45083" type="Node" parent="Skeleton2D/root/body_root/body/body2/neck1/neck2/head/eye_white"]
+[node name="@Node@45083" type="Node" parent="pony/root/body_root/body/body2/neck1/neck2/head/eye_white"]
 script = ExtResource("3_3ekgy")
 value = Vector2(488.332, -495.811)
 
-[node name="@Node@45084" type="Node" parent="Skeleton2D/root/body_root/body/body2/neck1/neck2/head/eye_white"]
+[node name="@Node@45084" type="Node" parent="pony/root/body_root/body/body2/neck1/neck2/head/eye_white"]
 script = ExtResource("3_3ekgy")
 value = Vector2(482.149, -491.259)
 
-[node name="@Node@45085" type="Node" parent="Skeleton2D/root/body_root/body/body2/neck1/neck2/head/eye_white"]
+[node name="@Node@45085" type="Node" parent="pony/root/body_root/body/body2/neck1/neck2/head/eye_white"]
 script = ExtResource("3_3ekgy")
 value = Vector2(466.719, -463.761)
 
-[node name="@Node@45086" type="Node" parent="Skeleton2D/root/body_root/body/body2/neck1/neck2/head/eye_white"]
+[node name="@Node@45086" type="Node" parent="pony/root/body_root/body/body2/neck1/neck2/head/eye_white"]
 script = ExtResource("3_3ekgy")
 value = Vector2(484.327, -428.347)
 
-[node name="@Node@45087" type="Node" parent="Skeleton2D/root/body_root/body/body2/neck1/neck2/head/eye_white"]
+[node name="@Node@45087" type="Node" parent="pony/root/body_root/body/body2/neck1/neck2/head/eye_white"]
 script = ExtResource("3_3ekgy")
 value = Vector2(501.935, -392.933)
 
-[node name="eye_iris" type="Node2D" parent="Skeleton2D/root/body_root/body/body2/neck1/neck2/head/eye_white"]
+[node name="eye_iris" type="Node2D" parent="pony/root/body_root/body/body2/neck1/neck2/head/eye_white"]
 script = ExtResource("1_oyty2")
 cyclic = true
 fill = Color(0.372549, 0.321569, 0.709804, 1)
 constraints = [1, 1, 1, 1]
 metadata/_custom_type_script = "uid://bodn4jw8tyemx"
 
-[node name="_Node_45076" type="Node" parent="Skeleton2D/root/body_root/body/body2/neck1/neck2/head/eye_white/eye_iris"]
+[node name="_Node_45076" type="Node" parent="pony/root/body_root/body/body2/neck1/neck2/head/eye_white/eye_iris"]
 script = ExtResource("3_3ekgy")
 value = Vector2(537.657, -385.798)
 
-[node name="_Node_45077" type="Node" parent="Skeleton2D/root/body_root/body/body2/neck1/neck2/head/eye_white/eye_iris"]
+[node name="_Node_45077" type="Node" parent="pony/root/body_root/body/body2/neck1/neck2/head/eye_white/eye_iris"]
 script = ExtResource("3_3ekgy")
 value = Vector2(551.017, -389.721)
 
-[node name="_Node_45078" type="Node" parent="Skeleton2D/root/body_root/body/body2/neck1/neck2/head/eye_white/eye_iris"]
+[node name="_Node_45078" type="Node" parent="pony/root/body_root/body/body2/neck1/neck2/head/eye_white/eye_iris"]
 script = ExtResource("3_3ekgy")
 value = Vector2(564.378, -393.644)
 
-[node name="_Node_45079" type="Node" parent="Skeleton2D/root/body_root/body/body2/neck1/neck2/head/eye_white/eye_iris"]
+[node name="_Node_45079" type="Node" parent="pony/root/body_root/body/body2/neck1/neck2/head/eye_white/eye_iris"]
 script = ExtResource("3_3ekgy")
 value = Vector2(582.26, -421.44)
 
-[node name="_Node_45080" type="Node" parent="Skeleton2D/root/body_root/body/body2/neck1/neck2/head/eye_white/eye_iris"]
+[node name="_Node_45080" type="Node" parent="pony/root/body_root/body/body2/neck1/neck2/head/eye_white/eye_iris"]
 script = ExtResource("3_3ekgy")
 value = Vector2(571.255, -457.06)
 
-[node name="_Node_45081" type="Node" parent="Skeleton2D/root/body_root/body/body2/neck1/neck2/head/eye_white/eye_iris"]
+[node name="_Node_45081" type="Node" parent="pony/root/body_root/body/body2/neck1/neck2/head/eye_white/eye_iris"]
 script = ExtResource("3_3ekgy")
 value = Vector2(560.249, -492.68)
 
-[node name="_Node_45082" type="Node" parent="Skeleton2D/root/body_root/body/body2/neck1/neck2/head/eye_white/eye_iris"]
+[node name="_Node_45082" type="Node" parent="pony/root/body_root/body/body2/neck1/neck2/head/eye_white/eye_iris"]
 script = ExtResource("3_3ekgy")
 value = Vector2(531.228, -494.298)
 
-[node name="_Node_45083" type="Node" parent="Skeleton2D/root/body_root/body/body2/neck1/neck2/head/eye_white/eye_iris"]
+[node name="_Node_45083" type="Node" parent="pony/root/body_root/body/body2/neck1/neck2/head/eye_white/eye_iris"]
 script = ExtResource("3_3ekgy")
 value = Vector2(517.833, -489.488)
 
-[node name="_Node_45084" type="Node" parent="Skeleton2D/root/body_root/body/body2/neck1/neck2/head/eye_white/eye_iris"]
+[node name="_Node_45084" type="Node" parent="pony/root/body_root/body/body2/neck1/neck2/head/eye_white/eye_iris"]
 script = ExtResource("3_3ekgy")
 value = Vector2(504.439, -484.678)
 
-[node name="_Node_45085" type="Node" parent="Skeleton2D/root/body_root/body/body2/neck1/neck2/head/eye_white/eye_iris"]
+[node name="_Node_45085" type="Node" parent="pony/root/body_root/body/body2/neck1/neck2/head/eye_white/eye_iris"]
 script = ExtResource("3_3ekgy")
 value = Vector2(491.044, -464.511)
 
-[node name="_Node_45086" type="Node" parent="Skeleton2D/root/body_root/body/body2/neck1/neck2/head/eye_white/eye_iris"]
+[node name="_Node_45086" type="Node" parent="pony/root/body_root/body/body2/neck1/neck2/head/eye_white/eye_iris"]
 script = ExtResource("3_3ekgy")
 value = Vector2(499.183, -427.991)
 
-[node name="_Node_45087" type="Node" parent="Skeleton2D/root/body_root/body/body2/neck1/neck2/head/eye_white/eye_iris"]
+[node name="_Node_45087" type="Node" parent="pony/root/body_root/body/body2/neck1/neck2/head/eye_white/eye_iris"]
 script = ExtResource("3_3ekgy")
 value = Vector2(507.321, -391.472)
 
-[node name="iris_detail1" type="Node2D" parent="Skeleton2D/root/body_root/body/body2/neck1/neck2/head/eye_white/eye_iris"]
+[node name="iris_detail1" type="Node2D" parent="pony/root/body_root/body/body2/neck1/neck2/head/eye_white/eye_iris"]
 script = ExtResource("1_oyty2")
 cyclic = true
 fill = Color(0.584314, 0.560784, 0.976471, 1)
 constraints = [1, 1, 1, 1]
 metadata/_custom_type_script = "uid://bodn4jw8tyemx"
 
-[node name="@Node@49484" type="Node" parent="Skeleton2D/root/body_root/body/body2/neck1/neck2/head/eye_white/eye_iris/iris_detail1"]
+[node name="@Node@49484" type="Node" parent="pony/root/body_root/body/body2/neck1/neck2/head/eye_white/eye_iris/iris_detail1"]
 script = ExtResource("3_3ekgy")
 value = Vector2(499.361, -424.904)
 
-[node name="@Node@49485" type="Node" parent="Skeleton2D/root/body_root/body/body2/neck1/neck2/head/eye_white/eye_iris/iris_detail1"]
+[node name="@Node@49485" type="Node" parent="pony/root/body_root/body/body2/neck1/neck2/head/eye_white/eye_iris/iris_detail1"]
 script = ExtResource("3_3ekgy")
 value = Vector2(498.599, -430.942)
 
-[node name="@Node@49486" type="Node" parent="Skeleton2D/root/body_root/body/body2/neck1/neck2/head/eye_white/eye_iris/iris_detail1"]
+[node name="@Node@49486" type="Node" parent="pony/root/body_root/body/body2/neck1/neck2/head/eye_white/eye_iris/iris_detail1"]
 script = ExtResource("3_3ekgy")
 value = Vector2(498.482, -431.868)
 
-[node name="@Node@49487" type="Node" parent="Skeleton2D/root/body_root/body/body2/neck1/neck2/head/eye_white/eye_iris/iris_detail1"]
+[node name="@Node@49487" type="Node" parent="pony/root/body_root/body/body2/neck1/neck2/head/eye_white/eye_iris/iris_detail1"]
 script = ExtResource("3_3ekgy")
 value = Vector2(514.899, -435.762)
 
-[node name="@Node@49488" type="Node" parent="Skeleton2D/root/body_root/body/body2/neck1/neck2/head/eye_white/eye_iris/iris_detail1"]
+[node name="@Node@49488" type="Node" parent="pony/root/body_root/body/body2/neck1/neck2/head/eye_white/eye_iris/iris_detail1"]
 script = ExtResource("3_3ekgy")
 value = Vector2(514.899, -435.762)
 
-[node name="@Node@49489" type="Node" parent="Skeleton2D/root/body_root/body/body2/neck1/neck2/head/eye_white/eye_iris/iris_detail1"]
+[node name="@Node@49489" type="Node" parent="pony/root/body_root/body/body2/neck1/neck2/head/eye_white/eye_iris/iris_detail1"]
 script = ExtResource("3_3ekgy")
 value = Vector2(514.899, -435.762)
 
-[node name="@Node@49490" type="Node" parent="Skeleton2D/root/body_root/body/body2/neck1/neck2/head/eye_white/eye_iris/iris_detail1"]
+[node name="@Node@49490" type="Node" parent="pony/root/body_root/body/body2/neck1/neck2/head/eye_white/eye_iris/iris_detail1"]
 script = ExtResource("3_3ekgy")
 value = Vector2(517.465, -423.211)
 
-[node name="@Node@49491" type="Node" parent="Skeleton2D/root/body_root/body/body2/neck1/neck2/head/eye_white/eye_iris/iris_detail1"]
+[node name="@Node@49491" type="Node" parent="pony/root/body_root/body/body2/neck1/neck2/head/eye_white/eye_iris/iris_detail1"]
 script = ExtResource("3_3ekgy")
 value = Vector2(517.465, -423.211)
 
-[node name="@Node@49492" type="Node" parent="Skeleton2D/root/body_root/body/body2/neck1/neck2/head/eye_white/eye_iris/iris_detail1"]
+[node name="@Node@49492" type="Node" parent="pony/root/body_root/body/body2/neck1/neck2/head/eye_white/eye_iris/iris_detail1"]
 script = ExtResource("3_3ekgy")
 value = Vector2(517.465, -423.211)
 
-[node name="@Node@49493" type="Node" parent="Skeleton2D/root/body_root/body/body2/neck1/neck2/head/eye_white/eye_iris/iris_detail1"]
+[node name="@Node@49493" type="Node" parent="pony/root/body_root/body/body2/neck1/neck2/head/eye_white/eye_iris/iris_detail1"]
 script = ExtResource("3_3ekgy")
 value = Vector2(502.47, -415.996)
 
-[node name="@Node@49494" type="Node" parent="Skeleton2D/root/body_root/body/body2/neck1/neck2/head/eye_white/eye_iris/iris_detail1"]
+[node name="@Node@49494" type="Node" parent="pony/root/body_root/body/body2/neck1/neck2/head/eye_white/eye_iris/iris_detail1"]
 script = ExtResource("3_3ekgy")
 value = Vector2(502.353, -416.353)
 
-[node name="@Node@49495" type="Node" parent="Skeleton2D/root/body_root/body/body2/neck1/neck2/head/eye_white/eye_iris/iris_detail1"]
+[node name="@Node@49495" type="Node" parent="pony/root/body_root/body/body2/neck1/neck2/head/eye_white/eye_iris/iris_detail1"]
 script = ExtResource("3_3ekgy")
 value = Vector2(500.918, -420.734)
 
-[node name="iris_detail2" type="Node2D" parent="Skeleton2D/root/body_root/body/body2/neck1/neck2/head/eye_white/eye_iris"]
+[node name="iris_detail2" type="Node2D" parent="pony/root/body_root/body/body2/neck1/neck2/head/eye_white/eye_iris"]
 script = ExtResource("1_oyty2")
 cyclic = true
 fill = Color(0.772549, 0.756863, 1, 1)
 constraints = [1, 1, 1, 1]
 metadata/_custom_type_script = "uid://bodn4jw8tyemx"
 
-[node name="_Node_49484" type="Node" parent="Skeleton2D/root/body_root/body/body2/neck1/neck2/head/eye_white/eye_iris/iris_detail2"]
+[node name="_Node_49484" type="Node" parent="pony/root/body_root/body/body2/neck1/neck2/head/eye_white/eye_iris/iris_detail2"]
 script = ExtResource("3_3ekgy")
 value = Vector2(500.788, -411.345)
 
-[node name="_Node_49485" type="Node" parent="Skeleton2D/root/body_root/body/body2/neck1/neck2/head/eye_white/eye_iris/iris_detail2"]
+[node name="_Node_49485" type="Node" parent="pony/root/body_root/body/body2/neck1/neck2/head/eye_white/eye_iris/iris_detail2"]
 script = ExtResource("3_3ekgy")
 value = Vector2(502.38, -416.33)
 
-[node name="_Node_49486" type="Node" parent="Skeleton2D/root/body_root/body/body2/neck1/neck2/head/eye_white/eye_iris/iris_detail2"]
+[node name="_Node_49486" type="Node" parent="pony/root/body_root/body/body2/neck1/neck2/head/eye_white/eye_iris/iris_detail2"]
 script = ExtResource("3_3ekgy")
 value = Vector2(503.478, -419.77)
 
-[node name="_Node_49487" type="Node" parent="Skeleton2D/root/body_root/body/body2/neck1/neck2/head/eye_white/eye_iris/iris_detail2"]
+[node name="_Node_49487" type="Node" parent="pony/root/body_root/body/body2/neck1/neck2/head/eye_white/eye_iris/iris_detail2"]
 script = ExtResource("3_3ekgy")
 value = Vector2(518.681, -424.796)
 
-[node name="_Node_49488" type="Node" parent="Skeleton2D/root/body_root/body/body2/neck1/neck2/head/eye_white/eye_iris/iris_detail2"]
+[node name="_Node_49488" type="Node" parent="pony/root/body_root/body/body2/neck1/neck2/head/eye_white/eye_iris/iris_detail2"]
 script = ExtResource("3_3ekgy")
 value = Vector2(518.681, -424.796)
 
-[node name="_Node_49489" type="Node" parent="Skeleton2D/root/body_root/body/body2/neck1/neck2/head/eye_white/eye_iris/iris_detail2"]
+[node name="_Node_49489" type="Node" parent="pony/root/body_root/body/body2/neck1/neck2/head/eye_white/eye_iris/iris_detail2"]
 script = ExtResource("3_3ekgy")
 value = Vector2(518.681, -424.796)
 
-[node name="_Node_49490" type="Node" parent="Skeleton2D/root/body_root/body/body2/neck1/neck2/head/eye_white/eye_iris/iris_detail2"]
+[node name="_Node_49490" type="Node" parent="pony/root/body_root/body/body2/neck1/neck2/head/eye_white/eye_iris/iris_detail2"]
 script = ExtResource("3_3ekgy")
 value = Vector2(524.337, -413.98)
 
-[node name="_Node_49491" type="Node" parent="Skeleton2D/root/body_root/body/body2/neck1/neck2/head/eye_white/eye_iris/iris_detail2"]
+[node name="_Node_49491" type="Node" parent="pony/root/body_root/body/body2/neck1/neck2/head/eye_white/eye_iris/iris_detail2"]
 script = ExtResource("3_3ekgy")
 value = Vector2(524.337, -413.98)
 
-[node name="_Node_49492" type="Node" parent="Skeleton2D/root/body_root/body/body2/neck1/neck2/head/eye_white/eye_iris/iris_detail2"]
+[node name="_Node_49492" type="Node" parent="pony/root/body_root/body/body2/neck1/neck2/head/eye_white/eye_iris/iris_detail2"]
 script = ExtResource("3_3ekgy")
 value = Vector2(524.337, -413.98)
 
-[node name="_Node_49493" type="Node" parent="Skeleton2D/root/body_root/body/body2/neck1/neck2/head/eye_white/eye_iris/iris_detail2"]
+[node name="_Node_49493" type="Node" parent="pony/root/body_root/body/body2/neck1/neck2/head/eye_white/eye_iris/iris_detail2"]
 script = ExtResource("3_3ekgy")
 value = Vector2(517.581, -401.908)
 
-[node name="_Node_49494" type="Node" parent="Skeleton2D/root/body_root/body/body2/neck1/neck2/head/eye_white/eye_iris/iris_detail2"]
+[node name="_Node_49494" type="Node" parent="pony/root/body_root/body/body2/neck1/neck2/head/eye_white/eye_iris/iris_detail2"]
 script = ExtResource("3_3ekgy")
 value = Vector2(512.653, -401.688)
 
-[node name="_Node_49495" type="Node" parent="Skeleton2D/root/body_root/body/body2/neck1/neck2/head/eye_white/eye_iris/iris_detail2"]
+[node name="_Node_49495" type="Node" parent="pony/root/body_root/body/body2/neck1/neck2/head/eye_white/eye_iris/iris_detail2"]
 script = ExtResource("3_3ekgy")
 value = Vector2(509.719, -401.557)
 
-[node name="eye_pupil" type="Node2D" parent="Skeleton2D/root/body_root/body/body2/neck1/neck2/head/eye_white"]
+[node name="eye_pupil" type="Node2D" parent="pony/root/body_root/body/body2/neck1/neck2/head/eye_white"]
 script = ExtResource("1_oyty2")
 cyclic = true
 fill = Color(0, 0, 0, 1)
 constraints = [1, 1, 1, 1]
 metadata/_custom_type_script = "uid://bodn4jw8tyemx"
 
-[node name="_Node_45076" type="Node" parent="Skeleton2D/root/body_root/body/body2/neck1/neck2/head/eye_white/eye_pupil"]
+[node name="_Node_45076" type="Node" parent="pony/root/body_root/body/body2/neck1/neck2/head/eye_white/eye_pupil"]
 script = ExtResource("3_3ekgy")
 value = Vector2(534.856, -395.221)
 
-[node name="_Node_45077" type="Node" parent="Skeleton2D/root/body_root/body/body2/neck1/neck2/head/eye_white/eye_pupil"]
+[node name="_Node_45077" type="Node" parent="pony/root/body_root/body/body2/neck1/neck2/head/eye_white/eye_pupil"]
 script = ExtResource("3_3ekgy")
 value = Vector2(546.923, -398.344)
 
-[node name="_Node_45078" type="Node" parent="Skeleton2D/root/body_root/body/body2/neck1/neck2/head/eye_white/eye_pupil"]
+[node name="_Node_45078" type="Node" parent="pony/root/body_root/body/body2/neck1/neck2/head/eye_white/eye_pupil"]
 script = ExtResource("3_3ekgy")
 value = Vector2(558.991, -401.467)
 
-[node name="_Node_45079" type="Node" parent="Skeleton2D/root/body_root/body/body2/neck1/neck2/head/eye_white/eye_pupil"]
+[node name="_Node_45079" type="Node" parent="pony/root/body_root/body/body2/neck1/neck2/head/eye_white/eye_pupil"]
 script = ExtResource("3_3ekgy")
 value = Vector2(568.974, -420.119)
 
-[node name="_Node_45080" type="Node" parent="Skeleton2D/root/body_root/body/body2/neck1/neck2/head/eye_white/eye_pupil"]
+[node name="_Node_45080" type="Node" parent="pony/root/body_root/body/body2/neck1/neck2/head/eye_white/eye_pupil"]
 script = ExtResource("3_3ekgy")
 value = Vector2(564.87, -448.783)
 
-[node name="_Node_45081" type="Node" parent="Skeleton2D/root/body_root/body/body2/neck1/neck2/head/eye_white/eye_pupil"]
+[node name="_Node_45081" type="Node" parent="pony/root/body_root/body/body2/neck1/neck2/head/eye_white/eye_pupil"]
 script = ExtResource("3_3ekgy")
 value = Vector2(560.998, -475.823)
 
-[node name="_Node_45082" type="Node" parent="Skeleton2D/root/body_root/body/body2/neck1/neck2/head/eye_white/eye_pupil"]
+[node name="_Node_45082" type="Node" parent="pony/root/body_root/body/body2/neck1/neck2/head/eye_white/eye_pupil"]
 script = ExtResource("3_3ekgy")
 value = Vector2(542.02, -481.963)
 
-[node name="_Node_45083" type="Node" parent="Skeleton2D/root/body_root/body/body2/neck1/neck2/head/eye_white/eye_pupil"]
+[node name="_Node_45083" type="Node" parent="pony/root/body_root/body/body2/neck1/neck2/head/eye_white/eye_pupil"]
 script = ExtResource("3_3ekgy")
 value = Vector2(529.321, -478.589)
 
-[node name="_Node_45084" type="Node" parent="Skeleton2D/root/body_root/body/body2/neck1/neck2/head/eye_white/eye_pupil"]
+[node name="_Node_45084" type="Node" parent="pony/root/body_root/body/body2/neck1/neck2/head/eye_white/eye_pupil"]
 script = ExtResource("3_3ekgy")
 value = Vector2(516.622, -475.214)
 
-[node name="_Node_45085" type="Node" parent="Skeleton2D/root/body_root/body/body2/neck1/neck2/head/eye_white/eye_pupil"]
+[node name="_Node_45085" type="Node" parent="pony/root/body_root/body/body2/neck1/neck2/head/eye_white/eye_pupil"]
 script = ExtResource("3_3ekgy")
 value = Vector2(508.352, -459.845)
 
-[node name="_Node_45086" type="Node" parent="Skeleton2D/root/body_root/body/body2/neck1/neck2/head/eye_white/eye_pupil"]
+[node name="_Node_45086" type="Node" parent="pony/root/body_root/body/body2/neck1/neck2/head/eye_white/eye_pupil"]
 script = ExtResource("3_3ekgy")
 value = Vector2(512.024, -434.049)
 
-[node name="_Node_45087" type="Node" parent="Skeleton2D/root/body_root/body/body2/neck1/neck2/head/eye_white/eye_pupil"]
+[node name="_Node_45087" type="Node" parent="pony/root/body_root/body/body2/neck1/neck2/head/eye_white/eye_pupil"]
 script = ExtResource("3_3ekgy")
 value = Vector2(515.917, -406.706)
 
-[node name="eye_shine1" type="Node2D" parent="Skeleton2D/root/body_root/body/body2/neck1/neck2/head/eye_white"]
+[node name="eye_shine1" type="Node2D" parent="pony/root/body_root/body/body2/neck1/neck2/head/eye_white"]
 script = ExtResource("1_oyty2")
 cyclic = true
 constraints = [1, 1, 1, 1]
 metadata/_custom_type_script = "uid://bodn4jw8tyemx"
 
-[node name="@Node@56930" type="Node" parent="Skeleton2D/root/body_root/body/body2/neck1/neck2/head/eye_white/eye_shine1"]
+[node name="@Node@56930" type="Node" parent="pony/root/body_root/body/body2/neck1/neck2/head/eye_white/eye_shine1"]
 script = ExtResource("3_3ekgy")
 value = Vector2(512.575, -472.793)
 
-[node name="@Node@56931" type="Node" parent="Skeleton2D/root/body_root/body/body2/neck1/neck2/head/eye_white/eye_shine1"]
+[node name="@Node@56931" type="Node" parent="pony/root/body_root/body/body2/neck1/neck2/head/eye_white/eye_shine1"]
 script = ExtResource("3_3ekgy")
 value = Vector2(521.251, -472.516)
 
-[node name="@Node@56932" type="Node" parent="Skeleton2D/root/body_root/body/body2/neck1/neck2/head/eye_white/eye_shine1"]
+[node name="@Node@56932" type="Node" parent="pony/root/body_root/body/body2/neck1/neck2/head/eye_white/eye_shine1"]
 script = ExtResource("3_3ekgy")
 value = Vector2(529.926, -472.239)
 
-[node name="@Node@56933" type="Node" parent="Skeleton2D/root/body_root/body/body2/neck1/neck2/head/eye_white/eye_shine1"]
+[node name="@Node@56933" type="Node" parent="pony/root/body_root/body/body2/neck1/neck2/head/eye_white/eye_shine1"]
 script = ExtResource("3_3ekgy")
 value = Vector2(533.157, -463.286)
 
-[node name="@Node@56934" type="Node" parent="Skeleton2D/root/body_root/body/body2/neck1/neck2/head/eye_white/eye_shine1"]
+[node name="@Node@56934" type="Node" parent="pony/root/body_root/body/body2/neck1/neck2/head/eye_white/eye_shine1"]
 script = ExtResource("3_3ekgy")
 value = Vector2(533.157, -454.426)
 
-[node name="@Node@56935" type="Node" parent="Skeleton2D/root/body_root/body/body2/neck1/neck2/head/eye_white/eye_shine1"]
+[node name="@Node@56935" type="Node" parent="pony/root/body_root/body/body2/neck1/neck2/head/eye_white/eye_shine1"]
 script = ExtResource("3_3ekgy")
 value = Vector2(533.157, -445.566)
 
-[node name="@Node@56936" type="Node" parent="Skeleton2D/root/body_root/body/body2/neck1/neck2/head/eye_white/eye_shine1"]
+[node name="@Node@56936" type="Node" parent="pony/root/body_root/body/body2/neck1/neck2/head/eye_white/eye_shine1"]
 script = ExtResource("3_3ekgy")
 value = Vector2(530.48, -434.581)
 
-[node name="@Node@56937" type="Node" parent="Skeleton2D/root/body_root/body/body2/neck1/neck2/head/eye_white/eye_shine1"]
+[node name="@Node@56937" type="Node" parent="pony/root/body_root/body/body2/neck1/neck2/head/eye_white/eye_shine1"]
 script = ExtResource("3_3ekgy")
 value = Vector2(520.143, -434.951)
 
-[node name="@Node@56938" type="Node" parent="Skeleton2D/root/body_root/body/body2/neck1/neck2/head/eye_white/eye_shine1"]
+[node name="@Node@56938" type="Node" parent="pony/root/body_root/body/body2/neck1/neck2/head/eye_white/eye_shine1"]
 script = ExtResource("3_3ekgy")
 value = Vector2(509.806, -435.32)
 
-[node name="@Node@56939" type="Node" parent="Skeleton2D/root/body_root/body/body2/neck1/neck2/head/eye_white/eye_shine1"]
+[node name="@Node@56939" type="Node" parent="pony/root/body_root/body/body2/neck1/neck2/head/eye_white/eye_shine1"]
 script = ExtResource("3_3ekgy")
 value = Vector2(507.591, -446.765)
 
-[node name="@Node@56940" type="Node" parent="Skeleton2D/root/body_root/body/body2/neck1/neck2/head/eye_white/eye_shine1"]
+[node name="@Node@56940" type="Node" parent="pony/root/body_root/body/body2/neck1/neck2/head/eye_white/eye_shine1"]
 script = ExtResource("3_3ekgy")
 value = Vector2(508.052, -455.072)
 
-[node name="@Node@56941" type="Node" parent="Skeleton2D/root/body_root/body/body2/neck1/neck2/head/eye_white/eye_shine1"]
+[node name="@Node@56941" type="Node" parent="pony/root/body_root/body/body2/neck1/neck2/head/eye_white/eye_shine1"]
 script = ExtResource("3_3ekgy")
 value = Vector2(508.514, -463.379)
 
-[node name="eye_shine2" type="Node2D" parent="Skeleton2D/root/body_root/body/body2/neck1/neck2/head/eye_white"]
+[node name="eye_shine2" type="Node2D" parent="pony/root/body_root/body/body2/neck1/neck2/head/eye_white"]
 script = ExtResource("1_oyty2")
 cyclic = true
 constraints = [1, 1, 1, 1]
 metadata/_custom_type_script = "uid://bodn4jw8tyemx"
 
-[node name="@Node@57427" type="Node" parent="Skeleton2D/root/body_root/body/body2/neck1/neck2/head/eye_white/eye_shine2"]
+[node name="@Node@57427" type="Node" parent="pony/root/body_root/body/body2/neck1/neck2/head/eye_white/eye_shine2"]
 script = ExtResource("3_3ekgy")
 value = Vector2(543.424, -434.675)
 
-[node name="@Node@57428" type="Node" parent="Skeleton2D/root/body_root/body/body2/neck1/neck2/head/eye_white/eye_shine2"]
+[node name="@Node@57428" type="Node" parent="pony/root/body_root/body/body2/neck1/neck2/head/eye_white/eye_shine2"]
 script = ExtResource("3_3ekgy")
 value = Vector2(546.55, -434.571)
 
-[node name="@Node@57429" type="Node" parent="Skeleton2D/root/body_root/body/body2/neck1/neck2/head/eye_white/eye_shine2"]
+[node name="@Node@57429" type="Node" parent="pony/root/body_root/body/body2/neck1/neck2/head/eye_white/eye_shine2"]
 script = ExtResource("3_3ekgy")
 value = Vector2(549.676, -434.467)
 
-[node name="@Node@57430" type="Node" parent="Skeleton2D/root/body_root/body/body2/neck1/neck2/head/eye_white/eye_shine2"]
+[node name="@Node@57430" type="Node" parent="pony/root/body_root/body/body2/neck1/neck2/head/eye_white/eye_shine2"]
 script = ExtResource("3_3ekgy")
 value = Vector2(551.604, -431.706)
 
-[node name="@Node@57431" type="Node" parent="Skeleton2D/root/body_root/body/body2/neck1/neck2/head/eye_white/eye_shine2"]
+[node name="@Node@57431" type="Node" parent="pony/root/body_root/body/body2/neck1/neck2/head/eye_white/eye_shine2"]
 script = ExtResource("3_3ekgy")
 value = Vector2(551.395, -427.017)
 
-[node name="@Node@57432" type="Node" parent="Skeleton2D/root/body_root/body/body2/neck1/neck2/head/eye_white/eye_shine2"]
+[node name="@Node@57432" type="Node" parent="pony/root/body_root/body/body2/neck1/neck2/head/eye_white/eye_shine2"]
 script = ExtResource("3_3ekgy")
 value = Vector2(551.187, -422.328)
 
-[node name="@Node@57433" type="Node" parent="Skeleton2D/root/body_root/body/body2/neck1/neck2/head/eye_white/eye_shine2"]
+[node name="@Node@57433" type="Node" parent="pony/root/body_root/body/body2/neck1/neck2/head/eye_white/eye_shine2"]
 script = ExtResource("3_3ekgy")
 value = Vector2(548.686, -418.681)
 
-[node name="@Node@57434" type="Node" parent="Skeleton2D/root/body_root/body/body2/neck1/neck2/head/eye_white/eye_shine2"]
+[node name="@Node@57434" type="Node" parent="pony/root/body_root/body/body2/neck1/neck2/head/eye_white/eye_shine2"]
 script = ExtResource("3_3ekgy")
 value = Vector2(546.029, -418.941)
 
-[node name="@Node@57435" type="Node" parent="Skeleton2D/root/body_root/body/body2/neck1/neck2/head/eye_white/eye_shine2"]
+[node name="@Node@57435" type="Node" parent="pony/root/body_root/body/body2/neck1/neck2/head/eye_white/eye_shine2"]
 script = ExtResource("3_3ekgy")
 value = Vector2(543.372, -419.202)
 
-[node name="@Node@57436" type="Node" parent="Skeleton2D/root/body_root/body/body2/neck1/neck2/head/eye_white/eye_shine2"]
+[node name="@Node@57436" type="Node" parent="pony/root/body_root/body/body2/neck1/neck2/head/eye_white/eye_shine2"]
 script = ExtResource("3_3ekgy")
 value = Vector2(540.454, -422.276)
 
-[node name="@Node@57437" type="Node" parent="Skeleton2D/root/body_root/body/body2/neck1/neck2/head/eye_white/eye_shine2"]
+[node name="@Node@57437" type="Node" parent="pony/root/body_root/body/body2/neck1/neck2/head/eye_white/eye_shine2"]
 script = ExtResource("3_3ekgy")
 value = Vector2(541.08, -427.017)
 
-[node name="@Node@57438" type="Node" parent="Skeleton2D/root/body_root/body/body2/neck1/neck2/head/eye_white/eye_shine2"]
+[node name="@Node@57438" type="Node" parent="pony/root/body_root/body/body2/neck1/neck2/head/eye_white/eye_shine2"]
 script = ExtResource("3_3ekgy")
 value = Vector2(541.706, -431.758)
 
-[node name="lashes_circle" type="Node2D" parent="Skeleton2D/root/body_root/body/body2/neck1/neck2/head"]
+[node name="lashes_circle" type="Node2D" parent="pony/root/body_root/body/body2/neck1/neck2/head"]
 position = Vector2(-437, 449)
 script = ExtResource("1_oyty2")
 do_fill = false
 constraints = [1, 1, 1, 1, 1]
 metadata/_custom_type_script = "uid://bodn4jw8tyemx"
 
-[node name="VecStroke" type="Line2D" parent="Skeleton2D/root/body_root/body/body2/neck1/neck2/head/lashes_circle"]
+[node name="VecStroke" type="Line2D" parent="pony/root/body_root/body/body2/neck1/neck2/head/lashes_circle"]
 points = PackedVector2Array(564.418, -440.128, 563.783, -443.887, 562.774, -448.165, 561.43, -452.818, 559.79, -457.701, 557.892, -462.671, 555.776, -467.583, 553.48, -472.292, 551.042, -476.654, 548.502, -480.526, 545.898, -483.761, 543.171, -486.635, 540.435, -489.281, 537.668, -491.698, 534.849, -493.883, 531.957, -495.833, 528.97, -497.547, 525.868, -499.02, 522.628, -500.251, 519.23, -501.237, 515.652, -501.976, 512.596, -502.356, 509.555, -502.481, 506.557, -502.359, 503.627, -501.998, 500.793, -501.406, 498.082, -500.591, 495.52, -499.561, 493.134, -498.324, 490.951, -496.888, 488.998, -495.262, 487.157, -493.329, 485.369, -491.042, 483.667, -488.432, 482.082, -485.53, 480.645, -482.367, 479.39, -478.974, 478.347, -475.383, 477.548, -471.625, 477.027, -467.731, 476.813, -463.733)
 width = 3.5
 width_curve = SubResource("Curve_x3xxr")
@@ -4019,74 +4170,74 @@ default_color = Color(0, 0, 0, 1)
 script = ExtResource("2_27k37")
 metadata/_custom_type_script = "uid://csgt88iv3c4ke"
 
-[node name="@Node@59588" type="Node" parent="Skeleton2D/root/body_root/body/body2/neck1/neck2/head/lashes_circle"]
+[node name="@Node@59588" type="Node" parent="pony/root/body_root/body/body2/neck1/neck2/head/lashes_circle"]
 script = ExtResource("3_3ekgy")
 value = Vector2(565.87, -428.625)
 
-[node name="@Node@59589" type="Node" parent="Skeleton2D/root/body_root/body/body2/neck1/neck2/head/lashes_circle"]
+[node name="@Node@59589" type="Node" parent="pony/root/body_root/body/body2/neck1/neck2/head/lashes_circle"]
 script = ExtResource("3_3ekgy")
 value = Vector2(564.418, -440.128)
 
-[node name="@Node@59590" type="Node" parent="Skeleton2D/root/body_root/body/body2/neck1/neck2/head/lashes_circle"]
+[node name="@Node@59590" type="Node" parent="pony/root/body_root/body/body2/neck1/neck2/head/lashes_circle"]
 script = ExtResource("3_3ekgy")
 value = Vector2(562.966, -451.631)
 
-[node name="@Node@59591" type="Node" parent="Skeleton2D/root/body_root/body/body2/neck1/neck2/head/lashes_circle"]
+[node name="@Node@59591" type="Node" parent="pony/root/body_root/body/body2/neck1/neck2/head/lashes_circle"]
 script = ExtResource("3_3ekgy")
 value = Vector2(554.642, -474.196)
 
-[node name="@Node@59592" type="Node" parent="Skeleton2D/root/body_root/body/body2/neck1/neck2/head/lashes_circle"]
+[node name="@Node@59592" type="Node" parent="pony/root/body_root/body/body2/neck1/neck2/head/lashes_circle"]
 script = ExtResource("3_3ekgy")
 value = Vector2(545.898, -483.761)
 
-[node name="@Node@59593" type="Node" parent="Skeleton2D/root/body_root/body/body2/neck1/neck2/head/lashes_circle"]
+[node name="@Node@59593" type="Node" parent="pony/root/body_root/body/body2/neck1/neck2/head/lashes_circle"]
 script = ExtResource("3_3ekgy")
 value = Vector2(536.799, -493.715)
 
-[node name="@Node@60152" type="Node" parent="Skeleton2D/root/body_root/body/body2/neck1/neck2/head/lashes_circle"]
+[node name="@Node@60152" type="Node" parent="pony/root/body_root/body/body2/neck1/neck2/head/lashes_circle"]
 script = ExtResource("3_3ekgy")
 value = Vector2(527.903, -499.929)
 
-[node name="@Node@60153" type="Node" parent="Skeleton2D/root/body_root/body/body2/neck1/neck2/head/lashes_circle"]
+[node name="@Node@60153" type="Node" parent="pony/root/body_root/body/body2/neck1/neck2/head/lashes_circle"]
 script = ExtResource("3_3ekgy")
 value = Vector2(515.652, -501.976)
 
-[node name="@Node@60154" type="Node" parent="Skeleton2D/root/body_root/body/body2/neck1/neck2/head/lashes_circle"]
+[node name="@Node@60154" type="Node" parent="pony/root/body_root/body/body2/neck1/neck2/head/lashes_circle"]
 script = ExtResource("3_3ekgy")
 value = Vector2(505.47, -503.678)
 
-[node name="@Node@60158" type="Node" parent="Skeleton2D/root/body_root/body/body2/neck1/neck2/head/lashes_circle"]
+[node name="@Node@60158" type="Node" parent="pony/root/body_root/body/body2/neck1/neck2/head/lashes_circle"]
 script = ExtResource("3_3ekgy")
 value = Vector2(495.096, -500.991)
 
-[node name="@Node@60159" type="Node" parent="Skeleton2D/root/body_root/body/body2/neck1/neck2/head/lashes_circle"]
+[node name="@Node@60159" type="Node" parent="pony/root/body_root/body/body2/neck1/neck2/head/lashes_circle"]
 script = ExtResource("3_3ekgy")
 value = Vector2(488.998, -495.262)
 
-[node name="@Node@60160" type="Node" parent="Skeleton2D/root/body_root/body/body2/neck1/neck2/head/lashes_circle"]
+[node name="@Node@60160" type="Node" parent="pony/root/body_root/body/body2/neck1/neck2/head/lashes_circle"]
 script = ExtResource("3_3ekgy")
 value = Vector2(482.808, -489.445)
 
-[node name="@Node@61769" type="Node" parent="Skeleton2D/root/body_root/body/body2/neck1/neck2/head/lashes_circle"]
+[node name="@Node@61769" type="Node" parent="pony/root/body_root/body/body2/neck1/neck2/head/lashes_circle"]
 script = ExtResource("3_3ekgy")
 value = Vector2(476.976, -477.201)
 
-[node name="@Node@61770" type="Node" parent="Skeleton2D/root/body_root/body/body2/neck1/neck2/head/lashes_circle"]
+[node name="@Node@61770" type="Node" parent="pony/root/body_root/body/body2/neck1/neck2/head/lashes_circle"]
 script = ExtResource("3_3ekgy")
 value = Vector2(476.813, -463.733)
 
-[node name="@Node@61771" type="Node" parent="Skeleton2D/root/body_root/body/body2/neck1/neck2/head/lashes_circle"]
+[node name="@Node@61771" type="Node" parent="pony/root/body_root/body/body2/neck1/neck2/head/lashes_circle"]
 script = ExtResource("3_3ekgy")
 value = Vector2(476.669, -451.802)
 
-[node name="lash1" type="Node2D" parent="Skeleton2D/root/body_root/body/body2/neck1/neck2/head"]
+[node name="lash1" type="Node2D" parent="pony/root/body_root/body/body2/neck1/neck2/head"]
 position = Vector2(-437, 449)
 script = ExtResource("1_oyty2")
 do_fill = false
 constraints = [1, 1]
 metadata/_custom_type_script = "uid://bodn4jw8tyemx"
 
-[node name="VecStroke" type="Line2D" parent="Skeleton2D/root/body_root/body/body2/neck1/neck2/head/lash1"]
+[node name="VecStroke" type="Line2D" parent="pony/root/body_root/body/body2/neck1/neck2/head/lash1"]
 points = PackedVector2Array(476.965, -465.952, 475.189, -465.962, 473.436, -465.948, 471.707, -465.912, 470.004, -465.857, 468.329, -465.784, 466.683, -465.693, 465.067, -465.588, 463.484, -465.47, 461.933, -465.34, 460.418, -465.2)
 width = 3.5
 width_curve = SubResource("Curve_t1v34")
@@ -4094,38 +4245,38 @@ default_color = Color(0, 0, 0, 1)
 script = ExtResource("2_27k37")
 metadata/_custom_type_script = "uid://csgt88iv3c4ke"
 
-[node name="_Node_60158" type="Node" parent="Skeleton2D/root/body_root/body/body2/neck1/neck2/head/lash1"]
+[node name="_Node_60158" type="Node" parent="pony/root/body_root/body/body2/neck1/neck2/head/lash1"]
 script = ExtResource("3_3ekgy")
 value = Vector2(483.326, -465.875)
 
-[node name="_Node_60159" type="Node" parent="Skeleton2D/root/body_root/body/body2/neck1/neck2/head/lash1"]
+[node name="_Node_60159" type="Node" parent="pony/root/body_root/body/body2/neck1/neck2/head/lash1"]
 script = ExtResource("3_3ekgy")
 value = Vector2(476.965, -465.952)
 
-[node name="_Node_60160" type="Node" parent="Skeleton2D/root/body_root/body/body2/neck1/neck2/head/lash1"]
+[node name="_Node_60160" type="Node" parent="pony/root/body_root/body/body2/neck1/neck2/head/lash1"]
 script = ExtResource("3_3ekgy")
 value = Vector2(471.008, -466.025)
 
-[node name="_Node_61769" type="Node" parent="Skeleton2D/root/body_root/body/body2/neck1/neck2/head/lash1"]
+[node name="_Node_61769" type="Node" parent="pony/root/body_root/body/body2/neck1/neck2/head/lash1"]
 script = ExtResource("3_3ekgy")
 value = Vector2(465.409, -465.681)
 
-[node name="_Node_61770" type="Node" parent="Skeleton2D/root/body_root/body/body2/neck1/neck2/head/lash1"]
+[node name="_Node_61770" type="Node" parent="pony/root/body_root/body/body2/neck1/neck2/head/lash1"]
 script = ExtResource("3_3ekgy")
 value = Vector2(460.418, -465.2)
 
-[node name="_Node_61771" type="Node" parent="Skeleton2D/root/body_root/body/body2/neck1/neck2/head/lash1"]
+[node name="_Node_61771" type="Node" parent="pony/root/body_root/body/body2/neck1/neck2/head/lash1"]
 script = ExtResource("3_3ekgy")
 value = Vector2(452.526, -464.44)
 
-[node name="lash2" type="Node2D" parent="Skeleton2D/root/body_root/body/body2/neck1/neck2/head"]
+[node name="lash2" type="Node2D" parent="pony/root/body_root/body/body2/neck1/neck2/head"]
 position = Vector2(-437, 449)
 script = ExtResource("1_oyty2")
 do_fill = false
 constraints = [1, 1]
 metadata/_custom_type_script = "uid://bodn4jw8tyemx"
 
-[node name="VecStroke" type="Line2D" parent="Skeleton2D/root/body_root/body/body2/neck1/neck2/head/lash2"]
+[node name="VecStroke" type="Line2D" parent="pony/root/body_root/body/body2/neck1/neck2/head/lash2"]
 points = PackedVector2Array(478.41, -475.008, 476.312, -475.392, 474.032, -475.759, 471.62, -476.108, 469.131, -476.436, 466.618, -476.742, 464.134, -477.022, 461.731, -477.275, 459.464, -477.498, 457.384, -477.69, 455.545, -477.847)
 width = 3.5
 width_curve = SubResource("Curve_t1v34")
@@ -4133,38 +4284,38 @@ default_color = Color(0, 0, 0, 1)
 script = ExtResource("2_27k37")
 metadata/_custom_type_script = "uid://csgt88iv3c4ke"
 
-[node name="_Node_60158" type="Node" parent="Skeleton2D/root/body_root/body/body2/neck1/neck2/head/lash2"]
+[node name="_Node_60158" type="Node" parent="pony/root/body_root/body/body2/neck1/neck2/head/lash2"]
 script = ExtResource("3_3ekgy")
 value = Vector2(485.485, -473.616)
 
-[node name="_Node_60159" type="Node" parent="Skeleton2D/root/body_root/body/body2/neck1/neck2/head/lash2"]
+[node name="_Node_60159" type="Node" parent="pony/root/body_root/body/body2/neck1/neck2/head/lash2"]
 script = ExtResource("3_3ekgy")
 value = Vector2(478.41, -475.008)
 
-[node name="_Node_60160" type="Node" parent="Skeleton2D/root/body_root/body/body2/neck1/neck2/head/lash2"]
+[node name="_Node_60160" type="Node" parent="pony/root/body_root/body/body2/neck1/neck2/head/lash2"]
 script = ExtResource("3_3ekgy")
 value = Vector2(471.783, -476.311)
 
-[node name="_Node_61769" type="Node" parent="Skeleton2D/root/body_root/body/body2/neck1/neck2/head/lash2"]
+[node name="_Node_61769" type="Node" parent="pony/root/body_root/body/body2/neck1/neck2/head/lash2"]
 script = ExtResource("3_3ekgy")
 value = Vector2(461.214, -477.382)
 
-[node name="_Node_61770" type="Node" parent="Skeleton2D/root/body_root/body/body2/neck1/neck2/head/lash2"]
+[node name="_Node_61770" type="Node" parent="pony/root/body_root/body/body2/neck1/neck2/head/lash2"]
 script = ExtResource("3_3ekgy")
 value = Vector2(455.545, -477.847)
 
-[node name="_Node_61771" type="Node" parent="Skeleton2D/root/body_root/body/body2/neck1/neck2/head/lash2"]
+[node name="_Node_61771" type="Node" parent="pony/root/body_root/body/body2/neck1/neck2/head/lash2"]
 script = ExtResource("3_3ekgy")
 value = Vector2(446.588, -478.582)
 
-[node name="lash3" type="Node2D" parent="Skeleton2D/root/body_root/body/body2/neck1/neck2/head"]
+[node name="lash3" type="Node2D" parent="pony/root/body_root/body/body2/neck1/neck2/head"]
 position = Vector2(-437, 449)
 script = ExtResource("1_oyty2")
 do_fill = false
 constraints = [1, 1]
 metadata/_custom_type_script = "uid://bodn4jw8tyemx"
 
-[node name="VecStroke" type="Line2D" parent="Skeleton2D/root/body_root/body/body2/neck1/neck2/head/lash3"]
+[node name="VecStroke" type="Line2D" parent="pony/root/body_root/body/body2/neck1/neck2/head/lash3"]
 points = PackedVector2Array(480.684, -483.999, 478.488, -484.82, 476.3, -485.608, 474.111, -486.37, 471.916, -487.115, 469.709, -487.85, 467.482, -488.584, 465.23, -489.325, 462.946, -490.08, 460.624, -490.858, 458.257, -491.668)
 width = 3.5
 width_curve = SubResource("Curve_t1v34")
@@ -4172,39 +4323,39 @@ default_color = Color(0, 0, 0, 1)
 script = ExtResource("2_27k37")
 metadata/_custom_type_script = "uid://csgt88iv3c4ke"
 
-[node name="_Node_60158" type="Node" parent="Skeleton2D/root/body_root/body/body2/neck1/neck2/head/lash3"]
+[node name="_Node_60158" type="Node" parent="pony/root/body_root/body/body2/neck1/neck2/head/lash3"]
 script = ExtResource("3_3ekgy")
 value = Vector2(488.518, -481.005)
 
-[node name="_Node_60159" type="Node" parent="Skeleton2D/root/body_root/body/body2/neck1/neck2/head/lash3"]
+[node name="_Node_60159" type="Node" parent="pony/root/body_root/body/body2/neck1/neck2/head/lash3"]
 script = ExtResource("3_3ekgy")
 value = Vector2(480.684, -483.999)
 
-[node name="_Node_60160" type="Node" parent="Skeleton2D/root/body_root/body/body2/neck1/neck2/head/lash3"]
+[node name="_Node_60160" type="Node" parent="pony/root/body_root/body/body2/neck1/neck2/head/lash3"]
 script = ExtResource("3_3ekgy")
 value = Vector2(473.347, -486.802)
 
-[node name="_Node_61769" type="Node" parent="Skeleton2D/root/body_root/body/body2/neck1/neck2/head/lash3"]
+[node name="_Node_61769" type="Node" parent="pony/root/body_root/body/body2/neck1/neck2/head/lash3"]
 script = ExtResource("3_3ekgy")
 value = Vector2(466.229, -488.909)
 
-[node name="_Node_61770" type="Node" parent="Skeleton2D/root/body_root/body/body2/neck1/neck2/head/lash3"]
+[node name="_Node_61770" type="Node" parent="pony/root/body_root/body/body2/neck1/neck2/head/lash3"]
 script = ExtResource("3_3ekgy")
 value = Vector2(458.257, -491.668)
 
-[node name="_Node_61771" type="Node" parent="Skeleton2D/root/body_root/body/body2/neck1/neck2/head/lash3"]
+[node name="_Node_61771" type="Node" parent="pony/root/body_root/body/body2/neck1/neck2/head/lash3"]
 script = ExtResource("3_3ekgy")
 value = Vector2(448.379, -495.087)
 
-[node name="shoulder_front" type="Bone2D" parent="Skeleton2D/root/body_root/body/body2"]
+[node name="shoulder_front" type="Bone2D" parent="pony/root/body_root/body/body2"]
 position = Vector2(69, 50)
 rest = Transform2D(1, -8.34465e-07, 8.34465e-07, 1, 69, 50)
 
-[node name="arm_front" type="Bone2D" parent="Skeleton2D/root/body_root/body/body2/shoulder_front"]
+[node name="arm_front" type="Bone2D" parent="pony/root/body_root/body/body2/shoulder_front"]
 position = Vector2(-4, 39)
 rest = Transform2D(1, 3.25841e-07, -3.25841e-07, 1, -4, 39)
 
-[node name="forearm_front" type="Bone2D" parent="Skeleton2D/root/body_root/body/body2/shoulder_front/arm_front" node_paths=PackedStringArray("target")]
+[node name="forearm_front" type="Bone2D" parent="pony/root/body_root/body/body2/shoulder_front/arm_front" node_paths=PackedStringArray("target")]
 position = Vector2(0, 105)
 scale = Vector2(0.999997, 0.999997)
 rest = Transform2D(0.999997, 5.08622e-07, -5.08622e-07, 0.999997, 0, 105)
@@ -4214,15 +4365,15 @@ bone_angle = 77.419
 script = ExtResource("5_27k37")
 target = NodePath("../../../../../../IK_frontleg_front")
 
-[node name="shoulder_back" type="Bone2D" parent="Skeleton2D/root/body_root/body/body2"]
+[node name="shoulder_back" type="Bone2D" parent="pony/root/body_root/body/body2"]
 position = Vector2(87, 27)
 rest = Transform2D(1, -8.34465e-07, 8.34465e-07, 1, 87, 27)
 
-[node name="arm_back" type="Bone2D" parent="Skeleton2D/root/body_root/body/body2/shoulder_back"]
+[node name="arm_back" type="Bone2D" parent="pony/root/body_root/body/body2/shoulder_back"]
 position = Vector2(-4, 39)
 rest = Transform2D(1, 3.25841e-07, -3.25841e-07, 1, -4, 39)
 
-[node name="forearm_back" type="Bone2D" parent="Skeleton2D/root/body_root/body/body2/shoulder_back/arm_back"]
+[node name="forearm_back" type="Bone2D" parent="pony/root/body_root/body/body2/shoulder_back/arm_back"]
 position = Vector2(0, 105)
 scale = Vector2(0.999997, 0.999997)
 rest = Transform2D(0.999997, 5.08622e-07, -5.08622e-07, 0.999997, 0, 105)
@@ -4230,22 +4381,22 @@ auto_calculate_length_and_angle = false
 length = 100.334
 bone_angle = 77.419
 
-[node name="hip_front" type="Bone2D" parent="Skeleton2D/root/body_root/body"]
+[node name="hip_front" type="Bone2D" parent="pony/root/body_root/body"]
 rest = Transform2D(1, 0, 0, 1, 0, 0)
 
-[node name="thigh_front" type="Bone2D" parent="Skeleton2D/root/body_root/body/hip_front"]
+[node name="thigh_front" type="Bone2D" parent="pony/root/body_root/body/hip_front"]
 position = Vector2(-40, 52)
 rotation = -0.613467
 scale = Vector2(1, 1)
 rest = Transform2D(0.817657, -0.575706, 0.575706, 0.817657, -40, 52)
 
-[node name="lowerleg_front" type="Bone2D" parent="Skeleton2D/root/body_root/body/hip_front/thigh_front"]
+[node name="lowerleg_front" type="Bone2D" parent="pony/root/body_root/body/hip_front/thigh_front"]
 position = Vector2(-22.3444, 82.108)
 rotation = 0.0713909
 scale = Vector2(1, 1)
 rest = Transform2D(0.997453, 0.0713303, -0.0713303, 0.997453, -22.3444, 82.108)
 
-[node name="toe_front" type="Bone2D" parent="Skeleton2D/root/body_root/body/hip_front/thigh_front/lowerleg_front"]
+[node name="toe_front" type="Bone2D" parent="pony/root/body_root/body/hip_front/thigh_front/lowerleg_front"]
 position = Vector2(-57.2776, -1.80989)
 rotation = 0.197934
 scale = Vector2(0.999995, 0.999995)
@@ -4254,52 +4405,54 @@ auto_calculate_length_and_angle = false
 length = 158.222
 bone_angle = 114.409
 
-[node name="toetip_front" type="Bone2D" parent="Skeleton2D/root/body_root/body/hip_front/thigh_front/lowerleg_front/toe_front"]
+[node name="toetip_front" type="Bone2D" parent="pony/root/body_root/body/hip_front/thigh_front/lowerleg_front/toe_front"]
 position = Vector2(-47.2889, 120.087)
 rest = Transform2D(1, -2.98023e-08, 2.98023e-08, 1, -47.2889, 120.087)
 auto_calculate_length_and_angle = false
 length = 41.111
 bone_angle = 99.863
 
-[node name="hip_back" type="Bone2D" parent="Skeleton2D/root/body_root/body"]
+[node name="hip_back" type="Bone2D" parent="pony/root/body_root/body"]
 rest = Transform2D(1, 0, 0, 1, 0, 0)
 
-[node name="thigh_back" type="Bone2D" parent="Skeleton2D/root/body_root/body/hip_back"]
+[node name="thigh_back" type="Bone2D" parent="pony/root/body_root/body/hip_back"]
 position = Vector2(-20, 28)
-rotation = -0.661979
+rotation = -0.364344
 scale = Vector2(1, 1)
 rest = Transform2D(0.788777, -0.614679, 0.614679, 0.788777, -20, 28)
 
-[node name="lowerleg_back" type="Bone2D" parent="Skeleton2D/root/body_root/body/hip_back/thigh_back"]
+[node name="lowerleg_back" type="Bone2D" parent="pony/root/body_root/body/hip_back/thigh_back"]
 position = Vector2(-19.2008, 86.46)
-rotation = 0.0713909
+rotation = -0.17008
 scale = Vector2(1, 1)
 rest = Transform2D(0.997453, 0.0713303, -0.0713303, 0.997453, -19.2008, 86.46)
 
-[node name="toe_back" type="Bone2D" parent="Skeleton2D/root/body_root/body/hip_back/thigh_back/lowerleg_back"]
+[node name="toe_back" type="Bone2D" parent="pony/root/body_root/body/hip_back/thigh_back/lowerleg_back"]
 position = Vector2(-57.9717, 2.06892)
-rotation = 0.197934
+rotation = 0.474898
 scale = Vector2(0.999995, 0.999995)
 rest = Transform2D(0.98047, 0.196643, -0.196643, 0.98047, -57.9717, 2.06892)
 auto_calculate_length_and_angle = false
 length = 158.222
 bone_angle = 114.409
 
-[node name="toetip_back" type="Bone2D" parent="Skeleton2D/root/body_root/body/hip_back/thigh_back/lowerleg_back/toe_back"]
+[node name="toetip_back" type="Bone2D" parent="pony/root/body_root/body/hip_back/thigh_back/lowerleg_back/toe_back"]
 position = Vector2(-47.2889, 120.087)
+rotation = -0.234057
+scale = Vector2(1, 1)
 rest = Transform2D(1, -2.98023e-08, 2.98023e-08, 1, -47.2889, 120.087)
 auto_calculate_length_and_angle = false
 length = 41.111
 bone_angle = 99.863
 
-[node name="IK_frontleg_front" type="Bone2D" parent="Skeleton2D/root"]
+[node name="IK_frontleg_front" type="Bone2D" parent="pony/root"]
 position = Vector2(235, -121)
 rest = Transform2D(1, 0, 0, 1, 235, -121)
 auto_calculate_length_and_angle = false
 length = 42.745
 bone_angle = 77.647
 
-[node name="IK_backleg_front" type="Bone2D" parent="Skeleton2D/root"]
+[node name="IK_backleg_front" type="Bone2D" parent="pony/root"]
 position = Vector2(50, -100)
 rotation = -0.542797
 scale = Vector2(1, 1)
