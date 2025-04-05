@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=3 uid="uid://b2cjwbuhd8mm3"]
+[gd_scene load_steps=31 format=3 uid="uid://b2cjwbuhd8mm3"]
 
 [ext_resource type="Script" uid="uid://bafpx8hxl2kgu" path="res://player/player_animation.gd" id="1_h4ksu"]
 [ext_resource type="Script" uid="uid://bodn4jw8tyemx" path="res://addons/gdvecrig/VecDrawing.gd" id="1_oyty2"]
@@ -105,9 +105,232 @@ point_count = 4
 
 [sub_resource type="Animation" id="Animation_h4ksu"]
 resource_name = "walk"
+length = 2.0
+loop_mode = 1
+step = 0.25
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("pony/root/IK_frontleg_front:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.25, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(229, -116), Vector2(253, -152), Vector2(273, -124)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("pony/root/IK_frontleg_front:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.25, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.568486, 0.605819, 0.034276]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("pony/root/IK_backleg_front:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(101, -180), Vector2(6, -180)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("pony/root/IK_backleg_front:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [-0.346897, -0.346897]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("pony/root/IK_backleg_back:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.5, 0.75, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(42, -201), Vector2(108, -239), Vector2(137, -219), Vector2(125, -201)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("pony/root/IK_backleg_back:rotation")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 0.5, 0.75, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [-0.395263, -0.184163, -0.302909, -0.421656]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("pony/root/IK_frontleg_back:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(281, -146), Vector2(220, -148)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("pony/root/IK_frontleg_back:rotation")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("pony/root/body_root/body/hip_back/thigh_back/lowerleg_back/toe_back/toetip_back:rotation")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0, 0.5, 0.75, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [-2.98023e-08, 0.522862, 0.24929, 0.0]
+}
+
+[sub_resource type="Animation" id="Animation_dl607"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("pony/root/IK_frontleg_front:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(229, -116)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("pony/root/IK_frontleg_front:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.568486]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("pony/root/IK_backleg_front:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(101, -180)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("pony/root/IK_backleg_front:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-0.346897]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("pony/root/IK_backleg_back:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(42, -201)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("pony/root/IK_backleg_back:rotation")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-0.395263]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("pony/root/IK_frontleg_back:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(253, -144)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("pony/root/IK_frontleg_back:rotation")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("pony/root/body_root/body/hip_back/thigh_back/lowerleg_back/toe_back/toetip_back:rotation")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-2.98023e-08]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_dl607"]
 _data = {
+&"RESET": SubResource("Animation_dl607"),
 &"walk": SubResource("Animation_h4ksu")
 }
 
@@ -123,7 +346,7 @@ constraints = [1, 1, 1, 1, 1, 1, 1]
 metadata/_custom_type_script = "uid://bodn4jw8tyemx"
 
 [node name="VecStroke" type="Line2D" parent="frontleg_back"]
-points = PackedVector2Array(409.158, -268.014, 406.302, -259.539, 403.488, -249.172, 400.762, -237.338, 398.172, -224.465, 395.767, -210.978, 393.594, -197.304, 391.7, -183.87, 390.134, -171.102, 388.942, -159.425, 388.173, -149.268, 387.619, -137.285, 387.332, -124.855, 387.326, -112.213, 387.614, -99.5957, 388.209, -87.238, 389.126, -75.376, 390.377, -64.2454, 391.976, -54.0821, 393.936, -45.1217, 396.27, -37.6, 397.307, -35.993, 399.183, -34.4157, 401.868, -32.8992, 405.326, -31.4747, 409.526, -30.1734, 414.435, -29.0263, 420.019, -28.0647, 426.246, -27.3195, 433.082, -26.8221, 440.495, -26.6035, 449.488, -26.6982, 457.85, -27.1183, 465.482, -27.8182, 472.29, -28.7527, 478.176, -29.8764, 483.044, -31.144, 486.798, -32.51, 489.341, -33.9292, 490.577, -35.3562, 490.409, -36.7456, 487.121, -42.4422, 483.467, -50.0886, 479.575, -59.3361, 475.573, -69.8364, 471.59, -81.2408, 467.754, -93.2007, 464.191, -105.368, 461.031, -117.393, 458.4, -128.929, 456.428, -139.626, 455.022, -150.292, 453.881, -162.572, 453.018, -176.121, 452.448, -190.59, 452.182, -205.633, 452.235, -220.902, 452.62, -236.049, 453.35, -250.728, 454.438, -264.591, 455.897, -277.291)
+points = PackedVector2Array(403.895, -276.093, 398.782, -268.107, 394.003, -257.863, 389.582, -245.863, 385.545, -232.607, 381.915, -218.597, 378.717, -204.333, 375.977, -190.318, 373.72, -177.051, 371.969, -165.034, 370.749, -154.769, 369.757, -142.604, 369.196, -129.949, 369.054, -117.055, 369.314, -104.171, 369.963, -91.5486, 370.985, -79.4373, 372.367, -68.0878, 374.094, -57.7503, 376.151, -48.675, 378.524, -41.1123, 379.56, -39.5055, 381.437, -37.9284, 384.121, -36.4121, 387.579, -34.9878, 391.779, -33.6866, 396.687, -32.5396, 402.27, -31.5781, 408.496, -30.8331, 415.331, -30.3357, 422.743, -30.1171, 431.736, -30.2118, 440.096, -30.6318, 447.728, -31.3317, 454.534, -32.2661, 460.42, -33.3897, 465.287, -34.6571, 469.041, -36.023, 471.583, -37.442, 472.819, -38.8688, 472.652, -40.258, 469.317, -45.9198, 465.544, -53.4712, 461.488, -62.5763, 457.308, -72.8994, 453.161, -84.1047, 449.203, -95.8563, 445.592, -107.819, 442.485, -119.655, 440.039, -131.031, 438.411, -141.61, 437.394, -152.215, 436.668, -164.212, 436.314, -177.264, 436.414, -191.034, 437.051, -205.186, 438.304, -219.381, 440.258, -233.283, 442.993, -246.554, 446.591, -258.859, 451.135, -269.859)
 width = 4.3
 width_curve = SubResource("Curve_cystm")
 default_color = Color(0.67451, 0.490196, 0.788235, 1)
@@ -511,7 +734,7 @@ constraints = [1, 1, 1, 1, 1]
 metadata/_custom_type_script = "uid://bodn4jw8tyemx"
 
 [node name="VecStroke" type="Line2D" parent="backleg_back_hip"]
-points = PackedVector2Array(289.132, -345.592, 284.638, -340.333, 280.798, -335.618, 277.57, -331.336, 274.914, -327.376, 272.788, -323.628, 271.15, -319.979, 269.961, -316.321, 269.178, -312.541, 268.761, -308.53, 268.668, -304.175, 269.162, -295.451, 270.342, -286.917, 272.078, -278.647, 274.239, -270.716, 276.694, -263.198, 279.312, -256.167, 281.964, -249.696, 284.518, -243.86, 286.845, -238.734, 288.812, -234.39, 290.535, -230.944, 293.319, -226.093, 296.993, -220.394, 301.389, -214.403, 306.338, -208.676, 311.67, -203.769, 317.217, -200.237, 322.808, -198.638, 328.275, -199.526, 333.449, -203.459, 338.388, -209.227, 343.207, -215.244, 347.82, -221.498, 352.139, -227.977, 356.077, -234.668, 359.549, -241.561, 362.467, -248.642, 364.745, -255.9, 366.295, -263.322, 367.032, -270.897)
+points = PackedVector2Array(289.132, -345.592, 284.629, -340.319, 280.767, -335.564, 277.514, -331.225, 274.838, -327.197, 272.707, -323.374, 271.089, -319.654, 269.951, -315.931, 269.263, -312.102, 268.991, -308.062, 269.104, -303.707, 270.15, -295.046, 272.035, -286.633, 274.59, -278.533, 277.644, -270.81, 281.026, -263.527, 284.566, -256.749, 288.093, -250.538, 291.437, -244.959, 294.427, -240.076, 296.893, -235.953, 298.898, -232.676, 301.986, -228.06, 305.963, -222.651, 310.638, -216.996, 315.815, -211.639, 321.304, -207.126, 326.91, -204.004, 332.439, -202.818, 337.7, -204.114, 342.499, -208.437, 346.381, -213.819, 350.232, -219.601, 353.959, -225.746, 357.473, -232.214, 360.681, -238.967, 363.492, -245.968, 365.815, -253.178, 367.559, -260.559, 368.631, -268.072, 368.942, -275.68)
 width = 4.8
 width_curve = SubResource("Curve_3yjpv")
 default_color = Color(0.67451, 0.490196, 0.788235, 1)
@@ -645,7 +868,7 @@ constraints = [1, 1, 1, 1, 1, 1, 1, 1, 1]
 metadata/_custom_type_script = "uid://bodn4jw8tyemx"
 
 [node name="VecStroke" type="Line2D" parent="backleg_back_bottom"]
-points = PackedVector2Array(306.816, -223.706, 302.283, -225.104, 298.149, -226.163, 294.393, -226.927, 290.995, -227.438, 287.935, -227.738, 285.192, -227.87, 282.747, -227.876, 280.579, -227.8, 278.667, -227.684, 276.992, -227.57, 274.022, -227.555, 271.331, -227.666, 268.778, -227.545, 266.224, -226.831, 263.53, -225.165, 260.557, -222.187, 257.163, -217.538, 253.211, -210.857, 248.56, -201.786, 243.07, -189.964, 237.161, -175.5, 232.252, -160.911, 228.267, -146.247, 225.131, -131.556, 222.769, -116.885, 221.104, -102.283, 220.063, -87.7973, 219.569, -73.4772, 219.546, -59.3703, 219.921, -45.5249, 220.791, -41.0762, 222.914, -37.263, 226.136, -34.0461, 230.298, -31.3863, 235.247, -29.2443, 240.826, -27.581, 246.879, -26.357, 253.25, -25.5333, 259.783, -25.0704, 266.322, -24.9294, 272.892, -25.0669, 279.342, -25.4472, 285.577, -26.0424, 291.508, -26.8248, 297.041, -27.7666, 302.084, -28.8399, 306.546, -30.0169, 310.334, -31.2698, 313.355, -32.5709, 315.519, -33.8923, 316.143, -35.9563, 315.047, -39.587, 312.617, -44.6969, 309.238, -51.1983, 305.298, -59.0037, 301.181, -68.0255, 297.274, -78.1762, 293.963, -89.3682, 291.634, -101.514, 290.672, -114.526, 291.304, -127.161, 293.343, -138.803, 296.565, -149.514, 300.747, -159.353, 305.664, -168.381, 311.093, -176.658, 316.81, -184.244, 322.591, -191.199, 328.212, -197.584, 333.449, -203.459, 338.388, -209.227, 343.207, -215.244, 347.82, -221.498, 352.139, -227.977, 356.077, -234.668, 359.549, -241.561, 362.467, -248.642, 364.745, -255.9, 366.295, -263.322, 367.032, -270.897)
+points = PackedVector2Array(315.918, -227.216, 311.188, -228.288, 306.908, -229.075, 303.049, -229.612, 299.586, -229.935, 296.491, -230.079, 293.737, -230.08, 291.297, -229.974, 289.144, -229.796, 287.251, -229.581, 285.591, -229.366, 282.635, -229.203, 279.945, -229.28, 277.392, -229.212, 274.848, -228.614, 272.184, -227.1, 269.269, -224.286, 265.976, -219.785, 262.175, -213.213, 257.737, -204.183, 252.533, -192.312, 246.963, -177.746, 242.371, -163.08, 238.685, -148.359, 235.832, -133.628, 233.742, -118.934, 232.341, -104.321, 231.559, -89.8358, 231.323, -75.523, 231.562, -61.4285, 232.204, -47.5976, 233.161, -43.1675, 235.36, -39.3975, 238.644, -36.2454, 242.858, -33.6687, 247.848, -31.6253, 253.458, -30.0729, 259.533, -28.9691, 265.918, -28.2717, 272.458, -27.9383, 278.998, -27.9267, 285.564, -28.1942, 292.004, -28.702, 298.226, -29.4205, 304.139, -30.32, 309.652, -31.371, 314.672, -32.5438, 319.109, -33.8088, 322.871, -35.1363, 325.866, -36.4968, 328.003, -37.8606, 328.583, -39.9362, 327.408, -43.5439, 324.867, -48.6038, 321.35, -55.0361, 317.246, -62.7609, 312.946, -71.6984, 308.838, -81.7688, 305.313, -92.8922, 302.76, -104.989, 301.568, -117.979, 301.999, -130.651, 303.888, -142.352, 307.001, -153.152, 311.106, -163.116, 315.969, -172.313, 321.358, -180.811, 327.039, -188.676, 332.781, -195.977, 338.35, -202.781, 343.514, -209.156, 348.229, -215.457, 352.588, -221.974, 356.543, -228.656, 360.047, -235.449, 363.052, -242.304, 365.511, -249.168, 367.377, -255.989, 368.602, -262.716, 369.14, -269.297, 368.942, -275.68)
 width = 4.8
 width_curve = SubResource("Curve_3yjpv")
 default_color = Color(0.67451, 0.490196, 0.788235, 1)
@@ -2372,7 +2595,7 @@ constraints = [1, 1, 1, 1, 1, 1, 1, 1, 1]
 metadata/_custom_type_script = "uid://bodn4jw8tyemx"
 
 [node name="VecStroke" type="Line2D" parent="backleg_front_B"]
-points = PackedVector2Array(267.056, -198.004, 265.005, -200.021, 262.614, -201.863, 259.975, -203.525, 257.179, -204.999, 254.319, -206.278, 251.488, -207.357, 248.777, -208.228, 246.278, -208.885, 244.083, -209.321, 242.286, -209.529, 240.224, -209.68, 238.21, -209.684, 236.135, -209.242, 233.893, -208.053, 231.376, -205.82, 228.475, -202.243, 225.083, -197.022, 221.092, -189.858, 216.395, -180.453, 210.883, -168.506, 204.975, -154.042, 200.066, -139.453, 196.081, -124.789, 192.945, -110.098, 190.582, -95.427, 188.918, -80.8249, 187.876, -66.3397, 187.382, -52.0197, 187.359, -37.9128, 187.734, -24.0674, 188.604, -19.6187, 190.727, -15.8055, 193.949, -12.5886, 198.111, -9.92881, 203.06, -7.78682, 208.639, -6.12345, 214.691, -4.89949, 221.062, -4.07572, 227.595, -3.61291, 234.134, -3.47185, 240.704, -3.60937, 247.154, -3.98966, 253.389, -4.58492, 259.32, -5.36733, 264.853, -6.30909, 269.896, -7.3824, 274.358, -8.55943, 278.146, -9.81238, 281.167, -11.1134, 283.331, -12.4348, 283.995, -14.5234, 282.997, -18.2204, 280.687, -23.4269, 277.418, -30.0441, 273.54, -37.9732, 269.406, -47.1155, 265.366, -57.372, 261.772, -68.644, 258.975, -80.8327, 257.328, -93.8392, 257.034, -106.759, 257.96, -118.774, 259.949, -129.917, 262.844, -140.221, 266.489, -149.719, 270.726, -158.442, 275.399, -166.423, 280.351, -173.696, 285.426, -180.291, 290.466, -186.242, 295.968, -192.397, 302.329, -199.461, 309.24, -207.256, 316.395, -215.602, 323.484, -224.318, 330.2, -233.226, 336.236, -242.145, 341.284, -250.896, 345.035, -259.299, 347.182, -267.174)
+points = PackedVector2Array(234.435, -197.908, 232.682, -199.757, 230.511, -201.474, 228.024, -203.049, 225.327, -204.47, 222.521, -205.728, 219.71, -206.812, 216.997, -207.711, 214.486, -208.415, 212.279, -208.913, 210.481, -209.194, 208.431, -209.447, 206.422, -209.55, 204.331, -209.211, 202.036, -208.137, 199.415, -206.033, 196.345, -202.608, 192.703, -197.568, 188.369, -190.619, 183.218, -181.469, 177.13, -169.824, 170.674, -155.609, 165.477, -141.088, 161.417, -126.344, 158.371, -111.464, 156.215, -96.5322, 154.826, -81.6339, 154.083, -66.8542, 153.86, -52.2783, 154.036, -37.9912, 154.487, -24.0781, 155.357, -19.6298, 157.48, -15.8169, 160.701, -12.6002, 164.864, -9.94052, 169.812, -7.79868, 175.391, -6.13542, 181.443, -4.91155, 187.813, -4.08783, 194.346, -3.62505, 200.884, -3.484, 207.454, -3.62151, 213.903, -4.00178, 220.138, -4.59699, 226.068, -5.37935, 231.601, -6.32105, 236.644, -7.39428, 241.105, -8.57123, 244.893, -9.82409, 247.914, -11.1251, 250.078, -12.4463, 250.771, -14.5372, 249.847, -18.2402, 247.638, -23.4547, 244.476, -30.0804, 240.693, -38.0169, 236.62, -47.1637, 232.59, -57.4203, 228.935, -68.6864, 225.986, -80.8615, 224.077, -93.8451, 223.456, -106.617, 224.031, -118.543, 225.668, -129.619, 228.231, -139.839, 231.585, -149.196, 235.595, -157.685, 240.125, -165.301, 245.04, -172.038, 250.205, -177.889, 255.485, -182.85, 262.036, -187.775, 270.725, -193.521, 280.969, -200.072, 292.183, -207.413, 303.784, -215.528, 315.19, -224.402, 325.816, -234.019, 335.079, -244.364, 342.396, -255.421, 347.182, -267.174)
 width = 4.8
 width_curve = SubResource("Curve_3yjpv")
 default_color = Color(0.741176, 0.541176, 0.843137, 1)
@@ -2735,7 +2958,7 @@ constraints = [1, 1, 1]
 metadata/_custom_type_script = "uid://bodn4jw8tyemx"
 
 [node name="VecStroke" type="Line2D" parent="backleg_front_TopLine"]
-points = PackedVector2Array(257.715, -341.484, 253.22, -336.208, 249.375, -331.371, 246.132, -326.76, 243.447, -322.158, 241.274, -317.351, 239.567, -312.124, 238.279, -306.262, 237.366, -299.55, 236.782, -291.773, 236.48, -282.717, 236.895, -273.789, 238.274, -264.664, 240.339, -255.451, 242.814, -246.259, 245.425, -237.195, 247.893, -228.369, 249.945, -219.889, 251.302, -211.863, 251.69, -204.4, 250.832, -197.608)
+points = PackedVector2Array(257.715, -341.484, 253.332, -336.201, 249.771, -331.385, 246.907, -326.877, 244.617, -322.521, 242.778, -318.161, 241.266, -313.641, 239.958, -308.802, 238.73, -303.49, 237.459, -297.546, 236.021, -290.815, 234.337, -281.974, 232.954, -272.712, 231.76, -263.133, 230.641, -253.345, 229.487, -243.453, 228.185, -233.563, 226.622, -223.782, 224.688, -214.217, 222.268, -204.972, 219.253, -196.155)
 width = 4.8
 width_curve = SubResource("Curve_3yjpv")
 default_color = Color(0.741176, 0.541176, 0.843137, 1)
@@ -3077,7 +3300,7 @@ constraints = [1, 1, 1, 1, 1, 1, 1]
 metadata/_custom_type_script = "uid://bodn4jw8tyemx"
 
 [node name="VecStroke" type="Line2D" parent="frontleg_front"]
-points = PackedVector2Array(393.297, -244.689, 390.441, -236.214, 387.627, -225.847, 384.901, -214.013, 382.311, -201.14, 379.906, -187.653, 377.733, -173.979, 375.839, -160.545, 374.273, -147.777, 373.081, -136.1, 372.312, -125.943, 371.758, -113.96, 371.471, -101.53, 371.465, -88.8879, 371.753, -76.2702, 372.348, -63.9124, 373.265, -52.0504, 374.516, -40.9199, 376.115, -30.7565, 378.075, -21.7962, 380.409, -14.2746, 381.446, -12.6676, 383.322, -11.0903, 386.007, -9.57385, 389.465, -8.14939, 393.666, -6.84806, 398.574, -5.70099, 404.158, -4.73933, 410.385, -3.99421, 417.221, -3.49678, 424.634, -3.27817, 433.627, -3.37291, 441.989, -3.79292, 449.621, -4.49285, 456.429, -5.42735, 462.315, -6.55105, 467.183, -7.8186, 470.937, -9.18465, 473.48, -10.6038, 474.716, -12.0308, 474.548, -13.4202, 471.26, -19.1168, 467.606, -26.7631, 463.714, -36.0107, 459.712, -46.511, 455.729, -57.9154, 451.893, -69.8755, 448.33, -82.0426, 445.17, -94.0683, 442.539, -105.604, 440.567, -116.301, 439.161, -126.967, 438.02, -139.247, 437.157, -152.796, 436.587, -167.265, 436.321, -182.308, 436.374, -197.577, 436.758, -212.724, 437.488, -227.403, 438.576, -241.266, 440.035, -253.966)
+points = PackedVector2Array(399.223, -240.284, 398.474, -231.612, 397.997, -221.171, 397.754, -209.392, 397.708, -196.706, 397.82, -183.544, 398.053, -170.335, 398.37, -157.513, 398.733, -145.506, 399.104, -134.747, 399.446, -125.666, 399.4, -114.546, 398.559, -103.164, 397.145, -91.6825, 395.38, -80.2638, 393.488, -69.0708, 391.69, -58.2661, 390.208, -48.0125, 389.265, -38.4726, 389.083, -29.809, 389.884, -22.1845, 390.638, -20.427, 392.225, -18.5585, 394.618, -16.6151, 397.79, -14.633, 401.713, -12.6484, 406.361, -10.6976, 411.706, -8.8168, 417.72, -7.04213, 424.377, -5.40983, 431.649, -3.95611, 440.531, -2.5473, 448.845, -1.56478, 456.487, -0.979956, 463.354, -0.764199, 469.345, -0.888901, 474.356, -1.32545, 478.285, -2.04523, 481.029, -3.01963, 482.486, -4.22004, 482.553, -5.61784, 480.497, -11.9628, 478.777, -20.6007, 477.311, -31.0927, 476.017, -42.9997, 474.813, -55.8828, 473.618, -69.303, 472.349, -82.8214, 470.925, -95.9991, 469.265, -108.397, 467.285, -119.576, 464.932, -131.004, 462.319, -143.92, 459.53, -157.995, 456.646, -172.899, 453.75, -188.305, 450.925, -203.883, 448.252, -219.303, 445.813, -234.238, 443.691, -248.359, 441.969, -261.336)
 width = 4.3
 width_curve = SubResource("Curve_cystm")
 default_color = Color(0.741176, 0.541176, 0.843137, 1)
@@ -4358,7 +4581,8 @@ metadata/_local_pose_override_enabled_ = true
 
 [node name="forearm_front" type="Bone2D" parent="pony/root/body_root/body/body2/shoulder_front/arm_front" node_paths=PackedStringArray("target")]
 position = Vector2(0, 105)
-scale = Vector2(0.999997, 0.999997)
+rotation = 0.327302
+scale = Vector2(0.999976, 0.999976)
 rest = Transform2D(0.999997, 5.08622e-07, -5.08622e-07, 0.999997, 0, 105)
 auto_calculate_length_and_angle = false
 length = 100.334
@@ -4378,7 +4602,8 @@ metadata/_local_pose_override_enabled_ = true
 
 [node name="forearm_back" type="Bone2D" parent="pony/root/body_root/body/body2/shoulder_back/arm_back" node_paths=PackedStringArray("target")]
 position = Vector2(0, 105)
-scale = Vector2(0.999997, 0.999997)
+rotation = -0.0517363
+scale = Vector2(0.999925, 0.999925)
 rest = Transform2D(0.999997, 5.08622e-07, -5.08622e-07, 0.999997, 0, 105)
 auto_calculate_length_and_angle = false
 length = 100.334
@@ -4405,8 +4630,8 @@ metadata/_local_pose_override_enabled_ = true
 
 [node name="toe_front" type="Bone2D" parent="pony/root/body_root/body/hip_front/thigh_front/lowerleg_front" node_paths=PackedStringArray("target")]
 position = Vector2(-57.2776, -1.80989)
-rotation = 0.19518
-scale = Vector2(0.999992, 0.999992)
+rotation = 0.0962575
+scale = Vector2(0.999949, 0.999949)
 rest = Transform2D(0.981005, 0.193941, -0.193941, 0.981005, -57.2776, -1.80989)
 auto_calculate_length_and_angle = false
 length = 158.222
@@ -4440,8 +4665,8 @@ metadata/_local_pose_override_enabled_ = true
 
 [node name="toe_back" type="Bone2D" parent="pony/root/body_root/body/hip_back/thigh_back/lowerleg_back" node_paths=PackedStringArray("target")]
 position = Vector2(-57.9717, 2.06892)
-rotation = 0.195325
-scale = Vector2(0.999973, 0.999973)
+rotation = 0.206273
+scale = Vector2(0.999903, 0.999903)
 rest = Transform2D(0.980958, 0.19408, -0.19408, 0.980958, -57.9717, 2.06892)
 auto_calculate_length_and_angle = false
 length = 158.222
@@ -4451,13 +4676,16 @@ target = NodePath("../../../../../../IK_backleg_back")
 
 [node name="toetip_back" type="Bone2D" parent="pony/root/body_root/body/hip_back/thigh_back/lowerleg_back/toe_back"]
 position = Vector2(-47.2889, 120.087)
+scale = Vector2(0.999983, 0.999983)
 rest = Transform2D(1, -2.98023e-08, 2.98023e-08, 1, -47.2889, 120.087)
 auto_calculate_length_and_angle = false
 length = 41.111
 bone_angle = 99.863
 
 [node name="IK_frontleg_front" type="Bone2D" parent="pony/root"]
-position = Vector2(235, -121)
+position = Vector2(229, -116)
+rotation = 0.568486
+scale = Vector2(0.999984, 0.999984)
 rest = Transform2D(1, 0, 0, 1, 235, -121)
 auto_calculate_length_and_angle = false
 length = 42.745
@@ -4465,13 +4693,14 @@ bone_angle = 77.647
 
 [node name="IK_frontleg_back" type="Bone2D" parent="pony/root"]
 position = Vector2(253, -144)
+scale = Vector2(0.999984, 0.999984)
 rest = Transform2D(1, 0, 0, 1, 253, -144)
 auto_calculate_length_and_angle = false
 length = 42.745
 bone_angle = 77.647
 
 [node name="IK_backleg_front" type="Bone2D" parent="pony/root"]
-position = Vector2(63, -180)
+position = Vector2(101, -180)
 rotation = -0.346897
 scale = Vector2(0.999999, 0.999999)
 rest = Transform2D(0.940432, -0.339981, 0.339981, 0.940432, 63, -180)
@@ -4480,9 +4709,9 @@ length = 42.745
 bone_angle = 77.647
 
 [node name="IK_backleg_back" type="Bone2D" parent="pony/root"]
-position = Vector2(95, -198)
+position = Vector2(42, -201)
 rotation = -0.395263
-scale = Vector2(1, 1)
+scale = Vector2(0.999984, 0.999984)
 rest = Transform2D(0.922895, -0.385051, 0.385051, 0.922895, 95, -198)
 auto_calculate_length_and_angle = false
 length = 42.745
@@ -5784,6 +6013,7 @@ script = ExtResource("3_3ekgy")
 value = Vector2(324.678, -484.132)
 
 [node name="cm_bigmagic" type="Node2D" parent="."]
+visible = false
 script = ExtResource("1_oyty2")
 cyclic = true
 fill = Color(0.607843, 0.913725, 0.847059, 1)
@@ -5864,6 +6094,7 @@ script = ExtResource("3_3ekgy")
 value = Vector2(287.374, -297.431)
 
 [node name="cm_bigmagic2" type="Node2D" parent="."]
+visible = false
 script = ExtResource("1_oyty2")
 cyclic = true
 fill = Color(0.0313726, 0.729412, 0.717647, 1)
@@ -5944,6 +6175,7 @@ script = ExtResource("3_3ekgy")
 value = Vector2(287.374, -297.431)
 
 [node name="cm_littlemagic" type="Node2D" parent="."]
+visible = false
 script = ExtResource("1_oyty2")
 cyclic = true
 fill = Color(0.607843, 0.913725, 0.847059, 1)
@@ -6024,6 +6256,7 @@ script = ExtResource("3_3ekgy")
 value = Vector2(308.8, -265.408)
 
 [node name="cm_littlemagic2" type="Node2D" parent="."]
+visible = false
 script = ExtResource("1_oyty2")
 cyclic = true
 fill = Color(0.0313726, 0.729412, 0.717647, 1)
@@ -6240,3 +6473,4 @@ script = ExtResource("7_1my0b")
 libraries = {
 &"": SubResource("AnimationLibrary_dl607")
 }
+autoplay = "walk"
