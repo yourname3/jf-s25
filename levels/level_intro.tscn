@@ -55,7 +55,7 @@ properties = SubResource("Resource_kyo8j")
 
 [sub_resource type="Resource" id="Resource_nkyub"]
 script = ExtResource("3_nqxoc")
-texture_idx = 0
+texture_idx = -7
 flip = false
 width = 1.0
 
@@ -146,9 +146,6 @@ metadata/_custom_type_script = "uid://g01lopkfyc68"
 
 [node name="Goal" parent="." index="3"]
 position = Vector2(6016, -1024)
-
-[node name="CollisionPolygon2D" parent="SS2D_Shape/StaticBody2D" index="0"]
-polygon = PackedVector2Array(1792, 0, 2304, -128, 2432, -128, 2432, 128, 2304, 640, 2293.88, 648.25, 2259, 670, 2192.63, 700.75, 2088, 736, 1737, 802, 1152, 832, 587, 802, 280, 736, 198.875, 700.75, 153, 670, 140.234, 657.719, 132.625, 648.25, 128.953, 642.156, 128, 640, 0, 64, 0, -128, 640, -128, 640, 0, 1792, 0)
 
 [node name="SS2D_Shape2" type="Node2D" parent="." index="5"]
 texture_repeat = 2

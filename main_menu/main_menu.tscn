@@ -1,7 +1,112 @@
-[gd_scene load_steps=3 format=3 uid="uid://bj2a0plooc6ey"]
+[gd_scene load_steps=22 format=3 uid="uid://bj2a0plooc6ey"]
 
 [ext_resource type="Theme" uid="uid://dbod1te104o66" path="res://theme.tres" id="1_oa53l"]
 [ext_resource type="Script" uid="uid://mxjn8tyj5rqr" path="res://main_menu/main_menu.gd" id="2_d3a7t"]
+[ext_resource type="PackedScene" uid="uid://kbpehcxnkskm" path="res://goal/goal.tscn" id="3_3shxk"]
+[ext_resource type="Script" uid="uid://clts7ttaac1qj" path="res://addons/rmsmartshape/shapes/shape.gd" id="4_ia84y"]
+[ext_resource type="Script" uid="uid://coaymqsgs0h2q" path="res://addons/rmsmartshape/vertex_properties.gd" id="5_6at21"]
+[ext_resource type="Script" uid="uid://cb2icyedydm1p" path="res://addons/rmsmartshape/shapes/point.gd" id="6_og6xe"]
+[ext_resource type="Script" uid="uid://g01lopkfyc68" path="res://addons/rmsmartshape/shapes/point_array.gd" id="7_mvfl2"]
+[ext_resource type="Resource" uid="uid://dwqtagtlmikq8" path="res://level/material_grass.tres" id="8_qvn4f"]
+
+[sub_resource type="Resource" id="Resource_g1omr"]
+script = ExtResource("5_6at21")
+texture_idx = 0
+flip = false
+width = 1.0
+
+[sub_resource type="Resource" id="Resource_kwfav"]
+script = ExtResource("6_og6xe")
+position = Vector2(-1120, -512)
+point_in = Vector2(0, 0)
+point_out = Vector2(0, 0)
+properties = SubResource("Resource_g1omr")
+
+[sub_resource type="Resource" id="Resource_n70vs"]
+script = ExtResource("5_6at21")
+texture_idx = 0
+flip = false
+width = 1.0
+
+[sub_resource type="Resource" id="Resource_tr6y3"]
+script = ExtResource("6_og6xe")
+position = Vector2(872, 992)
+point_in = Vector2(0, 0)
+point_out = Vector2(0, 0)
+properties = SubResource("Resource_n70vs")
+
+[sub_resource type="Resource" id="Resource_vj6np"]
+script = ExtResource("5_6at21")
+texture_idx = 0
+flip = false
+width = 1.0
+
+[sub_resource type="Resource" id="Resource_iri28"]
+script = ExtResource("6_og6xe")
+position = Vector2(2768, 992)
+point_in = Vector2(0, 0)
+point_out = Vector2(0, 0)
+properties = SubResource("Resource_vj6np")
+
+[sub_resource type="Resource" id="Resource_qq33v"]
+script = ExtResource("5_6at21")
+texture_idx = 0
+flip = false
+width = 1.0
+
+[sub_resource type="Resource" id="Resource_ie3af"]
+script = ExtResource("6_og6xe")
+position = Vector2(2744, 1768)
+point_in = Vector2(0, 0)
+point_out = Vector2(0, 0)
+properties = SubResource("Resource_qq33v")
+
+[sub_resource type="Resource" id="Resource_ifnh7"]
+script = ExtResource("5_6at21")
+texture_idx = 0
+flip = false
+width = 1.0
+
+[sub_resource type="Resource" id="Resource_7f1p5"]
+script = ExtResource("6_og6xe")
+position = Vector2(-1096, 1800)
+point_in = Vector2(0, 0)
+point_out = Vector2(0, 0)
+properties = SubResource("Resource_ifnh7")
+
+[sub_resource type="Resource" id="Resource_ombju"]
+script = ExtResource("5_6at21")
+texture_idx = 0
+flip = false
+width = 1.0
+
+[sub_resource type="Resource" id="Resource_ru8rc"]
+script = ExtResource("6_og6xe")
+position = Vector2(-1120, -512)
+point_in = Vector2(0, 0)
+point_out = Vector2(0, 0)
+properties = SubResource("Resource_ombju")
+
+[sub_resource type="Resource" id="Resource_xayta"]
+script = ExtResource("7_mvfl2")
+_points = {
+0: SubResource("Resource_kwfav"),
+1: SubResource("Resource_tr6y3"),
+2: SubResource("Resource_iri28"),
+3: SubResource("Resource_ie3af"),
+4: SubResource("Resource_7f1p5"),
+5: SubResource("Resource_ru8rc")
+}
+_point_order = PackedInt32Array(0, 1, 2, 3, 4, 5)
+_constraints = {
+Vector2i(0, 5): 15
+}
+_next_key = 6
+_material_overrides = {}
+tessellation_stages = 3
+tessellation_tolerance = 6.0
+curve_bake_interval = 20.0
+metadata/_custom_type_script = "uid://g01lopkfyc68"
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
@@ -12,6 +117,9 @@ grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("1_oa53l")
 script = ExtResource("2_d3a7t")
+
+[node name="Goal" parent="." instance=ExtResource("3_3shxk")]
+position = Vector2(928, 552)
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 1
@@ -56,3 +164,12 @@ offset_bottom = 119.0
 grow_horizontal = 2
 grow_vertical = 2
 text = "play"
+
+[node name="SS2D_Shape2" type="Node2D" parent="."]
+visible = false
+texture_repeat = 2
+script = ExtResource("4_ia84y")
+_points = SubResource("Resource_xayta")
+shape_material = ExtResource("8_qvn4f")
+metadata/_custom_type_script = "uid://clts7ttaac1qj"
+metadata/_edit_lock_ = true
