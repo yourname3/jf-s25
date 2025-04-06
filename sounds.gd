@@ -6,6 +6,7 @@ class_name SoundsScript
 
 @onready var magic = $Magic
 @onready var magic_fire = $MagicFire
+@onready var machine = $Machine
 
 var enable_magic: bool = false
 var _did_enable_magic: bool = false

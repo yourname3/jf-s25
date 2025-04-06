@@ -1,16 +1,23 @@
-[gd_scene load_steps=7 format=3 uid="uid://byxx7lsiy0elc"]
+[gd_scene load_steps=9 format=3 uid="uid://byxx7lsiy0elc"]
 
 [ext_resource type="AudioStream" uid="uid://d3pftnwigqepy" path="res://music/music.ogg" id="1_kypgd"]
 [ext_resource type="Script" uid="uid://56kovkxq2xv7" path="res://sounds.gd" id="1_vknln"]
 [ext_resource type="AudioStream" uid="uid://cr5aishfaa07j" path="res://music/menu.ogg" id="2_vknln"]
 [ext_resource type="AudioStream" uid="uid://3xscnims710q" path="res://sounds/magic_long.wav" id="4_npmcl"]
 [ext_resource type="AudioStream" uid="uid://b7cufdim7f33u" path="res://sounds/magic_fire.wav" id="5_pkgfr"]
+[ext_resource type="AudioStream" uid="uid://ca8okdidh4i2a" path="res://sounds/machine.wav" id="6_evih7"]
 
 [sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_pkgfr"]
 random_pitch = 1.05
 random_volume_offset_db = 2.0
 streams_count = 1
 stream_0/stream = ExtResource("5_pkgfr")
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_xkoj7"]
+random_pitch = 1.05
+random_volume_offset_db = 2.0
+streams_count = 1
+stream_0/stream = ExtResource("6_evih7")
 
 [node name="Sounds" type="Node"]
 script = ExtResource("1_vknln")
@@ -30,6 +37,12 @@ bus = &"SFX"
 
 [node name="MagicFire" type="AudioStreamPlayer" parent="."]
 stream = SubResource("AudioStreamRandomizer_pkgfr")
+volume_db = -8.0
+max_polyphony = 3
+bus = &"SFX"
+
+[node name="Machine" type="AudioStreamPlayer" parent="."]
+stream = SubResource("AudioStreamRandomizer_xkoj7")
 volume_db = -8.0
 max_polyphony = 3
 bus = &"SFX"
