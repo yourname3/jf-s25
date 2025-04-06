@@ -83,6 +83,11 @@ func spawn_clone() -> void:
 	# SAFETY: Do not let clones clone.
 	if mode != MODE_PLAYER:
 		return
+		
+	if is_recording:
+		return
+	if recording.is_empty():
+		return
 	
 	if current_clone != null:	
 		current_clone.despawn()
