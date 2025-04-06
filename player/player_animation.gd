@@ -64,7 +64,7 @@ func _physics_process(delta: float) -> void:
 	var front_y := 0.0
 	
 	var valid = true
-	valid = false
+	#valid = false
 	
 	var col: KinematicCollision2D = detect_ik_back.move_and_collide(Vector2(0, MAX), true)
 	if col != null:
@@ -88,15 +88,16 @@ func _physics_process(delta: float) -> void:
 	
 	var avg = (back_y + front_y) / 2
 	
-	var back_y_target: float = back_y #- avg
-	var front_y_target: float = front_y #- avg
-	var body_target: float = body_root_base + avg
+	var back_y_target: float = back_y - avg
+	var front_y_target: float = front_y - avg
+	#var body_target: float = body_root_base + avg
 	
+	# Don't shift body position down beause with the smoothing it look weird.
 	bone_ik_back.position.y += (back_y_target - bone_ik_back.position.y) * Global.get_lerp(0.03, delta)
 	bone_ik_front.position.y += (front_y_target - bone_ik_front.position.y) * Global.get_lerp(0.03, delta)
 	
 	var target_rot: float = atan2(front_y - back_y, detect_ik_front.position.x - detect_ik_back.position.x)
-	body_root.position.y += (body_target - body_root.position.y) * Global.get_lerp(0.03, delta)
+	#body_root.position.y += (body_target - body_root.position.y) * Global.get_lerp(0.03, delta)
 	#print(body_root.rotation)
 	#print(back_y, " ", front_y)
 	#print(bone_ik_back.position, " ", bone_ik_front.position)
