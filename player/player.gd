@@ -30,6 +30,8 @@ var original_position: Vector2
 @onready var player_jump_detector = $PlayerJumpDetector
 
 func _ready() -> void:
+	add_collision_exception_with($head)
+	
 	original_position = global_position
 	
 	if mode == MODE_PLAYER:
@@ -118,50 +120,16 @@ var towards_goal: Goal = null
 func on_goal(goal: Goal) -> void:
 	towards_goal = goal
 	
-func _move_and_slide_override(delta: float, override: Vector2) -> void:
-	var prev_velocity := velocity
-	velocity = override / delta
-	move_and_slide()
-	velocity = prev_velocity
 	
 #func _push(guy: Player, remainder: Vector2):
 	#move_and_collide(remainder)
 	#guy._reperform(remainder)
-
-var _saved_velocity: Vector2 = Vector2.ZERO	
 	
 #func _reperform(remainder: Vector2) -> void:
 	#move_and_collide(remainder)
 	#velocity = _saved_velocity
 	
-func override_component(input: Vector2, component: Vector2, override: float) -> Vector2:
-	var along = input.project(component)
-	var ortho = input - along
-	if along.length() < override:
-		along = override * component
-	return input + along
-	
-func _do_move_and_slide(delta: float) -> void:
-	var prev_position := position
-	_saved_velocity = velocity
-	#var retries = 4
-	#while retries > 0:
-	move_and_slide()
-	for i in range(0, get_slide_collision_count()):
-		var col := get_slide_collision(i)
-		if col != null:
-			if col.get_collider() is Player:
-				#var component = col.get_normal()
-				#if component.dot(Vector2.UP) > 0.9:
-				#	continue
-				#var own = velocity.dot(component)
-				
-				#col.get_collider().velocity = override_component(col.get_collider().velocity, component, own)
-				add_collision_exception_with(col.get_collider())
-				col.get_collider()._move_and_slide_override(delta, col.get_remainder())
-				move_and_slide()
-				velocity = _saved_velocity
-				#remove_collision_exception_with(col.get_collider())
+
 	#var do_retry := false
 	#for i in range(0, get_slide_collision_count()):
 		#var col := get_slide_collision(i)
@@ -248,8 +216,7 @@ func _physics_process(delta: float) -> void:
 	if jump_timer > 0:
 		jump_timer -= delta
 		velocity.y = -JUMP_SPEED
-		
-	_do_move_and_slide(delta)
+	move_and_slide()
 	
 	if velocity.y > 0:
 		# Disable jumps if we ever lose our Y velocity.
@@ -272,11 +239,12 @@ func _physics_process(delta: float) -> void:
 		walking_accumulator -= delta * 3.0
 		
 	if not is_on_floor():
-		if velocity.y < -32:
+		if velocity.y < -256:
 			air_accumulator += delta * 8.0
 		air_accumulator += delta
 	else:
 		air_accumulator -= delta * 3.0
+	
 	
 	air_accumulator = clamp(air_accumulator, -0.1, 0.1)
 			#
