@@ -166,12 +166,13 @@ func _physics_process(delta: float) -> void:
 	if mode == MODE_PLAYER:
 		if Input.is_action_just_pressed("clone"):
 			if is_recording:
-				spawn_clone()
 				is_recording = false
 			else:
 				original_position = global_position
 				recording.clear()
-				is_recording = true		
+				is_recording = true
+		if Input.is_action_just_pressed("clone_now"):
+			spawn_clone()
 		if is_recording:
 			recording.push_back(encoded_inputs)
 	
@@ -218,7 +219,8 @@ func _physics_process(delta: float) -> void:
 		velocity.y = -JUMP_SPEED
 	move_and_slide()
 	
-	if velocity.y > 0:
+	if velocity.y >= 0:
+		
 		# Disable jumps if we ever lose our Y velocity.
 		jump_timer = 0
 		

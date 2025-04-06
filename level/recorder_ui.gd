@@ -7,6 +7,7 @@ var current_player: Player = null
 var current_clone: Player = null
 
 @onready var playhead = $bar1/bar2/playhead
+@onready var rec_indicator = $recording
 
 func _ready() -> void:
 	Global.recorder_ui = self
@@ -22,3 +23,5 @@ func render_playback() -> void:
 func _process(delta: float) -> void:
 	if show_playback:
 		render_playback()
+		
+	$recording.visible = current_player.is_recording

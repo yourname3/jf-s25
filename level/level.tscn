@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://bda6bue7aop33"]
+[gd_scene load_steps=9 format=3 uid="uid://bda6bue7aop33"]
 
 [ext_resource type="PackedScene" uid="uid://d0u0o1s2jxhbj" path="res://player/player.tscn" id="1_7lnir"]
 [ext_resource type="Script" uid="uid://cb4drdeoxw0i2" path="res://level/level_camera.gd" id="2_rhqlf"]
@@ -15,6 +15,13 @@ corner_radius_bottom_left = 100
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xii2b"]
 bg_color = Color(0.607843, 0.913725, 0.847059, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ktfr2"]
+bg_color = Color(0.920026, 0, 0.292328, 1)
+corner_radius_top_left = 100
+corner_radius_top_right = 100
+corner_radius_bottom_right = 100
+corner_radius_bottom_left = 100
 
 [node name="LevelBase" type="Node2D"]
 
@@ -71,6 +78,18 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.0313726, 0.729412, 0.717647, 1)
 metadata/_edit_use_anchors_ = true
+
+[node name="recording" type="Panel" parent="CanvasLayer/Control"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -48.712
+offset_top = 10.3071
+offset_right = -8.71204
+offset_bottom = 50.3071
+grow_horizontal = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_ktfr2")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(384, -384)
