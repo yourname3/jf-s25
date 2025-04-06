@@ -211,5 +211,7 @@ func _physics_process(delta: float) -> void:
 	if _is_on_floor > 0:
 		_is_on_floor -= delta
 	
+	if Input.is_action_just_pressed("jump"):
+		SceneTransition.change_to(preload("res://level/level.tscn"))
 	
 			

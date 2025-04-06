@@ -1,10 +1,12 @@
-[gd_scene load_steps=6 format=3 uid="uid://c4inkiwc3cw6p"]
+[gd_scene load_steps=7 format=3 uid="uid://c4inkiwc3cw6p"]
 
 [ext_resource type="Shader" uid="uid://csh6k364agv56" path="res://scene_transition/scene_transition.gdshader" id="1_1tgxw"]
+[ext_resource type="Script" uid="uid://deb4j050aivb" path="res://scene_transition/scene_transition.gd" id="1_yc5g4"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_yc5g4"]
 shader = ExtResource("1_1tgxw")
 shader_parameter/t = 0.0
+shader_parameter/invert = false
 
 [sub_resource type="Animation" id="Animation_1tgxw"]
 resource_name = "transition"
@@ -19,6 +21,32 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1.93187, 1, 0.5, 1),
 "update": 0,
 "values": [0.0, 8.0, 8.0, 0.0]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.466667),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"_do_change_now"
+}]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("ColorRect:material:shader_parameter/invert")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.466667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
 }
 
 [sub_resource type="Animation" id="Animation_yc5g4"]
@@ -35,6 +63,18 @@ tracks/0/keys = {
 "update": 0,
 "values": [0.0]
 }
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ColorRect:material:shader_parameter/invert")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_yc5g4"]
 _data = {
@@ -44,6 +84,7 @@ _data = {
 
 [node name="CanvasLayer" type="CanvasLayer"]
 layer = 2
+script = ExtResource("1_yc5g4")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 material = SubResource("ShaderMaterial_yc5g4")

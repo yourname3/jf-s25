@@ -1,6 +1,7 @@
 shader_type canvas_item;
 
 uniform float t;
+uniform bool invert;
 
 void vertex() {
 	// Called for every vertex the material is visible on.
@@ -8,14 +9,18 @@ void vertex() {
 
 void fragment() {
 	vec2 uv = UV;
-	uv.y = UV.y * SCREEN_PIXEL_SIZE.x / SCREEN_PIXEL_SIZE.y;
+	if (invert) {
+		uv.x = 1.0 - uv.x;
+		uv.y = 1.0 - uv.y;
+	}
+	uv.y = uv.y * SCREEN_PIXEL_SIZE.x / SCREEN_PIXEL_SIZE.y;
 	uv *= 8.0;
 	vec2 sub_uv = mod(uv, vec2(1.0));
 	
 	float sub_t = t - floor(uv.x) / 3.0 - floor(uv.y) / 3.0;
 	
 	if(sub_uv.x > sub_t) { discard; }
-	COLOR.xy = uv;
+	//COLOR.xy = uv;
 }
 
 //void light() {
