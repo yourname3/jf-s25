@@ -1,4 +1,4 @@
-[gd_scene load_steps=56 format=3 uid="uid://bk20kocrvqcyy"]
+[gd_scene load_steps=67 format=3 uid="uid://bk20kocrvqcyy"]
 
 [ext_resource type="PackedScene" uid="uid://bda6bue7aop33" path="res://level/level.tscn" id="1_0ivh5"]
 [ext_resource type="PackedScene" uid="uid://b1lhi5tsueed4" path="res://button/button.tscn" id="2_glwf3"]
@@ -55,9 +55,9 @@ width = 1.0
 
 [sub_resource type="Resource" id="Resource_fje3y"]
 script = ExtResource("6_fvwxo")
-position = Vector2(-512, 320)
-point_in = Vector2(0, 0)
-point_out = Vector2(0, 0)
+position = Vector2(0, 320)
+point_in = Vector2(320, 0)
+point_out = Vector2(-576, 0)
 properties = SubResource("Resource_2v5bo")
 
 [sub_resource type="Resource" id="Resource_gg1xy"]
@@ -81,6 +81,90 @@ _points = {
 2: SubResource("Resource_bt5oh"),
 3: SubResource("Resource_fje3y"),
 4: SubResource("Resource_he1xc")
+}
+_point_order = PackedInt32Array(0, 1, 2, 3, 4)
+_constraints = {
+Vector2i(0, 4): 15
+}
+_next_key = 6
+_material_overrides = {}
+tessellation_stages = 3
+tessellation_tolerance = 6.0
+curve_bake_interval = 20.0
+
+[sub_resource type="Resource" id="Resource_mnqcs"]
+script = ExtResource("5_bg6kc")
+texture_idx = 0
+flip = false
+width = 1.0
+
+[sub_resource type="Resource" id="Resource_hp8fb"]
+script = ExtResource("6_fvwxo")
+position = Vector2(-512, 0)
+point_in = Vector2(0, 0)
+point_out = Vector2(0, 0)
+properties = SubResource("Resource_mnqcs")
+
+[sub_resource type="Resource" id="Resource_r2udy"]
+script = ExtResource("5_bg6kc")
+texture_idx = -1
+flip = false
+width = 1.0
+
+[sub_resource type="Resource" id="Resource_v04yb"]
+script = ExtResource("6_fvwxo")
+position = Vector2(4096, 0)
+point_in = Vector2(0, 0)
+point_out = Vector2(0, 0)
+properties = SubResource("Resource_r2udy")
+
+[sub_resource type="Resource" id="Resource_x2jtu"]
+script = ExtResource("5_bg6kc")
+texture_idx = 0
+flip = false
+width = 1.0
+
+[sub_resource type="Resource" id="Resource_ocbm4"]
+script = ExtResource("6_fvwxo")
+position = Vector2(4096, 320)
+point_in = Vector2(0, 0)
+point_out = Vector2(0, 0)
+properties = SubResource("Resource_x2jtu")
+
+[sub_resource type="Resource" id="Resource_icwe5"]
+script = ExtResource("5_bg6kc")
+texture_idx = 0
+flip = false
+width = 1.0
+
+[sub_resource type="Resource" id="Resource_0vuak"]
+script = ExtResource("6_fvwxo")
+position = Vector2(-512, 320)
+point_in = Vector2(0, 0)
+point_out = Vector2(0, 0)
+properties = SubResource("Resource_icwe5")
+
+[sub_resource type="Resource" id="Resource_xfa06"]
+script = ExtResource("5_bg6kc")
+texture_idx = 0
+flip = false
+width = 1.0
+
+[sub_resource type="Resource" id="Resource_ak3cv"]
+script = ExtResource("6_fvwxo")
+position = Vector2(-512, 0)
+point_in = Vector2(0, 0)
+point_out = Vector2(0, 0)
+properties = SubResource("Resource_xfa06")
+
+[sub_resource type="Resource" id="Resource_dmhmn"]
+script = ExtResource("7_pb137")
+_points = {
+0: SubResource("Resource_hp8fb"),
+1: SubResource("Resource_v04yb"),
+2: SubResource("Resource_ocbm4"),
+3: SubResource("Resource_0vuak"),
+4: SubResource("Resource_ak3cv")
 }
 _point_order = PackedInt32Array(0, 1, 2, 3, 4)
 _constraints = {
@@ -440,22 +524,26 @@ position = Vector2(0, -768)
 position = Vector2(1024, -1408)
 _points = SubResource("Resource_4pa6g")
 
-[node name="SS2D_Shape4" parent="." index="18" instance=ExtResource("4_vp86n")]
+[node name="SS2D_Shape9" parent="." index="18" instance=ExtResource("4_vp86n")]
+position = Vector2(1024, -2496)
+_points = SubResource("Resource_dmhmn")
+
+[node name="SS2D_Shape4" parent="." index="19" instance=ExtResource("4_vp86n")]
 position = Vector2(-128, 0)
 _points = SubResource("Resource_lh8pt")
 
-[node name="SS2D_Shape6" parent="." index="19" instance=ExtResource("4_vp86n")]
+[node name="SS2D_Shape6" parent="." index="20" instance=ExtResource("4_vp86n")]
 position = Vector2(768, 0)
 _points = SubResource("Resource_lh8pt")
 
-[node name="SS2D_Shape7" parent="." index="20" instance=ExtResource("4_vp86n")]
+[node name="SS2D_Shape7" parent="." index="21" instance=ExtResource("4_vp86n")]
 position = Vector2(1664, 0)
 _points = SubResource("Resource_lh8pt")
 
-[node name="SS2D_Shape8" parent="." index="21" instance=ExtResource("4_vp86n")]
+[node name="SS2D_Shape8" parent="." index="22" instance=ExtResource("4_vp86n")]
 position = Vector2(2560, 0)
 _points = SubResource("Resource_lh8pt")
 
-[node name="SS2D_Shape5" parent="." index="22" instance=ExtResource("4_vp86n")]
+[node name="SS2D_Shape5" parent="." index="23" instance=ExtResource("4_vp86n")]
 position = Vector2(-2816, 0)
 _points = SubResource("Resource_hadqb")
