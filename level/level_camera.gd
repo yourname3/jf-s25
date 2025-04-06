@@ -14,7 +14,7 @@ func _process(delta: float) -> void:
 	var max_y = Global.bottom_y - height * 0.5
 	var min_y = Global.top_y + height * 0.5
 	
-	print(pos.y, " " , max_y, " ", height)
+	#print(pos.y, " " , max_y, " ", height)
 	
 	if pos.y > max_y and pos.y < min_y:
 		pos.y = (min_y + max_y) / 2

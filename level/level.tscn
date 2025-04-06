@@ -21,6 +21,19 @@ corner_radius_bottom_left = 100
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xii2b"]
 bg_color = Color(0.607843, 0.913725, 0.847059, 1)
 
+[sub_resource type="Resource" id="Resource_cw150"]
+script = ExtResource("3_6gtgk")
+texture_idx = 0
+flip = false
+width = 1.0
+
+[sub_resource type="Resource" id="Resource_kp5pi"]
+script = ExtResource("4_cw150")
+position = Vector2(1792, 0)
+point_in = Vector2(0, 0)
+point_out = Vector2(0, 0)
+properties = SubResource("Resource_cw150")
+
 [sub_resource type="Resource" id="Resource_rhqlf"]
 script = ExtResource("3_6gtgk")
 texture_idx = 0
@@ -47,7 +60,7 @@ point_in = Vector2(960, 0)
 point_out = Vector2(-960, 0)
 properties = SubResource("Resource_m3nah")
 
-[sub_resource type="Resource" id="Resource_cw150"]
+[sub_resource type="Resource" id="Resource_7jqyl"]
 script = ExtResource("3_6gtgk")
 texture_idx = 0
 flip = false
@@ -58,19 +71,6 @@ script = ExtResource("4_cw150")
 position = Vector2(2304, -128)
 point_in = Vector2(0, 0)
 point_out = Vector2(0, 0)
-properties = SubResource("Resource_cw150")
-
-[sub_resource type="Resource" id="Resource_7jqyl"]
-script = ExtResource("3_6gtgk")
-texture_idx = 0
-flip = false
-width = 1.0
-
-[sub_resource type="Resource" id="Resource_m5ivw"]
-script = ExtResource("4_cw150")
-position = Vector2(2304, 640)
-point_in = Vector2(0, 0)
-point_out = Vector2(0, 0)
 properties = SubResource("Resource_7jqyl")
 
 [sub_resource type="Resource" id="Resource_sui6v"]
@@ -79,9 +79,9 @@ texture_idx = 0
 flip = false
 width = 1.0
 
-[sub_resource type="Resource" id="Resource_kp5pi"]
+[sub_resource type="Resource" id="Resource_m5ivw"]
 script = ExtResource("4_cw150")
-position = Vector2(1792, 0)
+position = Vector2(2304, 640)
 point_in = Vector2(0, 0)
 point_out = Vector2(0, 0)
 properties = SubResource("Resource_sui6v")

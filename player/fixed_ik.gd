@@ -1,3 +1,4 @@
+@tool
 extends Node
 
 @export_node_path("Node2D")
@@ -10,8 +11,17 @@ var target_node_path = NodePath()
 var _angle_a = 0.0
 var _angle_b = 0.0
 
+const ENABLE_IN_EDITOR: bool = true
+
+func _ready() -> void:
+	process_priority = -1
 
 func _process(delta: float) -> void:
+	
+	
+	if Engine.is_editor_hint():
+		if not ENABLE_IN_EDITOR:
+			return
 	_update_two_bone_ik_angles()
 
 
@@ -26,8 +36,10 @@ func _update_two_bone_ik_angles():
 	var bone_a = get_parent().get_bone(joint_one_bone_index)
 	var bone_b = get_parent().get_bone(joint_two_bone_index)
 	
-	var bone_a_len = bone_a.get_length()
-	var bone_b_len = bone_b.get_length()
+	var s: float = bone_a.global_scale.x # assume uniform scaling.
+	
+	var bone_a_len = bone_a.get_length() * s
+	var bone_b_len = bone_b.get_length() * s
 	
 	var sin_angle2 = 0.0
 	var cos_angle2 = 1.0
@@ -53,7 +65,9 @@ func _update_two_bone_ik_angles():
 	var tri_opposite = bone_b_len * sin_angle2
 	
 	var xform_inv = bone_a.get_parent().global_transform.affine_inverse()
-	var target_pos = xform_inv * target.global_position - bone_a.position
+	var target_pos = xform_inv * target.global_position - xform_inv * bone_a.global_position
+	#if joint_one_bone_index == 28:
+		#print(target_pos)
 	
 	var tan_y = target_pos.y * tri_adjacent - target_pos.x * tri_opposite
 	var tan_x = target_pos.x * tri_adjacent + target_pos.y * tri_opposite
@@ -63,6 +77,9 @@ func _update_two_bone_ik_angles():
 	var bone_b_angle = bone_b.get_bone_angle()
 	bone_a.rotation = _angle_a - bone_a_angle
 	bone_b.rotation = _angle_b - angle_difference(bone_a_angle, bone_b_angle)
+	#if joint_one_bone_index == 28:
+		#print("desired rots: ", _angle_a, " ", _angle_b)
+		#print("actual rotation: ", bone_a.rotation, " ", bone_b.rotation)
 
 
 func _distance_squared_between(node_a: Node2D, node_b: Node2D) -> float:

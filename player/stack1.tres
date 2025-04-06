@@ -1,0 +1,43 @@
+[gd_resource type="SkeletonModificationStack2D" load_steps=5 format=3 uid="uid://e3533nb6exnk"]
+
+[sub_resource type="SkeletonModification2DTwoBoneIK" id="SkeletonModification2DTwoBoneIK_h4ksu"]
+resource_local_to_scene = true
+target_nodepath = NodePath("root/ik_back_root/IK_backleg_back")
+joint_one_bone_idx = 28
+joint_one_bone2d_node = NodePath("root/body_root/body/hip_back/thigh_back")
+joint_two_bone_idx = 29
+joint_two_bone2d_node = NodePath("root/body_root/body/hip_back/thigh_back/lowerleg_back")
+
+[sub_resource type="SkeletonModification2DTwoBoneIK" id="SkeletonModification2DTwoBoneIK_oyty2"]
+resource_local_to_scene = true
+target_nodepath = NodePath("root/ik_front_root/IK_frontleg_front")
+flip_bend_direction = true
+joint_one_bone_idx = 16
+joint_one_bone2d_node = NodePath("root/body_root/body/body2/shoulder_front")
+joint_two_bone_idx = 17
+joint_two_bone2d_node = NodePath("root/body_root/body/body2/shoulder_front/arm_front")
+
+[sub_resource type="SkeletonModification2DTwoBoneIK" id="SkeletonModification2DTwoBoneIK_1my0b"]
+resource_local_to_scene = true
+target_nodepath = NodePath("root/ik_back_root/IK_backleg_front")
+joint_one_bone_idx = 23
+joint_one_bone2d_node = NodePath("root/body_root/body/hip_front/thigh_front")
+joint_two_bone_idx = 24
+joint_two_bone2d_node = NodePath("root/body_root/body/hip_front/thigh_front/lowerleg_front")
+
+[sub_resource type="SkeletonModification2DTwoBoneIK" id="SkeletonModification2DTwoBoneIK_dl607"]
+resource_local_to_scene = true
+target_nodepath = NodePath("root/ik_front_root/IK_frontleg_back")
+flip_bend_direction = true
+joint_one_bone_idx = 19
+joint_one_bone2d_node = NodePath("root/body_root/body/body2/shoulder_back")
+joint_two_bone_idx = 20
+joint_two_bone2d_node = NodePath("root/body_root/body/body2/shoulder_back/arm_back")
+
+[resource]
+resource_local_to_scene = true
+modification_count = 4
+modifications/0 = SubResource("SkeletonModification2DTwoBoneIK_h4ksu")
+modifications/1 = SubResource("SkeletonModification2DTwoBoneIK_oyty2")
+modifications/2 = SubResource("SkeletonModification2DTwoBoneIK_1my0b")
+modifications/3 = SubResource("SkeletonModification2DTwoBoneIK_dl607")
