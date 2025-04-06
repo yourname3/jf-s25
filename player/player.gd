@@ -34,7 +34,6 @@ var original_position: Vector2
 func _ready() -> void:
 	if mode == MODE_PLAYER:
 		$flash_in.queue_free()
-		$flash_in_particles.queue_free()
 	else:
 		hide()
 	
