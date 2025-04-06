@@ -512,4 +512,4 @@ metadata/_edit_lock_ = true
 position = Vector2(2048, 1024)
 
 [node name="Goal" parent="." instance=ExtResource("17_m5ivw")]
-position = Vector2(1920, 896)
+position = Vector2(3712, 640)
