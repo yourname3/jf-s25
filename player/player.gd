@@ -110,6 +110,8 @@ func spawn_clone() -> void:
 	add_sibling(clone)
 	current_clone = clone
 	
+	Sounds.magic_fire.play()
+	
 #func _draw() -> void:
 	#draw_line(Vector2.ZERO, velocity, Color.BLACK, 8)
 #func _process(delta: float) -> void:
@@ -193,6 +195,7 @@ func _physics_process(delta: float) -> void:
 	
 	var encoded_inputs := get_inputs()
 	if mode == MODE_PLAYER:
+		Sounds.enable_magic = is_recording
 		if Input.is_action_just_pressed("clone"):
 			if is_recording:
 				is_recording = false
