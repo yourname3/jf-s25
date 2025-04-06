@@ -29,7 +29,7 @@ var original_position: Vector2
 @onready var animator: PlayerAnimation = $pivot/pony
 @onready var pivot := $pivot
 
-@onready var player_jump_detector = $PlayerJumpDetector
+# @onready var player_jump_detector = $PlayerJumpDetector
 
 func _ready() -> void:
 	if mode == MODE_PLAYER:
@@ -72,6 +72,12 @@ func get_inputs() -> Vector2:
 	return input
 	
 var current_clone: Player = null
+
+func despawn():
+	$pivot/pony.process_mode = Node.PROCESS_MODE_DISABLED
+	$CollisionShape2D.disabled = true
+	$head/CollisionShape2D.disabled = true
+	$flash_in/AnimationPlayer.play("flash_out")
 	
 func spawn_clone() -> void:
 	# SAFETY: Do not let clones clone.
@@ -79,7 +85,8 @@ func spawn_clone() -> void:
 		return
 	
 	if current_clone != null:	
-		current_clone.queue_free()
+		current_clone.despawn()
+		current_clone = null
 	
 	var clone := preload("res://player/player.tscn").instantiate()
 	clone.global_position = original_position
