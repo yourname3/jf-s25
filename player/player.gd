@@ -25,6 +25,7 @@ const STATE_TOUCHED_GOAL = 1
 
 var original_position: Vector2
 @onready var animator: PlayerAnimation = $pivot/pony
+@onready var pivot := $pivot
 
 @onready var player_jump_detector = $PlayerJumpDetector
 
@@ -232,6 +233,11 @@ func _physics_process(delta: float) -> void:
 	#print(animator.want_walk)
 	animator.want_jump_down = linear_velocity.y > 0
 	animator.set_walkvel(abs(linear_velocity.x) / (WALK_BASE_SPEED * 6))
+	
+	if linear_velocity.x > 64:
+		pivot.scale.x = 1
+	if linear_velocity.x < -64:
+		pivot.scale.x = -1
 			
 	if _is_on_floor > 0:
 		_is_on_floor -= delta
