@@ -38,11 +38,12 @@ bus = &"SFX"
 [node name="MagicFire" type="AudioStreamPlayer" parent="."]
 stream = SubResource("AudioStreamRandomizer_pkgfr")
 volume_db = -8.0
+pitch_scale = 2.0
 max_polyphony = 3
 bus = &"SFX"
 
 [node name="Machine" type="AudioStreamPlayer" parent="."]
 stream = SubResource("AudioStreamRandomizer_xkoj7")
-volume_db = -8.0
+volume_db = -16.0
 max_polyphony = 3
 bus = &"SFX"
