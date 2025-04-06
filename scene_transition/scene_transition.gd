@@ -6,6 +6,7 @@ var current_next: PackedScene = null
 func change_to(scene: PackedScene) -> void:
 	if current_next == null:
 		current_next = scene
+		$AnimationPlayer.stop()
 		$AnimationPlayer.play("transition")
 
 func _do_change_now() -> void:

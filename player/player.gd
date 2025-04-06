@@ -303,6 +303,8 @@ func _physics_process(delta: float) -> void:
 	
 	if global_position.y > Global.bottom_y and mode == MODE_PLAYER:
 		Levels.reload_current()
+	if Input.is_action_just_pressed("reset"):
+		Levels.reload_current()
 	
 	#if Input.is_action_just_pressed("jump"):
 		#SceneTransition.change_to(preload("res://level/level.tscn"))
