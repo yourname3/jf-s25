@@ -1,0 +1,58 @@
+[gd_scene load_steps=3 format=3 uid="uid://bj2a0plooc6ey"]
+
+[ext_resource type="Theme" uid="uid://dbod1te104o66" path="res://theme.tres" id="1_oa53l"]
+[ext_resource type="Script" uid="uid://mxjn8tyj5rqr" path="res://main_menu/main_menu.gd" id="2_d3a7t"]
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_oa53l")
+script = ExtResource("2_d3a7t")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -434.0
+offset_top = 196.0
+offset_right = 434.0
+offset_bottom = 338.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 112
+text = "stuck in the past?"
+
+[node name="Label2" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -434.0
+offset_top = 320.0
+offset_right = 434.0
+offset_bottom = 360.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 27
+text = "a game by ben"
+horizontal_alignment = 1
+
+[node name="play_button" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -80.0
+offset_top = 76.0
+offset_right = 80.0
+offset_bottom = 119.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "play"
