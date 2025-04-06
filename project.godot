@@ -10,7 +10,7 @@ config_version=5
 
 [application]
 
-config/name="jf f25"
+config/name="stuck in the past?"
 run/main_scene="uid://chfr6pwtsw1o3"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"

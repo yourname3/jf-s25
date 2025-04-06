@@ -1,0 +1,166 @@
+[gd_scene load_steps=21 format=3 uid="uid://dkbauaxvohk3k"]
+
+[ext_resource type="Theme" uid="uid://dbod1te104o66" path="res://theme.tres" id="1_xrhw2"]
+[ext_resource type="Script" uid="uid://4afmn7idbxbj" path="res://levels/ending/ending.gd" id="2_nt15d"]
+[ext_resource type="Script" uid="uid://clts7ttaac1qj" path="res://addons/rmsmartshape/shapes/shape.gd" id="4_sc7t6"]
+[ext_resource type="Script" uid="uid://coaymqsgs0h2q" path="res://addons/rmsmartshape/vertex_properties.gd" id="5_2oe5h"]
+[ext_resource type="Script" uid="uid://cb2icyedydm1p" path="res://addons/rmsmartshape/shapes/point.gd" id="6_l05qr"]
+[ext_resource type="Script" uid="uid://g01lopkfyc68" path="res://addons/rmsmartshape/shapes/point_array.gd" id="7_5ybfe"]
+[ext_resource type="Resource" uid="uid://dwqtagtlmikq8" path="res://level/material_grass.tres" id="8_5wsk3"]
+
+[sub_resource type="Resource" id="Resource_ia84y"]
+script = ExtResource("5_2oe5h")
+texture_idx = 0
+flip = false
+width = 1.0
+
+[sub_resource type="Resource" id="Resource_kwfav"]
+script = ExtResource("6_l05qr")
+position = Vector2(-1120, -512)
+point_in = Vector2(0, 0)
+point_out = Vector2(0, 0)
+properties = SubResource("Resource_ia84y")
+
+[sub_resource type="Resource" id="Resource_6at21"]
+script = ExtResource("5_2oe5h")
+texture_idx = 0
+flip = false
+width = 1.0
+
+[sub_resource type="Resource" id="Resource_tr6y3"]
+script = ExtResource("6_l05qr")
+position = Vector2(872, 992)
+point_in = Vector2(0, 0)
+point_out = Vector2(0, 0)
+properties = SubResource("Resource_6at21")
+
+[sub_resource type="Resource" id="Resource_og6xe"]
+script = ExtResource("5_2oe5h")
+texture_idx = 0
+flip = false
+width = 1.0
+
+[sub_resource type="Resource" id="Resource_iri28"]
+script = ExtResource("6_l05qr")
+position = Vector2(2768, 992)
+point_in = Vector2(0, 0)
+point_out = Vector2(0, 0)
+properties = SubResource("Resource_og6xe")
+
+[sub_resource type="Resource" id="Resource_mvfl2"]
+script = ExtResource("5_2oe5h")
+texture_idx = 0
+flip = false
+width = 1.0
+
+[sub_resource type="Resource" id="Resource_ie3af"]
+script = ExtResource("6_l05qr")
+position = Vector2(2744, 1768)
+point_in = Vector2(0, 0)
+point_out = Vector2(0, 0)
+properties = SubResource("Resource_mvfl2")
+
+[sub_resource type="Resource" id="Resource_qvn4f"]
+script = ExtResource("5_2oe5h")
+texture_idx = 0
+flip = false
+width = 1.0
+
+[sub_resource type="Resource" id="Resource_7f1p5"]
+script = ExtResource("6_l05qr")
+position = Vector2(-1096, 1800)
+point_in = Vector2(0, 0)
+point_out = Vector2(0, 0)
+properties = SubResource("Resource_qvn4f")
+
+[sub_resource type="Resource" id="Resource_g1omr"]
+script = ExtResource("5_2oe5h")
+texture_idx = 0
+flip = false
+width = 1.0
+
+[sub_resource type="Resource" id="Resource_ru8rc"]
+script = ExtResource("6_l05qr")
+position = Vector2(-1120, -512)
+point_in = Vector2(0, 0)
+point_out = Vector2(0, 0)
+properties = SubResource("Resource_g1omr")
+
+[sub_resource type="Resource" id="Resource_xayta"]
+script = ExtResource("7_5ybfe")
+_points = {
+0: SubResource("Resource_kwfav"),
+1: SubResource("Resource_tr6y3"),
+2: SubResource("Resource_iri28"),
+3: SubResource("Resource_ie3af"),
+4: SubResource("Resource_7f1p5"),
+5: SubResource("Resource_ru8rc")
+}
+_point_order = PackedInt32Array(0, 1, 2, 3, 4, 5)
+_constraints = {
+Vector2i(0, 5): 15
+}
+_next_key = 6
+_material_overrides = {}
+tessellation_stages = 3
+tessellation_tolerance = 6.0
+curve_bake_interval = 20.0
+metadata/_custom_type_script = "uid://g01lopkfyc68"
+
+[node name="Ending" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_xrhw2")
+script = ExtResource("2_nt15d")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -224.0
+offset_top = 260.0
+offset_right = 221.0
+offset_bottom = 402.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 112
+text = "you win?"
+
+[node name="play_button" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -80.0
+offset_top = 248.0
+offset_right = 80.0
+offset_bottom = 291.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 20
+text = "quit to menu"
+
+[node name="SS2D_Shape2" type="Node2D" parent="."]
+visible = false
+texture_repeat = 2
+script = ExtResource("4_sc7t6")
+_points = SubResource("Resource_xayta")
+shape_material = ExtResource("8_5wsk3")
+metadata/_custom_type_script = "uid://clts7ttaac1qj"
+metadata/_edit_lock_ = true
