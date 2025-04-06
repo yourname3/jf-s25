@@ -1,0 +1,113 @@
+[gd_scene load_steps=17 format=3 uid="uid://78q04skjo3kb"]
+
+[ext_resource type="Script" uid="uid://clts7ttaac1qj" path="res://addons/rmsmartshape/shapes/shape.gd" id="1_01g6r"]
+[ext_resource type="Script" uid="uid://coaymqsgs0h2q" path="res://addons/rmsmartshape/vertex_properties.gd" id="2_r5un7"]
+[ext_resource type="Script" uid="uid://cb2icyedydm1p" path="res://addons/rmsmartshape/shapes/point.gd" id="3_q6fx6"]
+[ext_resource type="Script" uid="uid://g01lopkfyc68" path="res://addons/rmsmartshape/shapes/point_array.gd" id="4_6mfdl"]
+[ext_resource type="Resource" uid="uid://dwqtagtlmikq8" path="res://level/material_grass.tres" id="5_avahi"]
+
+[sub_resource type="Resource" id="Resource_01g6r"]
+script = ExtResource("2_r5un7")
+texture_idx = 0
+flip = false
+width = 1.0
+
+[sub_resource type="Resource" id="Resource_r5un7"]
+script = ExtResource("3_q6fx6")
+position = Vector2(0, 0)
+point_in = Vector2(0, 0)
+point_out = Vector2(0, 0)
+properties = SubResource("Resource_01g6r")
+
+[sub_resource type="Resource" id="Resource_q6fx6"]
+script = ExtResource("2_r5un7")
+texture_idx = 0
+flip = false
+width = 1.0
+
+[sub_resource type="Resource" id="Resource_6mfdl"]
+script = ExtResource("3_q6fx6")
+position = Vector2(640, 0)
+point_in = Vector2(0, 0)
+point_out = Vector2(0, 0)
+properties = SubResource("Resource_q6fx6")
+
+[sub_resource type="Resource" id="Resource_avahi"]
+script = ExtResource("2_r5un7")
+texture_idx = 0
+flip = false
+width = 1.0
+
+[sub_resource type="Resource" id="Resource_51mq3"]
+script = ExtResource("3_q6fx6")
+position = Vector2(640, 512)
+point_in = Vector2(0, 0)
+point_out = Vector2(0, 0)
+properties = SubResource("Resource_avahi")
+
+[sub_resource type="Resource" id="Resource_8ndte"]
+script = ExtResource("2_r5un7")
+texture_idx = 0
+flip = false
+width = 1.0
+
+[sub_resource type="Resource" id="Resource_72aop"]
+script = ExtResource("3_q6fx6")
+position = Vector2(0, 512)
+point_in = Vector2(0, 0)
+point_out = Vector2(0, 0)
+properties = SubResource("Resource_8ndte")
+
+[sub_resource type="Resource" id="Resource_kgxl4"]
+script = ExtResource("2_r5un7")
+texture_idx = 0
+flip = false
+width = 1.0
+
+[sub_resource type="Resource" id="Resource_7v7nd"]
+script = ExtResource("3_q6fx6")
+position = Vector2(0, 0)
+point_in = Vector2(0, 0)
+point_out = Vector2(0, 0)
+properties = SubResource("Resource_kgxl4")
+
+[sub_resource type="Resource" id="Resource_t8qry"]
+resource_local_to_scene = true
+script = ExtResource("4_6mfdl")
+_points = {
+0: SubResource("Resource_r5un7"),
+1: SubResource("Resource_6mfdl"),
+2: SubResource("Resource_51mq3"),
+3: SubResource("Resource_72aop"),
+4: SubResource("Resource_7v7nd")
+}
+_point_order = PackedInt32Array(0, 1, 2, 3, 4)
+_constraints = {
+Vector2i(0, 4): 15
+}
+_next_key = 5
+_material_overrides = {}
+tessellation_stages = 3
+tessellation_tolerance = 6.0
+curve_bake_interval = 20.0
+metadata/_custom_type_script = "uid://g01lopkfyc68"
+
+[node name="SS2D_Shape3" type="Node2D"]
+texture_repeat = 2
+script = ExtResource("1_01g6r")
+_points = SubResource("Resource_t8qry")
+shape_material = ExtResource("5_avahi")
+collision_update_mode = 2
+collision_polygon_node_path = NodePath("StaticBody2D/CollisionPolygon2D")
+metadata/_custom_type_script = "uid://clts7ttaac1qj"
+metadata/_edit_lock_ = true
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+collision_layer = 3
+collision_mask = 3
+metadata/_edit_lock_ = true
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+visible = false
+polygon = PackedVector2Array(0, 0, 640, 0, 640, 512, 0, 512, 0, 0)
+metadata/_edit_lock_ = true

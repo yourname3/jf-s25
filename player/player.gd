@@ -1,11 +1,11 @@
 extends RigidBody2D
 class_name Player
 
-const H_VEL := 256.0 * 3.0
+const H_VEL := 256.0 * 4.0
 const H_ACCEL := 2048.0
 
 const JUMP_TIME := 0.4
-const JUMP_SPEED := 256.0 * 3.0
+const JUMP_SPEED := 256.0 * 4.0
 
 var jump_timer: float = 0.0
 
@@ -168,10 +168,10 @@ func _physics_process(delta: float) -> void:
 	var target_x_vel := h_input * H_VEL
 	var x_accel: float = sign(target_x_vel - linear_velocity.x) * H_ACCEL
 	
-	if target_x_vel == 0:
-		x_accel *= 0.5
-	if not is_on_floor():
-		x_accel *= 0.75
+	#if target_x_vel == 0:
+		#x_accel *= 0.5
+	#if not is_on_floor():
+		#x_accel *= 0.75
 	
 	var x_accel_integrated = x_accel * delta
 	
@@ -242,7 +242,7 @@ func _physics_process(delta: float) -> void:
 	if _is_on_floor > 0:
 		_is_on_floor -= delta
 	
-	if global_position.y > Global.bottom_y:
+	if global_position.y > Global.bottom_y and mode == MODE_PLAYER:
 		Levels.reload_current()
 	
 	#if Input.is_action_just_pressed("jump"):

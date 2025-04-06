@@ -1,6 +1,3 @@
-[gd_resource type="Theme" load_steps=2 format=3 uid="uid://dbod1te104o66"]
-
-[ext_resource type="FontFile" uid="uid://clftjiqbo2kg2" path="res://fonts/DeliusSwashCaps-Regular.ttf" id="1_e1x85"]
+[gd_resource type="Theme" format=3 uid="uid://dbod1te104o66"]
 
 [resource]
-default_font = ExtResource("1_e1x85")

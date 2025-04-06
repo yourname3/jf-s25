@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://d0u0o1s2jxhbj"]
+[gd_scene load_steps=7 format=3 uid="uid://d0u0o1s2jxhbj"]
 
 [ext_resource type="Script" uid="uid://b14jeh0pd1aal" path="res://player/player.gd" id="1_g1dw6"]
 [ext_resource type="Texture2D" uid="uid://dxyu74jyy6a5l" path="res://whitebox/whitebox_round.png" id="2_rkbax"]
@@ -8,11 +8,7 @@
 friction = 0.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yw30f"]
-size = Vector2(126, 99)
-
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_g1dw6"]
-radius = 68.5
-height = 331.0
+size = Vector2(129, 337)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g1dw6"]
 size = Vector2(254, 24)
@@ -28,13 +24,9 @@ contact_monitor = true
 max_contacts_reported = 4
 script = ExtResource("1_g1dw6")
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
-position = Vector2(0, -116.5)
-shape = SubResource("RectangleShape2D_yw30f")
-
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-0.5, -0.5)
-shape = SubResource("CapsuleShape2D_g1dw6")
+shape = SubResource("RectangleShape2D_yw30f")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 visible = false

@@ -15,7 +15,7 @@ func get_level_scene():
 		return levels[levels.size() - 1]
 
 func reload_current():
-	SceneTransition.change_to(get_level_scene())
+	SceneTransition.change_to(load(get_tree().current_scene.scene_file_path))#get_level_scene())
 	
 func next_level():
 	if SceneTransition.current_next == null:
