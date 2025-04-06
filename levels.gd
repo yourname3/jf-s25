@@ -9,6 +9,8 @@ var levels = [
 	preload("res://levels/level_boost_yourself.tscn"),
 	preload("res://levels/level_multi_button.tscn"),
 	preload("res://levels/level_crazy_platforming.tscn"),
+	preload("res://levels/level_big_boost.tscn"),
+	preload("res://levels/level_big_boost.tscn"),
 ]
 
 var current_level: int = 0
