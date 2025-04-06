@@ -126,7 +126,7 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 1)
 
-[node name="Label" type="Label" parent="."]
+[node name="Label" type="RichTextLabel" parent="."]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
@@ -136,9 +136,9 @@ offset_top = 260.0
 offset_right = 221.0
 offset_bottom = 402.0
 grow_horizontal = 2
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_font_sizes/font_size = 112
-text = "you win?"
+theme_override_font_sizes/normal_font_size = 109
+bbcode_enabled = true
+text = "[wave]you win?[/wave]"
 
 [node name="play_button" type="Button" parent="."]
 layout_mode = 1
