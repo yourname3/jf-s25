@@ -78,10 +78,10 @@ func spawn_clone() -> void:
 	add_sibling(clone)
 	current_clone = clone
 	
-func _draw() -> void:
-	draw_line(Vector2.ZERO, linear_velocity, Color.BLACK, 8)
-func _process(delta: float) -> void:
-	queue_redraw()
+#func _draw() -> void:
+	#draw_line(Vector2.ZERO, linear_velocity, Color.BLACK, 8)
+#func _process(delta: float) -> void:
+	#queue_redraw()
 		
 var _is_on_floor: float = 0.0
 		

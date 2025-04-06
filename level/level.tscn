@@ -1,20 +1,13 @@
-[gd_scene load_steps=72 format=3 uid="uid://bda6bue7aop33"]
+[gd_scene load_steps=56 format=3 uid="uid://bda6bue7aop33"]
 
 [ext_resource type="PackedScene" uid="uid://d0u0o1s2jxhbj" path="res://player/player.tscn" id="1_7lnir"]
 [ext_resource type="Script" uid="uid://clts7ttaac1qj" path="res://addons/rmsmartshape/shapes/shape.gd" id="2_0v1st"]
 [ext_resource type="Script" uid="uid://coaymqsgs0h2q" path="res://addons/rmsmartshape/vertex_properties.gd" id="3_6gtgk"]
 [ext_resource type="Script" uid="uid://cb2icyedydm1p" path="res://addons/rmsmartshape/shapes/point.gd" id="4_cw150"]
 [ext_resource type="Script" uid="uid://g01lopkfyc68" path="res://addons/rmsmartshape/shapes/point_array.gd" id="5_xii2b"]
-[ext_resource type="Script" uid="uid://cs7sfcttk45ir" path="res://addons/rmsmartshape/materials/edge_material_metadata.gd" id="6_rhqlf"]
-[ext_resource type="Script" uid="uid://b5pdeqxbhw7y7" path="res://addons/rmsmartshape/materials/edge_material.gd" id="7_cw150"]
-[ext_resource type="Script" uid="uid://igcmftw7hkgq" path="res://addons/rmsmartshape/materials/shape_material.gd" id="7_l5lfc"]
-[ext_resource type="Texture2D" uid="uid://8ua0t4npmfyt" path="res://level/tiles/tile_basic.svg" id="9_l5lfc"]
-[ext_resource type="Script" uid="uid://53mvvatpbra5" path="res://addons/rmsmartshape/normal_range.gd" id="9_rhqlf"]
-[ext_resource type="Texture2D" uid="uid://d2hbodlpyo7u7" path="res://level/tiles/tile_sides.svg" id="11_l5lfc"]
-[ext_resource type="Texture2D" uid="uid://0nhdgcdcd0x6" path="res://level/tiles/tile_darker.svg" id="11_m3nah"]
+[ext_resource type="Resource" uid="uid://dwqtagtlmikq8" path="res://level/material_grass.tres" id="8_cw150"]
+[ext_resource type="Texture2D" uid="uid://bxq1ymmba1m6d" path="res://level/cloud.svg" id="11_rhqlf"]
 [ext_resource type="Script" uid="uid://c666aimbmpet3" path="res://level/recorder_ui.gd" id="11_xii2b"]
-[ext_resource type="Texture2D" uid="uid://bjcqay220cuyp" path="res://level/tiles/tile_basic_tl.svg" id="12_m3nah"]
-[ext_resource type="Texture2D" uid="uid://51h1nxct4d7j" path="res://level/tiles/tile_basic_tr.svg" id="13_fm1jd"]
 [ext_resource type="PackedScene" uid="uid://b1lhi5tsueed4" path="res://button/button.tscn" id="16_7jqyl"]
 [ext_resource type="PackedScene" uid="uid://kbpehcxnkskm" path="res://goal/goal.tscn" id="17_m5ivw"]
 [ext_resource type="PackedScene" uid="uid://btayoav3hqsll" path="res://door/door.tscn" id="18_sui6v"]
@@ -331,105 +324,7 @@ tessellation_stages = 3
 tessellation_tolerance = 6.0
 curve_bake_interval = 20.0
 
-[sub_resource type="Resource" id="Resource_sui6v"]
-script = ExtResource("7_cw150")
-textures = Array[Texture2D]([ExtResource("11_l5lfc")])
-textures_corner_outer = Array[Texture2D]([])
-textures_corner_inner = Array[Texture2D]([])
-textures_taper_left = Array[Texture2D]([])
-textures_taper_right = Array[Texture2D]([])
-textures_taper_corner_left = Array[Texture2D]([])
-textures_taper_corner_right = Array[Texture2D]([])
-randomize_texture = false
-use_corner_texture = false
-use_taper_texture = false
-fit_mode = 0
-metadata/_custom_type_script = "uid://b5pdeqxbhw7y7"
-
-[sub_resource type="Resource" id="Resource_q4dhf"]
-script = ExtResource("9_rhqlf")
-begin = 313.0
-distance = 76.0
-edgeRendering = Vector2(0, 0)
-
-[sub_resource type="Resource" id="Resource_4vkke"]
-script = ExtResource("6_rhqlf")
-edge_material = SubResource("Resource_sui6v")
-normal_range = SubResource("Resource_q4dhf")
-weld = true
-taper_sharp_corners = false
-render = true
-z_index = -1
-z_as_relative = true
-offset = -0.7
-metadata/_custom_type_script = "uid://cs7sfcttk45ir"
-
-[sub_resource type="Resource" id="Resource_l5lfc"]
-script = ExtResource("7_cw150")
-textures = Array[Texture2D]([ExtResource("9_l5lfc")])
-textures_corner_outer = Array[Texture2D]([])
-textures_corner_inner = Array[Texture2D]([])
-textures_taper_left = Array[Texture2D]([ExtResource("12_m3nah")])
-textures_taper_right = Array[Texture2D]([ExtResource("13_fm1jd")])
-textures_taper_corner_left = Array[Texture2D]([])
-textures_taper_corner_right = Array[Texture2D]([])
-randomize_texture = false
-use_corner_texture = true
-use_taper_texture = true
-fit_mode = 0
-metadata/_custom_type_script = "uid://b5pdeqxbhw7y7"
-
-[sub_resource type="Resource" id="Resource_m3nah"]
-script = ExtResource("9_rhqlf")
-begin = 20.0
-distance = 134.0
-edgeRendering = Vector2(0, 0)
-
-[sub_resource type="Resource" id="Resource_3dv6e"]
-script = ExtResource("6_rhqlf")
-edge_material = SubResource("Resource_l5lfc")
-normal_range = SubResource("Resource_m3nah")
-weld = true
-taper_sharp_corners = false
-render = true
-z_index = 0
-z_as_relative = true
-offset = -0.9
-metadata/_custom_type_script = "uid://cs7sfcttk45ir"
-
-[sub_resource type="Resource" id="Resource_w18mj"]
-script = ExtResource("9_rhqlf")
-begin = 156.0
-distance = 76.0
-edgeRendering = Vector2(0, 0)
-
-[sub_resource type="Resource" id="Resource_j1fdq"]
-script = ExtResource("6_rhqlf")
-edge_material = SubResource("Resource_sui6v")
-normal_range = SubResource("Resource_w18mj")
-weld = true
-taper_sharp_corners = false
-render = true
-z_index = -1
-z_as_relative = true
-offset = -0.7
-metadata/_custom_type_script = "uid://cs7sfcttk45ir"
-
-[sub_resource type="Resource" id="Resource_1vdk1"]
-script = ExtResource("7_l5lfc")
-_edge_meta_materials = Array[ExtResource("6_rhqlf")]([SubResource("Resource_4vkke"), SubResource("Resource_3dv6e"), SubResource("Resource_j1fdq")])
-fill_textures = Array[Texture2D]([ExtResource("11_m3nah")])
-fill_texture_z_index = -10
-fill_texture_show_behind_parent = false
-fill_texture_scale = 1.0
-fill_texture_absolute_position = false
-fill_texture_absolute_rotation = false
-fill_texture_offset = Vector2(0, 0)
-fill_texture_angle_offset = 0.0
-fill_mesh_offset = 0.0
-render_offset = 0.0
-
-[node name="Node2D" type="Node2D"]
+[node name="LevelBase" type="Node2D"]
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
@@ -488,23 +383,27 @@ max_contacts_reported = 8
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 zoom = Vector2(0.404, 0.404)
+position_smoothing_enabled = true
+
+[node name="Goal" parent="." instance=ExtResource("17_m5ivw")]
+position = Vector2(3712, 640)
 
 [node name="SS2D_Shape" type="Node2D" parent="."]
 texture_repeat = 2
 script = ExtResource("2_0v1st")
 _points = SubResource("Resource_8yb03")
-shape_material = SubResource("Resource_1vdk1")
-collision_polygon_node_path = NodePath("../StaticBody2D/CollisionPolygon2D")
+shape_material = ExtResource("8_cw150")
+collision_polygon_node_path = NodePath("StaticBody2D/CollisionPolygon2D")
 metadata/_custom_type_script = "uid://clts7ttaac1qj"
 metadata/_edit_lock_ = true
 
-[node name="StaticBody2D" type="StaticBody2D" parent="."]
+[node name="StaticBody2D" type="StaticBody2D" parent="SS2D_Shape"]
 visible = false
 collision_layer = 3
 collision_mask = 3
 metadata/_edit_lock_ = true
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="SS2D_Shape/StaticBody2D"]
 visible = false
 polygon = PackedVector2Array(-256, 1024, -256, -832, 640, -832, 640, 1024, 3392, 1024, 5120, 896, 6016, 896, 6464, 640, 7168, 640, 7552, 960, 8320, 960, 9344, 1088, 9344, 1344, 6016, 1344, 5120, 1344, 5115.88, 1357.75, 5099, 1394, 5062.63, 1445.25, 5000, 1504, 4904.38, 1562.75, 4769, 1614, 4587.13, 1650.25, 4352, 1664, 2048, 1664, -192, 1664, -768, 1664, -768, 1024, -256, 1024)
 metadata/_edit_lock_ = true
@@ -512,13 +411,19 @@ metadata/_edit_lock_ = true
 [node name="Button" parent="." instance=ExtResource("16_7jqyl")]
 position = Vector2(1408, 1024)
 
-[node name="Goal" parent="." instance=ExtResource("17_m5ivw")]
-position = Vector2(3712, 640)
-
-[node name="Door" parent="." node_paths=PackedStringArray("to_pos", "button") instance=ExtResource("18_sui6v")]
-position = Vector2(2432, 512)
-to_pos = NodePath("Marker2D")
+[node name="Door" parent="." node_paths=PackedStringArray("to_pos_src", "button") instance=ExtResource("18_sui6v")]
+position = Vector2(2432, 896)
+to_pos_src = NodePath("Marker2D")
 button = NodePath("../Button")
 
 [node name="Marker2D" type="Marker2D" parent="Door"]
-position = Vector2(384, -512)
+position = Vector2(0, -640)
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_mirroring = Vector2(2048, 0)
+
+[node name="Cloud" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2(640, -384)
+texture = ExtResource("11_rhqlf")

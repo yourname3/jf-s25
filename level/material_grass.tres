@@ -1,0 +1,109 @@
+[gd_resource type="Resource" script_class="SS2D_Material_Shape" load_steps=18 format=3 uid="uid://dwqtagtlmikq8"]
+
+[ext_resource type="Script" uid="uid://cs7sfcttk45ir" path="res://addons/rmsmartshape/materials/edge_material_metadata.gd" id="1_jgfph"]
+[ext_resource type="Script" uid="uid://b5pdeqxbhw7y7" path="res://addons/rmsmartshape/materials/edge_material.gd" id="2_t71vw"]
+[ext_resource type="Texture2D" uid="uid://d2hbodlpyo7u7" path="res://level/tiles/tile_sides.svg" id="3_bp8k5"]
+[ext_resource type="Script" uid="uid://53mvvatpbra5" path="res://addons/rmsmartshape/normal_range.gd" id="4_c2kjc"]
+[ext_resource type="Texture2D" uid="uid://8ua0t4npmfyt" path="res://level/tiles/tile_basic.svg" id="5_libqh"]
+[ext_resource type="Texture2D" uid="uid://bjcqay220cuyp" path="res://level/tiles/tile_basic_tl.svg" id="6_7imnc"]
+[ext_resource type="Texture2D" uid="uid://51h1nxct4d7j" path="res://level/tiles/tile_basic_tr.svg" id="7_s2dfh"]
+[ext_resource type="Texture2D" uid="uid://0nhdgcdcd0x6" path="res://level/tiles/tile_darker.svg" id="8_37v42"]
+[ext_resource type="Script" uid="uid://igcmftw7hkgq" path="res://addons/rmsmartshape/materials/shape_material.gd" id="9_8dcqt"]
+
+[sub_resource type="Resource" id="Resource_sui6v"]
+script = ExtResource("2_t71vw")
+textures = Array[Texture2D]([ExtResource("3_bp8k5")])
+textures_corner_outer = Array[Texture2D]([])
+textures_corner_inner = Array[Texture2D]([])
+textures_taper_left = Array[Texture2D]([])
+textures_taper_right = Array[Texture2D]([])
+textures_taper_corner_left = Array[Texture2D]([])
+textures_taper_corner_right = Array[Texture2D]([])
+randomize_texture = false
+use_corner_texture = false
+use_taper_texture = false
+fit_mode = 0
+metadata/_custom_type_script = "uid://b5pdeqxbhw7y7"
+
+[sub_resource type="Resource" id="Resource_q4dhf"]
+script = ExtResource("4_c2kjc")
+begin = 313.0
+distance = 76.0
+edgeRendering = Vector2(0, 0)
+
+[sub_resource type="Resource" id="Resource_4vkke"]
+script = ExtResource("1_jgfph")
+edge_material = SubResource("Resource_sui6v")
+normal_range = SubResource("Resource_q4dhf")
+weld = true
+taper_sharp_corners = false
+render = true
+z_index = -1
+z_as_relative = true
+offset = -0.7
+metadata/_custom_type_script = "uid://cs7sfcttk45ir"
+
+[sub_resource type="Resource" id="Resource_l5lfc"]
+script = ExtResource("2_t71vw")
+textures = Array[Texture2D]([ExtResource("5_libqh")])
+textures_corner_outer = Array[Texture2D]([])
+textures_corner_inner = Array[Texture2D]([])
+textures_taper_left = Array[Texture2D]([ExtResource("6_7imnc")])
+textures_taper_right = Array[Texture2D]([ExtResource("7_s2dfh")])
+textures_taper_corner_left = Array[Texture2D]([])
+textures_taper_corner_right = Array[Texture2D]([])
+randomize_texture = false
+use_corner_texture = true
+use_taper_texture = true
+fit_mode = 0
+metadata/_custom_type_script = "uid://b5pdeqxbhw7y7"
+
+[sub_resource type="Resource" id="Resource_m3nah"]
+script = ExtResource("4_c2kjc")
+begin = 20.0
+distance = 134.0
+edgeRendering = Vector2(0, 0)
+
+[sub_resource type="Resource" id="Resource_3dv6e"]
+script = ExtResource("1_jgfph")
+edge_material = SubResource("Resource_l5lfc")
+normal_range = SubResource("Resource_m3nah")
+weld = true
+taper_sharp_corners = false
+render = true
+z_index = 0
+z_as_relative = true
+offset = -0.9
+metadata/_custom_type_script = "uid://cs7sfcttk45ir"
+
+[sub_resource type="Resource" id="Resource_w18mj"]
+script = ExtResource("4_c2kjc")
+begin = 156.0
+distance = 76.0
+edgeRendering = Vector2(0, 0)
+
+[sub_resource type="Resource" id="Resource_j1fdq"]
+script = ExtResource("1_jgfph")
+edge_material = SubResource("Resource_sui6v")
+normal_range = SubResource("Resource_w18mj")
+weld = true
+taper_sharp_corners = false
+render = true
+z_index = -1
+z_as_relative = true
+offset = -0.7
+metadata/_custom_type_script = "uid://cs7sfcttk45ir"
+
+[resource]
+script = ExtResource("9_8dcqt")
+_edge_meta_materials = Array[ExtResource("1_jgfph")]([SubResource("Resource_4vkke"), SubResource("Resource_3dv6e"), SubResource("Resource_j1fdq")])
+fill_textures = Array[Texture2D]([ExtResource("8_37v42")])
+fill_texture_z_index = -10
+fill_texture_show_behind_parent = false
+fill_texture_scale = 1.0
+fill_texture_absolute_position = false
+fill_texture_absolute_rotation = false
+fill_texture_offset = Vector2(0, 0)
+fill_texture_angle_offset = 0.0
+fill_mesh_offset = 0.0
+render_offset = 0.0
