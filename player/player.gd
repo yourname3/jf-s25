@@ -32,6 +32,12 @@ var original_position: Vector2
 @onready var player_jump_detector = $PlayerJumpDetector
 
 func _ready() -> void:
+	if mode == MODE_PLAYER:
+		$flash_in.queue_free()
+		$flash_in_particles.queue_free()
+	else:
+		hide()
+	
 	add_collision_exception_with($head)
 	
 	original_position = global_position
@@ -61,8 +67,9 @@ func get_inputs() -> Vector2:
 		else:
 			#queue_free()
 			#global_position = original_position
-			input = recording[0]
-			playback_frame = 1
+			if not recording.is_empty():
+				input = recording[0]
+				playback_frame = 1
 	return input
 	
 var current_clone: Player = null
@@ -79,7 +86,7 @@ func spawn_clone() -> void:
 	clone.global_position = original_position
 	clone.recording = recording
 	clone.mode = MODE_PLAYBACK
-	recording = []
+	# Don't clear recording when we spawn.
 	add_sibling(clone)
 	current_clone = clone
 	
