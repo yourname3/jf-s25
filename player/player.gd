@@ -197,9 +197,12 @@ func _physics_process(delta: float) -> void:
 	if mode == MODE_PLAYER:
 		Sounds.enable_magic = is_recording
 		if Input.is_action_just_pressed("clone"):
+			
 			if is_recording:
 				is_recording = false
+				Sounds.click2.play()
 			else:
+				Sounds.click.play()
 				original_position = global_position
 				recording.clear()
 				recording_start = 0
@@ -256,6 +259,7 @@ func _physics_process(delta: float) -> void:
 	
 	if is_on_floor() and jump_just_pressed:
 		jump_timer = JUMP_TIME
+		Sounds.jump.play()
 	if not jump_pressed:
 		jump_timer = 0
 		

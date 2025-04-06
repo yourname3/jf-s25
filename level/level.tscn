@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://d38gdwd0g6gbx" path="res://player/recording.svg" id="3_ivpvi"]
 [ext_resource type="Script" uid="uid://cuc7m6tw6ltie" path="res://level/y_line.gd" id="11_rhqlf"]
 [ext_resource type="Script" uid="uid://c666aimbmpet3" path="res://level/recorder_ui.gd" id="11_xii2b"]
-[ext_resource type="PackedScene" uid="uid://kbpehcxnkskm" path="res://goal/goal.tscn" id="17_m5ivw"]
+[ext_resource type="PackedScene" uid="uid://kbpehcxnkskm" path="res://sounds/goal.tscn" id="17_m5ivw"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cw150"]
 bg_color = Color(0.221236, 0.490525, 0.438929, 1)

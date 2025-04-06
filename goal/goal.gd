@@ -6,6 +6,7 @@ class_name Goal
 func _on_player_entered(shape) -> void:
 	if shape is Player and shape.mode == Player.MODE_PLAYER:
 		shape.on_goal(self)
+		Sounds.black_hole.play()
 
 func _ready() -> void:
 	$Detect.body_entered.connect(_on_player_entered)

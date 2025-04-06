@@ -7,6 +7,10 @@ class_name SoundsScript
 @onready var magic = $Magic
 @onready var magic_fire = $MagicFire
 @onready var machine = $Machine
+@onready var click = $Click
+@onready var click2 = $Click2
+@onready var black_hole = $BlackHole
+@onready var jump = $Jump
 
 var enable_magic: bool = false
 var _did_enable_magic: bool = false

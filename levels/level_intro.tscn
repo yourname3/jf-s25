@@ -328,33 +328,6 @@ metadata/_custom_type_script = "uid://g01lopkfyc68"
 
 [node name="LevelBase" instance=ExtResource("1_8xd68")]
 
-[node name="Panel" type="Panel" parent="CanvasLayer/Control" index="2"]
-visible = false
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_top = 473.0
-grow_horizontal = 2
-grow_vertical = 2
-theme = ExtResource("2_nkyub")
-
-[node name="Label" type="Label" parent="CanvasLayer/Control/Panel" index="0"]
-layout_mode = 0
-offset_left = 6.55423
-offset_top = 5.01208
-offset_right = 129.554
-offset_bottom = 28.0121
-text = "starlight glimmer"
-
-[node name="Label2" type="Label" parent="CanvasLayer/Control/Panel" index="1"]
-layout_mode = 0
-offset_left = 6.55423
-offset_top = 35.47
-offset_right = 129.554
-offset_bottom = 58.47
-text = "What? Where am I"
-
 [node name="Goal" parent="." index="3"]
 position = Vector2(6016, -1024)
 
