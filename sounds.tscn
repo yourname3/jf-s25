@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://byxx7lsiy0elc"]
+
+[ext_resource type="AudioStream" uid="uid://d3pftnwigqepy" path="res://music/music.ogg" id="1_kypgd"]
+[ext_resource type="Script" uid="uid://56kovkxq2xv7" path="res://sounds.gd" id="1_vknln"]
+[ext_resource type="AudioStream" uid="uid://cr5aishfaa07j" path="res://music/menu.ogg" id="2_vknln"]
+
+[node name="Sounds" type="Node"]
+script = ExtResource("1_vknln")
+
+[node name="Game" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("1_kypgd")
+bus = &"Music"
+
+[node name="Menu" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_vknln")
+bus = &"Music"

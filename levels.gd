@@ -14,6 +14,9 @@ func get_level_scene():
 		# Last level (should be a victory screen or something)
 		return levels[levels.size() - 1]
 
+func to_current_level():
+	SceneTransition.change_to(get_level_scene())
+
 func reload_current():
 	SceneTransition.change_to(load(get_tree().current_scene.scene_file_path))#get_level_scene())
 	

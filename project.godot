@@ -20,6 +20,7 @@ config/icon="res://icon.svg"
 Global="*res://global.gd"
 SceneTransition="*res://scene_transition/scene_transition.tscn"
 Levels="*res://levels.gd"
+Sounds="*res://sounds.tscn"
 
 [debug]
 
