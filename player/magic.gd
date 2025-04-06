@@ -1,6 +1,8 @@
 extends VecDrawing
 class_name PlayerMagic
 
+@export var animator: PlayerAnimation = null
+
 var roots: Array[Vector2] = []
 
 func _ready() -> void:
@@ -10,6 +12,15 @@ func _ready() -> void:
 		roots.push_back(waypoints[i].value)
 
 func _process(delta: float) -> void:
+	var p = animator.player_parent
+	if p == null:
+		return
+	
+	var magic: bool = p.is_recording
+	var mod_t: float = 1.0 if magic else 0.0
+	
+	modulate.a += (mod_t - modulate.a) * Global.get_lerp(0.3, delta)
+	
 	super._process(delta)
 	for i in range(0, roots.size() / 3):
 		var dir: Vector2 = waypoints[i * 3 + 2].value - waypoints[i * 3 + 0].value
