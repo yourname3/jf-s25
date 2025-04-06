@@ -19,6 +19,10 @@ var playback_frame: int = 0
 const MODE_PLAYER = 0
 const MODE_PLAYBACK = 1
 
+var state: int = 0
+const STATE_NORMAL = 0
+const STATE_TOUCHED_GOAL = 1
+
 var original_position: Vector2
 @onready var animator: PlayerAnimation = $pivot/pony
 
@@ -107,7 +111,26 @@ var air_accumulator: float = 0.0
 # In pixels/second
 const WALK_BASE_SPEED = (101 - 29)
 
+# Goal that we are animating to.
+var towards_goal: Goal = null
+
+func on_goal(goal: Goal) -> void:
+	towards_goal = goal
+	
+
 func _physics_process(delta: float) -> void:
+	if towards_goal != null:
+		linear_velocity = Vector2.ZERO
+		var next := global_position.move_toward(towards_goal.global_position, delta * 512.0)
+		var offset = next - global_position
+		#print(offset)
+		move_and_collide(offset)
+		#print(global_position, towards_goal.global_position)
+		#scale = scale.move_toward(Vector2.ZERO, delta)
+		animator.scale = animator.scale.move_toward(Vector2.ZERO, 0.5 * delta)
+		towards_goal.scale = towards_goal.scale.move_toward(Vector2.ZERO, 0.3 * delta)
+		return
+	
 	var encoded_inputs := get_inputs()
 	if mode == MODE_PLAYER:
 		if Input.is_action_just_pressed("clone"):
@@ -211,7 +234,7 @@ func _physics_process(delta: float) -> void:
 	if _is_on_floor > 0:
 		_is_on_floor -= delta
 	
-	if Input.is_action_just_pressed("jump"):
-		SceneTransition.change_to(preload("res://level/level.tscn"))
+	#if Input.is_action_just_pressed("jump"):
+		#SceneTransition.change_to(preload("res://level/level.tscn"))
 	
 			

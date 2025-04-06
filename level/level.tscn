@@ -509,7 +509,7 @@ polygon = PackedVector2Array(-256, 1024, -256, -832, 640, -832, 640, 1024, 3392,
 metadata/_edit_lock_ = true
 
 [node name="Button" parent="." instance=ExtResource("16_7jqyl")]
-position = Vector2(2048, 1024)
+position = Vector2(1408, 1024)
 
 [node name="Goal" parent="." instance=ExtResource("17_m5ivw")]
 position = Vector2(3712, 640)

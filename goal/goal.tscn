@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://kbpehcxnkskm"]
+[gd_scene load_steps=16 format=3 uid="uid://kbpehcxnkskm"]
 
 [ext_resource type="Script" uid="uid://bghifdlfm2k1n" path="res://goal/goal.gd" id="1_0pfsm"]
 [ext_resource type="Texture2D" uid="uid://blhyg7ql70phr" path="res://goal/goal.svg" id="1_6aq0c"]
@@ -67,6 +67,9 @@ _data = {
 &"wobble": SubResource("Animation_h3eg0")
 }
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_0pfsm"]
+radius = 380.189
+
 [node name="Goal" type="Node2D"]
 script = ExtResource("1_0pfsm")
 
@@ -117,3 +120,10 @@ libraries = {
 &"": SubResource("AnimationLibrary_73eyi")
 }
 autoplay = "wobble"
+
+[node name="Detect" type="Area2D" parent="."]
+collision_layer = 4
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Detect"]
+shape = SubResource("CircleShape2D_0pfsm")
