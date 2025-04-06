@@ -128,7 +128,9 @@ func _physics_process(delta: float) -> void:
 		#print(global_position, towards_goal.global_position)
 		#scale = scale.move_toward(Vector2.ZERO, delta)
 		animator.scale = animator.scale.move_toward(Vector2.ZERO, 0.5 * delta)
-		towards_goal.scale = towards_goal.scale.move_toward(Vector2.ZERO, 0.3 * delta)
+		towards_goal.scale = towards_goal.scale.move_toward(Vector2.ZERO, 0.9 * delta)
+		if towards_goal.scale.length() < 0.0001:
+			SceneTransition.change_to(preload("res://level/level.tscn"))
 		return
 	
 	var encoded_inputs := get_inputs()
