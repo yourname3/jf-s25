@@ -14,7 +14,7 @@ width = 1.0
 
 [sub_resource type="Resource" id="Resource_r5un7"]
 script = ExtResource("3_q6fx6")
-position = Vector2(0, 0)
+position = Vector2(-320, 0)
 point_in = Vector2(0, 0)
 point_out = Vector2(0, 0)
 properties = SubResource("Resource_01g6r")
@@ -27,7 +27,7 @@ width = 1.0
 
 [sub_resource type="Resource" id="Resource_6mfdl"]
 script = ExtResource("3_q6fx6")
-position = Vector2(640, 0)
+position = Vector2(384, 0)
 point_in = Vector2(0, 0)
 point_out = Vector2(0, 0)
 properties = SubResource("Resource_q6fx6")
@@ -40,8 +40,8 @@ width = 1.0
 
 [sub_resource type="Resource" id="Resource_51mq3"]
 script = ExtResource("3_q6fx6")
-position = Vector2(640, 512)
-point_in = Vector2(0, 0)
+position = Vector2(1600, 832)
+point_in = Vector2(768, 0)
 point_out = Vector2(0, 0)
 properties = SubResource("Resource_avahi")
 
@@ -53,7 +53,7 @@ width = 1.0
 
 [sub_resource type="Resource" id="Resource_72aop"]
 script = ExtResource("3_q6fx6")
-position = Vector2(0, 512)
+position = Vector2(-320, 832)
 point_in = Vector2(0, 0)
 point_out = Vector2(0, 0)
 properties = SubResource("Resource_8ndte")
@@ -66,7 +66,7 @@ width = 1.0
 
 [sub_resource type="Resource" id="Resource_7v7nd"]
 script = ExtResource("3_q6fx6")
-position = Vector2(0, 0)
+position = Vector2(-320, 0)
 point_in = Vector2(0, 0)
 point_out = Vector2(0, 0)
 properties = SubResource("Resource_kgxl4")
@@ -108,6 +108,5 @@ collision_mask = 3
 metadata/_edit_lock_ = true
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
-visible = false
-polygon = PackedVector2Array(0, 0, 640, 0, 640, 512, 0, 512, 0, 0)
+polygon = PackedVector2Array(-320, 0, 384, 0, 1280, 416, 1552.75, 568.75, 1658.28, 639.031, 1734, 702, 1772.97, 755.219, 1768.25, 796.25, 1712.91, 822.656, 1600, 832, -320, 832, -320, 0)
 metadata/_edit_lock_ = true
