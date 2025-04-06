@@ -12,6 +12,8 @@ var jump_timer: float = 0.0
 var recording: Array[Vector2] = []
 var mode: int = 0
 
+var recording_start: int = 0
+
 var is_recording: bool = false
 
 var playback_frame: int = 0
@@ -79,6 +81,11 @@ func despawn():
 	$head/CollisionShape2D.disabled = true
 	$flash_in/AnimationPlayer.play("flash_out")
 	
+func cleanup_recording() -> void:
+	if recording_start > 0:
+		recording = recording.slice(recording_start)
+		recording_start = 0
+	
 func spawn_clone() -> void:
 	# SAFETY: Do not let clones clone.
 	if mode != MODE_PLAYER:
@@ -92,10 +99,12 @@ func spawn_clone() -> void:
 	if current_clone != null:	
 		current_clone.despawn()
 		current_clone = null
+		
+	cleanup_recording()
 	
 	var clone := preload("res://player/player.tscn").instantiate()
 	clone.global_position = original_position
-	clone.recording = recording
+	clone.recording = recording.duplicate()
 	clone.mode = MODE_PLAYBACK
 	# Don't clear recording when we spawn.
 	add_sibling(clone)
@@ -190,9 +199,13 @@ func _physics_process(delta: float) -> void:
 			else:
 				original_position = global_position
 				recording.clear()
+				recording_start = 0
 				is_recording = true
 				if current_ghost != null:
 					current_ghost.target_alpha = 0.0
+				if current_clone != null:	
+					current_clone.despawn()
+					current_clone = null
 				var g = preload("res://player/ghost.tscn").instantiate()
 				g.position = position
 				g.scale.x *= pivot.scale.x
@@ -202,6 +215,8 @@ func _physics_process(delta: float) -> void:
 			spawn_clone()
 		if is_recording:
 			recording.push_back(encoded_inputs)
+			if recording.size() > (60 * 8):
+				recording_start = recording.size() - (60 * 8)
 	
 	var h_input := encoded_inputs.x
 	var jump_pressed := false

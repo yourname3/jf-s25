@@ -1,7 +1,9 @@
-[gd_scene load_steps=9 format=3 uid="uid://bda6bue7aop33"]
+[gd_scene load_steps=13 format=3 uid="uid://bda6bue7aop33"]
 
 [ext_resource type="PackedScene" uid="uid://d0u0o1s2jxhbj" path="res://player/player.tscn" id="1_7lnir"]
+[ext_resource type="Theme" uid="uid://dbod1te104o66" path="res://theme.tres" id="1_44x8d"]
 [ext_resource type="Script" uid="uid://cb4drdeoxw0i2" path="res://level/level_camera.gd" id="2_rhqlf"]
+[ext_resource type="Texture2D" uid="uid://d38gdwd0g6gbx" path="res://player/recording.svg" id="3_ivpvi"]
 [ext_resource type="Script" uid="uid://cuc7m6tw6ltie" path="res://level/y_line.gd" id="11_rhqlf"]
 [ext_resource type="Script" uid="uid://c666aimbmpet3" path="res://level/recorder_ui.gd" id="11_xii2b"]
 [ext_resource type="PackedScene" uid="uid://kbpehcxnkskm" path="res://goal/goal.tscn" id="17_m5ivw"]
@@ -13,8 +15,15 @@ corner_radius_top_right = 100
 corner_radius_bottom_right = 100
 corner_radius_bottom_left = 100
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ivpvi"]
+bg_color = Color(0.5148, 0.66, 0.62612, 1)
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xii2b"]
-bg_color = Color(0.607843, 0.913725, 0.847059, 1)
+bg_color = Color(0.732877, 0.948494, 0.898361, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0v1st"]
+texture = ExtResource("3_ivpvi")
+axis_stretch_horizontal = 1
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ktfr2"]
 bg_color = Color(0.920026, 0, 0.292328, 1)
@@ -34,6 +43,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("1_44x8d")
 script = ExtResource("11_xii2b")
 metadata/_edit_use_anchors_ = true
 
@@ -63,21 +73,59 @@ offset_right = -27.0
 offset_bottom = -8.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_xii2b")
+theme_override_styles/panel = SubResource("StyleBoxFlat_ivpvi")
 metadata/_edit_use_anchors_ = true
 
-[node name="playhead" type="ColorRect" parent="CanvasLayer/Control/bar1/bar2"]
+[node name="bar_record" type="Panel" parent="CanvasLayer/Control/bar1/bar2"]
 layout_mode = 1
-anchors_preset = -1
+anchors_preset = 15
+anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -3.5
-offset_top = -18.0
-offset_right = 3.5
-offset_bottom = 18.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_xii2b")
+
+[node name="Panel" type="Panel" parent="CanvasLayer/Control/bar1/bar2/bar_record"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_0v1st")
+
+[node name="playhead" type="ColorRect" parent="CanvasLayer/Control/bar1/bar2/bar_record"]
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_left = -3.0
+offset_top = -12.0
+offset_right = 2.0
+offset_bottom = 14.0
+grow_vertical = 2
 color = Color(0.0313726, 0.729412, 0.717647, 1)
-metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="CanvasLayer/Control/bar1"]
+layout_mode = 0
+offset_left = -3.94902
+offset_top = 16.9418
+offset_right = 36.051
+offset_bottom = 47.9418
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 24
+text = "0"
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="CanvasLayer/Control/bar1"]
+layout_mode = 0
+offset_left = 941.051
+offset_top = 16.9418
+offset_right = 981.051
+offset_bottom = 47.9418
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 24
+text = "8"
+horizontal_alignment = 1
 
 [node name="recording" type="Panel" parent="CanvasLayer/Control"]
 layout_mode = 1

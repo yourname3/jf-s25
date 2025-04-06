@@ -100,7 +100,7 @@ width = 1.0
 
 [sub_resource type="Resource" id="Resource_npw3u"]
 script = ExtResource("6_6rdr2")
-position = Vector2(1536, -832)
+position = Vector2(1536, -704)
 point_in = Vector2(0, 0)
 point_out = Vector2(0, 0)
 properties = SubResource("Resource_d1waf")
@@ -146,7 +146,7 @@ properties = SubResource("Resource_400ue")
 
 [sub_resource type="Resource" id="Resource_4eld7"]
 script = ExtResource("6_6rdr2")
-position = Vector2(1536, -832)
+position = Vector2(1536, -704)
 point_in = Vector2(0, 0)
 point_out = Vector2(0, 0)
 properties = SubResource("Resource_d1waf")
@@ -159,7 +159,7 @@ width = 1.0
 
 [sub_resource type="Resource" id="Resource_md7ar"]
 script = ExtResource("6_6rdr2")
-position = Vector2(2304, -832)
+position = Vector2(2304, -704)
 point_in = Vector2(0, 0)
 point_out = Vector2(0, 0)
 properties = SubResource("Resource_mymj1")
@@ -244,10 +244,10 @@ position = Vector2(704, -1856)
 position = Vector2(-256, 0)
 
 [node name="Button2" parent="." index="7" instance=ExtResource("2_npw3u")]
-position = Vector2(-1088, -832)
+position = Vector2(-1088, -704)
 
 [node name="Door" parent="." index="8" node_paths=PackedStringArray("to_pos_src", "button") instance=ExtResource("3_mnfw8")]
-position = Vector2(-576, -1344)
+position = Vector2(-576, -1216)
 to_pos_src = NodePath("Marker2D")
 button = NodePath("../Button")
 
