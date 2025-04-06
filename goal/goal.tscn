@@ -1,0 +1,19 @@
+[gd_scene load_steps=5 format=3 uid="uid://kbpehcxnkskm"]
+
+[ext_resource type="Texture2D" uid="uid://blhyg7ql70phr" path="res://goal/goal.svg" id="1_6aq0c"]
+[ext_resource type="Texture2D" uid="uid://dxyu74jyy6a5l" path="res://whitebox/whitebox_round.png" id="2_7c8bl"]
+[ext_resource type="Shader" uid="uid://b0bghop74y0u8" path="res://goal/goal_fx.gdshader" id="2_h3eg0"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_73eyi"]
+shader = ExtResource("2_h3eg0")
+
+[node name="Goal" type="Node2D"]
+
+[node name="Goal" type="Sprite2D" parent="."]
+texture = ExtResource("1_6aq0c")
+
+[node name="Effect" type="Sprite2D" parent="."]
+z_index = 50
+material = SubResource("ShaderMaterial_73eyi")
+scale = Vector2(4, 4)
+texture = ExtResource("2_7c8bl")
