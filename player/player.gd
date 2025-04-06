@@ -1,4 +1,4 @@
-extends RigidBody2D
+extends CharacterBody2D
 class_name Player
 
 const H_VEL := 256.0 * 4.0
@@ -80,29 +80,29 @@ func spawn_clone() -> void:
 	current_clone = clone
 	
 #func _draw() -> void:
-	#draw_line(Vector2.ZERO, linear_velocity, Color.BLACK, 8)
+	#draw_line(Vector2.ZERO, velocity, Color.BLACK, 8)
 #func _process(delta: float) -> void:
 	#queue_redraw()
 		
-var _is_on_floor: float = 0.0
-		
-func is_on_floor() -> bool:
-	return _is_on_floor > 0
+#var _is_on_floor: float = 0.0
+		#
+#func is_on_floor() -> bool:
+	#return _is_on_floor > 0
 	
-func _integrate_forces(state: PhysicsDirectBodyState2D) -> void:
-	#_is_on_floor = false
-	for i in range(0, state.get_contact_count()):
-		var normal := state.get_contact_local_normal(i)
-		if normal.dot(Vector2.UP) > cos(deg_to_rad(45)):
-			_is_on_floor = 3.0 / 60.0
-		
-	var probe := move_and_collide(Vector2(0, -8), true)
-	var probe2 := test_move(transform, Vector2(0, -8))
-	if probe != null and probe.get_normal().dot(Vector2.UP) > 0.9:
-		_is_on_floor = 3.0 / 60.0
-	
-	if player_jump_detector.has_overlapping_bodies():
-		_is_on_floor = 3.0 / 60.0
+#func _integrate_forces(state: PhysicsDirectBodyState2D) -> void:
+	##_is_on_floor = false
+	#for i in range(0, state.get_contact_count()):
+		#var normal := state.get_contact_local_normal(i)
+		#if normal.dot(Vector2.UP) > cos(deg_to_rad(45)):
+			#_is_on_floor = 3.0 / 60.0
+		#
+	#var probe := move_and_collide(Vector2(0, -8), true)
+	#var probe2 := test_move(transform, Vector2(0, -8))
+	#if probe != null and probe.get_normal().dot(Vector2.UP) > 0.9:
+		#_is_on_floor = 3.0 / 60.0
+	#
+	#if player_jump_detector.has_overlapping_bodies():
+		#_is_on_floor = 3.0 / 60.0
 	
 # Hystersis for the walking animation. Increase this when we're definitely walking,
 # decrease it when we're definitely not.
@@ -121,7 +121,7 @@ func on_goal(goal: Goal) -> void:
 
 func _physics_process(delta: float) -> void:
 	if towards_goal != null:
-		linear_velocity = Vector2.ZERO
+		velocity = Vector2.ZERO
 		var next := global_position.move_toward(towards_goal.global_position, delta * 512.0)
 		var offset = next - global_position
 		#print(offset)
@@ -161,12 +161,12 @@ func _physics_process(delta: float) -> void:
 	if not is_on_floor():
 		# NOTE: Getting rid of the if fixes our jumping problem, but it makes
 		# us get pushed in to the ground which is probably worse.
-		linear_velocity += get_gravity() * delta
+		velocity += get_gravity() * delta
 	#else:
-		#linear_velocity += get_gravity() * delta * 0.2
+		#velocity += get_gravity() * delta * 0.2
 	
 	var target_x_vel := h_input * H_VEL
-	var x_accel: float = sign(target_x_vel - linear_velocity.x) * H_ACCEL
+	var x_accel: float = sign(target_x_vel - velocity.x) * H_ACCEL
 	
 	#if target_x_vel == 0:
 		#x_accel *= 0.5
@@ -175,10 +175,10 @@ func _physics_process(delta: float) -> void:
 	
 	var x_accel_integrated = x_accel * delta
 	
-	if abs(x_accel_integrated) > abs(target_x_vel - linear_velocity.x):
-		x_accel_integrated = target_x_vel - linear_velocity.x
+	if abs(x_accel_integrated) > abs(target_x_vel - velocity.x):
+		x_accel_integrated = target_x_vel - velocity.x
 	
-	linear_velocity.x += x_accel_integrated
+	velocity.x += x_accel_integrated
 	
 	if is_on_floor() and jump_just_pressed:
 		jump_timer = JUMP_TIME
@@ -187,30 +187,32 @@ func _physics_process(delta: float) -> void:
 		
 	if jump_timer > 0:
 		jump_timer -= delta
-		linear_velocity.y = -JUMP_SPEED
+		velocity.y = -JUMP_SPEED
+		
+	move_and_slide()
 	
-	if linear_velocity.y > 0:
+	if velocity.y > 0:
 		# Disable jumps if we ever lose our Y velocity.
 		jump_timer = 0
 		
 	# Manually perform a snap to the floor.
-	const SNAP_AMOUNT = 32.0
-	if linear_velocity.y > 0:
-		var check := move_and_collide(Vector2(0, SNAP_AMOUNT), true)
-		if check != null:
-			move_and_collide(Vector2(0, SNAP_AMOUNT) - check.get_normal() * 8)
-			# _is_on_floor = true
+	#const SNAP_AMOUNT = 32.0
+	#if velocity.y > 0:
+		#var check := move_and_collide(Vector2(0, SNAP_AMOUNT), true)
+		#if check != null:
+			#move_and_collide(Vector2(0, SNAP_AMOUNT) - check.get_normal() * 8)
+			## _is_on_floor = true
 			
 	# Choose animation.
 	#var anim = "idle"
 	#if is_on_floor():
-	if abs(linear_velocity.x) > 32:
+	if abs(velocity.x) > 32:
 		walking_accumulator += delta
 	else:
 		walking_accumulator -= delta * 3.0
 		
 	if not is_on_floor():
-		if linear_velocity.y < -32:
+		if velocity.y < -32:
 			air_accumulator += delta * 8.0
 		air_accumulator += delta
 	else:
@@ -227,20 +229,20 @@ func _physics_process(delta: float) -> void:
 	# fast movement speeds.
 	# If we can get a gallop animation, we can make it look better.
 	# For now, just do foot sliding.
-	# animator.set_walkvel(abs(linear_velocity.x) / WALK_BASE_SPEED)
+	# animator.set_walkvel(abs(velocity.x) / WALK_BASE_SPEED)
 	animator.want_air = air_accumulator > 0
 	animator.want_walk = walking_accumulator > 0
 	#print(animator.want_walk)
-	animator.want_jump_down = linear_velocity.y > 0
-	animator.set_walkvel(abs(linear_velocity.x) / (WALK_BASE_SPEED * 6))
+	animator.want_jump_down = velocity.y > 0
+	animator.set_walkvel(abs(velocity.x) / (WALK_BASE_SPEED * 6))
 	
-	if linear_velocity.x > 128:
+	if velocity.x > 128:
 		pivot.scale.x = 1
-	if linear_velocity.x < -128:
+	if velocity.x < -128:
 		pivot.scale.x = -1
 			
-	if _is_on_floor > 0:
-		_is_on_floor -= delta
+	#if _is_on_floor > 0:
+		#_is_on_floor -= delta
 	
 	if global_position.y > Global.bottom_y and mode == MODE_PLAYER:
 		Levels.reload_current()

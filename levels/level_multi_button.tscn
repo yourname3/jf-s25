@@ -16,7 +16,7 @@ width = 1.0
 
 [sub_resource type="Resource" id="Resource_wh38g"]
 script = ExtResource("6_fvwxo")
-position = Vector2(0, 0)
+position = Vector2(-512, 0)
 point_in = Vector2(0, 0)
 point_out = Vector2(0, 0)
 properties = SubResource("Resource_cgxt0")
@@ -55,7 +55,7 @@ width = 1.0
 
 [sub_resource type="Resource" id="Resource_fje3y"]
 script = ExtResource("6_fvwxo")
-position = Vector2(0, 320)
+position = Vector2(-512, 320)
 point_in = Vector2(0, 0)
 point_out = Vector2(0, 0)
 properties = SubResource("Resource_2v5bo")
@@ -68,7 +68,7 @@ width = 1.0
 
 [sub_resource type="Resource" id="Resource_he1xc"]
 script = ExtResource("6_fvwxo")
-position = Vector2(0, 0)
+position = Vector2(-512, 0)
 point_in = Vector2(0, 0)
 point_out = Vector2(0, 0)
 properties = SubResource("Resource_gg1xy")
@@ -204,7 +204,7 @@ width = 1.0
 
 [sub_resource type="Resource" id="Resource_bq2m5"]
 script = ExtResource("6_fvwxo")
-position = Vector2(3584, 320)
+position = Vector2(3584, 640)
 point_in = Vector2(0, 0)
 point_out = Vector2(0, 0)
 properties = SubResource("Resource_uhbmo")
@@ -217,7 +217,7 @@ width = 1.0
 
 [sub_resource type="Resource" id="Resource_5lnoy"]
 script = ExtResource("6_fvwxo")
-position = Vector2(1536, 320)
+position = Vector2(1536, 640)
 point_in = Vector2(0, 0)
 point_out = Vector2(0, 0)
 properties = SubResource("Resource_wkt43")
@@ -372,7 +372,10 @@ curve_bake_interval = 20.0
 zoom = Vector2(0.3, 0.3)
 
 [node name="Goal" parent="." index="3"]
-position = Vector2(4864, -1536)
+position = Vector2(4800, -1792)
+
+[node name="YLineBottom" parent="." index="4"]
+position = Vector2(0, 640)
 
 [node name="YLineTop" parent="." index="5"]
 position = Vector2(704, -1856)
@@ -389,20 +392,21 @@ button = NodePath("../Button")
 position = Vector2(0, -768)
 
 [node name="Button5" parent="." index="8" instance=ExtResource("2_glwf3")]
-position = Vector2(512, 0)
+position = Vector2(640, 0)
 
-[node name="Door5" parent="." index="9" node_paths=PackedStringArray("to_pos_src", "button") instance=ExtResource("3_8gyhn")]
-position = Vector2(64, 640)
-to_pos_src = NodePath("Marker2D")
+[node name="Doo5Marker" type="Marker2D" parent="." index="9"]
+position = Vector2(0, -960)
+
+[node name="Door5" parent="." index="10" node_paths=PackedStringArray("to_pos_src", "button") instance=ExtResource("3_8gyhn")]
+position = Vector2(0, 576)
+rotation = 1.5708
+to_pos_src = NodePath("../Doo5Marker")
 button = NodePath("../Button5")
 
-[node name="Marker2D" type="Marker2D" parent="Door5" index="2"]
-position = Vector2(0, -2048)
-
-[node name="Button2" parent="." index="10" instance=ExtResource("2_glwf3")]
+[node name="Button2" parent="." index="11" instance=ExtResource("2_glwf3")]
 position = Vector2(2432, 0)
 
-[node name="Door2" parent="." index="11" node_paths=PackedStringArray("to_pos_src", "button") instance=ExtResource("3_8gyhn")]
+[node name="Door2" parent="." index="12" node_paths=PackedStringArray("to_pos_src", "button") instance=ExtResource("3_8gyhn")]
 position = Vector2(2432, -1664)
 to_pos_src = NodePath("Marker2D")
 button = NodePath("../Button2")
@@ -410,10 +414,10 @@ button = NodePath("../Button2")
 [node name="Marker2D" type="Marker2D" parent="Door2" index="2"]
 position = Vector2(0, -768)
 
-[node name="Button3" parent="." index="12" instance=ExtResource("2_glwf3")]
+[node name="Button3" parent="." index="13" instance=ExtResource("2_glwf3")]
 position = Vector2(3328, 0)
 
-[node name="Door3" parent="." index="13" node_paths=PackedStringArray("to_pos_src", "button") instance=ExtResource("3_8gyhn")]
+[node name="Door3" parent="." index="14" node_paths=PackedStringArray("to_pos_src", "button") instance=ExtResource("3_8gyhn")]
 position = Vector2(3328, -1664)
 to_pos_src = NodePath("Marker2D")
 button = NodePath("../Button3")
@@ -421,10 +425,10 @@ button = NodePath("../Button3")
 [node name="Marker2D" type="Marker2D" parent="Door3" index="2"]
 position = Vector2(0, -768)
 
-[node name="Button4" parent="." index="14" instance=ExtResource("2_glwf3")]
+[node name="Button4" parent="." index="15" instance=ExtResource("2_glwf3")]
 position = Vector2(4224, 0)
 
-[node name="Door4" parent="." index="15" node_paths=PackedStringArray("to_pos_src", "button") instance=ExtResource("3_8gyhn")]
+[node name="Door4" parent="." index="16" node_paths=PackedStringArray("to_pos_src", "button") instance=ExtResource("3_8gyhn")]
 position = Vector2(4224, -1664)
 to_pos_src = NodePath("Marker2D")
 button = NodePath("../Button4")
@@ -432,26 +436,26 @@ button = NodePath("../Button4")
 [node name="Marker2D" type="Marker2D" parent="Door4" index="2"]
 position = Vector2(0, -768)
 
-[node name="SS2D_Shape3" parent="." index="16" instance=ExtResource("4_vp86n")]
+[node name="SS2D_Shape3" parent="." index="17" instance=ExtResource("4_vp86n")]
 position = Vector2(1024, -1408)
 _points = SubResource("Resource_4pa6g")
 
-[node name="SS2D_Shape4" parent="." index="17" instance=ExtResource("4_vp86n")]
+[node name="SS2D_Shape4" parent="." index="18" instance=ExtResource("4_vp86n")]
 position = Vector2(-128, 0)
 _points = SubResource("Resource_lh8pt")
 
-[node name="SS2D_Shape6" parent="." index="18" instance=ExtResource("4_vp86n")]
+[node name="SS2D_Shape6" parent="." index="19" instance=ExtResource("4_vp86n")]
 position = Vector2(768, 0)
 _points = SubResource("Resource_lh8pt")
 
-[node name="SS2D_Shape7" parent="." index="19" instance=ExtResource("4_vp86n")]
+[node name="SS2D_Shape7" parent="." index="20" instance=ExtResource("4_vp86n")]
 position = Vector2(1664, 0)
 _points = SubResource("Resource_lh8pt")
 
-[node name="SS2D_Shape8" parent="." index="20" instance=ExtResource("4_vp86n")]
+[node name="SS2D_Shape8" parent="." index="21" instance=ExtResource("4_vp86n")]
 position = Vector2(2560, 0)
 _points = SubResource("Resource_lh8pt")
 
-[node name="SS2D_Shape5" parent="." index="21" instance=ExtResource("4_vp86n")]
-position = Vector2(-2944, 0)
+[node name="SS2D_Shape5" parent="." index="22" instance=ExtResource("4_vp86n")]
+position = Vector2(-2816, 0)
 _points = SubResource("Resource_hadqb")

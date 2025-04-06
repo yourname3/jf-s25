@@ -12,7 +12,7 @@ var move_speed: float = 256.0 * 2.0
 
 func _ready() -> void:
 	# Half second?
-	move_speed = (to_pos - from_pos).length() * 2.0
+	move_speed = (to_pos - from_pos).length() * 1.0
 
 func _physics_process(delta: float) -> void:
 	var target = from_pos
