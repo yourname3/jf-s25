@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://bda6bue7aop33"]
+[gd_scene load_steps=24 format=3 uid="uid://bda6bue7aop33"]
 
 [ext_resource type="PackedScene" uid="uid://d0u0o1s2jxhbj" path="res://player/player.tscn" id="1_7lnir"]
 [ext_resource type="Script" uid="uid://clts7ttaac1qj" path="res://addons/rmsmartshape/shapes/shape.gd" id="2_0v1st"]
@@ -6,6 +6,7 @@
 [ext_resource type="Script" uid="uid://cb2icyedydm1p" path="res://addons/rmsmartshape/shapes/point.gd" id="4_cw150"]
 [ext_resource type="Script" uid="uid://g01lopkfyc68" path="res://addons/rmsmartshape/shapes/point_array.gd" id="5_xii2b"]
 [ext_resource type="Resource" uid="uid://dwqtagtlmikq8" path="res://level/material_grass.tres" id="8_cw150"]
+[ext_resource type="Script" uid="uid://cuc7m6tw6ltie" path="res://level/y_line.gd" id="11_rhqlf"]
 [ext_resource type="Script" uid="uid://c666aimbmpet3" path="res://level/recorder_ui.gd" id="11_xii2b"]
 [ext_resource type="PackedScene" uid="uid://b1lhi5tsueed4" path="res://button/button.tscn" id="16_7jqyl"]
 [ext_resource type="PackedScene" uid="uid://kbpehcxnkskm" path="res://goal/goal.tscn" id="17_m5ivw"]
@@ -197,3 +198,14 @@ button = NodePath("../Button")
 
 [node name="Marker2D" type="Marker2D" parent="Door"]
 position = Vector2(0, -640)
+
+[node name="YLineBottom" type="Marker2D" parent="."]
+position = Vector2(0, 1024)
+gizmo_extents = 380.7
+script = ExtResource("11_rhqlf")
+
+[node name="YLineTop" type="Marker2D" parent="."]
+position = Vector2(0, -1280)
+gizmo_extents = 380.7
+script = ExtResource("11_rhqlf")
+is_bottom = false

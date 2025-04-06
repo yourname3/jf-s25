@@ -130,7 +130,7 @@ func _physics_process(delta: float) -> void:
 		animator.scale = animator.scale.move_toward(Vector2.ZERO, 0.5 * delta)
 		towards_goal.scale = towards_goal.scale.move_toward(Vector2.ZERO, 0.9 * delta)
 		if towards_goal.scale.length() < 0.0001:
-			SceneTransition.change_to(preload("res://level/level.tscn"))
+			Levels.next_level()
 		return
 	
 	var encoded_inputs := get_inputs()
@@ -235,6 +235,9 @@ func _physics_process(delta: float) -> void:
 			
 	if _is_on_floor > 0:
 		_is_on_floor -= delta
+	
+	if global_position.y > Global.bottom_y:
+		Levels.reload_current()
 	
 	#if Input.is_action_just_pressed("jump"):
 		#SceneTransition.change_to(preload("res://level/level.tscn"))
