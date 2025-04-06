@@ -1,4 +1,4 @@
-[gd_scene load_steps=71 format=3 uid="uid://bda6bue7aop33"]
+[gd_scene load_steps=72 format=3 uid="uid://bda6bue7aop33"]
 
 [ext_resource type="PackedScene" uid="uid://d0u0o1s2jxhbj" path="res://player/player.tscn" id="1_7lnir"]
 [ext_resource type="Script" uid="uid://clts7ttaac1qj" path="res://addons/rmsmartshape/shapes/shape.gd" id="2_0v1st"]
@@ -17,6 +17,7 @@
 [ext_resource type="Texture2D" uid="uid://51h1nxct4d7j" path="res://level/tiles/tile_basic_tr.svg" id="13_fm1jd"]
 [ext_resource type="PackedScene" uid="uid://b1lhi5tsueed4" path="res://button/button.tscn" id="16_7jqyl"]
 [ext_resource type="PackedScene" uid="uid://kbpehcxnkskm" path="res://goal/goal.tscn" id="17_m5ivw"]
+[ext_resource type="PackedScene" uid="uid://btayoav3hqsll" path="res://door/door.tscn" id="18_sui6v"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cw150"]
 bg_color = Color(0.221236, 0.490525, 0.438929, 1)
@@ -513,3 +514,11 @@ position = Vector2(1408, 1024)
 
 [node name="Goal" parent="." instance=ExtResource("17_m5ivw")]
 position = Vector2(3712, 640)
+
+[node name="Door" parent="." node_paths=PackedStringArray("to_pos", "button") instance=ExtResource("18_sui6v")]
+position = Vector2(2432, 512)
+to_pos = NodePath("Marker2D")
+button = NodePath("../Button")
+
+[node name="Marker2D" type="Marker2D" parent="Door"]
+position = Vector2(384, -512)
