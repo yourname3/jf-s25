@@ -81,7 +81,6 @@ script = ExtResource("2_rhqlf")
 [node name="Player" parent="." instance=ExtResource("1_7lnir")]
 position = Vector2(384, -384)
 collision_layer = 7
-max_contacts_reported = 8
 
 [node name="Goal" parent="." instance=ExtResource("17_m5ivw")]
 position = Vector2(1536, -512)
