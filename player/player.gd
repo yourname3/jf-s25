@@ -234,9 +234,9 @@ func _physics_process(delta: float) -> void:
 	animator.want_jump_down = linear_velocity.y > 0
 	animator.set_walkvel(abs(linear_velocity.x) / (WALK_BASE_SPEED * 6))
 	
-	if linear_velocity.x > 64:
+	if linear_velocity.x > 128:
 		pivot.scale.x = 1
-	if linear_velocity.x < -64:
+	if linear_velocity.x < -128:
 		pivot.scale.x = -1
 			
 	if _is_on_floor > 0:
