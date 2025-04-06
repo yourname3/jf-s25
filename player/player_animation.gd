@@ -58,7 +58,7 @@ func _ready() -> void:
 	
 func _physics_process(delta: float) -> void:
 	const MAX := 512.0
-	const MAX2 := 128.0
+	const MAX2 := 32.0
 	
 	var back_y := 0.0
 	var front_y := 0.0

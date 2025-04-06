@@ -1,6 +1,7 @@
-[gd_scene load_steps=51 format=3 uid="uid://chfr6pwtsw1o3"]
+[gd_scene load_steps=52 format=3 uid="uid://chfr6pwtsw1o3"]
 
 [ext_resource type="PackedScene" uid="uid://bda6bue7aop33" path="res://level/level.tscn" id="1_8xd68"]
+[ext_resource type="Theme" uid="uid://dbod1te104o66" path="res://theme.tres" id="2_nkyub"]
 [ext_resource type="PackedScene" uid="uid://78q04skjo3kb" path="res://level/smart_shape.tscn" id="2_nqxoc"]
 [ext_resource type="Script" uid="uid://clts7ttaac1qj" path="res://addons/rmsmartshape/shapes/shape.gd" id="2_ora6d"]
 [ext_resource type="Script" uid="uid://coaymqsgs0h2q" path="res://addons/rmsmartshape/vertex_properties.gd" id="3_nqxoc"]
@@ -327,6 +328,33 @@ metadata/_custom_type_script = "uid://g01lopkfyc68"
 
 [node name="LevelBase" instance=ExtResource("1_8xd68")]
 
+[node name="Panel" type="Panel" parent="CanvasLayer/Control" index="2"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 473.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_nkyub")
+
+[node name="Label" type="Label" parent="CanvasLayer/Control/Panel" index="0"]
+layout_mode = 0
+offset_left = 6.55423
+offset_top = 5.01208
+offset_right = 129.554
+offset_bottom = 28.0121
+text = "starlight glimmer"
+
+[node name="Label2" type="Label" parent="CanvasLayer/Control/Panel" index="1"]
+layout_mode = 0
+offset_left = 6.55423
+offset_top = 35.47
+offset_right = 129.554
+offset_bottom = 58.47
+text = "What? Where am I"
+
 [node name="Goal" parent="." index="3"]
 position = Vector2(6016, -1024)
 
@@ -358,3 +386,23 @@ metadata/_edit_lock_ = true
 
 [node name="YLineTop" parent="." index="7"]
 position = Vector2(0, -1536)
+
+[node name="Label" type="Label" parent="." index="8"]
+offset_left = 683.686
+offset_top = -129.441
+offset_right = 1759.69
+offset_bottom = -19.4413
+theme = ExtResource("2_nkyub")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 87
+text = "use the arrow keys to move"
+
+[node name="Label2" type="Label" parent="." index="9"]
+offset_left = 3114.98
+offset_top = -247.695
+offset_right = 3714.98
+offset_bottom = -137.695
+theme = ExtResource("2_nkyub")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 87
+text = "press Z to jump"
