@@ -1,11 +1,11 @@
 extends RigidBody2D
 class_name Player
 
-const H_VEL := 256.0 * 6
+const H_VEL := 256.0 * 3.0
 const H_ACCEL := 2048.0
 
 const JUMP_TIME := 0.4
-const JUMP_SPEED := 1024.0 + 512.0
+const JUMP_SPEED := 256.0 * 3.0
 
 var jump_timer: float = 0.0
 
