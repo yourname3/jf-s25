@@ -8,10 +8,16 @@ class_name Door
 # I guess just store this position once for now.
 @onready var to_pos = to_pos_src.global_position if to_pos_src != null else from_pos
 
+var move_speed: float = 256.0 * 2.0
+
+func _ready() -> void:
+	# Half second?
+	move_speed = (to_pos - from_pos).length() * 2.0
+
 func _physics_process(delta: float) -> void:
 	var target = from_pos
 	if button.is_pressed():
 		target = to_pos
 		
-	global_position = global_position.move_toward(target, 256.0 * 2.0 * delta)
+	global_position = global_position.move_toward(target, move_speed * delta)
 	#move_and_collide(target - global_position)
