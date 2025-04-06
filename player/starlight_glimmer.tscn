@@ -5364,7 +5364,7 @@ rest = Transform2D(1, 0, 0, 1, 0, 0)
 [node name="body2" type="Bone2D" parent="pony/root/body_root/body"]
 position = Vector2(46, 25)
 rotation = -0.017567
-scale = Vector2(0.999837, 0.999837)
+scale = Vector2(0.999836, 0.999836)
 rest = Transform2D(1, 0, 0, 1, 46, 25)
 
 [node name="neck1" type="Bone2D" parent="pony/root/body_root/body/body2"]

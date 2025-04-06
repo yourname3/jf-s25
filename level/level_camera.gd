@@ -8,6 +8,9 @@ func _ready() -> void:
 	# Make sure we process after the player.
 	process_priority = 10
 	
+	global_position = target.global_position
+	reset_smoothing()
+	
 func _process(delta: float) -> void:
 	var pos: Vector2 = target.global_position
 	var height = get_viewport_rect().size.y / zoom.y

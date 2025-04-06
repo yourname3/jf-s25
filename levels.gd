@@ -4,9 +4,10 @@ class_name LevelsScript
 var levels = [
 	preload("res://levels/level_intro.tscn"),
 	preload("res://levels/level_clone_intro.tscn"),
-	preload("res://levels/level_crazy_platforming.tscn"),
+	preload("res://levels/level_simpler_period.tscn"),
+	preload("res://levels/level_boost_yourself.tscn"),
 	preload("res://levels/level_multi_button.tscn"),
-	preload("res://levels/level_boost_yourself.tscn")
+	preload("res://levels/level_crazy_platforming.tscn"),
 ]
 
 var current_level: int = 0
