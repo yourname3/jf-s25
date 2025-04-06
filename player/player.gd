@@ -23,6 +23,8 @@ var state: int = 0
 const STATE_NORMAL = 0
 const STATE_TOUCHED_GOAL = 1
 
+var current_ghost: Ghost = null
+
 var original_position: Vector2
 @onready var animator: PlayerAnimation = $pivot/pony
 @onready var pivot := $pivot
@@ -171,6 +173,13 @@ func _physics_process(delta: float) -> void:
 				original_position = global_position
 				recording.clear()
 				is_recording = true
+				if current_ghost != null:
+					current_ghost.target_alpha = 0.0
+				var g = preload("res://player/ghost.tscn").instantiate()
+				g.position = position
+				g.scale.x *= pivot.scale.x
+				add_sibling(g)
+				current_ghost = g
 		if Input.is_action_just_pressed("clone_now"):
 			spawn_clone()
 		if is_recording:
