@@ -3,3 +3,9 @@
 [ext_resource type="PackedScene" uid="uid://bda6bue7aop33" path="res://level/level.tscn" id="1_8xd68"]
 
 [node name="LevelBase" instance=ExtResource("1_8xd68")]
+
+[node name="YLineBottom" parent="." index="7"]
+position = Vector2(0, 640)
+
+[node name="YLineTop" parent="." index="8"]
+position = Vector2(0, -1536)

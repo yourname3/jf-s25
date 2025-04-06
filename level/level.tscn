@@ -1,7 +1,8 @@
-[gd_scene load_steps=24 format=3 uid="uid://bda6bue7aop33"]
+[gd_scene load_steps=25 format=3 uid="uid://bda6bue7aop33"]
 
 [ext_resource type="PackedScene" uid="uid://d0u0o1s2jxhbj" path="res://player/player.tscn" id="1_7lnir"]
 [ext_resource type="Script" uid="uid://clts7ttaac1qj" path="res://addons/rmsmartshape/shapes/shape.gd" id="2_0v1st"]
+[ext_resource type="Script" uid="uid://cb4drdeoxw0i2" path="res://level/level_camera.gd" id="2_rhqlf"]
 [ext_resource type="Script" uid="uid://coaymqsgs0h2q" path="res://addons/rmsmartshape/vertex_properties.gd" id="3_6gtgk"]
 [ext_resource type="Script" uid="uid://cb2icyedydm1p" path="res://addons/rmsmartshape/shapes/point.gd" id="4_cw150"]
 [ext_resource type="Script" uid="uid://g01lopkfyc68" path="res://addons/rmsmartshape/shapes/point_array.gd" id="5_xii2b"]
@@ -156,14 +157,16 @@ grow_vertical = 2
 color = Color(0.0313726, 0.729412, 0.717647, 1)
 metadata/_edit_use_anchors_ = true
 
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(384, -384)
+zoom = Vector2(0.404, 0.404)
+position_smoothing_enabled = true
+script = ExtResource("2_rhqlf")
+
 [node name="Player" parent="." instance=ExtResource("1_7lnir")]
 position = Vector2(384, -384)
 collision_layer = 7
 max_contacts_reported = 8
-
-[node name="Camera2D" type="Camera2D" parent="Player"]
-zoom = Vector2(0.404, 0.404)
-position_smoothing_enabled = true
 
 [node name="Goal" parent="." instance=ExtResource("17_m5ivw")]
 position = Vector2(1536, -512)
