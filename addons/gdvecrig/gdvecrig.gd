@@ -1,5 +1,5 @@
 @tool
-extends EditorPlugin
+extends Node
 class_name GDVecRig
 
 var current_vecdrawing: VecDrawing = null
@@ -25,6 +25,9 @@ func in_mode_weightpaint():
 	
 func add_end_point():
 	return drawing_tool_new.button_pressed
+	
+func get_editor_interface():
+	return null
 	
 # Determines whether we can start a lasso.
 # 
@@ -306,58 +309,58 @@ func _drawing_tool_edit_pressed():
 		get_editor_interface().get_selection().clear()
 		get_editor_interface().get_selection().add_node(current_vecdrawing)
 
-func _enter_tree():
-	Engine.register_singleton("GDVecRig", self)
-	
-	# Load the dock scene and instantiate it.
-	dock = preload("res://addons/gdvecrig/Vector Editing.tscn").instantiate()
-
-	# Add the loaded scene to the docks.
-	add_control_to_dock(DOCK_SLOT_LEFT_UL, dock)
-
-	dock_tabs = dock.get_node("TopVLayout/TabContainer")
-	cur_drawing_display = dock.get_node("TopVLayout/CurrentDrawingUI/CurrentDrawingDisplay")
-	tab_drawing = dock_tabs.get_node("Drawing")
-	tab_weightpaint = dock_tabs.get_node("Weight Painting")
-	
-	dock_tabs.tab_changed.connect(_dock_tab_changed)
-	
-	# SETUP DRAWING UI
-	var d_tool = dock_tabs.get_node("Drawing/ToolSelector")
-	drawing_tool_group = ButtonGroup.new()
-	drawing_tool_edit = setup_button(d_tool, "ToolSelect", drawing_tool_group)
-	drawing_tool_new = setup_button(d_tool, "ToolNewPoint", drawing_tool_group)
-	drawing_tool_knife = setup_button(d_tool, "ToolKnife", drawing_tool_group)
-	drawing_tool_toggle_constraint = setup_button(d_tool, "ToolToggleConstraint", drawing_tool_group)
-	drawing_tool_delete = setup_button(d_tool, "ToolDelete", drawing_tool_group)
-	drawing_tool_edit.button_pressed = true
-	
-	drawing_tool_edit.pressed.connect(_drawing_tool_edit_pressed)
-	
-	# SETUP WEIGHT PAINTING UI
-	bone_list = dock.get_node("%BoneList")
-	bone_list.connect("item_selected", _on_bone_list_selected)
-	
-	weight_paint_value_box = dock.get_node("%WeightPaintValBox")
-	weight_paint_strength_box = dock.get_node("%WeightPaintStrengthBox")
-	
-	var wp_tool = dock_tabs.get_node("Weight Painting/VBox/ToolSelector")
-	weight_paint_tool_group = ButtonGroup.new()
-	weight_paint_tool_add = setup_button(wp_tool, "Add", weight_paint_tool_group)
-	weight_paint_tool_sub = setup_button(wp_tool, "Subtract", weight_paint_tool_group)
-	weight_paint_tool_mix = setup_button(wp_tool, "Mix", weight_paint_tool_group)
-	weight_paint_tool_add.button_pressed = true
-	# Note that LEFT_UL means the left of the editor, upper-left dock.
-	# Initialization of the plugin goes here.
-	pass
-
-
-func _exit_tree():
-	remove_control_from_docks(dock)
-	# Erase the control from the memory.
-	dock.free()
-	# Clean-up of the plugin goes here.
-	
-	Engine.unregister_singleton("GDVecRig")
-	pass
-	
+#func _enter_tree():
+	#Engine.register_singleton("GDVecRig", self)
+	#
+	## Load the dock scene and instantiate it.
+	#dock = preload("res://addons/gdvecrig/Vector Editing.tscn").instantiate()
+#
+	## Add the loaded scene to the docks.
+	#add_control_to_dock(DOCK_SLOT_LEFT_UL, dock)
+#
+	#dock_tabs = dock.get_node("TopVLayout/TabContainer")
+	#cur_drawing_display = dock.get_node("TopVLayout/CurrentDrawingUI/CurrentDrawingDisplay")
+	#tab_drawing = dock_tabs.get_node("Drawing")
+	#tab_weightpaint = dock_tabs.get_node("Weight Painting")
+	#
+	#dock_tabs.tab_changed.connect(_dock_tab_changed)
+	#
+	## SETUP DRAWING UI
+	#var d_tool = dock_tabs.get_node("Drawing/ToolSelector")
+	#drawing_tool_group = ButtonGroup.new()
+	#drawing_tool_edit = setup_button(d_tool, "ToolSelect", drawing_tool_group)
+	#drawing_tool_new = setup_button(d_tool, "ToolNewPoint", drawing_tool_group)
+	#drawing_tool_knife = setup_button(d_tool, "ToolKnife", drawing_tool_group)
+	#drawing_tool_toggle_constraint = setup_button(d_tool, "ToolToggleConstraint", drawing_tool_group)
+	#drawing_tool_delete = setup_button(d_tool, "ToolDelete", drawing_tool_group)
+	#drawing_tool_edit.button_pressed = true
+	#
+	#drawing_tool_edit.pressed.connect(_drawing_tool_edit_pressed)
+	#
+	## SETUP WEIGHT PAINTING UI
+	#bone_list = dock.get_node("%BoneList")
+	#bone_list.connect("item_selected", _on_bone_list_selected)
+	#
+	#weight_paint_value_box = dock.get_node("%WeightPaintValBox")
+	#weight_paint_strength_box = dock.get_node("%WeightPaintStrengthBox")
+	#
+	#var wp_tool = dock_tabs.get_node("Weight Painting/VBox/ToolSelector")
+	#weight_paint_tool_group = ButtonGroup.new()
+	#weight_paint_tool_add = setup_button(wp_tool, "Add", weight_paint_tool_group)
+	#weight_paint_tool_sub = setup_button(wp_tool, "Subtract", weight_paint_tool_group)
+	#weight_paint_tool_mix = setup_button(wp_tool, "Mix", weight_paint_tool_group)
+	#weight_paint_tool_add.button_pressed = true
+	## Note that LEFT_UL means the left of the editor, upper-left dock.
+	## Initialization of the plugin goes here.
+	#pass
+#
+#
+#func _exit_tree():
+	#remove_control_from_docks(dock)
+	## Erase the control from the memory.
+	#dock.free()
+	## Clean-up of the plugin goes here.
+	#
+	#Engine.unregister_singleton("GDVecRig")
+	#pass
+	#
