@@ -296,7 +296,7 @@ metadata/_custom_type_script = "uid://g01lopkfyc68"
 zoom = Vector2(0.3, 0.3)
 
 [node name="Player" parent="." index="2"]
-position = Vector2(896, -1408)
+position = Vector2(-64, -256)
 
 [node name="Goal" parent="." index="3"]
 position = Vector2(1088, 1216)
