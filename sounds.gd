@@ -25,7 +25,7 @@ var in_game: bool = false
 
 func _ready() -> void:
 	menu_music.play()
-	play_music(true) # REMOVE THIS BEFORE SHIPPING
+	# play_music(true) # REMOVE THIS BEFORE SHIPPING
 
 func play_music(in_game_: bool) -> void:
 	in_game = in_game_

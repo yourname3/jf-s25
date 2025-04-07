@@ -47,9 +47,9 @@ func _process(delta: float) -> void:
 	tree["parameters/blend_to_jumpdown/blend_amount"] = jump_down_blend
 
 func _ready() -> void:
-	$"Pony-color-ref".queue_free()
-	$"Pony-ref".queue_free()
-	$"Pony-ref2".queue_free()
+	#$"Pony-color-ref".queue_free()
+	#$"Pony-ref".queue_free()
+	#$"Pony-ref2".queue_free()
 	
 	if get_parent() != null and get_parent().get_parent() != null:
 		var p = get_parent().get_parent()

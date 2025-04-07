@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="stuck in the past?"
-run/main_scene="uid://chfr6pwtsw1o3"
+run/main_scene="uid://bj2a0plooc6ey"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
 
