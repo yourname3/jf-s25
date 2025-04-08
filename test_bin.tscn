@@ -1,11 +1,75 @@
-[gd_scene load_steps=2 format=3 uid="uid://dyvqtohdclmmo"]
+[gd_scene load_steps=3 format=3 uid="uid://dyvqtohdclmmo"]
 
-[ext_resource type="Texture2D" uid="uid://byvmyb25xgeyb" path="res://icon.svg" id="1_dn8vi"]
+[ext_resource type="Script" uid="uid://druaxt2ugybtj" path="res://addons/gdvecrig/VecWaypoint.gd" id="1_dn8vi"]
+[ext_resource type="Script" uid="uid://dfb8k8m5r8pp0" path="res://debug_fast_vec.gd" id="1_s4do5"]
 
 [node name="Node2D" type="Node2D"]
 
 [node name="FastVecDrawing" type="FastVecDrawing" parent="."]
-position = Vector2(64, 65)
+skeleton = NodePath("../Skeleton2D")
+script = ExtResource("1_s4do5")
 
-[node name="Sprite2D" type="Sprite2D" parent="FastVecDrawing"]
-texture = ExtResource("1_dn8vi")
+[node name="_Node_39491" type="Node" parent="FastVecDrawing"]
+script = ExtResource("1_dn8vi")
+value = Vector2(551.879, -555.066)
+
+[node name="_Node_39492" type="Node" parent="FastVecDrawing"]
+script = ExtResource("1_dn8vi")
+value = Vector2(558.546, -564.277)
+
+[node name="_Node_39493" type="Node" parent="FastVecDrawing"]
+script = ExtResource("1_dn8vi")
+value = Vector2(568.239, -577.667)
+
+[node name="_Node_39494" type="Node" parent="FastVecDrawing"]
+script = ExtResource("1_dn8vi")
+value = Vector2(591.881, -599.194)
+
+[node name="_Node_39495" type="Node" parent="FastVecDrawing"]
+script = ExtResource("1_dn8vi")
+value = Vector2(601.677, -607.832)
+
+[node name="_Node_39496" type="Node" parent="FastVecDrawing"]
+script = ExtResource("1_dn8vi")
+value = Vector2(609.499, -614.73)
+
+[node name="_Node_39497" type="Node" parent="FastVecDrawing"]
+script = ExtResource("1_dn8vi")
+value = Vector2(625.53, -626.61)
+
+[node name="_Node_39498" type="Node" parent="FastVecDrawing"]
+script = ExtResource("1_dn8vi")
+value = Vector2(631.611, -621.07)
+
+[node name="_Node_39499" type="Node" parent="FastVecDrawing"]
+script = ExtResource("1_dn8vi")
+value = Vector2(637.692, -615.53)
+
+[node name="_Node_39500" type="Node" parent="FastVecDrawing"]
+script = ExtResource("1_dn8vi")
+value = Vector2(629.92, -600.609)
+
+[node name="_Node_39501" type="Node" parent="FastVecDrawing"]
+script = ExtResource("1_dn8vi")
+value = Vector2(624.514, -591.555)
+
+[node name="_Node_39502" type="Node" parent="FastVecDrawing"]
+script = ExtResource("1_dn8vi")
+value = Vector2(619.109, -582.501)
+
+[node name="_Node_39503" type="Node" parent="FastVecDrawing"]
+script = ExtResource("1_dn8vi")
+value = Vector2(596.886, -550.046)
+
+[node name="_Node_39504" type="Node" parent="FastVecDrawing"]
+script = ExtResource("1_dn8vi")
+value = Vector2(585.056, -538.928)
+
+[node name="_Node_39505" type="Node" parent="FastVecDrawing"]
+script = ExtResource("1_dn8vi")
+value = Vector2(576.143, -530.551)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(0.295, 0.295)
+
+[node name="Skeleton2D" type="Skeleton2D" parent="."]
