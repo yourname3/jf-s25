@@ -6241,20 +6241,20 @@ value = Vector2(618.393, -648.798)
 
 [node name="shoulder_front" type="Bone2D" parent="pony/root/body_root/body/body2"]
 position = Vector2(69, 50)
-rotation = 0.554322
+rotation = 0.496968
 scale = Vector2(0.999865, 0.999865)
 rest = Transform2D(1, -2.38419e-07, 2.38419e-07, 1, 69, 50)
 
 [node name="arm_front" type="Bone2D" parent="pony/root/body_root/body/body2/shoulder_front"]
 position = Vector2(-4, 39)
-rotation = -0.709748
+rotation = -0.621316
 scale = Vector2(0.999867, 0.999867)
 rest = Transform2D(1, 5.6426e-07, -5.6426e-07, 1, -4, 39)
 
 [node name="forearm_front" type="Bone2D" parent="pony/root/body_root/body/body2/shoulder_front/arm_front" node_paths=PackedStringArray("target")]
 position = Vector2(0, 105)
-rotation = 0.170265
-scale = Vector2(0.999837, 0.999837)
+rotation = 0.146657
+scale = Vector2(0.999836, 0.999836)
 rest = Transform2D(0.999997, -3.2584e-07, 3.2584e-07, 0.999997, 0, 105)
 auto_calculate_length_and_angle = false
 length = 100.334
@@ -6264,19 +6264,19 @@ target = NodePath("../../../../../../ik_front_root/IK_frontleg_front")
 
 [node name="shoulder_back" type="Bone2D" parent="pony/root/body_root/body/body2"]
 position = Vector2(87, 27)
-rotation = 0.543148
+rotation = 0.478885
 scale = Vector2(0.99986, 0.99986)
 rest = Transform2D(1, 8.10623e-06, -8.10623e-06, 1, 87, 27)
 
 [node name="arm_back" type="Bone2D" parent="pony/root/body_root/body/body2/shoulder_back"]
 position = Vector2(-4, 39)
-rotation = -0.698516
+rotation = -0.602491
 scale = Vector2(0.999866, 0.999866)
 rest = Transform2D(1, -1.02838e-05, 1.02838e-05, 1, -4, 39)
 
 [node name="forearm_back" type="Bone2D" parent="pony/root/body_root/body/body2/shoulder_back/arm_back" node_paths=PackedStringArray("target")]
 position = Vector2(0, 105)
-rotation = 0.170206
+rotation = 0.145915
 scale = Vector2(0.999833, 0.999833)
 rest = Transform2D(0.999997, 2.17755e-06, -2.17755e-06, 0.999997, 0, 105)
 auto_calculate_length_and_angle = false
@@ -6290,19 +6290,19 @@ rest = Transform2D(1, 0, 0, 1, 0, 0)
 
 [node name="thigh_front" type="Bone2D" parent="pony/root/body_root/body/hip_front"]
 position = Vector2(-40, 52)
-rotation = -0.594096
-scale = Vector2(0.999884, 0.999884)
+rotation = -0.588502
+scale = Vector2(0.999885, 0.999885)
 rest = Transform2D(0.817657, -0.575706, 0.575706, 0.817657, -40, 52)
 
 [node name="lowerleg_front" type="Bone2D" parent="pony/root/body_root/body/hip_front/thigh_front"]
 position = Vector2(-22.3444, 82.108)
-rotation = 0.244552
-scale = Vector2(0.999836, 0.999836)
+rotation = 0.217398
+scale = Vector2(0.999837, 0.999837)
 rest = Transform2D(0.997453, 0.0713301, -0.0713301, 0.997453, -22.3444, 82.108)
 
 [node name="toe_front" type="Bone2D" parent="pony/root/body_root/body/hip_front/thigh_front/lowerleg_front" node_paths=PackedStringArray("target")]
 position = Vector2(-57.2776, -1.80989)
-rotation = 0.0420961
+rotation = 0.0636559
 scale = Vector2(0.999829, 0.999829)
 rest = Transform2D(0.981005, 0.193941, -0.193941, 0.981005, -57.2776, -1.80989)
 auto_calculate_length_and_angle = false
@@ -6323,20 +6323,20 @@ rest = Transform2D(1, 0, 0, 1, 0, 0)
 
 [node name="thigh_back" type="Bone2D" parent="pony/root/body_root/body/hip_back"]
 position = Vector2(-20, 28)
-rotation = -0.658771
-scale = Vector2(0.999884, 0.999884)
+rotation = -0.651516
+scale = Vector2(0.999883, 0.999883)
 rest = Transform2D(0.788777, -0.614679, 0.614679, 0.788777, -20, 28)
 
 [node name="lowerleg_back" type="Bone2D" parent="pony/root/body_root/body/hip_back/thigh_back"]
 position = Vector2(-19.2008, 86.46)
-rotation = 0.237045
-scale = Vector2(0.999837, 0.999837)
+rotation = 0.209514
+scale = Vector2(0.999836, 0.999836)
 rest = Transform2D(0.997453, 0.0713294, -0.0713294, 0.997453, -19.2008, 86.46)
 
 [node name="toe_back" type="Bone2D" parent="pony/root/body_root/body/hip_back/thigh_back/lowerleg_back" node_paths=PackedStringArray("target")]
 position = Vector2(-57.9717, 2.06892)
-rotation = 0.065912
-scale = Vector2(0.999835, 0.999835)
+rotation = 0.0861888
+scale = Vector2(0.999836, 0.999836)
 rest = Transform2D(0.980958, 0.19408, -0.19408, 0.980958, -57.9717, 2.06892)
 auto_calculate_length_and_angle = false
 length = 158.222

@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://b14jeh0pd1aal" path="res://player/player.gd" id="1_g1dw6"]
 [ext_resource type="Texture2D" uid="uid://dxyu74jyy6a5l" path="res://whitebox/whitebox_round.png" id="2_rkbax"]
-[ext_resource type="PackedScene" uid="uid://b2cjwbuhd8mm3" path="res://player/starlight_glimmer.tscn" id="3_g1dw6"]
+[ext_resource type="PackedScene" uid="uid://pndvuu6qsug3" path="res://player/starlight_glimmer_fast.tscn" id="3_yw30f"]
 [ext_resource type="Texture2D" uid="uid://mcs1gc836xrt" path="res://player/spawn_flash.svg" id="4_yw30f"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yw30f"]
@@ -234,7 +234,7 @@ texture = ExtResource("2_rkbax")
 
 [node name="pivot" type="Node2D" parent="."]
 
-[node name="pony" parent="pivot" instance=ExtResource("3_g1dw6")]
+[node name="pony" parent="pivot" instance=ExtResource("3_yw30f")]
 z_index = 10
 position = Vector2(-197, 197)
 scale = Vector2(0.567864, 0.567864)
