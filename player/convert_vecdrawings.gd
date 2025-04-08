@@ -24,7 +24,7 @@ func process(node: Node) -> void:
 		new_guy.owner = node.owner
 		for child in children:
 			child.reparent(new_guy)
-		#new_guy.skeleton = node.get_skeleton_from_tree()
+		new_guy.skeleton = node.get_skeleton_from_tree()
 		node.hide()
 
 func _go() -> void:
