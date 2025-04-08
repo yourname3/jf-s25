@@ -1,12 +1,10 @@
-[gd_scene load_steps=45 format=3 uid="uid://pndvuu6qsug3"]
+[gd_scene load_steps=43 format=3 uid="uid://pndvuu6qsug3"]
 
 [ext_resource type="Script" uid="uid://bafpx8hxl2kgu" path="res://player/player_animation.gd" id="1_hphrg"]
-[ext_resource type="Script" uid="uid://bodn4jw8tyemx" path="res://addons/gdvecrig/VecDrawing.gd" id="2_wfw7s"]
 [ext_resource type="Script" uid="uid://csgt88iv3c4ke" path="res://addons/gdvecrig/VecStroke.gd" id="3_e3hr0"]
 [ext_resource type="Script" uid="uid://druaxt2ugybtj" path="res://addons/gdvecrig/VecWaypoint.gd" id="4_0dh1a"]
 [ext_resource type="SkeletonModificationStack2D" uid="uid://e3533nb6exnk" path="res://player/stack1.tres" id="5_f237b"]
 [ext_resource type="Script" uid="uid://diewmn53ynmra" path="res://player/tail.gd" id="6_pdoep"]
-[ext_resource type="Script" uid="uid://crvnc1mebpld" path="res://player/magic.gd" id="7_d2c3x"]
 [ext_resource type="Script" uid="uid://bc4qbrgg2jegi" path="res://player/copy_rotation.gd" id="8_5nwwa"]
 [ext_resource type="Script" uid="uid://dwgh5qoah71fw" path="res://player/fixed_ik.gd" id="9_n376i"]
 [ext_resource type="Script" uid="uid://qx12uswm33hj" path="res://addons/gdvecrig/VecEditCanvas.gd" id="10_bkf23"]
@@ -1256,14 +1254,6 @@ node_connections = [&"blend_to_air", 0, &"blend_to_walk", &"blend_to_air", 1, &"
 [node name="StarlightGlimmer" type="Node2D"]
 script = ExtResource("1_hphrg")
 
-[node name="frontleg_back" type="Node2D" parent="."]
-visible = false
-script = ExtResource("2_wfw7s")
-fill = Color(0.854902, 0.690196, 0.913725, 1)
-show_rest = false
-skeleton = NodePath("../pony")
-metadata/_custom_type_script = "uid://bodn4jw8tyemx"
-
 [node name="frontleg_back_fast" type="FastVecDrawing" parent="." node_paths=PackedStringArray("skeleton")]
 fill = Color(0.854902, 0.690196, 0.913725, 1)
 steps = 10
@@ -1501,12 +1491,6 @@ NodePath("../../pony/root/body_root/body/body2/shoulder_front"): 0.0,
 NodePath("../../pony/root/body_root/body/body2/shoulder_back"): 1.0
 }
 
-[node name="backleg_back_whole" type="Node2D" parent="."]
-visible = false
-script = ExtResource("2_wfw7s")
-fill = Color(0.854902, 0.690196, 0.913725, 1)
-metadata/_custom_type_script = "uid://bodn4jw8tyemx"
-
 [node name="backleg_back_whole_fast" type="FastVecDrawing" parent="."]
 fill = Color(0.854902, 0.690196, 0.913725, 1)
 steps = 10
@@ -1652,14 +1636,6 @@ value = Vector2(367.032, -270.897)
 script = ExtResource("4_0dh1a")
 value = Vector2(367.704, -287.972)
 
-[node name="backleg_back_hip" type="Node2D" parent="."]
-visible = false
-script = ExtResource("2_wfw7s")
-fill = Color(0.854902, 0.690196, 0.913725, 1)
-show_rest = false
-skeleton = NodePath("../pony")
-metadata/_custom_type_script = "uid://bodn4jw8tyemx"
-
 [node name="backleg_back_hip_fast" type="FastVecDrawing" parent="." node_paths=PackedStringArray("skeleton")]
 fill = Color(0.854902, 0.690196, 0.913725, 1)
 steps = 10
@@ -1790,14 +1766,6 @@ weights = {
 NodePath("../../pony/root/body_root/body/hip_back"): 1.0,
 NodePath("../../pony/root/body_root/body/hip_back/thigh_back"): 1.0
 }
-
-[node name="backleg_back_bottom" type="Node2D" parent="."]
-visible = false
-script = ExtResource("2_wfw7s")
-fill = Color(0.854902, 0.690196, 0.913725, 1)
-show_rest = false
-skeleton = NodePath("../pony")
-metadata/_custom_type_script = "uid://bodn4jw8tyemx"
 
 [node name="backleg_back_bottom_fast" type="FastVecDrawing" parent="." node_paths=PackedStringArray("skeleton")]
 fill = Color(0.854902, 0.690196, 0.913725, 1)
@@ -2011,27 +1979,10 @@ NodePath("../../pony/root/body_root/body/hip_back"): 1.0,
 NodePath("../../pony/root/body_root/body/hip_back/thigh_back"): 1.0
 }
 
-[node name="tail_main" type="Node2D" parent="."]
-visible = false
-script = ExtResource("2_wfw7s")
-fill = Color(0.411765, 0.196078, 0.560784, 1)
-show_rest = false
-skeleton = NodePath("../pony")
-metadata/_custom_type_script = "uid://bodn4jw8tyemx"
-
 [node name="tail_main_fast" type="FastVecDrawing" parent="." node_paths=PackedStringArray("skeleton")]
 fill = Color(0.411765, 0.196078, 0.560784, 1)
 steps = 10
 skeleton = NodePath("../pony")
-
-[node name="tail_purple_big" type="Node2D" parent="tail_main_fast"]
-visible = false
-script = ExtResource("2_wfw7s")
-cyclic = true
-fill = Color(0.52549, 0.25098, 0.705882, 1)
-show_rest = false
-skeleton = NodePath("../../pony")
-metadata/_custom_type_script = "uid://bodn4jw8tyemx"
 
 [node name="tail_purple_big_fast" type="FastVecDrawing" parent="tail_main_fast" node_paths=PackedStringArray("skeleton")]
 cyclic = true
@@ -2164,15 +2115,6 @@ value = Vector2(109.632, -158.214)
 weights = {
 NodePath("../../../pony/root/body_root/body/tail/tail2/tail3/tail4"): 1.0
 }
-
-[node name="tail_teal_big" type="Node2D" parent="tail_main_fast"]
-visible = false
-script = ExtResource("2_wfw7s")
-cyclic = true
-fill = Color(0.607843, 0.913725, 0.847059, 1)
-show_rest = false
-skeleton = NodePath("../../pony")
-metadata/_custom_type_script = "uid://bodn4jw8tyemx"
 
 [node name="tail_teal_big_fast" type="FastVecDrawing" parent="tail_main_fast" node_paths=PackedStringArray("skeleton")]
 cyclic = true
@@ -2371,15 +2313,6 @@ weights = {
 NodePath("../../../pony/root/body_root/body/tail/tail2/tail3/tail4"): 1.0
 }
 
-[node name="tail_purple_stripe_bottom" type="Node2D" parent="tail_main_fast"]
-visible = false
-script = ExtResource("2_wfw7s")
-fill = Color(0.52549, 0.25098, 0.705882, 1)
-steps = 20
-show_rest = false
-skeleton = NodePath("../../pony")
-metadata/_custom_type_script = "uid://bodn4jw8tyemx"
-
 [node name="tail_purple_stripe_bottom_fast" type="FastVecDrawing" parent="tail_main_fast" node_paths=PackedStringArray("skeleton")]
 fill = Color(0.52549, 0.25098, 0.705882, 1)
 skeleton = NodePath("../../pony")
@@ -2509,15 +2442,6 @@ value = Vector2(24.0943, -147.333)
 weights = {
 NodePath("../../../pony/root/body_root/body/tail/tail2/tail3/tail4/tail5"): 1.0
 }
-
-[node name="tail_teal_stripe_bottom" type="Node2D" parent="tail_main_fast"]
-visible = false
-script = ExtResource("2_wfw7s")
-fill = Color(0.607843, 0.913725, 0.847059, 1)
-steps = 20
-show_rest = false
-skeleton = NodePath("../../pony")
-metadata/_custom_type_script = "uid://bodn4jw8tyemx"
 
 [node name="tail_teal_stripe_bottom_fast" type="FastVecDrawing" parent="tail_main_fast" node_paths=PackedStringArray("skeleton")]
 fill = Color(0.607843, 0.913725, 0.847059, 1)
@@ -2650,16 +2574,6 @@ value = Vector2(28.5254, -144.627)
 weights = {
 NodePath("../../../pony/root/body_root/body/tail/tail2/tail3/tail4/tail5"): 1.0
 }
-
-[node name="tail_inner_purple" type="Node2D" parent="tail_main_fast"]
-visible = false
-script = ExtResource("2_wfw7s")
-cyclic = true
-fill = Color(0.52549, 0.25098, 0.705882, 1)
-steps = 20
-show_rest = false
-skeleton = NodePath("../../pony")
-metadata/_custom_type_script = "uid://bodn4jw8tyemx"
 
 [node name="tail_inner_purple_fast" type="FastVecDrawing" parent="tail_main_fast" node_paths=PackedStringArray("skeleton")]
 cyclic = true
@@ -3101,14 +3015,6 @@ weights = {
 NodePath("../../pony/root/body_root/body/tail"): 1.0
 }
 
-[node name="mane_hollow_bg" type="Node2D" parent="."]
-visible = false
-script = ExtResource("2_wfw7s")
-fill = Color(0.372549, 0.176471, 0.498039, 1)
-show_rest = false
-skeleton = NodePath("../pony")
-metadata/_custom_type_script = "uid://bodn4jw8tyemx"
-
 [node name="mane_hollow_bg_fast" type="FastVecDrawing" parent="." node_paths=PackedStringArray("skeleton")]
 fill = Color(0.372549, 0.176471, 0.498039, 1)
 steps = 10
@@ -3200,14 +3106,6 @@ weights = {
 NodePath("../../pony/root/body_root/body/body2/neck1/neck2/head/mane_small"): 1.0,
 NodePath("../../pony/root/body_root/body/body2/neck1/neck2/head/mane_small/mane_small2"): 1.0
 }
-
-[node name="mane_complex_back" type="Node2D" parent="."]
-visible = false
-script = ExtResource("2_wfw7s")
-fill = Color(0.411765, 0.196078, 0.560784, 1)
-show_rest = false
-skeleton = NodePath("../pony")
-metadata/_custom_type_script = "uid://bodn4jw8tyemx"
 
 [node name="mane_complex_back_fast" type="FastVecDrawing" parent="." node_paths=PackedStringArray("skeleton")]
 fill = Color(0.411765, 0.196078, 0.560784, 1)
@@ -3349,15 +3247,6 @@ weights = {
 NodePath("../../pony/root/body_root/body/body2/neck1/neck2/head/mane_small"): 1.0
 }
 
-[node name="mane_big" type="Node2D" parent="."]
-visible = false
-script = ExtResource("2_wfw7s")
-fill = Color(0.411765, 0.196078, 0.560784, 1)
-steps = 15
-show_rest = false
-skeleton = NodePath("../pony")
-metadata/_custom_type_script = "uid://bodn4jw8tyemx"
-
 [node name="mane_big_fast" type="FastVecDrawing" parent="." node_paths=PackedStringArray("skeleton")]
 fill = Color(0.411765, 0.196078, 0.560784, 1)
 steps = 15
@@ -3456,15 +3345,6 @@ weights = {
 NodePath("../../pony/root/body_root/body/body2/neck1/neck2/head/mane_big/mane_big2"): 1.0
 }
 
-[node name="mane_big_line" type="Node2D" parent="."]
-visible = false
-script = ExtResource("2_wfw7s")
-do_fill = false
-steps = 20
-show_rest = false
-skeleton = NodePath("../pony")
-metadata/_custom_type_script = "uid://bodn4jw8tyemx"
-
 [node name="mane_big_line_fast" type="FastVecDrawing" parent="." node_paths=PackedStringArray("skeleton")]
 do_fill = false
 fill = Color(1, 1, 1, 1)
@@ -3539,15 +3419,6 @@ width = 2.0
 default_color = Color(0.337255, 0.156863, 0.458824, 1)
 script = ExtResource("3_e3hr0")
 metadata/_custom_type_script = "uid://csgt88iv3c4ke"
-
-[node name="body" type="Node2D" parent="."]
-visible = false
-script = ExtResource("2_wfw7s")
-fill = Color(0.972549, 0.772549, 1, 1)
-steps = 20
-show_rest = false
-skeleton = NodePath("../pony")
-metadata/_custom_type_script = "uid://bodn4jw8tyemx"
 
 [node name="body_fast" type="FastVecDrawing" parent="." node_paths=PackedStringArray("skeleton")]
 fill = Color(0.972549, 0.772549, 1, 1)
@@ -3701,15 +3572,6 @@ weights = {
 NodePath("../../pony/root/body_root/body"): 1.0
 }
 
-[node name="neck" type="Node2D" parent="."]
-visible = false
-script = ExtResource("2_wfw7s")
-fill = Color(0.972549, 0.772549, 1, 1)
-steps = 20
-show_rest = false
-skeleton = NodePath("../pony")
-metadata/_custom_type_script = "uid://bodn4jw8tyemx"
-
 [node name="neck_fast" type="FastVecDrawing" parent="." node_paths=PackedStringArray("skeleton")]
 fill = Color(0.972549, 0.772549, 1, 1)
 skeleton = NodePath("../pony")
@@ -3842,14 +3704,6 @@ weights = {
 NodePath("../../pony/root/body_root/body/body2/neck1"): 1.0,
 null: 1.0
 }
-
-[node name="head" type="Node2D" parent="."]
-visible = false
-script = ExtResource("2_wfw7s")
-fill = Color(0.972549, 0.772549, 1, 1)
-show_rest = false
-skeleton = NodePath("../pony")
-metadata/_custom_type_script = "uid://bodn4jw8tyemx"
 
 [node name="head_fast" type="FastVecDrawing" parent="." node_paths=PackedStringArray("skeleton")]
 fill = Color(0.972549, 0.772549, 1, 1)
@@ -4078,14 +3932,6 @@ NodePath("../../pony/root/body_root/body/body2/neck1/neck2"): 1.0,
 NodePath("../../pony/root/body_root/body/body2/neck1/neck2/head"): 1.0
 }
 
-[node name="mouth_simple" type="Node2D" parent="head_fast"]
-visible = false
-script = ExtResource("2_wfw7s")
-do_fill = false
-show_rest = false
-skeleton = NodePath("../../pony")
-metadata/_custom_type_script = "uid://bodn4jw8tyemx"
-
 [node name="mouth_simple_fast" type="FastVecDrawing" parent="head_fast" node_paths=PackedStringArray("skeleton")]
 do_fill = false
 fill = Color(1, 1, 1, 1)
@@ -4142,15 +3988,6 @@ default_color = Color(0.741176, 0.541176, 0.843137, 1)
 script = ExtResource("3_e3hr0")
 metadata/_custom_type_script = "uid://csgt88iv3c4ke"
 
-[node name="nose" type="Node2D" parent="head_fast"]
-visible = false
-script = ExtResource("2_wfw7s")
-do_fill = false
-steps = 15
-show_rest = false
-skeleton = NodePath("../../pony")
-metadata/_custom_type_script = "uid://bodn4jw8tyemx"
-
 [node name="nose_fast" type="FastVecDrawing" parent="head_fast" node_paths=PackedStringArray("skeleton")]
 do_fill = false
 fill = Color(1, 1, 1, 1)
@@ -4206,14 +4043,6 @@ width_curve = SubResource("Curve_4njp3")
 default_color = Color(0.741176, 0.541176, 0.843137, 1)
 script = ExtResource("3_e3hr0")
 metadata/_custom_type_script = "uid://csgt88iv3c4ke"
-
-[node name="tail_flair" type="Node2D" parent="."]
-visible = false
-script = ExtResource("2_wfw7s")
-fill = Color(0.411765, 0.196078, 0.560784, 1)
-show_rest = false
-skeleton = NodePath("../pony")
-metadata/_custom_type_script = "uid://bodn4jw8tyemx"
 
 [node name="tail_flair_fast" type="FastVecDrawing" parent="." node_paths=PackedStringArray("skeleton")]
 fill = Color(0.411765, 0.196078, 0.560784, 1)
@@ -4345,14 +4174,6 @@ default_color = Color(0.337255, 0.156863, 0.458824, 1)
 script = ExtResource("3_e3hr0")
 metadata/_custom_type_script = "uid://csgt88iv3c4ke"
 metadata/_edit_lock_ = true
-
-[node name="backleg_front_B" type="Node2D" parent="."]
-visible = false
-script = ExtResource("2_wfw7s")
-fill = Color(0.972549, 0.772549, 1, 1)
-show_rest = false
-skeleton = NodePath("../pony")
-metadata/_custom_type_script = "uid://bodn4jw8tyemx"
 
 [node name="backleg_front_B_fast" type="FastVecDrawing" parent="." node_paths=PackedStringArray("skeleton")]
 fill = Color(0.972549, 0.772549, 1, 1)
@@ -4588,14 +4409,6 @@ NodePath("../../pony/root/body_root/body/hip_front/thigh_front"): 0.0,
 NodePath("../../pony/root/body_root/body/hip_front"): 1.0
 }
 
-[node name="backleg_front_TopFill" type="Node2D" parent="."]
-visible = false
-script = ExtResource("2_wfw7s")
-fill = Color(0.972549, 0.772549, 1, 1)
-show_rest = false
-skeleton = NodePath("../pony")
-metadata/_custom_type_script = "uid://bodn4jw8tyemx"
-
 [node name="backleg_front_TopFill_fast" type="FastVecDrawing" parent="." node_paths=PackedStringArray("skeleton")]
 fill = Color(0.972549, 0.772549, 1, 1)
 steps = 10
@@ -4718,15 +4531,6 @@ NodePath("../../pony/root/body_root/body/hip_front/thigh_front"): 1.0,
 NodePath("../../pony/root/body_root/body/hip_front"): 1.0
 }
 
-[node name="backleg_front_TopLine" type="Node2D" parent="."]
-visible = false
-script = ExtResource("2_wfw7s")
-fill = Color(0.972549, 0.772549, 1, 1)
-do_fill = false
-show_rest = false
-skeleton = NodePath("../pony")
-metadata/_custom_type_script = "uid://bodn4jw8tyemx"
-
 [node name="backleg_front_TopLine_fast" type="FastVecDrawing" parent="." node_paths=PackedStringArray("skeleton")]
 do_fill = false
 fill = Color(0.972549, 0.772549, 1, 1)
@@ -4806,14 +4610,6 @@ value = Vector2(247.299, -183.189)
 weights = {
 NodePath("../../pony/root/body_root/body/hip_front/thigh_front/lowerleg_front"): 1.0
 }
-
-[node name="backleg_whole" type="Node2D" parent="."]
-visible = false
-script = ExtResource("2_wfw7s")
-fill = Color(0.972549, 0.772549, 1, 1)
-show_rest = false
-skeleton = NodePath("../pony")
-metadata/_custom_type_script = "uid://bodn4jw8tyemx"
 
 [node name="backleg_whole_fast" type="FastVecDrawing" parent="." node_paths=PackedStringArray("skeleton")]
 fill = Color(0.972549, 0.772549, 1, 1)
@@ -5071,14 +4867,6 @@ NodePath("../../pony/root/body_root/body/hip_front/thigh_front"): 0.0,
 NodePath("../../pony/root/body_root/body/hip_front"): 1.0
 }
 
-[node name="frontleg_front" type="Node2D" parent="."]
-visible = false
-script = ExtResource("2_wfw7s")
-fill = Color(0.972549, 0.772549, 1, 1)
-show_rest = false
-skeleton = NodePath("../pony")
-metadata/_custom_type_script = "uid://bodn4jw8tyemx"
-
 [node name="frontleg_front_fast" type="FastVecDrawing" parent="." node_paths=PackedStringArray("skeleton")]
 fill = Color(0.972549, 0.772549, 1, 1)
 steps = 10
@@ -5276,14 +5064,6 @@ weights = {
 NodePath("../../pony/root/body_root/body/body2/shoulder_front"): 1.0
 }
 
-[node name="ear" type="Node2D" parent="."]
-visible = false
-script = ExtResource("2_wfw7s")
-fill = Color(0.972549, 0.772549, 1, 1)
-show_rest = false
-skeleton = NodePath("../pony")
-metadata/_custom_type_script = "uid://bodn4jw8tyemx"
-
 [node name="ear_fast" type="FastVecDrawing" parent="." node_paths=PackedStringArray("skeleton")]
 fill = Color(0.972549, 0.772549, 1, 1)
 steps = 10
@@ -5411,14 +5191,6 @@ NodePath("../../pony/root/body_root/body/body2/neck1/neck2/head"): 1.0,
 NodePath("../../pony/root/body_root/body/body2/neck1/neck2/head/ear"): 0.0
 }
 
-[node name="ear_line" type="Node2D" parent="ear_fast"]
-visible = false
-script = ExtResource("2_wfw7s")
-do_fill = false
-show_rest = false
-skeleton = NodePath("../../pony")
-metadata/_custom_type_script = "uid://bodn4jw8tyemx"
-
 [node name="ear_line_fast" type="FastVecDrawing" parent="ear_fast" node_paths=PackedStringArray("skeleton")]
 do_fill = false
 fill = Color(1, 1, 1, 1)
@@ -5497,13 +5269,13 @@ rest = Transform2D(1, 0, 0, 1, 0, 0)
 [node name="body2" type="Bone2D" parent="pony/root/body_root/body"]
 position = Vector2(46, 25)
 rotation = -0.017567
-scale = Vector2(0.999831, 0.999831)
+scale = Vector2(0.99983, 0.99983)
 rest = Transform2D(1, 0, 0, 1, 46, 25)
 
 [node name="neck1" type="Bone2D" parent="pony/root/body_root/body/body2"]
 position = Vector2(61, 23)
 rotation = 0.0164968
-scale = Vector2(0.999831, 0.999831)
+scale = Vector2(0.999832, 0.999832)
 rest = Transform2D(1, 0, 0, 1, 61, 23)
 
 [node name="neck2" type="Bone2D" parent="pony/root/body_root/body/body2/neck1"]
@@ -5532,13 +5304,6 @@ rest = Transform2D(1, 0, 0, 1, 35, 70)
 auto_calculate_length_and_angle = false
 length = 118.667
 bone_angle = 0.0
-
-[node name="horn" type="Node2D" parent="pony/root/body_root/body/body2/neck1/neck2/head"]
-visible = false
-position = Vector2(-437, 449)
-script = ExtResource("2_wfw7s")
-fill = Color(0.972549, 0.772549, 1, 1)
-metadata/_custom_type_script = "uid://bodn4jw8tyemx"
 
 [node name="horn_fast" type="FastVecDrawing" parent="pony/root/body_root/body/body2/neck1/neck2/head"]
 fill = Color(0.972549, 0.772549, 1, 1)
@@ -5613,12 +5378,6 @@ value = Vector2(585.056, -538.928)
 script = ExtResource("4_0dh1a")
 value = Vector2(576.143, -530.551)
 
-[node name="detail" type="Node2D" parent="pony/root/body_root/body/body2/neck1/neck2/head/horn_fast"]
-visible = false
-script = ExtResource("2_wfw7s")
-do_fill = false
-metadata/_custom_type_script = "uid://bodn4jw8tyemx"
-
 [node name="detail_fast" type="FastVecDrawing" parent="pony/root/body_root/body/body2/neck1/neck2/head/horn_fast"]
 do_fill = false
 fill = Color(1, 1, 1, 1)
@@ -5655,12 +5414,6 @@ width_curve = SubResource("Curve_oyty2")
 default_color = Color(0.741176, 0.541176, 0.843137, 1)
 script = ExtResource("3_e3hr0")
 metadata/_custom_type_script = "uid://csgt88iv3c4ke"
-
-[node name="detail2" type="Node2D" parent="pony/root/body_root/body/body2/neck1/neck2/head/horn_fast"]
-visible = false
-script = ExtResource("2_wfw7s")
-do_fill = false
-metadata/_custom_type_script = "uid://bodn4jw8tyemx"
 
 [node name="detail2_fast" type="FastVecDrawing" parent="pony/root/body_root/body/body2/neck1/neck2/head/horn_fast"]
 do_fill = false
@@ -5699,12 +5452,6 @@ default_color = Color(0.741176, 0.541176, 0.843137, 1)
 script = ExtResource("3_e3hr0")
 metadata/_custom_type_script = "uid://csgt88iv3c4ke"
 
-[node name="detail3" type="Node2D" parent="pony/root/body_root/body/body2/neck1/neck2/head/horn_fast"]
-visible = false
-script = ExtResource("2_wfw7s")
-do_fill = false
-metadata/_custom_type_script = "uid://bodn4jw8tyemx"
-
 [node name="detail3_fast" type="FastVecDrawing" parent="pony/root/body_root/body/body2/neck1/neck2/head/horn_fast"]
 do_fill = false
 fill = Color(1, 1, 1, 1)
@@ -5741,14 +5488,6 @@ width_curve = SubResource("Curve_oyty2")
 default_color = Color(0.741176, 0.541176, 0.843137, 1)
 script = ExtResource("3_e3hr0")
 metadata/_custom_type_script = "uid://csgt88iv3c4ke"
-
-[node name="eye_white" type="Node2D" parent="pony/root/body_root/body/body2/neck1/neck2/head"]
-visible = false
-clip_children = 2
-position = Vector2(-437, 449)
-script = ExtResource("2_wfw7s")
-cyclic = true
-metadata/_custom_type_script = "uid://bodn4jw8tyemx"
 
 [node name="eye_white_fast" type="FastVecDrawing" parent="pony/root/body_root/body/body2/neck1/neck2/head"]
 cyclic = true
@@ -5804,13 +5543,6 @@ value = Vector2(484.327, -428.347)
 script = ExtResource("4_0dh1a")
 value = Vector2(501.935, -392.933)
 
-[node name="eye_iris" type="Node2D" parent="pony/root/body_root/body/body2/neck1/neck2/head/eye_white_fast"]
-visible = false
-script = ExtResource("2_wfw7s")
-cyclic = true
-fill = Color(0.372549, 0.321569, 0.709804, 1)
-metadata/_custom_type_script = "uid://bodn4jw8tyemx"
-
 [node name="eye_iris_fast" type="FastVecDrawing" parent="pony/root/body_root/body/body2/neck1/neck2/head/eye_white_fast"]
 cyclic = true
 fill = Color(0.372549, 0.321569, 0.709804, 1)
@@ -5863,13 +5595,6 @@ value = Vector2(499.183, -427.991)
 [node name="_Node_45087" type="Node" parent="pony/root/body_root/body/body2/neck1/neck2/head/eye_white_fast/eye_iris_fast"]
 script = ExtResource("4_0dh1a")
 value = Vector2(507.321, -391.472)
-
-[node name="iris_detail1" type="Node2D" parent="pony/root/body_root/body/body2/neck1/neck2/head/eye_white_fast/eye_iris_fast"]
-visible = false
-script = ExtResource("2_wfw7s")
-cyclic = true
-fill = Color(0.584314, 0.560784, 0.976471, 1)
-metadata/_custom_type_script = "uid://bodn4jw8tyemx"
 
 [node name="iris_detail1_fast" type="FastVecDrawing" parent="pony/root/body_root/body/body2/neck1/neck2/head/eye_white_fast/eye_iris_fast"]
 cyclic = true
@@ -5924,13 +5649,6 @@ value = Vector2(502.353, -416.353)
 script = ExtResource("4_0dh1a")
 value = Vector2(500.918, -420.734)
 
-[node name="iris_detail2" type="Node2D" parent="pony/root/body_root/body/body2/neck1/neck2/head/eye_white_fast/eye_iris_fast"]
-visible = false
-script = ExtResource("2_wfw7s")
-cyclic = true
-fill = Color(0.772549, 0.756863, 1, 1)
-metadata/_custom_type_script = "uid://bodn4jw8tyemx"
-
 [node name="iris_detail2_fast" type="FastVecDrawing" parent="pony/root/body_root/body/body2/neck1/neck2/head/eye_white_fast/eye_iris_fast"]
 cyclic = true
 fill = Color(0.772549, 0.756863, 1, 1)
@@ -5984,13 +5702,6 @@ value = Vector2(512.653, -401.688)
 script = ExtResource("4_0dh1a")
 value = Vector2(509.719, -401.557)
 
-[node name="eye_pupil" type="Node2D" parent="pony/root/body_root/body/body2/neck1/neck2/head/eye_white_fast"]
-visible = false
-script = ExtResource("2_wfw7s")
-cyclic = true
-fill = Color(0, 0, 0, 1)
-metadata/_custom_type_script = "uid://bodn4jw8tyemx"
-
 [node name="eye_pupil_fast" type="FastVecDrawing" parent="pony/root/body_root/body/body2/neck1/neck2/head/eye_white_fast"]
 cyclic = true
 steps = 10
@@ -6042,12 +5753,6 @@ value = Vector2(512.024, -434.049)
 [node name="_Node_45087" type="Node" parent="pony/root/body_root/body/body2/neck1/neck2/head/eye_white_fast/eye_pupil_fast"]
 script = ExtResource("4_0dh1a")
 value = Vector2(515.917, -406.706)
-
-[node name="eye_shine1" type="Node2D" parent="pony/root/body_root/body/body2/neck1/neck2/head/eye_white_fast"]
-visible = false
-script = ExtResource("2_wfw7s")
-cyclic = true
-metadata/_custom_type_script = "uid://bodn4jw8tyemx"
 
 [node name="eye_shine1_fast" type="FastVecDrawing" parent="pony/root/body_root/body/body2/neck1/neck2/head/eye_white_fast"]
 cyclic = true
@@ -6102,12 +5807,6 @@ value = Vector2(508.052, -455.072)
 script = ExtResource("4_0dh1a")
 value = Vector2(508.514, -463.379)
 
-[node name="eye_shine2" type="Node2D" parent="pony/root/body_root/body/body2/neck1/neck2/head/eye_white_fast"]
-visible = false
-script = ExtResource("2_wfw7s")
-cyclic = true
-metadata/_custom_type_script = "uid://bodn4jw8tyemx"
-
 [node name="eye_shine2_fast" type="FastVecDrawing" parent="pony/root/body_root/body/body2/neck1/neck2/head/eye_white_fast"]
 cyclic = true
 fill = Color(1, 1, 1, 1)
@@ -6160,13 +5859,6 @@ value = Vector2(541.08, -427.017)
 [node name="@Node@57438" type="Node" parent="pony/root/body_root/body/body2/neck1/neck2/head/eye_white_fast/eye_shine2_fast"]
 script = ExtResource("4_0dh1a")
 value = Vector2(541.706, -431.758)
-
-[node name="lashes_circle" type="Node2D" parent="pony/root/body_root/body/body2/neck1/neck2/head"]
-visible = false
-position = Vector2(-437, 449)
-script = ExtResource("2_wfw7s")
-do_fill = false
-metadata/_custom_type_script = "uid://bodn4jw8tyemx"
 
 [node name="lashes_circle_fast" type="FastVecDrawing" parent="pony/root/body_root/body/body2/neck1/neck2/head"]
 do_fill = false
@@ -6242,13 +5934,6 @@ value = Vector2(476.813, -463.733)
 script = ExtResource("4_0dh1a")
 value = Vector2(476.669, -451.802)
 
-[node name="lash1" type="Node2D" parent="pony/root/body_root/body/body2/neck1/neck2/head"]
-visible = false
-position = Vector2(-437, 449)
-script = ExtResource("2_wfw7s")
-do_fill = false
-metadata/_custom_type_script = "uid://bodn4jw8tyemx"
-
 [node name="lash1_fast" type="FastVecDrawing" parent="pony/root/body_root/body/body2/neck1/neck2/head"]
 do_fill = false
 fill = Color(1, 1, 1, 1)
@@ -6287,13 +5972,6 @@ value = Vector2(460.418, -465.2)
 script = ExtResource("4_0dh1a")
 value = Vector2(452.526, -464.44)
 
-[node name="lash2" type="Node2D" parent="pony/root/body_root/body/body2/neck1/neck2/head"]
-visible = false
-position = Vector2(-437, 449)
-script = ExtResource("2_wfw7s")
-do_fill = false
-metadata/_custom_type_script = "uid://bodn4jw8tyemx"
-
 [node name="lash2_fast" type="FastVecDrawing" parent="pony/root/body_root/body/body2/neck1/neck2/head"]
 do_fill = false
 fill = Color(1, 1, 1, 1)
@@ -6331,13 +6009,6 @@ value = Vector2(455.545, -477.847)
 [node name="_Node_61771" type="Node" parent="pony/root/body_root/body/body2/neck1/neck2/head/lash2_fast"]
 script = ExtResource("4_0dh1a")
 value = Vector2(446.588, -478.582)
-
-[node name="lash3" type="Node2D" parent="pony/root/body_root/body/body2/neck1/neck2/head"]
-visible = false
-position = Vector2(-437, 449)
-script = ExtResource("2_wfw7s")
-do_fill = false
-metadata/_custom_type_script = "uid://bodn4jw8tyemx"
 
 [node name="lash3_fast" type="FastVecDrawing" parent="pony/root/body_root/body/body2/neck1/neck2/head"]
 do_fill = false
@@ -6417,18 +6088,6 @@ auto_calculate_length_and_angle = false
 length = 90.854
 bone_angle = 117.073
 script = ExtResource("6_pdoep")
-
-[node name="magic" type="Node2D" parent="pony/root/body_root/body/body2/neck1/neck2/head" node_paths=PackedStringArray("animator")]
-position = Vector2(-452.896, 424.336)
-rotation = 0.0492916
-scale = Vector2(1.00049, 1.00049)
-script = ExtResource("7_d2c3x")
-animator = NodePath("../../../../../../../../..")
-cyclic = true
-fill = Color(0.607843, 0.913725, 0.847059, 0.121569)
-do_fill = false
-constraints = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
-metadata/_custom_type_script = "uid://bodn4jw8tyemx"
 
 [node name="magic_fast" type="FastVecDrawing" parent="pony/root/body_root/body/body2/neck1/neck2/head"]
 cyclic = true
@@ -6582,19 +6241,19 @@ value = Vector2(618.393, -648.798)
 
 [node name="shoulder_front" type="Bone2D" parent="pony/root/body_root/body/body2"]
 position = Vector2(69, 50)
-rotation = 0.555343
-scale = Vector2(0.999864, 0.999864)
+rotation = 0.554322
+scale = Vector2(0.999865, 0.999865)
 rest = Transform2D(1, -2.38419e-07, 2.38419e-07, 1, 69, 50)
 
 [node name="arm_front" type="Bone2D" parent="pony/root/body_root/body/body2/shoulder_front"]
 position = Vector2(-4, 39)
-rotation = -0.661995
-scale = Vector2(0.999868, 0.999868)
+rotation = -0.709748
+scale = Vector2(0.999867, 0.999867)
 rest = Transform2D(1, 5.6426e-07, -5.6426e-07, 1, -4, 39)
 
 [node name="forearm_front" type="Bone2D" parent="pony/root/body_root/body/body2/shoulder_front/arm_front" node_paths=PackedStringArray("target")]
 position = Vector2(0, 105)
-rotation = 0.149238
+rotation = 0.170265
 scale = Vector2(0.999837, 0.999837)
 rest = Transform2D(0.999997, -3.2584e-07, 3.2584e-07, 0.999997, 0, 105)
 auto_calculate_length_and_angle = false
@@ -6605,19 +6264,19 @@ target = NodePath("../../../../../../ik_front_root/IK_frontleg_front")
 
 [node name="shoulder_back" type="Bone2D" parent="pony/root/body_root/body/body2"]
 position = Vector2(87, 27)
-rotation = 0.522234
+rotation = 0.543148
 scale = Vector2(0.99986, 0.99986)
 rest = Transform2D(1, 8.10623e-06, -8.10623e-06, 1, 87, 27)
 
 [node name="arm_back" type="Bone2D" parent="pony/root/body_root/body/body2/shoulder_back"]
 position = Vector2(-4, 39)
-rotation = -0.628175
+rotation = -0.698516
 scale = Vector2(0.999866, 0.999866)
 rest = Transform2D(1, -1.02838e-05, 1.02838e-05, 1, -4, 39)
 
 [node name="forearm_back" type="Bone2D" parent="pony/root/body_root/body/body2/shoulder_back/arm_back" node_paths=PackedStringArray("target")]
 position = Vector2(0, 105)
-rotation = 0.148527
+rotation = 0.170206
 scale = Vector2(0.999833, 0.999833)
 rest = Transform2D(0.999997, 2.17755e-06, -2.17755e-06, 0.999997, 0, 105)
 auto_calculate_length_and_angle = false
@@ -6631,20 +6290,20 @@ rest = Transform2D(1, 0, 0, 1, 0, 0)
 
 [node name="thigh_front" type="Bone2D" parent="pony/root/body_root/body/hip_front"]
 position = Vector2(-40, 52)
-rotation = -0.598065
+rotation = -0.594096
 scale = Vector2(0.999884, 0.999884)
 rest = Transform2D(0.817657, -0.575706, 0.575706, 0.817657, -40, 52)
 
 [node name="lowerleg_front" type="Bone2D" parent="pony/root/body_root/body/hip_front/thigh_front"]
 position = Vector2(-22.3444, 82.108)
-rotation = 0.264574
+rotation = 0.244552
 scale = Vector2(0.999836, 0.999836)
 rest = Transform2D(0.997453, 0.0713301, -0.0713301, 0.997453, -22.3444, 82.108)
 
 [node name="toe_front" type="Bone2D" parent="pony/root/body_root/body/hip_front/thigh_front/lowerleg_front" node_paths=PackedStringArray("target")]
 position = Vector2(-57.2776, -1.80989)
-rotation = 0.026043
-scale = Vector2(0.999831, 0.999831)
+rotation = 0.0420961
+scale = Vector2(0.999829, 0.999829)
 rest = Transform2D(0.981005, 0.193941, -0.193941, 0.981005, -57.2776, -1.80989)
 auto_calculate_length_and_angle = false
 length = 158.222
@@ -6664,20 +6323,20 @@ rest = Transform2D(1, 0, 0, 1, 0, 0)
 
 [node name="thigh_back" type="Bone2D" parent="pony/root/body_root/body/hip_back"]
 position = Vector2(-20, 28)
-rotation = -0.664006
-scale = Vector2(0.999883, 0.999883)
+rotation = -0.658771
+scale = Vector2(0.999884, 0.999884)
 rest = Transform2D(0.788777, -0.614679, 0.614679, 0.788777, -20, 28)
 
 [node name="lowerleg_back" type="Bone2D" parent="pony/root/body_root/body/hip_back/thigh_back"]
 position = Vector2(-19.2008, 86.46)
-rotation = 0.257345
+rotation = 0.237045
 scale = Vector2(0.999837, 0.999837)
 rest = Transform2D(0.997453, 0.0713294, -0.0713294, 0.997453, -19.2008, 86.46)
 
 [node name="toe_back" type="Bone2D" parent="pony/root/body_root/body/hip_back/thigh_back/lowerleg_back" node_paths=PackedStringArray("target")]
 position = Vector2(-57.9717, 2.06892)
-rotation = 0.0508472
-scale = Vector2(0.999834, 0.999834)
+rotation = 0.065912
+scale = Vector2(0.999835, 0.999835)
 rest = Transform2D(0.980958, 0.19408, -0.19408, 0.980958, -57.9717, 2.06892)
 auto_calculate_length_and_angle = false
 length = 158.222
@@ -6790,26 +6449,10 @@ flip_bend_direction = true
 joint_one_bone_index = 19
 joint_two_bone_index = 20
 
-[node name="mane_complex_front" type="Node2D" parent="."]
-visible = false
-script = ExtResource("2_wfw7s")
-fill = Color(0.411765, 0.196078, 0.560784, 1)
-show_rest = false
-skeleton = NodePath("../pony")
-metadata/_custom_type_script = "uid://bodn4jw8tyemx"
-
 [node name="mane_complex_front_fast" type="FastVecDrawing" parent="." node_paths=PackedStringArray("skeleton")]
 fill = Color(0.411765, 0.196078, 0.560784, 1)
 steps = 10
 skeleton = NodePath("../pony")
-
-[node name="mane_complex_purple" type="Node2D" parent="mane_complex_front_fast"]
-visible = false
-script = ExtResource("2_wfw7s")
-fill = Color(0.52549, 0.25098, 0.705882, 1)
-show_rest = false
-skeleton = NodePath("../../pony")
-metadata/_custom_type_script = "uid://bodn4jw8tyemx"
 
 [node name="mane_complex_purple_fast" type="FastVecDrawing" parent="mane_complex_front_fast" node_paths=PackedStringArray("skeleton")]
 fill = Color(0.52549, 0.25098, 0.705882, 1)
@@ -6986,14 +6629,6 @@ value = Vector2(491.68, -566.531)
 weights = {
 NodePath("../../../pony/root/body_root/body/body2/neck1/neck2/head/mane_small/mane_small2/mane_small3"): 1.0
 }
-
-[node name="mane_complex_teal" type="Node2D" parent="mane_complex_front_fast"]
-visible = false
-script = ExtResource("2_wfw7s")
-fill = Color(0.607843, 0.913725, 0.847059, 1)
-show_rest = false
-skeleton = NodePath("../../pony")
-metadata/_custom_type_script = "uid://bodn4jw8tyemx"
 
 [node name="mane_complex_teal_fast" type="FastVecDrawing" parent="mane_complex_front_fast" node_paths=PackedStringArray("skeleton")]
 fill = Color(0.607843, 0.913725, 0.847059, 1)
@@ -7223,15 +6858,6 @@ script = ExtResource("3_e3hr0")
 metadata/_custom_type_script = "uid://csgt88iv3c4ke"
 metadata/_edit_lock_ = true
 
-[node name="mane_complex_flair_fill" type="Node2D" parent="mane_complex_front_fast"]
-visible = false
-script = ExtResource("2_wfw7s")
-cyclic = true
-fill = Color(0.54902, 0.25098, 0.733333, 1)
-show_rest = false
-skeleton = NodePath("../../pony")
-metadata/_custom_type_script = "uid://bodn4jw8tyemx"
-
 [node name="mane_complex_flair_fill_fast" type="FastVecDrawing" parent="mane_complex_front_fast" node_paths=PackedStringArray("skeleton")]
 cyclic = true
 fill = Color(0.54902, 0.25098, 0.733333, 1)
@@ -7427,14 +7053,6 @@ weights = {
 NodePath("../../../pony/root/body_root/body/body2/neck1/neck2/head/mane_small/mane_small2/mane_small3"): 1.0
 }
 
-[node name="mane_complex_flair_teal" type="Node2D" parent="mane_complex_front_fast"]
-visible = false
-script = ExtResource("2_wfw7s")
-fill = Color(0.607843, 0.913725, 0.847059, 1)
-show_rest = false
-skeleton = NodePath("../../pony")
-metadata/_custom_type_script = "uid://bodn4jw8tyemx"
-
 [node name="mane_complex_flair_teal_fast" type="FastVecDrawing" parent="mane_complex_front_fast" node_paths=PackedStringArray("skeleton")]
 fill = Color(0.607843, 0.913725, 0.847059, 1)
 steps = 10
@@ -7607,14 +7225,6 @@ value = Vector2(427.843, -516.805)
 weights = {
 NodePath("../../../pony/root/body_root/body/body2/neck1/neck2/head/mane_small/mane_small2/mane_small3"): 1.0
 }
-
-[node name="mane_complex_flair_line" type="Node2D" parent="mane_complex_front_fast"]
-visible = false
-script = ExtResource("2_wfw7s")
-do_fill = false
-show_rest = false
-skeleton = NodePath("../../pony")
-metadata/_custom_type_script = "uid://bodn4jw8tyemx"
 
 [node name="mane_complex_flair_line_fast" type="FastVecDrawing" parent="mane_complex_front_fast" node_paths=PackedStringArray("skeleton")]
 do_fill = false
@@ -7989,29 +7599,11 @@ weights = {
 NodePath("../../pony/root/body_root/body/body2/neck1/neck2/head/mane_small"): 1.0
 }
 
-[node name="mane_long" type="Node2D" parent="."]
-visible = false
-script = ExtResource("2_wfw7s")
-cyclic = true
-fill = Color(0.411765, 0.196078, 0.560784, 1)
-show_rest = false
-skeleton = NodePath("../pony")
-metadata/_custom_type_script = "uid://bodn4jw8tyemx"
-
 [node name="mane_long_fast" type="FastVecDrawing" parent="." node_paths=PackedStringArray("skeleton")]
 cyclic = true
 fill = Color(0.411765, 0.196078, 0.560784, 1)
 steps = 10
 skeleton = NodePath("../pony")
-
-[node name="mane_long_purple" type="Node2D" parent="mane_long_fast"]
-visible = false
-script = ExtResource("2_wfw7s")
-cyclic = true
-fill = Color(0.52549, 0.25098, 0.705882, 1)
-show_rest = false
-skeleton = NodePath("../../pony")
-metadata/_custom_type_script = "uid://bodn4jw8tyemx"
 
 [node name="mane_long_purple_fast" type="FastVecDrawing" parent="mane_long_fast" node_paths=PackedStringArray("skeleton")]
 cyclic = true
@@ -8207,15 +7799,6 @@ value = Vector2(340.748, -504.453)
 weights = {
 NodePath("../../../pony/root/body_root/body/body2/neck1/neck2/head/mane_big/mane_big2"): 1.0
 }
-
-[node name="mane_long_teal" type="Node2D" parent="mane_long_fast"]
-visible = false
-script = ExtResource("2_wfw7s")
-cyclic = true
-fill = Color(0.607843, 0.913725, 0.847059, 1)
-show_rest = false
-skeleton = NodePath("../../pony")
-metadata/_custom_type_script = "uid://bodn4jw8tyemx"
 
 [node name="mane_long_teal_fast" type="FastVecDrawing" parent="mane_long_fast" node_paths=PackedStringArray("skeleton")]
 cyclic = true
@@ -8426,16 +8009,6 @@ script = ExtResource("3_e3hr0")
 metadata/_custom_type_script = "uid://csgt88iv3c4ke"
 metadata/_edit_lock_ = true
 
-[node name="mane_long_flair_fill" type="Node2D" parent="mane_long_fast"]
-visible = false
-script = ExtResource("2_wfw7s")
-cyclic = true
-fill = Color(0.52549, 0.25098, 0.705882, 1)
-steps = 15
-show_rest = false
-skeleton = NodePath("../../pony")
-metadata/_custom_type_script = "uid://bodn4jw8tyemx"
-
 [node name="mane_long_flair_fill_fast" type="FastVecDrawing" parent="mane_long_fast" node_paths=PackedStringArray("skeleton")]
 cyclic = true
 fill = Color(0.52549, 0.25098, 0.705882, 1)
@@ -8564,15 +8137,6 @@ value = Vector2(436.095, -294.198)
 weights = {
 NodePath("../../../pony/root/body_root/body/body2/neck1/neck2/head/mane_big/mane_big2/mane_big3/mane_big4"): 1.0
 }
-
-[node name="mane_long_flair_teal" type="Node2D" parent="mane_long_fast"]
-visible = false
-script = ExtResource("2_wfw7s")
-cyclic = true
-fill = Color(0.607843, 0.913725, 0.847059, 1)
-show_rest = false
-skeleton = NodePath("../../pony")
-metadata/_custom_type_script = "uid://bodn4jw8tyemx"
 
 [node name="mane_long_flair_teal_fast" type="FastVecDrawing" parent="mane_long_fast" node_paths=PackedStringArray("skeleton")]
 cyclic = true
@@ -8747,14 +8311,6 @@ value = Vector2(412.242, -298.637)
 weights = {
 NodePath("../../../pony/root/body_root/body/body2/neck1/neck2/head/mane_big/mane_big2/mane_big3/mane_big4"): 1.0
 }
-
-[node name="mane_long_flair_line" type="Node2D" parent="mane_long_fast"]
-visible = false
-script = ExtResource("2_wfw7s")
-do_fill = false
-show_rest = false
-skeleton = NodePath("../../pony")
-metadata/_custom_type_script = "uid://bodn4jw8tyemx"
 
 [node name="mane_long_flair_line_fast" type="FastVecDrawing" parent="mane_long_fast" node_paths=PackedStringArray("skeleton")]
 do_fill = false
@@ -9069,15 +8625,6 @@ weights = {
 NodePath("../../pony/root/body_root/body/body2/neck1/neck2/head/mane_big/mane_big2"): 1.0
 }
 
-[node name="cm_bigmagic" type="Node2D" parent="."]
-visible = false
-script = ExtResource("2_wfw7s")
-cyclic = true
-fill = Color(0.607843, 0.913725, 0.847059, 1)
-show_rest = false
-skeleton = NodePath("../pony")
-metadata/_custom_type_script = "uid://bodn4jw8tyemx"
-
 [node name="cm_bigmagic_fast" type="FastVecDrawing" parent="." node_paths=PackedStringArray("skeleton")]
 cyclic = true
 fill = Color(0.607843, 0.913725, 0.847059, 1)
@@ -9218,15 +8765,6 @@ weights = {
 NodePath("../../pony/root/body_root/body"): 0.0,
 NodePath("../../pony/root/body_root/body/hip_front"): 1.0
 }
-
-[node name="cm_bigmagic2" type="Node2D" parent="."]
-visible = false
-script = ExtResource("2_wfw7s")
-cyclic = true
-fill = Color(0.0313726, 0.729412, 0.717647, 1)
-show_rest = false
-skeleton = NodePath("../pony")
-metadata/_custom_type_script = "uid://bodn4jw8tyemx"
 
 [node name="cm_bigmagic2_fast" type="FastVecDrawing" parent="." node_paths=PackedStringArray("skeleton")]
 cyclic = true
@@ -9369,15 +8907,6 @@ weights = {
 NodePath("../../pony/root/body_root/body"): 0.0,
 NodePath("../../pony/root/body_root/body/hip_front"): 1.0
 }
-
-[node name="cm_littlemagic" type="Node2D" parent="."]
-visible = false
-script = ExtResource("2_wfw7s")
-cyclic = true
-fill = Color(0.607843, 0.913725, 0.847059, 1)
-show_rest = false
-skeleton = NodePath("../pony")
-metadata/_custom_type_script = "uid://bodn4jw8tyemx"
 
 [node name="cm_littlemagic_fast" type="FastVecDrawing" parent="." node_paths=PackedStringArray("skeleton")]
 cyclic = true
@@ -9536,15 +9065,6 @@ weights = {
 NodePath("../../pony/root/body_root/body/hip_front/thigh_front"): 1.0,
 NodePath("../../pony/root/body_root/body/hip_front"): 1.0
 }
-
-[node name="cm_littlemagic2" type="Node2D" parent="."]
-visible = false
-script = ExtResource("2_wfw7s")
-cyclic = true
-fill = Color(0.0313726, 0.729412, 0.717647, 1)
-show_rest = false
-skeleton = NodePath("../pony")
-metadata/_custom_type_script = "uid://bodn4jw8tyemx"
 
 [node name="cm_littlemagic2_fast" type="FastVecDrawing" parent="." node_paths=PackedStringArray("skeleton")]
 cyclic = true
@@ -9711,15 +9231,6 @@ NodePath("../../pony/root/body_root/body/hip_front/thigh_front"): 1.0,
 NodePath("../../pony/root/body_root/body/hip_front"): 1.0
 }
 
-[node name="cm_starwhite" type="Node2D" parent="."]
-visible = false
-script = ExtResource("2_wfw7s")
-cyclic = true
-fill = Color(1, 1, 0.941176, 1)
-show_rest = false
-skeleton = NodePath("../pony")
-metadata/_custom_type_script = "uid://bodn4jw8tyemx"
-
 [node name="cm_starwhite_fast" type="FastVecDrawing" parent="." node_paths=PackedStringArray("skeleton")]
 cyclic = true
 fill = Color(1, 1, 0.941176, 1)
@@ -9815,15 +9326,6 @@ value = Vector2(277.797, -248.524)
 weights = {
 NodePath("../../pony/root/body_root/body/hip_front/thigh_front"): 1.0
 }
-
-[node name="cm_starpink" type="Node2D" parent="."]
-visible = false
-script = ExtResource("2_wfw7s")
-cyclic = true
-fill = Color(0.717647, 0.396078, 0.721569, 1)
-show_rest = false
-skeleton = NodePath("../pony")
-metadata/_custom_type_script = "uid://bodn4jw8tyemx"
 
 [node name="cm_starpink_fast" type="FastVecDrawing" parent="." node_paths=PackedStringArray("skeleton")]
 cyclic = true
