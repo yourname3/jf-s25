@@ -5,6 +5,8 @@ class_name HelperConvertVec
 @export
 var go: bool = false
 
+@export var kill: bool = false
+
 func process(node: Node) -> void:
 	print("process node: ", node)
 	for child in node.get_children():
@@ -33,7 +35,21 @@ func _go() -> void:
 	var parent = get_parent()
 	process(parent)
 	
+func killfunc(node: Node) -> void:
+	if node is VecDrawing:
+		node.queue_free()
+	else:
+		for child in node.get_children():
+			killfunc(child)
+	
+func _kill() -> void:
+	var parent = get_parent()
+	killfunc(parent)
+	
 func _process(delta: float) -> void:
 	if go:
 		go = false
 		_go()
+	if kill:
+		kill = false
+		_kill()
