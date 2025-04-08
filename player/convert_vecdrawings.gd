@@ -22,9 +22,11 @@ func process(node: Node) -> void:
 		new_guy.steps = node.steps
 		node.add_sibling(new_guy)
 		new_guy.owner = node.owner
+		new_guy.position = node.position
 		for child in children:
 			child.reparent(new_guy)
 		new_guy.skeleton = node.get_skeleton_from_tree()
+		
 		node.hide()
 
 func _go() -> void:
