@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://dyvqtohdclmmo"]
+
+[ext_resource type="Texture2D" uid="uid://byvmyb25xgeyb" path="res://icon.svg" id="1_dn8vi"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="FastVecDrawing" type="FastVecDrawing" parent="."]
+position = Vector2(64, 65)
+
+[node name="Sprite2D" type="Sprite2D" parent="FastVecDrawing"]
+texture = ExtResource("1_dn8vi")

@@ -10,6 +10,7 @@ func _ready() -> void:
 		queue_free()
 
 func _process(delta: float) -> void:
+	return
 	the_drawing = Engine.get_singleton("GDVecRig").current_vecdrawing
 	if the_drawing != null:
 		queue_redraw()
