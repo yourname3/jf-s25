@@ -1254,10 +1254,10 @@ node_connections = [&"blend_to_air", 0, &"blend_to_walk", &"blend_to_air", 1, &"
 [node name="StarlightGlimmer" type="Node2D"]
 script = ExtResource("1_hphrg")
 
-[node name="frontleg_back_fast" type="FastVecDrawing" parent="." node_paths=PackedStringArray("skeleton")]
+[node name="frontleg_back_fast" type="FastVecDrawing" parent="." node_paths=PackedStringArray("bezier_skeleton")]
 fill = Color(0.854902, 0.690196, 0.913725, 1)
 steps = 10
-skeleton = NodePath("../pony")
+bezier_skeleton = NodePath("../pony")
 
 [node name="VecStroke" type="Line2D" parent="frontleg_back_fast"]
 points = PackedVector2Array(406.948, -276.798, 402.412, -268.352, 398.63, -257.599, 395.539, -245.063, 393.076, -231.265, 391.176, -216.73, 389.775, -201.979, 388.811, -187.537, 388.22, -173.925, 387.937, -161.668, 387.9, -151.288, 387.974, -139.622, 388.076, -127.555, 388.26, -115.304, 388.581, -103.086, 389.093, -91.1186, 389.85, -79.6187, 390.907, -68.8037, 392.318, -58.8907, 394.138, -50.0971, 396.421, -42.6399, 397.459, -41.0352, 399.337, -39.4612, 402.022, -37.949, 405.48, -36.5298, 409.679, -35.2345, 414.586, -34.0943, 420.168, -33.1402, 426.392, -32.4034, 433.225, -31.9149, 440.633, -31.7057, 449.621, -31.8117, 457.977, -32.242, 465.604, -32.9511, 472.406, -33.8936, 478.287, -35.024, 483.151, -36.2969, 486.9, -37.6668, 489.44, -39.0884, 490.674, -40.516, 490.504, -41.9044, 487.276, -47.6479, 483.782, -55.4341, 480.109, -64.8934, 476.344, -75.6563, 472.573, -87.3531, 468.883, -99.6143, 465.361, -112.07, 462.092, -124.351, 459.164, -136.088, 456.663, -146.911, 454.483, -157.313, 452.299, -169.054, 450.275, -181.816, 448.576, -195.28, 447.368, -209.13, 446.814, -223.047, 447.078, -236.714, 448.327, -249.811, 450.724, -262.022, 454.435, -273.029)
@@ -1636,10 +1636,10 @@ value = Vector2(367.032, -270.897)
 script = ExtResource("4_0dh1a")
 value = Vector2(367.704, -287.972)
 
-[node name="backleg_back_hip_fast" type="FastVecDrawing" parent="." node_paths=PackedStringArray("skeleton")]
+[node name="backleg_back_hip_fast" type="FastVecDrawing" parent="." node_paths=PackedStringArray("bezier_skeleton")]
 fill = Color(0.854902, 0.690196, 0.913725, 1)
 steps = 10
-skeleton = NodePath("../pony")
+bezier_skeleton = NodePath("../pony")
 
 [node name="VecStroke" type="Line2D" parent="backleg_back_hip_fast"]
 points = PackedVector2Array(288.918, -340.261, 284.637, -334.831, 280.989, -329.973, 277.936, -325.575, 275.441, -321.523, 273.465, -317.703, 271.971, -314.004, 270.919, -310.31, 270.273, -306.51, 269.995, -302.489, 270.045, -298.135, 270.806, -289.431, 272.224, -280.936, 274.171, -272.721, 276.518, -264.856, 279.138, -257.412, 281.903, -250.458, 284.686, -244.064, 287.358, -238.301, 289.792, -233.239, 291.859, -228.948, 293.523, -225.53, 296.041, -220.701, 299.303, -215.011, 303.198, -209.007, 307.615, -203.238, 312.444, -198.254, 317.574, -194.603, 322.895, -192.833, 328.295, -193.493, 333.664, -197.133, 339.777, -203.541, 345.45, -210.136, 350.638, -216.905, 355.293, -223.834, 359.369, -230.91, 362.819, -238.12, 365.596, -245.452, 367.653, -252.891, 368.943, -260.425, 369.42, -268.041)
@@ -1767,10 +1767,10 @@ NodePath("../../pony/root/body_root/body/hip_back"): 1.0,
 NodePath("../../pony/root/body_root/body/hip_back/thigh_back"): 1.0
 }
 
-[node name="backleg_back_bottom_fast" type="FastVecDrawing" parent="." node_paths=PackedStringArray("skeleton")]
+[node name="backleg_back_bottom_fast" type="FastVecDrawing" parent="." node_paths=PackedStringArray("bezier_skeleton")]
 fill = Color(0.854902, 0.690196, 0.913725, 1)
 steps = 10
-skeleton = NodePath("../pony")
+bezier_skeleton = NodePath("../pony")
 
 [node name="VecStroke" type="Line2D" parent="backleg_back_bottom_fast"]
 points = PackedVector2Array(310.121, -218.717, 305.458, -220.27, 301.233, -221.509, 297.418, -222.468, 293.988, -223.181, 290.918, -223.683, 288.18, -224.009, 285.748, -224.193, 283.597, -224.269, 281.701, -224.273, 280.033, -224.24, 277.02, -224.453, 274.203, -224.982, 271.448, -225.418, 268.623, -225.348, 265.594, -224.361, 262.229, -222.047, 258.395, -217.993, 253.959, -211.789, 248.787, -203.024, 242.748, -191.285, 236.352, -176.75, 231.167, -162.05, 227.08, -147.247, 223.977, -132.398, 221.744, -117.565, 220.266, -102.805, 219.431, -88.1787, 219.124, -73.7453, 219.231, -59.564, 219.638, -45.6944, 220.499, -41.2458, 222.614, -37.4299, 225.827, -34.2078, 229.983, -31.5406, 234.925, -29.3894, 240.498, -27.7153, 246.546, -26.4795, 252.912, -25.6431, 259.441, -25.1671, 265.978, -25.0128, 272.546, -25.1368, 278.993, -25.5038, 285.227, -26.086, 291.157, -26.856, 296.689, -27.786, 301.733, -28.8486, 306.195, -30.016, 309.984, -31.2607, 313.007, -32.555, 315.172, -33.8714, 315.828, -35.9338, 314.81, -39.5667, 312.486, -44.6813, 309.223, -51.1889, 305.388, -59.0008, 301.35, -68.0285, 297.474, -78.1831, 294.129, -89.3759, 291.682, -101.518, 290.501, -114.522, 290.913, -126.779, 292.822, -137.863, 296.007, -147.889, 300.247, -156.973, 305.32, -165.23, 311.007, -172.775, 317.084, -179.723, 323.333, -186.189, 329.53, -192.289, 335.455, -198.137, 341.013, -204.043, 346.246, -210.251, 351.094, -216.739, 355.501, -223.483, 359.408, -230.461, 362.757, -237.649, 365.491, -245.024, 367.551, -252.563, 368.881, -260.243, 369.42, -268.041)
@@ -1979,16 +1979,16 @@ NodePath("../../pony/root/body_root/body/hip_back"): 1.0,
 NodePath("../../pony/root/body_root/body/hip_back/thigh_back"): 1.0
 }
 
-[node name="tail_main_fast" type="FastVecDrawing" parent="." node_paths=PackedStringArray("skeleton")]
+[node name="tail_main_fast" type="FastVecDrawing" parent="." node_paths=PackedStringArray("bezier_skeleton")]
 fill = Color(0.411765, 0.196078, 0.560784, 1)
 steps = 10
-skeleton = NodePath("../pony")
+bezier_skeleton = NodePath("../pony")
 
-[node name="tail_purple_big_fast" type="FastVecDrawing" parent="tail_main_fast" node_paths=PackedStringArray("skeleton")]
+[node name="tail_purple_big_fast" type="FastVecDrawing" parent="tail_main_fast" node_paths=PackedStringArray("bezier_skeleton")]
 cyclic = true
 fill = Color(0.52549, 0.25098, 0.705882, 1)
 steps = 10
-skeleton = NodePath("../../pony")
+bezier_skeleton = NodePath("../../pony")
 
 [node name="@Node@35072" type="Node" parent="tail_main_fast/tail_purple_big_fast" node_paths=PackedStringArray("weights")]
 script = ExtResource("4_0dh1a")
@@ -2116,11 +2116,11 @@ weights = {
 NodePath("../../../pony/root/body_root/body/tail/tail2/tail3/tail4"): 1.0
 }
 
-[node name="tail_teal_big_fast" type="FastVecDrawing" parent="tail_main_fast" node_paths=PackedStringArray("skeleton")]
+[node name="tail_teal_big_fast" type="FastVecDrawing" parent="tail_main_fast" node_paths=PackedStringArray("bezier_skeleton")]
 cyclic = true
 fill = Color(0.607843, 0.913725, 0.847059, 1)
 steps = 10
-skeleton = NodePath("../../pony")
+bezier_skeleton = NodePath("../../pony")
 
 [node name="@Node@33846" type="Node" parent="tail_main_fast/tail_teal_big_fast" node_paths=PackedStringArray("weights")]
 script = ExtResource("4_0dh1a")
@@ -2313,9 +2313,9 @@ weights = {
 NodePath("../../../pony/root/body_root/body/tail/tail2/tail3/tail4"): 1.0
 }
 
-[node name="tail_purple_stripe_bottom_fast" type="FastVecDrawing" parent="tail_main_fast" node_paths=PackedStringArray("skeleton")]
+[node name="tail_purple_stripe_bottom_fast" type="FastVecDrawing" parent="tail_main_fast" node_paths=PackedStringArray("bezier_skeleton")]
 fill = Color(0.52549, 0.25098, 0.705882, 1)
-skeleton = NodePath("../../pony")
+bezier_skeleton = NodePath("../../pony")
 
 [node name="_Node_80932" type="Node" parent="tail_main_fast/tail_purple_stripe_bottom_fast" node_paths=PackedStringArray("weights")]
 script = ExtResource("4_0dh1a")
@@ -2443,9 +2443,9 @@ weights = {
 NodePath("../../../pony/root/body_root/body/tail/tail2/tail3/tail4/tail5"): 1.0
 }
 
-[node name="tail_teal_stripe_bottom_fast" type="FastVecDrawing" parent="tail_main_fast" node_paths=PackedStringArray("skeleton")]
+[node name="tail_teal_stripe_bottom_fast" type="FastVecDrawing" parent="tail_main_fast" node_paths=PackedStringArray("bezier_skeleton")]
 fill = Color(0.607843, 0.913725, 0.847059, 1)
-skeleton = NodePath("../../pony")
+bezier_skeleton = NodePath("../../pony")
 
 [node name="@Node@80932" type="Node" parent="tail_main_fast/tail_teal_stripe_bottom_fast" node_paths=PackedStringArray("weights")]
 script = ExtResource("4_0dh1a")
@@ -2575,10 +2575,10 @@ weights = {
 NodePath("../../../pony/root/body_root/body/tail/tail2/tail3/tail4/tail5"): 1.0
 }
 
-[node name="tail_inner_purple_fast" type="FastVecDrawing" parent="tail_main_fast" node_paths=PackedStringArray("skeleton")]
+[node name="tail_inner_purple_fast" type="FastVecDrawing" parent="tail_main_fast" node_paths=PackedStringArray("bezier_skeleton")]
 cyclic = true
 fill = Color(0.52549, 0.25098, 0.705882, 1)
-skeleton = NodePath("../../pony")
+bezier_skeleton = NodePath("../../pony")
 
 [node name="@Node@35772" type="Node" parent="tail_main_fast/tail_inner_purple_fast" node_paths=PackedStringArray("weights")]
 script = ExtResource("4_0dh1a")
@@ -3015,10 +3015,10 @@ weights = {
 NodePath("../../pony/root/body_root/body/tail"): 1.0
 }
 
-[node name="mane_hollow_bg_fast" type="FastVecDrawing" parent="." node_paths=PackedStringArray("skeleton")]
+[node name="mane_hollow_bg_fast" type="FastVecDrawing" parent="." node_paths=PackedStringArray("bezier_skeleton")]
 fill = Color(0.372549, 0.176471, 0.498039, 1)
 steps = 10
-skeleton = NodePath("../pony")
+bezier_skeleton = NodePath("../pony")
 
 [node name="@Node@47653" type="Node" parent="mane_hollow_bg_fast" node_paths=PackedStringArray("weights")]
 script = ExtResource("4_0dh1a")
@@ -3107,10 +3107,10 @@ NodePath("../../pony/root/body_root/body/body2/neck1/neck2/head/mane_small"): 1.
 NodePath("../../pony/root/body_root/body/body2/neck1/neck2/head/mane_small/mane_small2"): 1.0
 }
 
-[node name="mane_complex_back_fast" type="FastVecDrawing" parent="." node_paths=PackedStringArray("skeleton")]
+[node name="mane_complex_back_fast" type="FastVecDrawing" parent="." node_paths=PackedStringArray("bezier_skeleton")]
 fill = Color(0.411765, 0.196078, 0.560784, 1)
 steps = 10
-skeleton = NodePath("../pony")
+bezier_skeleton = NodePath("../pony")
 
 [node name="VecStroke" type="Line2D" parent="mane_complex_back_fast"]
 points = PackedVector2Array(529.784, -687.587, 533.927, -687.244, 538.374, -685.991, 542.956, -683.799, 547.506, -680.637, 551.855, -676.474, 555.834, -671.279, 559.275, -665.022, 562.011, -657.672, 563.872, -649.198, 564.69, -639.571, 564.707, -629.358, 564.263, -620.087, 563.373, -611.574, 562.052, -603.638, 560.315, -596.093, 558.178, -588.758, 555.656, -581.449, 552.764, -573.984, 549.518, -566.179, 545.933, -557.851, 544.969, -558.254, 543.887, -558.714, 542.727, -559.217, 541.527, -559.748, 540.326, -560.294, 539.164, -560.842, 538.08, -561.378, 537.112, -561.888, 536.3, -562.357, 535.683, -562.774, 538.118, -570.479, 540.151, -578.127, 541.807, -585.603, 543.11, -592.792, 544.083, -599.579, 544.751, -605.849, 545.138, -611.486, 545.266, -616.375, 545.162, -620.401, 544.848, -623.45, 544.4, -626.082, 543.852, -628.869, 543.165, -631.714, 542.298, -634.517, 541.212, -637.181, 539.867, -639.607, 538.224, -641.696, 536.243, -643.351, 533.884, -644.473, 531.107, -644.964)
@@ -3247,10 +3247,10 @@ weights = {
 NodePath("../../pony/root/body_root/body/body2/neck1/neck2/head/mane_small"): 1.0
 }
 
-[node name="mane_big_fast" type="FastVecDrawing" parent="." node_paths=PackedStringArray("skeleton")]
+[node name="mane_big_fast" type="FastVecDrawing" parent="." node_paths=PackedStringArray("bezier_skeleton")]
 fill = Color(0.411765, 0.196078, 0.560784, 1)
 steps = 15
-skeleton = NodePath("../pony")
+bezier_skeleton = NodePath("../pony")
 
 [node name="VecStroke" type="Line2D" parent="mane_big_fast"]
 points = PackedVector2Array(498.233, -611.816, 500.218, -623.359, 500.035, -633.486, 497.885, -642.235, 493.969, -649.645, 488.486, -655.752, 481.636, -660.595, 473.62, -664.213, 464.637, -666.643, 454.889, -667.923, 444.575, -668.091, 433.895, -667.186, 423.05, -665.244, 412.239, -662.305, 401.663, -658.407, 391.522, -653.587, 381.262, -647.54, 371.89, -640.903, 363.384, -633.757, 355.722, -626.181, 348.879, -618.255, 342.834, -610.058, 337.564, -601.669, 333.045, -593.169, 329.254, -584.636, 326.17, -576.151, 323.769, -567.793, 322.027, -559.642, 320.924, -551.777, 320.434, -544.279, 320.536, -537.225, 321.335, -529.467, 322.858, -521.421, 325.099, -513.183, 328.053, -504.854, 331.715, -496.531, 336.078, -488.313, 341.136, -480.298, 346.886, -472.585, 353.32, -465.273, 360.432, -458.46, 368.219, -452.245, 376.673, -446.725, 385.789, -442, 395.561, -438.168, 405.984, -435.328)
@@ -3345,10 +3345,10 @@ weights = {
 NodePath("../../pony/root/body_root/body/body2/neck1/neck2/head/mane_big/mane_big2"): 1.0
 }
 
-[node name="mane_big_line_fast" type="FastVecDrawing" parent="." node_paths=PackedStringArray("skeleton")]
+[node name="mane_big_line_fast" type="FastVecDrawing" parent="." node_paths=PackedStringArray("bezier_skeleton")]
 do_fill = false
 fill = Color(1, 1, 1, 1)
-skeleton = NodePath("../pony")
+bezier_skeleton = NodePath("../pony")
 
 [node name="@Node@51471" type="Node" parent="mane_big_line_fast" node_paths=PackedStringArray("weights")]
 script = ExtResource("4_0dh1a")
@@ -3420,9 +3420,9 @@ default_color = Color(0.337255, 0.156863, 0.458824, 1)
 script = ExtResource("3_e3hr0")
 metadata/_custom_type_script = "uid://csgt88iv3c4ke"
 
-[node name="body_fast" type="FastVecDrawing" parent="." node_paths=PackedStringArray("skeleton")]
+[node name="body_fast" type="FastVecDrawing" parent="." node_paths=PackedStringArray("bezier_skeleton")]
 fill = Color(0.972549, 0.772549, 1, 1)
-skeleton = NodePath("../pony")
+bezier_skeleton = NodePath("../pony")
 
 [node name="VecStroke" type="Line2D" parent="body_fast"]
 points = PackedVector2Array(252.798, -329.208, 255.862, -332.875, 258.956, -336.18, 262.073, -339.139, 265.207, -341.771, 268.351, -344.09, 271.5, -346.114, 274.647, -347.86, 277.786, -349.345, 280.91, -350.584, 284.013, -351.595, 287.088, -352.394, 290.13, -352.998, 293.132, -353.424, 296.088, -353.688, 298.991, -353.807, 301.835, -353.798, 304.614, -353.678, 307.321, -353.462, 309.95, -353.168, 312.495, -352.812, 315, -352.341, 317.617, -351.68, 320.339, -350.844, 323.158, -349.845, 326.068, -348.695, 329.061, -347.409, 332.131, -345.999, 335.27, -344.478, 338.472, -342.859, 341.73, -341.155, 345.037, -339.379, 348.385, -337.545, 351.769, -335.664, 355.18, -333.75, 358.612, -331.816, 362.058, -329.875, 365.51, -327.94, 368.963, -326.023, 372.409, -324.139, 375.841, -322.3, 380.092, -319.995, 384.997, -317.235, 390.459, -314.077, 396.378, -310.575, 402.655, -306.783, 409.192, -302.755, 415.89, -298.548, 422.651, -294.214, 429.375, -289.81, 435.964, -285.389, 442.319, -281.007, 448.342, -276.718, 453.933, -272.577, 458.994, -268.638, 463.427, -264.956, 467.131, -261.586, 470.01, -258.582, 471.963, -256, 472.892, -253.893, 472.699, -252.317, 469.542, -247.359, 466.283, -242.7, 462.91, -238.331, 459.408, -234.247, 455.761, -230.441, 451.956, -226.906, 447.978, -223.634, 443.812, -220.619, 439.444, -217.855, 434.859, -215.333, 430.043, -213.048, 424.981, -210.993, 419.658, -209.16, 414.06, -207.542, 408.173, -206.134, 401.982, -204.927, 395.473, -203.916, 388.63, -203.092, 381.439, -202.45, 373.886, -201.982, 366.172, -201.655, 358.838, -201.461, 351.87, -201.412, 345.257, -201.519, 338.988, -201.794, 333.049, -202.247, 327.43, -202.89, 322.118, -203.734, 317.101, -204.789, 312.367, -206.068, 307.905, -207.58, 303.701, -209.338, 299.746, -211.352, 296.025, -213.633, 292.528, -216.194, 289.242, -219.043, 286.156, -222.194, 283.258, -225.656, 280.535, -229.442, 277.975, -233.562)
@@ -3572,9 +3572,9 @@ weights = {
 NodePath("../../pony/root/body_root/body"): 1.0
 }
 
-[node name="neck_fast" type="FastVecDrawing" parent="." node_paths=PackedStringArray("skeleton")]
+[node name="neck_fast" type="FastVecDrawing" parent="." node_paths=PackedStringArray("bezier_skeleton")]
 fill = Color(0.972549, 0.772549, 1, 1)
-skeleton = NodePath("../pony")
+bezier_skeleton = NodePath("../pony")
 
 [node name="VecStroke" type="Line2D" parent="neck_fast"]
 points = PackedVector2Array(433.006, -214.675, 438.996, -218.589, 444.567, -222.432, 449.733, -226.229, 454.508, -230.005, 458.907, -233.787, 462.945, -237.601, 466.636, -241.471, 469.994, -245.424, 473.035, -249.485, 475.772, -253.68, 478.22, -258.035, 480.394, -262.576, 482.308, -267.327, 483.977, -272.316, 485.415, -277.567, 486.636, -283.107, 487.656, -288.96, 488.489, -295.153, 489.149, -301.712, 489.65, -308.662, 489.908, -314.308, 490.009, -319.908, 489.961, -325.45, 489.772, -330.927, 489.452, -336.33, 489.007, -341.648, 488.446, -346.874, 487.778, -351.998, 487.01, -357.01, 486.151, -361.903, 485.209, -366.666, 484.192, -371.291, 483.108, -375.768, 481.966, -380.089, 480.773, -384.245, 479.538, -388.226, 478.269, -392.023, 476.975, -395.627, 475.663, -399.029, 474.341, -402.221, 472.645, -405.33, 470.257, -408.475, 467.258, -411.628, 463.73, -414.764, 459.751, -417.854, 455.405, -420.873, 450.771, -423.793, 445.929, -426.589, 440.962, -429.232, 435.949, -431.697, 430.972, -433.957, 426.111, -435.984, 421.448, -437.753, 417.062, -439.236, 413.034, -440.407, 409.447, -441.24, 406.379, -441.706, 403.913, -441.78, 402.128, -441.434, 401.106, -440.643, 400.292, -438.255, 399.914, -434.681, 399.912, -430.045, 400.224, -424.468, 400.79, -418.073, 401.55, -410.981, 402.442, -403.315, 403.406, -395.198, 404.381, -386.751, 405.307, -378.096, 406.122, -369.356, 406.766, -360.654, 407.178, -352.11, 407.297, -343.848, 407.063, -335.989, 406.415, -328.656, 405.292, -321.971, 403.634, -316.057, 401.38, -311.035, 398.468, -307.027)
@@ -3705,10 +3705,10 @@ NodePath("../../pony/root/body_root/body/body2/neck1"): 1.0,
 null: 1.0
 }
 
-[node name="head_fast" type="FastVecDrawing" parent="." node_paths=PackedStringArray("skeleton")]
+[node name="head_fast" type="FastVecDrawing" parent="." node_paths=PackedStringArray("bezier_skeleton")]
 fill = Color(0.972549, 0.772549, 1, 1)
 steps = 10
-skeleton = NodePath("../pony")
+bezier_skeleton = NodePath("../pony")
 
 [node name="VecStroke" type="Line2D" parent="head_fast"]
 points = PackedVector2Array(415.427, -388.489, 408.658, -397.751, 402.368, -407.709, 396.652, -418.174, 391.609, -428.958, 387.336, -439.872, 383.929, -450.727, 381.485, -461.335, 380.102, -471.506, 379.876, -481.053, 380.904, -489.787, 382.989, -498.846, 385.964, -509.192, 389.975, -520.368, 395.168, -531.919, 401.691, -543.387, 409.688, -554.318, 419.306, -564.255, 430.692, -572.743, 443.991, -579.324, 459.35, -583.544, 476.482, -585.939, 492.286, -586.912, 506.798, -586.524, 520.055, -584.839, 532.091, -581.916, 542.943, -577.82, 552.646, -572.611, 561.237, -566.352, 568.749, -559.105, 575.22, -550.931, 582.195, -539.799, 587.78, -528.773, 592.106, -517.957, 595.305, -507.456, 597.511, -497.375, 598.856, -487.818, 599.472, -478.89, 599.492, -470.696, 599.047, -463.34, 598.271, -456.926, 597.377, -451.458, 596.515, -446.806, 595.726, -442.878, 595.053, -439.58, 594.534, -436.82, 594.212, -434.504, 594.127, -432.54, 594.32, -430.834, 594.832, -429.294, 595.703, -427.827, 597.18, -426.487, 599.35, -425.346, 602.017, -424.335, 604.986, -423.386, 608.062, -422.432, 611.048, -421.404, 613.75, -420.234, 615.972, -418.854, 617.518, -417.195, 618.192, -415.191, 618.009, -412.274, 616.999, -408.109, 614.998, -402.975, 611.84, -397.153, 607.36, -390.921, 601.392, -384.559, 593.771, -378.347, 584.33, -372.564, 572.905, -367.49, 559.33, -363.405, 546.771, -360.954, 534.144, -359.476, 521.577, -358.884, 509.201, -359.086, 497.146, -359.994, 485.541, -361.516, 474.517, -363.564, 464.204, -366.047, 454.731, -368.876, 446.229, -371.961)
@@ -3932,11 +3932,11 @@ NodePath("../../pony/root/body_root/body/body2/neck1/neck2"): 1.0,
 NodePath("../../pony/root/body_root/body/body2/neck1/neck2/head"): 1.0
 }
 
-[node name="mouth_simple_fast" type="FastVecDrawing" parent="head_fast" node_paths=PackedStringArray("skeleton")]
+[node name="mouth_simple_fast" type="FastVecDrawing" parent="head_fast" node_paths=PackedStringArray("bezier_skeleton")]
 do_fill = false
 fill = Color(1, 1, 1, 1)
 steps = 10
-skeleton = NodePath("../../pony")
+bezier_skeleton = NodePath("../../pony")
 
 [node name="_Node_64617" type="Node" parent="head_fast/mouth_simple_fast" node_paths=PackedStringArray("weights")]
 script = ExtResource("4_0dh1a")
@@ -3988,11 +3988,11 @@ default_color = Color(0.741176, 0.541176, 0.843137, 1)
 script = ExtResource("3_e3hr0")
 metadata/_custom_type_script = "uid://csgt88iv3c4ke"
 
-[node name="nose_fast" type="FastVecDrawing" parent="head_fast" node_paths=PackedStringArray("skeleton")]
+[node name="nose_fast" type="FastVecDrawing" parent="head_fast" node_paths=PackedStringArray("bezier_skeleton")]
 do_fill = false
 fill = Color(1, 1, 1, 1)
 steps = 15
-skeleton = NodePath("../../pony")
+bezier_skeleton = NodePath("../../pony")
 
 [node name="_Node_64617" type="Node" parent="head_fast/nose_fast" node_paths=PackedStringArray("weights")]
 script = ExtResource("4_0dh1a")
@@ -4044,10 +4044,10 @@ default_color = Color(0.741176, 0.541176, 0.843137, 1)
 script = ExtResource("3_e3hr0")
 metadata/_custom_type_script = "uid://csgt88iv3c4ke"
 
-[node name="tail_flair_fast" type="FastVecDrawing" parent="." node_paths=PackedStringArray("skeleton")]
+[node name="tail_flair_fast" type="FastVecDrawing" parent="." node_paths=PackedStringArray("bezier_skeleton")]
 fill = Color(0.411765, 0.196078, 0.560784, 1)
 steps = 10
-skeleton = NodePath("../pony")
+bezier_skeleton = NodePath("../pony")
 
 [node name="@Node@24811" type="Node" parent="tail_flair_fast" node_paths=PackedStringArray("weights")]
 script = ExtResource("4_0dh1a")
@@ -4175,10 +4175,10 @@ script = ExtResource("3_e3hr0")
 metadata/_custom_type_script = "uid://csgt88iv3c4ke"
 metadata/_edit_lock_ = true
 
-[node name="backleg_front_B_fast" type="FastVecDrawing" parent="." node_paths=PackedStringArray("skeleton")]
+[node name="backleg_front_B_fast" type="FastVecDrawing" parent="." node_paths=PackedStringArray("bezier_skeleton")]
 fill = Color(0.972549, 0.772549, 1, 1)
 steps = 10
-skeleton = NodePath("../pony")
+bezier_skeleton = NodePath("../pony")
 
 [node name="VecStroke" type="Line2D" parent="backleg_front_B_fast"]
 points = PackedVector2Array(268.744, -194.609, 266.528, -197.069, 264.044, -199.328, 261.372, -201.378, 258.591, -203.21, 255.781, -204.814, 253.022, -206.18, 250.391, -207.301, 247.969, -208.167, 245.835, -208.768, 244.068, -209.095, 242.024, -209.371, 240.018, -209.497, 237.925, -209.183, 235.619, -208.135, 232.976, -206.064, 229.869, -202.677, 226.173, -197.683, 221.763, -190.79, 216.512, -181.707, 210.296, -170.142, 203.711, -155.999, 198.431, -141.509, 194.326, -126.766, 191.263, -111.861, 189.112, -96.8881, 187.74, -81.9397, 187.018, -67.1087, 186.812, -52.4876, 186.992, -38.1695, 187.427, -24.2469, 188.287, -19.7983, 190.401, -15.9823, 193.614, -12.7598, 197.769, -10.0921, 202.711, -7.94037, 208.284, -6.26566, 214.331, -5.02914, 220.697, -4.19193, 227.226, -3.71518, 233.762, -3.56002, 240.33, -3.68325, 246.777, -4.0494, 253.011, -4.63089, 258.941, -5.40012, 264.473, -6.32948, 269.517, -7.39138, 273.979, -8.55823, 277.768, -9.80242, 280.791, -11.0964, 282.956, -12.4124, 283.66, -14.5016, 282.759, -18.2065, 280.581, -23.4258, 277.455, -30.0578, 273.708, -38.0012, 269.669, -47.1545, 265.664, -57.4162, 262.023, -68.6849, 259.073, -80.859, 257.141, -93.8371, 256.552, -106.52, 257.27, -118.262, 259.142, -129.094, 262.015, -139.046, 265.735, -148.15, 270.148, -156.436, 275.101, -163.935, 280.439, -170.678, 286.01, -176.696, 291.659, -182.019, 297.571, -187.47, 304.299, -194.127, 311.532, -201.768, 318.957, -210.171, 326.26, -219.115, 333.13, -228.379, 339.253, -237.739, 344.317, -246.977, 348.008, -255.868, 350.016, -264.193)
@@ -4409,10 +4409,10 @@ NodePath("../../pony/root/body_root/body/hip_front/thigh_front"): 0.0,
 NodePath("../../pony/root/body_root/body/hip_front"): 1.0
 }
 
-[node name="backleg_front_TopFill_fast" type="FastVecDrawing" parent="." node_paths=PackedStringArray("skeleton")]
+[node name="backleg_front_TopFill_fast" type="FastVecDrawing" parent="." node_paths=PackedStringArray("bezier_skeleton")]
 fill = Color(0.972549, 0.772549, 1, 1)
 steps = 10
-skeleton = NodePath("../pony")
+bezier_skeleton = NodePath("../pony")
 
 [node name="_Node_41457" type="Node" parent="backleg_front_TopFill_fast" node_paths=PackedStringArray("weights")]
 script = ExtResource("4_0dh1a")
@@ -4531,11 +4531,11 @@ NodePath("../../pony/root/body_root/body/hip_front/thigh_front"): 1.0,
 NodePath("../../pony/root/body_root/body/hip_front"): 1.0
 }
 
-[node name="backleg_front_TopLine_fast" type="FastVecDrawing" parent="." node_paths=PackedStringArray("skeleton")]
+[node name="backleg_front_TopLine_fast" type="FastVecDrawing" parent="." node_paths=PackedStringArray("bezier_skeleton")]
 do_fill = false
 fill = Color(0.972549, 0.772549, 1, 1)
 steps = 10
-skeleton = NodePath("../pony")
+bezier_skeleton = NodePath("../pony")
 
 [node name="VecStroke" type="Line2D" parent="backleg_front_TopLine_fast"]
 points = PackedVector2Array(257.688, -334.917, 253.415, -329.468, 249.788, -324.488, 246.762, -319.764, 244.291, -315.083, 242.332, -310.231, 240.839, -304.996, 239.766, -299.164, 239.07, -292.523, 238.705, -284.86, 238.625, -275.961, 239.226, -267.043, 240.753, -257.967, 242.928, -248.867, 245.471, -239.879, 248.103, -231.137, 250.545, -222.776, 252.519, -214.93, 253.746, -207.734, 253.946, -201.322, 252.84, -195.83)
@@ -4611,10 +4611,10 @@ weights = {
 NodePath("../../pony/root/body_root/body/hip_front/thigh_front/lowerleg_front"): 1.0
 }
 
-[node name="backleg_whole_fast" type="FastVecDrawing" parent="." node_paths=PackedStringArray("skeleton")]
+[node name="backleg_whole_fast" type="FastVecDrawing" parent="." node_paths=PackedStringArray("bezier_skeleton")]
 fill = Color(0.972549, 0.772549, 1, 1)
 steps = 10
-skeleton = NodePath("../pony")
+bezier_skeleton = NodePath("../pony")
 
 [node name="VecStroke" type="Line2D" parent="backleg_whole_fast"]
 points = PackedVector2Array(257.715, -341.484, 253.22, -336.208, 249.375, -331.371, 246.132, -326.76, 243.447, -322.158, 241.274, -317.351, 239.567, -312.124, 238.279, -306.262, 237.366, -299.55, 236.782, -291.773, 236.48, -282.717, 236.787, -274.005, 237.914, -265.5, 239.696, -257.269, 241.968, -249.379, 244.564, -241.897, 247.319, -234.889, 250.067, -228.422, 252.645, -222.562, 254.885, -217.376, 256.624, -212.932, 257.145, -210.737, 257.02, -209.073, 256.348, -207.868, 255.23, -207.047, 253.767, -206.538, 252.06, -206.268, 250.209, -206.164, 248.316, -206.152, 246.481, -206.159, 244.804, -206.112, 241.834, -206.097, 239.143, -206.208, 236.59, -206.087, 234.036, -205.373, 231.343, -203.707, 228.369, -200.729, 224.976, -196.08, 221.023, -189.399, 216.372, -180.328, 210.883, -168.506, 204.975, -154.042, 200.066, -139.453, 196.081, -124.789, 192.945, -110.098, 190.582, -95.4269, 188.918, -80.8249, 187.876, -66.3397, 187.382, -52.0197, 187.359, -37.9128, 187.734, -24.0674, 188.604, -19.6187, 190.727, -15.8055, 193.949, -12.5886, 198.111, -9.9288, 203.06, -7.78681, 208.639, -6.12344, 214.691, -4.89948, 221.062, -4.07571, 227.595, -3.6129, 234.134, -3.47184, 240.704, -3.60936, 247.154, -3.98965, 253.389, -4.58491, 259.32, -5.36732, 264.853, -6.30908, 269.896, -7.38238, 274.358, -8.55941, 278.146, -9.81236, 281.167, -11.1134, 283.331, -12.4348, 283.995, -14.5234, 282.997, -18.2203, 280.687, -23.4268, 277.418, -30.0441, 273.54, -37.9732, 269.406, -47.1155, 265.366, -57.372, 261.772, -68.644, 258.975, -80.8327, 257.328, -93.8392, 257.034, -106.759, 257.96, -118.774, 259.949, -129.917, 262.844, -140.221, 266.489, -149.719, 270.726, -158.442, 275.399, -166.423, 280.351, -173.696, 285.426, -180.291, 290.466, -186.242, 295.968, -192.397, 302.329, -199.461, 309.24, -207.256, 316.395, -215.602, 323.484, -224.318, 330.2, -233.226, 336.236, -242.145, 341.284, -250.896, 345.035, -259.299, 347.182, -267.174)
@@ -4867,10 +4867,10 @@ NodePath("../../pony/root/body_root/body/hip_front/thigh_front"): 0.0,
 NodePath("../../pony/root/body_root/body/hip_front"): 1.0
 }
 
-[node name="frontleg_front_fast" type="FastVecDrawing" parent="." node_paths=PackedStringArray("skeleton")]
+[node name="frontleg_front_fast" type="FastVecDrawing" parent="." node_paths=PackedStringArray("bezier_skeleton")]
 fill = Color(0.972549, 0.772549, 1, 1)
 steps = 10
-skeleton = NodePath("../pony")
+bezier_skeleton = NodePath("../pony")
 
 [node name="VecStroke" type="Line2D" parent="frontleg_front_fast"]
 points = PackedVector2Array(391.493, -253.416, 386.617, -245.173, 382.618, -234.54, 379.413, -222.063, 376.918, -208.287, 375.048, -193.757, 373.719, -179.017, 372.848, -164.613, 372.35, -151.089, 372.14, -138.991, 372.136, -128.863, 372.217, -117.061, 372.316, -104.861, 372.49, -92.484, 372.795, -80.1486, 373.288, -68.0748, 374.025, -56.4824, 375.063, -45.5911, 376.458, -35.6204, 378.266, -26.7902, 380.545, -19.3202, 381.582, -17.7153, 383.46, -16.141, 386.144, -14.6285, 389.602, -13.2087, 393.801, -11.9129, 398.708, -10.772, 404.29, -9.81717, 410.514, -9.07948, 417.347, -8.59, 424.755, -8.37983, 433.743, -8.48458, 442.099, -8.91371, 449.726, -9.62177, 456.529, -10.5633, 462.41, -11.693, 467.274, -12.9652, 471.024, -14.3346, 473.564, -15.7558, 474.797, -17.1833, 474.628, -18.5717, 471.394, -24.3097, 467.884, -32.0793, 464.19, -41.5117, 460.4, -52.238, 456.607, -63.8896, 452.9, -76.0975, 449.369, -88.4931, 446.106, -100.707, 443.2, -112.372, 440.742, -123.118, 438.503, -133.702, 436.202, -145.495, 434.03, -158.191, 432.181, -171.484, 430.847, -185.07, 430.221, -198.644, 430.496, -211.901, 431.865, -224.536, 434.52, -236.244, 438.655, -246.719)
@@ -5064,10 +5064,10 @@ weights = {
 NodePath("../../pony/root/body_root/body/body2/shoulder_front"): 1.0
 }
 
-[node name="ear_fast" type="FastVecDrawing" parent="." node_paths=PackedStringArray("skeleton")]
+[node name="ear_fast" type="FastVecDrawing" parent="." node_paths=PackedStringArray("bezier_skeleton")]
 fill = Color(0.972549, 0.772549, 1, 1)
 steps = 10
-skeleton = NodePath("../pony")
+bezier_skeleton = NodePath("../pony")
 
 [node name="VecStroke" type="Line2D" parent="ear_fast"]
 points = PackedVector2Array(399.927, -457.291, 395.577, -463.157, 391.247, -469.716, 387.033, -476.845, 383.028, -484.418, 379.329, -492.31, 376.029, -500.395, 373.224, -508.548, 371.008, -516.645, 369.477, -524.559, 368.725, -532.166, 369.066, -543.972, 370.95, -555.261, 374.063, -565.903, 378.088, -575.766, 382.711, -584.72, 387.615, -592.635, 392.487, -599.378, 397.009, -604.821, 400.867, -608.832, 403.745, -611.28, 405.232, -612.243, 406.613, -612.94, 407.903, -613.377, 409.117, -613.56, 410.271, -613.496, 411.379, -613.189, 412.457, -612.647, 413.519, -611.875, 414.581, -610.879, 415.657, -609.665, 420.2, -603.742, 424.168, -597.678, 427.584, -591.433, 430.467, -584.965, 432.837, -578.234, 434.716, -571.197, 436.123, -563.815, 437.08, -556.044, 437.606, -547.846, 437.722, -539.177)
@@ -5191,11 +5191,11 @@ NodePath("../../pony/root/body_root/body/body2/neck1/neck2/head"): 1.0,
 NodePath("../../pony/root/body_root/body/body2/neck1/neck2/head/ear"): 0.0
 }
 
-[node name="ear_line_fast" type="FastVecDrawing" parent="ear_fast" node_paths=PackedStringArray("skeleton")]
+[node name="ear_line_fast" type="FastVecDrawing" parent="ear_fast" node_paths=PackedStringArray("bezier_skeleton")]
 do_fill = false
 fill = Color(1, 1, 1, 1)
 steps = 10
-skeleton = NodePath("../../pony")
+bezier_skeleton = NodePath("../../pony")
 
 [node name="@Node@64617" type="Node" parent="ear_fast/ear_line_fast" node_paths=PackedStringArray("weights")]
 script = ExtResource("4_0dh1a")
@@ -6241,19 +6241,19 @@ value = Vector2(618.393, -648.798)
 
 [node name="shoulder_front" type="Bone2D" parent="pony/root/body_root/body/body2"]
 position = Vector2(69, 50)
-rotation = 0.496968
+rotation = 0.637183
 scale = Vector2(0.999865, 0.999865)
 rest = Transform2D(1, -2.38419e-07, 2.38419e-07, 1, 69, 50)
 
 [node name="arm_front" type="Bone2D" parent="pony/root/body_root/body/body2/shoulder_front"]
 position = Vector2(-4, 39)
-rotation = -0.621316
+rotation = -0.795136
 scale = Vector2(0.999867, 0.999867)
 rest = Transform2D(1, 5.6426e-07, -5.6426e-07, 1, -4, 39)
 
 [node name="forearm_front" type="Bone2D" parent="pony/root/body_root/body/body2/shoulder_front/arm_front" node_paths=PackedStringArray("target")]
 position = Vector2(0, 105)
-rotation = 0.146657
+rotation = 0.185237
 scale = Vector2(0.999836, 0.999836)
 rest = Transform2D(0.999997, -3.2584e-07, 3.2584e-07, 0.999997, 0, 105)
 auto_calculate_length_and_angle = false
@@ -6264,19 +6264,19 @@ target = NodePath("../../../../../../ik_front_root/IK_frontleg_front")
 
 [node name="shoulder_back" type="Bone2D" parent="pony/root/body_root/body/body2"]
 position = Vector2(87, 27)
-rotation = 0.478885
+rotation = 0.61783
 scale = Vector2(0.99986, 0.99986)
 rest = Transform2D(1, 8.10623e-06, -8.10623e-06, 1, 87, 27)
 
 [node name="arm_back" type="Bone2D" parent="pony/root/body_root/body/body2/shoulder_back"]
 position = Vector2(-4, 39)
-rotation = -0.602491
+rotation = -0.776346
 scale = Vector2(0.999866, 0.999866)
 rest = Transform2D(1, -1.02838e-05, 1.02838e-05, 1, -4, 39)
 
 [node name="forearm_back" type="Bone2D" parent="pony/root/body_root/body/body2/shoulder_back/arm_back" node_paths=PackedStringArray("target")]
 position = Vector2(0, 105)
-rotation = 0.145915
+rotation = 0.185801
 scale = Vector2(0.999833, 0.999833)
 rest = Transform2D(0.999997, 2.17755e-06, -2.17755e-06, 0.999997, 0, 105)
 auto_calculate_length_and_angle = false
@@ -6290,20 +6290,20 @@ rest = Transform2D(1, 0, 0, 1, 0, 0)
 
 [node name="thigh_front" type="Bone2D" parent="pony/root/body_root/body/hip_front"]
 position = Vector2(-40, 52)
-rotation = -0.588502
+rotation = -0.605193
 scale = Vector2(0.999885, 0.999885)
 rest = Transform2D(0.817657, -0.575706, 0.575706, 0.817657, -40, 52)
 
 [node name="lowerleg_front" type="Bone2D" parent="pony/root/body_root/body/hip_front/thigh_front"]
 position = Vector2(-22.3444, 82.108)
-rotation = 0.217398
+rotation = 0.302454
 scale = Vector2(0.999837, 0.999837)
 rest = Transform2D(0.997453, 0.0713301, -0.0713301, 0.997453, -22.3444, 82.108)
 
 [node name="toe_front" type="Bone2D" parent="pony/root/body_root/body/hip_front/thigh_front/lowerleg_front" node_paths=PackedStringArray("target")]
 position = Vector2(-57.2776, -1.80989)
-rotation = 0.0636559
-scale = Vector2(0.999829, 0.999829)
+rotation = -0.00470893
+scale = Vector2(0.99983, 0.99983)
 rest = Transform2D(0.981005, 0.193941, -0.193941, 0.981005, -57.2776, -1.80989)
 auto_calculate_length_and_angle = false
 length = 158.222
@@ -6323,19 +6323,19 @@ rest = Transform2D(1, 0, 0, 1, 0, 0)
 
 [node name="thigh_back" type="Bone2D" parent="pony/root/body_root/body/hip_back"]
 position = Vector2(-20, 28)
-rotation = -0.651516
+rotation = -0.673631
 scale = Vector2(0.999883, 0.999883)
 rest = Transform2D(0.788777, -0.614679, 0.614679, 0.788777, -20, 28)
 
 [node name="lowerleg_back" type="Bone2D" parent="pony/root/body_root/body/hip_back/thigh_back"]
 position = Vector2(-19.2008, 86.46)
-rotation = 0.209514
+rotation = 0.295755
 scale = Vector2(0.999836, 0.999836)
 rest = Transform2D(0.997453, 0.0713294, -0.0713294, 0.997453, -19.2008, 86.46)
 
 [node name="toe_back" type="Bone2D" parent="pony/root/body_root/body/hip_back/thigh_back/lowerleg_back" node_paths=PackedStringArray("target")]
 position = Vector2(-57.9717, 2.06892)
-rotation = 0.0861888
+rotation = 0.0220622
 scale = Vector2(0.999836, 0.999836)
 rest = Transform2D(0.980958, 0.19408, -0.19408, 0.980958, -57.9717, 2.06892)
 auto_calculate_length_and_angle = false
@@ -6449,15 +6449,15 @@ flip_bend_direction = true
 joint_one_bone_index = 19
 joint_two_bone_index = 20
 
-[node name="mane_complex_front_fast" type="FastVecDrawing" parent="." node_paths=PackedStringArray("skeleton")]
+[node name="mane_complex_front_fast" type="FastVecDrawing" parent="." node_paths=PackedStringArray("bezier_skeleton")]
 fill = Color(0.411765, 0.196078, 0.560784, 1)
 steps = 10
-skeleton = NodePath("../pony")
+bezier_skeleton = NodePath("../pony")
 
-[node name="mane_complex_purple_fast" type="FastVecDrawing" parent="mane_complex_front_fast" node_paths=PackedStringArray("skeleton")]
+[node name="mane_complex_purple_fast" type="FastVecDrawing" parent="mane_complex_front_fast" node_paths=PackedStringArray("bezier_skeleton")]
 fill = Color(0.52549, 0.25098, 0.705882, 1)
 steps = 10
-skeleton = NodePath("../../pony")
+bezier_skeleton = NodePath("../../pony")
 
 [node name="@Node@30949" type="Node" parent="mane_complex_front_fast/mane_complex_purple_fast" node_paths=PackedStringArray("weights")]
 script = ExtResource("4_0dh1a")
@@ -6630,10 +6630,10 @@ weights = {
 NodePath("../../../pony/root/body_root/body/body2/neck1/neck2/head/mane_small/mane_small2/mane_small3"): 1.0
 }
 
-[node name="mane_complex_teal_fast" type="FastVecDrawing" parent="mane_complex_front_fast" node_paths=PackedStringArray("skeleton")]
+[node name="mane_complex_teal_fast" type="FastVecDrawing" parent="mane_complex_front_fast" node_paths=PackedStringArray("bezier_skeleton")]
 fill = Color(0.607843, 0.913725, 0.847059, 1)
 steps = 10
-skeleton = NodePath("../../pony")
+bezier_skeleton = NodePath("../../pony")
 
 [node name="@Node@29869" type="Node" parent="mane_complex_front_fast/mane_complex_teal_fast" node_paths=PackedStringArray("weights")]
 script = ExtResource("4_0dh1a")
@@ -6858,11 +6858,11 @@ script = ExtResource("3_e3hr0")
 metadata/_custom_type_script = "uid://csgt88iv3c4ke"
 metadata/_edit_lock_ = true
 
-[node name="mane_complex_flair_fill_fast" type="FastVecDrawing" parent="mane_complex_front_fast" node_paths=PackedStringArray("skeleton")]
+[node name="mane_complex_flair_fill_fast" type="FastVecDrawing" parent="mane_complex_front_fast" node_paths=PackedStringArray("bezier_skeleton")]
 cyclic = true
 fill = Color(0.54902, 0.25098, 0.733333, 1)
 steps = 10
-skeleton = NodePath("../../pony")
+bezier_skeleton = NodePath("../../pony")
 
 [node name="_Node_24374" type="Node" parent="mane_complex_front_fast/mane_complex_flair_fill_fast" node_paths=PackedStringArray("weights")]
 script = ExtResource("4_0dh1a")
@@ -7053,10 +7053,10 @@ weights = {
 NodePath("../../../pony/root/body_root/body/body2/neck1/neck2/head/mane_small/mane_small2/mane_small3"): 1.0
 }
 
-[node name="mane_complex_flair_teal_fast" type="FastVecDrawing" parent="mane_complex_front_fast" node_paths=PackedStringArray("skeleton")]
+[node name="mane_complex_flair_teal_fast" type="FastVecDrawing" parent="mane_complex_front_fast" node_paths=PackedStringArray("bezier_skeleton")]
 fill = Color(0.607843, 0.913725, 0.847059, 1)
 steps = 10
-skeleton = NodePath("../../pony")
+bezier_skeleton = NodePath("../../pony")
 
 [node name="@Node@35838" type="Node" parent="mane_complex_front_fast/mane_complex_flair_teal_fast" node_paths=PackedStringArray("weights")]
 script = ExtResource("4_0dh1a")
@@ -7226,11 +7226,11 @@ weights = {
 NodePath("../../../pony/root/body_root/body/body2/neck1/neck2/head/mane_small/mane_small2/mane_small3"): 1.0
 }
 
-[node name="mane_complex_flair_line_fast" type="FastVecDrawing" parent="mane_complex_front_fast" node_paths=PackedStringArray("skeleton")]
+[node name="mane_complex_flair_line_fast" type="FastVecDrawing" parent="mane_complex_front_fast" node_paths=PackedStringArray("bezier_skeleton")]
 do_fill = false
 fill = Color(1, 1, 1, 1)
 steps = 10
-skeleton = NodePath("../../pony")
+bezier_skeleton = NodePath("../../pony")
 
 [node name="VecStroke" type="Line2D" parent="mane_complex_front_fast/mane_complex_flair_line_fast"]
 points = PackedVector2Array(433.447, -498.063, 431.439, -499.138, 429.24, -500.535, 426.943, -502.276, 424.638, -504.382, 422.416, -506.873, 420.369, -509.771, 418.587, -513.095, 417.163, -516.868, 416.187, -521.109, 415.75, -525.84, 415.831, -529.86, 416.269, -533.711, 417.024, -537.358, 418.054, -540.768, 419.32, -543.908, 420.78, -546.744, 422.393, -549.241, 424.118, -551.367, 425.914, -553.088, 427.741, -554.37, 428.234, -550.382, 428.764, -546.429, 429.395, -542.558, 430.188, -538.816, 431.205, -535.248, 432.509, -531.902, 434.162, -528.824, 436.225, -526.061, 438.762, -523.659, 441.833, -521.666, 445.36, -520.081, 449.17, -518.855, 453.184, -517.966, 457.326, -517.39, 461.517, -517.104, 465.68, -517.084, 469.736, -517.307, 473.608, -517.749, 477.218, -518.387, 480.489, -519.198, 483.67, -520.404, 487.009, -522.174, 490.425, -524.403, 493.836, -526.989, 497.16, -529.825, 500.314, -532.807, 503.218, -535.832, 505.789, -538.795, 507.945, -541.592, 509.605, -544.117, 510.982, -546.806, 512.326, -550.082, 513.607, -553.827, 514.797, -557.924, 515.866, -562.255, 516.786, -566.703, 517.527, -571.15, 518.061, -575.478, 518.358, -579.569, 518.39, -583.306)
@@ -7599,17 +7599,17 @@ weights = {
 NodePath("../../pony/root/body_root/body/body2/neck1/neck2/head/mane_small"): 1.0
 }
 
-[node name="mane_long_fast" type="FastVecDrawing" parent="." node_paths=PackedStringArray("skeleton")]
+[node name="mane_long_fast" type="FastVecDrawing" parent="." node_paths=PackedStringArray("bezier_skeleton")]
 cyclic = true
 fill = Color(0.411765, 0.196078, 0.560784, 1)
 steps = 10
-skeleton = NodePath("../pony")
+bezier_skeleton = NodePath("../pony")
 
-[node name="mane_long_purple_fast" type="FastVecDrawing" parent="mane_long_fast" node_paths=PackedStringArray("skeleton")]
+[node name="mane_long_purple_fast" type="FastVecDrawing" parent="mane_long_fast" node_paths=PackedStringArray("bezier_skeleton")]
 cyclic = true
 fill = Color(0.52549, 0.25098, 0.705882, 1)
 steps = 10
-skeleton = NodePath("../../pony")
+bezier_skeleton = NodePath("../../pony")
 
 [node name="@Node@24349" type="Node" parent="mane_long_fast/mane_long_purple_fast" node_paths=PackedStringArray("weights")]
 script = ExtResource("4_0dh1a")
@@ -7800,11 +7800,11 @@ weights = {
 NodePath("../../../pony/root/body_root/body/body2/neck1/neck2/head/mane_big/mane_big2"): 1.0
 }
 
-[node name="mane_long_teal_fast" type="FastVecDrawing" parent="mane_long_fast" node_paths=PackedStringArray("skeleton")]
+[node name="mane_long_teal_fast" type="FastVecDrawing" parent="mane_long_fast" node_paths=PackedStringArray("bezier_skeleton")]
 cyclic = true
 fill = Color(0.607843, 0.913725, 0.847059, 1)
 steps = 10
-skeleton = NodePath("../../pony")
+bezier_skeleton = NodePath("../../pony")
 
 [node name="@Node@23519" type="Node" parent="mane_long_fast/mane_long_teal_fast" node_paths=PackedStringArray("weights")]
 script = ExtResource("4_0dh1a")
@@ -8009,11 +8009,11 @@ script = ExtResource("3_e3hr0")
 metadata/_custom_type_script = "uid://csgt88iv3c4ke"
 metadata/_edit_lock_ = true
 
-[node name="mane_long_flair_fill_fast" type="FastVecDrawing" parent="mane_long_fast" node_paths=PackedStringArray("skeleton")]
+[node name="mane_long_flair_fill_fast" type="FastVecDrawing" parent="mane_long_fast" node_paths=PackedStringArray("bezier_skeleton")]
 cyclic = true
 fill = Color(0.52549, 0.25098, 0.705882, 1)
 steps = 15
-skeleton = NodePath("../../pony")
+bezier_skeleton = NodePath("../../pony")
 
 [node name="_Node_49482" type="Node" parent="mane_long_fast/mane_long_flair_fill_fast" node_paths=PackedStringArray("weights")]
 script = ExtResource("4_0dh1a")
@@ -8138,11 +8138,11 @@ weights = {
 NodePath("../../../pony/root/body_root/body/body2/neck1/neck2/head/mane_big/mane_big2/mane_big3/mane_big4"): 1.0
 }
 
-[node name="mane_long_flair_teal_fast" type="FastVecDrawing" parent="mane_long_fast" node_paths=PackedStringArray("skeleton")]
+[node name="mane_long_flair_teal_fast" type="FastVecDrawing" parent="mane_long_fast" node_paths=PackedStringArray("bezier_skeleton")]
 cyclic = true
 fill = Color(0.607843, 0.913725, 0.847059, 1)
 steps = 10
-skeleton = NodePath("../../pony")
+bezier_skeleton = NodePath("../../pony")
 
 [node name="@Node@23677" type="Node" parent="mane_long_fast/mane_long_flair_teal_fast" node_paths=PackedStringArray("weights")]
 script = ExtResource("4_0dh1a")
@@ -8312,11 +8312,11 @@ weights = {
 NodePath("../../../pony/root/body_root/body/body2/neck1/neck2/head/mane_big/mane_big2/mane_big3/mane_big4"): 1.0
 }
 
-[node name="mane_long_flair_line_fast" type="FastVecDrawing" parent="mane_long_fast" node_paths=PackedStringArray("skeleton")]
+[node name="mane_long_flair_line_fast" type="FastVecDrawing" parent="mane_long_fast" node_paths=PackedStringArray("bezier_skeleton")]
 do_fill = false
 fill = Color(1, 1, 1, 1)
 steps = 10
-skeleton = NodePath("../../pony")
+bezier_skeleton = NodePath("../../pony")
 
 [node name="VecStroke" type="Line2D" parent="mane_long_fast/mane_long_flair_line_fast"]
 points = PackedVector2Array(402.747, -303.673, 399.246, -304.16, 395.492, -304.977, 391.676, -306.302, 387.992, -308.312, 384.632, -311.184, 381.789, -315.097, 379.656, -320.227, 378.427, -326.751, 378.293, -334.847, 379.447, -344.693, 383.388, -339.635, 387.972, -334.841, 393.073, -330.541, 398.568, -326.964, 404.331, -324.342, 410.237, -322.903, 416.163, -322.878, 421.983, -324.498, 427.572, -327.991, 432.807, -333.588, 436.285, -338.388, 439.056, -342.542, 441.192, -346.2, 442.764, -349.514, 443.846, -352.633, 444.51, -355.708, 444.828, -358.891, 444.874, -362.33, 444.718, -366.177, 444.435, -370.583, 443.368, -376.122, 440.961, -383.043, 437.437, -391.005, 433.021, -399.668, 427.935, -408.691, 422.403, -417.734, 416.649, -426.457, 410.896, -434.52, 405.367, -441.581, 400.286, -447.301)
@@ -8625,11 +8625,11 @@ weights = {
 NodePath("../../pony/root/body_root/body/body2/neck1/neck2/head/mane_big/mane_big2"): 1.0
 }
 
-[node name="cm_bigmagic_fast" type="FastVecDrawing" parent="." node_paths=PackedStringArray("skeleton")]
+[node name="cm_bigmagic_fast" type="FastVecDrawing" parent="." node_paths=PackedStringArray("bezier_skeleton")]
 cyclic = true
 fill = Color(0.607843, 0.913725, 0.847059, 1)
 steps = 10
-skeleton = NodePath("../pony")
+bezier_skeleton = NodePath("../pony")
 
 [node name="@Node@67251" type="Node" parent="cm_bigmagic_fast" node_paths=PackedStringArray("weights")]
 script = ExtResource("4_0dh1a")
@@ -8766,11 +8766,11 @@ NodePath("../../pony/root/body_root/body"): 0.0,
 NodePath("../../pony/root/body_root/body/hip_front"): 1.0
 }
 
-[node name="cm_bigmagic2_fast" type="FastVecDrawing" parent="." node_paths=PackedStringArray("skeleton")]
+[node name="cm_bigmagic2_fast" type="FastVecDrawing" parent="." node_paths=PackedStringArray("bezier_skeleton")]
 cyclic = true
 fill = Color(0.0313726, 0.729412, 0.717647, 1)
 steps = 10
-skeleton = NodePath("../pony")
+bezier_skeleton = NodePath("../pony")
 
 [node name="_Node_67251" type="Node" parent="cm_bigmagic2_fast" node_paths=PackedStringArray("weights")]
 script = ExtResource("4_0dh1a")
@@ -8908,11 +8908,11 @@ NodePath("../../pony/root/body_root/body"): 0.0,
 NodePath("../../pony/root/body_root/body/hip_front"): 1.0
 }
 
-[node name="cm_littlemagic_fast" type="FastVecDrawing" parent="." node_paths=PackedStringArray("skeleton")]
+[node name="cm_littlemagic_fast" type="FastVecDrawing" parent="." node_paths=PackedStringArray("bezier_skeleton")]
 cyclic = true
 fill = Color(0.607843, 0.913725, 0.847059, 1)
 steps = 10
-skeleton = NodePath("../pony")
+bezier_skeleton = NodePath("../pony")
 
 [node name="@Node@71653" type="Node" parent="cm_littlemagic_fast" node_paths=PackedStringArray("weights")]
 script = ExtResource("4_0dh1a")
@@ -9066,11 +9066,11 @@ NodePath("../../pony/root/body_root/body/hip_front/thigh_front"): 1.0,
 NodePath("../../pony/root/body_root/body/hip_front"): 1.0
 }
 
-[node name="cm_littlemagic2_fast" type="FastVecDrawing" parent="." node_paths=PackedStringArray("skeleton")]
+[node name="cm_littlemagic2_fast" type="FastVecDrawing" parent="." node_paths=PackedStringArray("bezier_skeleton")]
 cyclic = true
 fill = Color(0.0313726, 0.729412, 0.717647, 1)
 steps = 10
-skeleton = NodePath("../pony")
+bezier_skeleton = NodePath("../pony")
 
 [node name="_Node_71653" type="Node" parent="cm_littlemagic2_fast" node_paths=PackedStringArray("weights")]
 script = ExtResource("4_0dh1a")
@@ -9231,11 +9231,11 @@ NodePath("../../pony/root/body_root/body/hip_front/thigh_front"): 1.0,
 NodePath("../../pony/root/body_root/body/hip_front"): 1.0
 }
 
-[node name="cm_starwhite_fast" type="FastVecDrawing" parent="." node_paths=PackedStringArray("skeleton")]
+[node name="cm_starwhite_fast" type="FastVecDrawing" parent="." node_paths=PackedStringArray("bezier_skeleton")]
 cyclic = true
 fill = Color(1, 1, 0.941176, 1)
 steps = 10
-skeleton = NodePath("../pony")
+bezier_skeleton = NodePath("../pony")
 
 [node name="_Node_72868" type="Node" parent="cm_starwhite_fast" node_paths=PackedStringArray("weights")]
 script = ExtResource("4_0dh1a")
@@ -9327,11 +9327,11 @@ weights = {
 NodePath("../../pony/root/body_root/body/hip_front/thigh_front"): 1.0
 }
 
-[node name="cm_starpink_fast" type="FastVecDrawing" parent="." node_paths=PackedStringArray("skeleton")]
+[node name="cm_starpink_fast" type="FastVecDrawing" parent="." node_paths=PackedStringArray("bezier_skeleton")]
 cyclic = true
 fill = Color(0.717647, 0.396078, 0.721569, 1)
 steps = 10
-skeleton = NodePath("../pony")
+bezier_skeleton = NodePath("../pony")
 
 [node name="@Node@72868" type="Node" parent="cm_starpink_fast" node_paths=PackedStringArray("weights")]
 script = ExtResource("4_0dh1a")

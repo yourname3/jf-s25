@@ -5,9 +5,7 @@
 
 [node name="Node2D" type="Node2D"]
 
-[node name="FastVecDrawing" type="FastVecDrawing" parent="."]
-skeleton = NodePath("../Skeleton2D")
-constraints = PackedInt32Array(0, 0, 0, 0, 0)
+[node name="FastVecDrawing" type="Node2D" parent="."]
 script = ExtResource("1_s4do5")
 
 [node name="_Node_39491" type="Node" parent="FastVecDrawing"]
