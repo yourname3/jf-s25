@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://dyvqtohdclmmo"]
 
 [ext_resource type="Script" uid="uid://druaxt2ugybtj" path="res://addons/gdvecrig/VecWaypoint.gd" id="1_dn8vi"]
-[ext_resource type="Script" uid="uid://dfb8k8m5r8pp0" path="res://debug_fast_vec.gd" id="1_s4do5"]
+[ext_resource type="Script" uid="uid://dfb8k8m5r8pp0" path="res://player/debug_fast_vec.gd" id="1_s4do5"]
 
 [node name="Node2D" type="Node2D"]
 

@@ -19,7 +19,8 @@ func process(node: Node) -> void:
 		new_guy.do_fill = node.do_fill
 		new_guy.constraints = PackedInt32Array(node.constraints)
 		new_guy.steps = node.steps
-		new_guy.skeleton = node.get_skeleton_from_tree()
+		node.add_sibling(new_guy)
+		#new_guy.skeleton = node.get_skeleton_from_tree()
 		node.hide()
 
 func _go() -> void:
